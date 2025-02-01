@@ -7,16 +7,14 @@ from django.conf import settings
 from django.core.mail import EmailMessage
 from django.utils import timezone
 from django.urls import reverse
+from rest_framework_simplejwt.tokens import RefreshToken
 from .models import *
 
 
 @login_required # restrict page to authenticated users
 def Home(request):
-    return render(request, 'index.html')
-
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib import messages
+    access_token = request.GET.get('access_token', None)
+    return render(request, 'index.html', {'access_token': access_token})
 
 def RegisterView(request):
     if request.method == 'POST':
@@ -77,8 +75,12 @@ def LoginView(request):
             # login user if login credentials are correct
             login(request, user)
 
+            refresh = RefreshToken.for_user(user)
+            access_token = str(refresh.access_token)
+
             # ewdirect to home page
-            return redirect('home')
+            return redirect(f"/?access_token={access_token}")
+
         else:
             # redirect back to the login page if credentials are wrong
             messages.error(request, 'Invalid user credentials')

@@ -130,11 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'login'
 
-# EMAIL_HOST="smtp.gmail.com"
-# EMAIL_PORT=465
-# EMAIL_USE_SSL=True
-# EMAIL_HOST_USER="th.mnajja2016@gmail.com"
-# EMAIL_HOST_PASSWORD="zcmd wvtn vyoi dzuj"
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'localhost'  # MailDev SMTP server

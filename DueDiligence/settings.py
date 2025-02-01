@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Core',
+    'rest_framework'
+
 ]
 
 MIDDLEWARE = [
@@ -137,3 +139,11 @@ EMAIL_PORT = 1025         # MailDev SMTP port
 EMAIL_USE_TLS = False     # MailDev does not use TLS
 EMAIL_HOST_USER = ''      # Leave empty for MailDev
 EMAIL_HOST_PASSWORD = ''  # Leave empty for MailDev
+
+
+# Django Rest Framework settings
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}

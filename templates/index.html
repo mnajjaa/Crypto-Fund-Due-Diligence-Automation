@@ -1,15 +1,26 @@
+{% extends 'template.html' %}
+{% block title %}Chatbot{% endblock %}
+
+{% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
 <body>
     <P>Hello World</P>
+    {% if access_token  %}
+    <script>  
+    const access = "{{ access_token }}";  
+    localStorage.setItem("access", access);  
+    </script>
+    {% endif %}
     <br><br>
     
     <a href="{% url 'logout' %}">Logout</a>
 </body>
 </html>
+{% endblock %}

@@ -127,3 +127,18 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'login'
+
+# EMAIL_HOST="smtp.gmail.com"
+# EMAIL_PORT=465
+# EMAIL_USE_SSL=True
+# EMAIL_HOST_USER="th.mnajja2016@gmail.com"
+# EMAIL_HOST_PASSWORD="zcmd wvtn vyoi dzuj"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'  # MailDev SMTP server
+EMAIL_PORT = 1025         # MailDev SMTP port
+EMAIL_USE_TLS = False     # MailDev does not use TLS
+EMAIL_HOST_USER = ''      # Leave empty for MailDev
+EMAIL_HOST_PASSWORD = ''  # Leave empty for MailDev

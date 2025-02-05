@@ -66,60 +66,36 @@ def RegisterView(request):
             return redirect('login')
 
     # Handle GET request (render the registration form)
-    return render(request, 'register.html')
+    return render(request, 'sign-up.html')
 
+def LoginView(request):
+    if request.method == 'POST':
 
+        # getting user inputs from frontend
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
-
-# def LoginView(request):
-#     if request.method == 'POST':
-
-#         # getting user inputs from frontend
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-
-#         # authenticate user
-#         user = authenticate(request, username=username, password=password)
+        # authenticate user
+        user = authenticate(request, username=username, password=password)
         
-#         if user is not None:
-#             # login user if login credentials are correct
-#             login(request, user)
+        if user is not None:
+            # login user if login credentials are correct
+            login(request, user)
 
-#             refresh = RefreshToken.for_user(user)
-#             access_token = str(refresh.access_token)
+            refresh = RefreshToken.for_user(user)
+            access_token = str(refresh.access_token)
 
-#             # ewdirect to home page
-#             return redirect(f"/?access_token={access_token}")
+            # ewdirect to home page
+            return redirect(f"/?access_token={access_token}")
 
-#         else:
-#             # redirect back to the login page if credentials are wrong
-#             messages.error(request, 'Invalid user credentials')
-#             return redirect('login')
+        else:
+            # redirect back to the login page if credentials are wrong
+            messages.error(request, 'Invalid user credentials')
+            return redirect('login')
 
 
-#     return render(request, 'sign-in.html')
+    return render(request, 'sign-in.html')
 
-class LoginView(APIView):
-    permission_classes = [AllowAny]
-
-    @extend_schema(
-        summary="Login user",
-        request=LoginSerializer,
-        responses={200: "Login successful", 401: "Invalid credentials"}
-    )
-    def post(self, request):
-        serializer = LoginSerializer(data=request.data)
-        if serializer.is_valid():
-            user = authenticate(username=serializer.validated_data['username'], password=serializer.validated_data['password'])
-            if user:
-                refresh = RefreshToken.for_user(user)
-                return Response({
-                    "message": "Login successful",
-                    "access_token": str(refresh.access_token),
-                    "refresh_token": str(refresh)
-                }, status=status.HTTP_200_OK)
-            return Response({"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 def LogoutView(request):
@@ -228,4 +204,4 @@ def ResetPassword(request, reset_id):
         messages.error(request, 'Invalid reset id')
         return redirect('forgot-password')
 
-    return render(request, 'reset_password.html')
+    return render(request, 'reset_password1.html')

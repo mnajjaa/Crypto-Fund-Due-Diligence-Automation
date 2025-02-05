@@ -87,6 +87,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'due_diligence_db',  # Remplace par le nom de ta base
+#         'USER': 'postgres',       # Remplace par ton utilisateur PostgreSQL
+#         'PASSWORD': 'root',  # Remplace par ton mot de passe PostgreSQL
+#         'HOST': 'localhost',      # 'db' si tu utilises Docker
+#         'PORT': '5432',           # Port par défaut de PostgreSQL
+#     }
+# }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ profile.user.username }}'s Profile</h1>
+<p>First Name: {{ profile.user.first_name }}</p>
+<p>Last Name: {{ profile.user.last_name }}</p>
+<p>Email: {{ profile.user.email }}</p>
+<p>Bio: {{ profile.bio }}</p>
+<p>Birth Date: {{ profile.birth_date }}</p>
+{% if profile.profile_picture %}
+    <img src="{{ profile.profile_picture.url }}" alt="Profile Picture">
+{% else %}
+    <p>No profile picture uploaded.</p>
+{% endif %}
+
+<!-- 2FA Section -->
+<div class="2fa-section">
+    <h3>Two-Factor Authentication (2FA)</h3>
+    {% if profile.is_2fa_enabled %}
+        <p>Status: <span style="color: green;">Enabled</span></p>
+        <form method="post" action="{% url 'disable_2fa' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Disable 2FA</button>
+        </form>
+    {% else %}
+        <p>Status: <span style="color: red;">Disabled</span></p>
+        <a href="{% url 'setup_2fa' %}" class="btn btn-primary">Enable 2FA</a>
+    {% endif %}
+</div>
+
+<!-- Edit Profile Link -->
+<a href="{% url 'edit_profile' %}" class="btn btn-secondary">Edit Profile</a>
+{% endblock %}

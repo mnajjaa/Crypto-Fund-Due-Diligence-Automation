@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Setup 2FA</h2>
+<div>
+    Scan this QR code with your authenticator app:
+    <img src="data:image/png;base64,{{ qr_code_base64 }}" alt="QR Code">
+</div>
+<form method="post" action="{% url 'verify_2fa_setup' %}">
+    {% csrf_token %}
+    <input type="text" name="token" placeholder="Enter 6-digit code">
+    <button type="submit">Verify & Enable</button>
+</form>
+{% endblock %}

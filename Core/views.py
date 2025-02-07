@@ -17,22 +17,35 @@ from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from .models import PasswordReset
 from .serializers import RegisterSerializer, LoginSerializer, ForgotPasswordSerializer, ResetPasswordSerializer
+from .forms import ProfileForm
+from .models import Profile
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from django.contrib import messages
+from .models import Profile
+from django_otp.plugins.otp_totp.models import TOTPDevice
+from django_otp import devices_for_user
+import qrcode
+import qrcode.image.svg
+from io import BytesIO
+import pyotp
+import qrcode
+from io import BytesIO
+import base64
 
 
-
-@login_required # restrict page to authenticated users
+@login_required 
 def Home(request):
     access_token = request.GET.get('access_token', None)
     return render(request, 'index.html', {'access_token': access_token})
 
 def RegisterView(request):
-    
     if request.method == 'POST':
         # Getting user inputs from frontend
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         username = request.POST.get('username')
-        email = request.POST.get('email')
+        email = request.POST.get('email')  
         password = request.POST.get('password')
 
         user_data_has_error = False
@@ -71,17 +84,17 @@ def RegisterView(request):
 def LoginView(request):
     if request.method == 'POST':
 
-        # getting user inputs from frontend
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        # authenticate user
         user = authenticate(request, username=username, password=password)
         
         if user is not None:
             # login user if login credentials are correct
             login(request, user)
-
+            profile = Profile.objects.get(user=user)
+            if profile.is_2fa_enabled:
+                return redirect('verify_2fa_login') 
             refresh = RefreshToken.for_user(user)
             access_token = str(refresh.access_token)
 
@@ -89,7 +102,6 @@ def LoginView(request):
             return redirect(f"/?access_token={access_token}")
 
         else:
-            # redirect back to the login page if credentials are wrong
             messages.error(request, 'Invalid user credentials')
             return redirect('login')
 
@@ -99,10 +111,9 @@ def LoginView(request):
 
 
 def LogoutView(request):
-
+    if '2fa_verified' in request.session:
+        del request.session['2fa_verified'] 
     logout(request)
-
-    # redirect to login page after logout
     return redirect('login')
 
 def ForgotPassword(request):
@@ -205,3 +216,84 @@ def ResetPassword(request, reset_id):
         return redirect('forgot-password')
 
     return render(request, 'reset_password1.html')
+
+@login_required
+def profile_view(request):
+    profile = Profile.objects.get(user=request.user)  # Fetch the profile
+    return render(request, 'profile.html', {'profile': profile})
+
+@login_required
+def edit_profile(request):
+    profile = request.user.profile
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            # Save the profile data
+            form.save()
+            # Save the user data
+            user = request.user
+            user.first_name = form.cleaned_data['first_name']
+            user.last_name = form.cleaned_data['last_name']
+            user.email = form.cleaned_data['email']  # Save the email field
+            user.save()
+            messages.success(request, "Profile updated successfully")
+            return redirect('profile')
+    else:
+        form = ProfileForm(instance=profile)
+    return render(request, 'edit_profile.html', {'form': form})     
+
+login_required
+def setup_2fa(request):
+    profile, created = Profile.objects.get_or_create(user=request.user)
+    
+    # Generate a new OTP secret if one doesn't exist
+    if not profile.otp_secret:
+        profile.otp_secret = pyotp.random_base32()
+        profile.save()
+
+    # Generate a provisioning URI for the authenticator app
+    totp = pyotp.TOTP(profile.otp_secret)
+    provisioning_uri = totp.provisioning_uri(name=request.user.email, issuer_name="DueDiligence")
+
+    # Generate QR code
+    qr = qrcode.QRCode(version=1, box_size=10, border=5)
+    qr.add_data(provisioning_uri)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="black", back_color="white")
+    
+    # Convert QR code to base64 for embedding in HTML
+    buffer = BytesIO()
+    img.save(buffer, format="PNG")
+    qr_code_base64 = base64.b64encode(buffer.getvalue()).decode()
+
+    return render(request, 'setup_2fa.html', {'qr_code_base64': qr_code_base64})
+
+@login_required
+def verify_2fa_setup(request):
+    if request.method == 'POST':
+        profile = Profile.objects.get(user=request.user)
+        totp = pyotp.TOTP(profile.otp_secret)
+        token = request.POST.get('token')
+
+        if totp.verify(token):
+            profile.is_2fa_enabled = True  # Update this field
+            profile.save()  # Save the changes
+            messages.success(request, '2FA successfully enabled!')
+            return redirect('profile')
+        else:
+            messages.error(request, 'Invalid token. Please try again.')
+            return redirect('setup_2fa')
+
+@login_required
+def verify_2fa_login(request):
+    if request.method == 'POST':
+        profile = Profile.objects.get(user=request.user)
+        totp = pyotp.TOTP(profile.otp_secret)
+        token = request.POST.get('token')
+
+        if totp.verify(token):
+            request.session['2fa_verified'] = True
+            return redirect('home')
+        else:
+            messages.error(request, 'Invalid code')
+    return render(request, 'verify_login_2fa.html')

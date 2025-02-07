@@ -1,0 +1,8 @@
+{% block content %}
+<h2>2FA Verification</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="token" placeholder="Enter 6-digit code">
+    <button type="submit">Verify</button>
+</form>
+{% endblock %}

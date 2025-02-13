@@ -32,6 +32,14 @@ import pyotp
 import qrcode
 from io import BytesIO
 import base64
+from django.http import JsonResponse
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import ChangePasswordForm
+import re
+
 
 
 @login_required 
@@ -41,7 +49,6 @@ def Home(request):
 
 def RegisterView(request):
     if request.method == 'POST':
-        # Getting user inputs from frontend
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         username = request.POST.get('username')
@@ -50,7 +57,7 @@ def RegisterView(request):
 
         user_data_has_error = False
 
-        # Make sure email and username are not being used
+        # Check if username or email is taken
         if User.objects.filter(username=username).exists():
             user_data_has_error = True
             messages.error(request, 'Username already exists')
@@ -59,15 +66,14 @@ def RegisterView(request):
             user_data_has_error = True
             messages.error(request, 'Email already exists')
 
-        # Make sure password is at least 5 characters long
-        if len(password) < 5:
+        # Password validation: Min 6 chars, 1 number, 1 special character
+        if len(password) < 6 or not re.search(r"\d", password) or not re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
             user_data_has_error = True
-            messages.error(request, 'Password must be at least 5 characters')
+            messages.error(request, 'Password must be at least 6 characters long, contain at least one number, and one special character.')
 
         if user_data_has_error:
             return redirect('register')
         else:
-            # Create the user
             new_user = User.objects.create_user(
                 first_name=first_name,
                 last_name=last_name,
@@ -78,7 +84,6 @@ def RegisterView(request):
             messages.success(request, "Account created. Login now")
             return redirect('login')
 
-    # Handle GET request (render the registration form)
     return render(request, 'sign-up.html')
 
 def LoginView(request):
@@ -225,24 +230,32 @@ def profile_view(request):
 @login_required
 def edit_profile(request):
     profile = request.user.profile
+    user = request.user  
+
     if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        form = ProfileForm(request.POST, request.FILES, instance=profile, user=user)  # Pass user here
         if form.is_valid():
-            # Save the profile data
-            form.save()
-            # Save the user data
-            user = request.user
+            profile = form.save(commit=False)
+            profile.user = request.user  # Ensure it's linked
+            profile.save()
+
+            # Update User fields
             user.first_name = form.cleaned_data['first_name']
             user.last_name = form.cleaned_data['last_name']
-            user.email = form.cleaned_data['email']  # Save the email field
+            user.username = form.cleaned_data['username']
+            user.email = form.cleaned_data['email']
             user.save()
-            messages.success(request, "Profile updated successfully")
-            return redirect('profile')
-    else:
-        form = ProfileForm(instance=profile)
-    return render(request, 'edit_profile.html', {'form': form})     
 
-login_required
+            messages.success(request, "Profile updated successfully")
+            return redirect('profile')  
+    else:
+        form = ProfileForm(instance=profile, user=user)  # Pass user here
+
+    return render(request, 'profile.html', {'form': form, 'profile': profile})
+
+  
+
+@login_required
 def setup_2fa(request):
     profile, created = Profile.objects.get_or_create(user=request.user)
     
@@ -266,7 +279,10 @@ def setup_2fa(request):
     img.save(buffer, format="PNG")
     qr_code_base64 = base64.b64encode(buffer.getvalue()).decode()
 
-    return render(request, 'setup_2fa.html', {'qr_code_base64': qr_code_base64})
+    return JsonResponse({
+        'success': True,
+        'qr_code_base64': qr_code_base64
+    })
 
 @login_required
 def verify_2fa_setup(request):
@@ -278,7 +294,7 @@ def verify_2fa_setup(request):
         if totp.verify(token):
             profile.is_2fa_enabled = True  # Update this field
             profile.save()  # Save the changes
-            messages.success(request, '2FA successfully enabled!')
+            #messages.success(request, '2FA successfully enabled!')
             return redirect('profile')
         else:
             messages.error(request, 'Invalid token. Please try again.')
@@ -289,7 +305,9 @@ def verify_2fa_login(request):
     if request.method == 'POST':
         profile = Profile.objects.get(user=request.user)
         totp = pyotp.TOTP(profile.otp_secret)
-        token = request.POST.get('token')
+
+        # Collect the six digits from the form
+        token = ''.join([request.POST.get(f'token_{i}', '') for i in range(1, 7)])
 
         if totp.verify(token):
             request.session['2fa_verified'] = True
@@ -297,3 +315,44 @@ def verify_2fa_login(request):
         else:
             messages.error(request, 'Invalid code')
     return render(request, 'verify_login_2fa.html')
+
+@login_required
+def disable_2fa(request):
+    if request.method == 'POST':
+        profile = Profile.objects.get(user=request.user)
+        profile.is_2fa_enabled = False
+        profile.otp_secret = ''  # Clear the OTP secret
+        profile.save()
+        return JsonResponse({'success': True})
+    return JsonResponse({'success': False, 'error': 'Invalid request method'})
+
+@login_required
+def change_password(request):
+    if request.method == 'POST':
+        form = ChangePasswordForm(request.POST)
+        if form.is_valid():
+            current_password = form.cleaned_data['current_password']
+            new_password = form.cleaned_data['new_password']
+
+            # Verify the current password
+            if not request.user.check_password(current_password):
+                messages.error(request, "Your current password is incorrect.")
+            else:
+                # Set the new password
+                request.user.set_password(new_password)
+                request.user.save()
+
+                # Update the session to prevent the user from being logged out
+                update_session_auth_hash(request, request.user)
+
+                messages.success(request, "Your password has been changed successfully.")
+                return redirect('profile')  # Redirect to the profile page
+        else:
+            # If the form is invalid, display error messages
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f"{field}: {error}")
+    else:
+        form = ChangePasswordForm()
+
+    return redirect('profile')

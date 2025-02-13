@@ -1,26 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'baseTim.html' %}
+
 {% block title %}Home{% endblock %}
 
 {% block content %}
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <P>Hello World</P>
-    {% if access_token  %}
-    <script>  
-    const access = "{{ access_token }}";  
-    localStorage.setItem("access", access);  
+    <p>Hello World</p>
+    {% if access_token %}
+    <script>
+        const access = "{{ access_token }}";
+        localStorage.setItem("access", access);
     </script>
     {% endif %}
     <br><br>
-    
     <a href="{% url 'logout' %}">Logout</a>
-</body>
-</html>
 {% endblock %}

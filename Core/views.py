@@ -156,7 +156,7 @@ def ForgotPassword(request):
             messages.error(request, f"No user with email '{email}' found")
             return redirect('forgot-password')
 
-    return render(request, 'forgot_password1.html')
+    return render(request, 'forgot_password.html')
 
 def PasswordResetSent(request, reset_id):
 
@@ -220,7 +220,7 @@ def ResetPassword(request, reset_id):
         messages.error(request, 'Invalid reset id')
         return redirect('forgot-password')
 
-    return render(request, 'reset_password1.html')
+    return render(request, 'reset_password.html')
 
 @login_required
 def profile_view(request):

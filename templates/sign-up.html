@@ -2,202 +2,179 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../static/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../static/img/favicon.png">
-  <title>
-Due Diligence
-  </title>
-  <!-- Extra details for Live View on GitHub Pages -->
-  <!-- Canonical SEO -->
-  <link rel="canonical" href="https://www.creative-tim.com/product/material-dashboard-pro" />
-  <!--  Social tags      -->
-  <meta name="keywords" content="creative tim, html dashboard, html css dashboard, web dashboard, bootstrap 5 dashboard, bootstrap 5, css3 dashboard, bootstrap 5 admin, material dashboard bootstrap 5 dashboard, frontend, responsive bootstrap 5 dashboard, material design, material dashboard bootstrap 5 dashboard">
-  <meta name="description" content="Material Dashboard PRO is a beautiful Bootstrap 5 admin dashboard with a large number of components, designed to look beautiful, clean and organized. If you are looking for a tool to manage dates about your business, this dashboard is the thing for you.">
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="product">
-  <meta name="twitter:site" content="@creativetim">
-  <meta name="twitter:title" content="Material Dashboard PRO by Creative Tim">
-  <meta name="twitter:description" content="Material Dashboard PRO is a beautiful Bootstrap 5 admin dashboard with a large number of components, designed to look beautiful, clean and organized. If you are looking for a tool to manage dates about your business, this dashboard is the thing for you.">
-  <meta name="twitter:creator" content="@creativetim">
-  <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/51/original/opt_mdp_bs5_thumbnail.jpg">
-  <!-- Open Graph data -->
-  <meta property="fb:app_id" content="655968634437471">
-  <meta property="og:title" content="Material Dashboard PRO by Creative Tim" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://demos.creative-tim.com/material-dashboard-pro/pages/dashboards/default.html" />
-  <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/51/original/opt_mdp_bs5_thumbnail.jpg" />
-  <meta property="og:description" content="Material Dashboard PRO is a beautiful Bootstrap 5 admin dashboard with a large number of components, designed to look beautiful, clean and organized. If you are looking for a tool to manage dates about your business, this dashboard is the thing for you." />
-  <meta property="og:site_name" content="Creative Tim" />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
-  <!-- Nucleo Icons -->
-  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../static/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <!-- Material Icons -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="../static/css/material-dashboard.min.css?v=3.1.0" rel="stylesheet" />
-  <!-- Anti-flicker snippet (recommended)  -->
-  <style>
-    .async-hide {
-      opacity: 0 !important
-    }
-  </style>
-  <script>
-    (function(a, s, y, n, c, h, i, d, e) {
-      s.className += ' ' + y;
-      h.start = 1 * new Date;
-      h.end = i = function() {
-        s.className = s.className.replace(RegExp(' ?' + y), '')
-      };
-      (a[n] = a[n] || []).hide = h;
-      setTimeout(function() {
-        i();
-        h.end = null
-      }, c);
-      h.timeout = c;
-    })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
-      'GTM-K9BGS8K': true
-    });
-  </script>
-  <!-- Analytics-Optimize Snippet -->
-  <script>
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-46172202-22', 'auto', {
-      allowLinker: true
-    });
-    ga('set', 'anonymizeIp', true);
-    ga('require', 'GTM-K9BGS8K');
-    ga('require', 'displayfeatures');
-    ga('require', 'linker');
-    ga('linker:autoLink', ["2checkout.com", "avangate.com"]);
-  </script>
-  <!-- end Analytics-Optimize Snippet -->
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
-  </script>
-  <!-- End Google Tag Manager -->
-</head>
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="Themepixels">
 
-<body class="bg-gray-200"><!-- Extra details for Live View on GitHub Pages --><!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <!-- Navbar -->
- 
-  <!-- End Navbar -->
-  <main class="main-content main-content-bg mt-0">
-    <div class="page-header align-items-start min-height-300 m-3 border-radius-xl bg-gray-200" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position:center;">
-      <span class="mask bg-gradient-dark opacity-4"></span>
-    </div>
-    <div class="container">
-      <div class="row mt-lg-n12 mt-md-n12 mt-n11 justify-content-center">
-        <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
-          <div class="card mt-8">
-            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1 text-center py-4">
-                <h4 class="font-weight-bolder text-white mt-1">Join us today</h4>
-                <p class="mb-1 text-white text-sm">Enter your email and password to register</p>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>DueDeals - Sign-Up</title>
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'lib/remixicon/fonts/remixicon.css'%}">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+  </head>
+  <body class="page-sign" style="background-color:#7167ff;">
+
+    <div class="card card-sign" style="width: 500px; height: auto;">
+      <div class="card-header">
+          <a href="../" class="header-logo mb-4">DueDeals</a>
+          <h3 class="card-title">Sign Up</h3>
+          <p class="card-text">It's free to signup and only takes a minute.</p>
+      </div><!-- card-header -->
+      <div class="card-body">
+          <!-- Display form errors -->
+          {% if form.errors %}
+              <div class="alert alert-danger">
+                  <strong>Error:</strong> Please correct the errors below.
+                  {{ form.errors }}
               </div>
-            </div>
-            <div class="card-body pb-3">
-                {% if messages %}
-                {% for message in messages %}
-                    {% if message.tags == 'error' %}
-                        <center><p class="mb-2 text-sm mx-auto" style="color: firebrick;">{{message}}</p></center>
-                    {% else %}
-                        <center><p class="mb-2 text-sm mx-auto" style="color: dodgerblue;">{{message}}</p></center>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-              <form role="form" method="POST">
-                    {% csrf_token %}
+          {% endif %}
+  
+          <!-- Sign Up Form -->
+          <form method="POST">
+              {% csrf_token %}
+              <!-- First Name and Last Name on the same line -->
+              <div class="row">
+                  <div class="col-md-6 mb-3">
+                      <label for="id_first_name" class="form-label">First name</label>
+                      <input type="text" class="form-control"  name="first_name"  placeholder="Enter first name" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="id_last_name" class="form-label">Last name</label>
+                      <input type="text" class="form-control"  name="last_name" placeholder="Enter last name" required>
+                  </div>
+              </div>
 
-
-                    <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">First Name</label>
-                      <input type="text" required name="first_name"class="form-control">
-                    </div>
-                    <div class="input-group input-group-outline mb-3">
-                        <label class="form-label">Last Name</label>
-                        <input type="text" required name="last_name" class="form-control">
-                      </div>
-                      <div class="input-group input-group-outline mb-3">
-                        <label class="form-label">Username</label>
-                        <input type="text" required name="username" class="form-control">
-                      </div>
-                    <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Email</label>
-                      <input type="email" name="email" required class="form-control">
-                    </div>
-                    <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Password</label>
-                      <input type="password" required name="password" class="form-control">
-                    </div>
-                    <div class="text-center">
-                      <button type="submit" value="Register" class="btn btn-lg bg-gradient-dark btn-lg w-100 mt-4 mb-0">Sign Up</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                  <p class="mb-2 text-sm mx-auto">
-                    Already have an account?
-                    <a href="{% url 'login' %}" class="text-primary text-gradient font-weight-bold">Sign in</a>
-                  </p>
-                </div>
+              <div class="mb-3">
+                  <label for="id_username" class="form-label">Username</label>
+                  <input type="text" class="form-control"  name="username" placeholder="Enter your username" required>
+              </div>
+              <div class="mb-3">
+                  <label for="id_email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" name="email"  placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label for="id_password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
+                <div id="password-error" class="text-danger mt-1" style="font-size: 14px;"></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <!--   Core JS Files   -->
+              <!-- <div class="mb-3">
+                  <label for="id_password2" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" name="password2" id="id_password2" placeholder="Confirm your password" required>
+              </div> -->
+              <div class="mb-4">
+                  <small>By clicking <strong>Create Account</strong> below, you agree to our terms of service and privacy statement.</small>
+              </div>
+              <button class="btn btn-primary btn-sign" type="submit" value="Register">Create Account</button>
+          </form>
+
+          
+      </div><!-- card-body -->
+      <div class="card-footer">
+          Already have an account? <a href="{% url 'login' %}">Sign In</a>
+      </div><!-- card-footer -->
+    </div><!-- card -->
+
+    <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+     <!--   Core JS Files   -->
   <script src= "{% static 'js/core/popper.min.js' %}"></script>
   <script src="{% static 'js/core/bootstrap.min.js' %}"></script>
   <script src="{% static 'js/plugins/perfect-scrollbar.min.js' %}"></script>
   <script src="{% static 'js/plugins/smooth-scrollbar.min.js' %}"></script>
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const usernameInput = document.querySelector('input[name="username"]');
+            const emailInput = document.querySelector('input[name="email"]');
+        
+            // Function to create or update error messages
+            function createErrorMessage(field, message) {
+                let errorDiv = field.nextElementSibling;
+        
+                // If the error div doesn't exist, create it
+                if (!errorDiv || !errorDiv.classList.contains("error-message")) {
+                    errorDiv = document.createElement("div");
+                    errorDiv.className = "error-message";
+                    errorDiv.style.color = "red";
+                    errorDiv.style.fontSize = "14px";
+                    errorDiv.style.marginTop = "5px";
+                    field.after(errorDiv);
+                }
+        
+                // Update the error message
+                errorDiv.innerText = message;
+            }
+        
+            
+       
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const passwordInput = document.querySelector('input[name="password"]');
+            const submitButton = document.querySelector('button[type="submit"]');
+            
+            // Create a validation message container
+            const validationMessage = document.createElement("div");
+            validationMessage.className = "error-message";
+            validationMessage.style.fontSize = "14px";
+            validationMessage.style.marginTop = "5px";
+            passwordInput.after(validationMessage);
+        
+            function validatePassword() {
+                const password = passwordInput.value;
+                let errors = [];
+        
+                // Check for minimum length
+                if (password.length < 6) {
+                    errors.push("At least 6 characters");
+                }
+                // Check for at least one number
+                if (!/\d/.test(password)) {
+                    errors.push("At least one number");
+                }
+                // Check for at least one special character
+                if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                    errors.push("At least one special character");
+                }
+        
+                // Update validation message
+                if (errors.length > 0) {
+                    validationMessage.innerHTML = errors.join("<br>");
+                    validationMessage.style.color = "red";
+                    passwordInput.style.borderColor = "red";
+                    submitButton.disabled = true;
+                } else {
+                    validationMessage.innerHTML = "Password is strong!";
+                    validationMessage.style.color = "green";
+                    passwordInput.style.borderColor = "green";
+                    submitButton.disabled = false;
+                }
+            }
+        
+            // Listen for input changes
+            passwordInput.addEventListener("input", validatePassword);
+        });
+        </script>
+        
+    
+    <script>
+      var win = navigator.platform.indexOf('Win') > -1;
+      if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+          damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
       }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="{% static 'js/material-dashboard.js' %}"></script>
-</body>
-
+    </script>
+  </body>
 </html>

@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Core',
     'rest_framework',
-    'drf_spectacular',
     'django_otp',
     'django_otp.plugins.otp_totp',
 

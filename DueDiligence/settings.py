@@ -43,9 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Core',
     'rest_framework',
-    'drf_spectacular',
     'django_otp',
     'django_otp.plugins.otp_totp',
+    'data',
+    'django_extensions',
 
 ]
 
@@ -165,7 +166,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     # Ensure DRF uses drf-spectacular's schema
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    
 }
 
 # drf-spectacular settings swagger

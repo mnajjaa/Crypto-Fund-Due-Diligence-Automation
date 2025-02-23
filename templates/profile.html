@@ -4,6 +4,105 @@
 
 {% block title %}Profile{% endblock %}
 
+{% block extra_css %}
+
+<style>
+  .custom-file-upload {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds spacing between elements */
+}
+
+.file-input-label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #e9ecef; /* Light gray background */
+    border: 1px solid #ced4da; /* Match the input field border */
+    border-radius: 4px; /* Rounded corners */
+    color: #495057; /* Text color */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.file-input-label:hover {
+    background-color: #d3d9df; /* Slightly darker gray on hover */
+}
+
+.custom-file-upload a.text-danger {
+    text-decoration: none; /* Remove underline from the link */
+    display: inline-flex;
+    align-items: center;
+    color: #dc3545; /* Red color for delete icon and text */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.custom-file-upload a.text-danger:hover {
+    opacity: 0.8; /* Slightly fade the icon and text on hover */
+}
+
+
+  /* Hide the default file input */
+  .custom-file-upload input[type="file"] {
+    display: none; /* Hide the default file input */
+  }
+  
+  /* Style the custom file input label */
+  .custom-file-upload .file-input-label {
+    cursor: pointer; /* Change cursor to pointer */
+    display: inline-block;
+    padding: 10px 15px; /* Add padding for better click area */
+    background-color: #e9ecef; /* Light gray background */
+    border: 1px solid #ced4da; /* Match the input field border */
+    border-radius: 4px; /* Rounded corners */
+    color: #495057; /* Text color */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Hover effect for the custom file input label */
+  .custom-file-upload .file-input-label:hover {
+    background-color: #d3d9df; /* Slightly darker gray on hover */
+  }
+  
+  /* Style the Font Awesome icon */
+  .custom-file-upload .file-input-label i {
+    margin-right: 8px; /* Add spacing between icon and text (if any) */
+  }
+      .avatar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; /* Make the container circular */
+        overflow: hidden; /* Clip the image to the container's shape */
+        width: 74px; /* Fixed width */
+        height: 74px; /* Fixed height */
+        border: 1px solid #fff; /* Optional: Add a border */
+    }
+    .avatar-xl {
+      width: 74px !important;
+      height: 74px !important
+  }
+  .avatar img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    object-position: center top; /* Focus on the upper part of the image */
+  }
+  
+  .avatar-sm {
+      width: 36px !important;
+      height: 36px !important;
+  }
+
+  .breadcrumb-item a {
+    display: none !important;
+}
+
+.async-hide {
+  opacity: 0 !important
+}
+</style>
+  {% endblock %}
          {% block nav %}
          <nav  aria-label="breadcrumb" class="ps-2">
           
@@ -23,10 +122,7 @@
 
       <div class="row align-items-start flex-column">
         <div class="col-lg-5 ms-3 col-sm-8">
-          <h3 class="mb-0 h4 font-weight-bolder">Settings</h3>
-          <p class="mb-4">
-            Check the sales, value and bounce rate by country.
-          </p>
+          <h3 class="mb-2 h4 font-weight-bolder">Settings</h3>
         </div>
         <div class="col-lg-4 col-sm-8">
           <div class="nav-wrapper position-relative end-0">
@@ -63,7 +159,7 @@
             <ul class="nav flex-column bg-white border-radius-lg p-3">
               <li class="nav-item">
                 <a class="nav-link text-dark d-flex" data-scroll="" href="#profile">
-                  <i class="material-symbols-rounded text-lg me-2">person</i>
+                  <i class="material-symbols-rounded text-lg me-2" >person</i>
                   <span class="text-sm">Profile</span>
                 </a>
               </li>
@@ -85,24 +181,7 @@
                   <span class="text-sm">2FA</span>
                 </a>
               </li>
-              <li class="nav-item pt-2">
-                <a class="nav-link text-dark d-flex" data-scroll="" href="#accounts">
-                  <i class="material-symbols-rounded text-lg me-2">badge</i>
-                  <span class="text-sm">Accounts</span>
-                </a>
-              </li>
-              <li class="nav-item pt-2">
-                <a class="nav-link text-dark d-flex" data-scroll="" href="#notifications">
-                  <i class="material-symbols-rounded text-lg me-2">campaign</i>
-                  <span class="text-sm">Notifications</span>
-                </a>
-              </li>
-              <li class="nav-item pt-2">
-                <a class="nav-link text-dark d-flex" data-scroll="" href="#sessions">
-                  <i class="material-symbols-rounded text-lg me-2">settings_applications</i>
-                  <span class="text-sm">Sessions</span>
-                </a>
-              </li>
+             
               <li class="nav-item pt-2">
                 <a class="nav-link text-dark d-flex" data-scroll="" href="#delete">
                   <i class="material-symbols-rounded text-lg me-2">delete</i>
@@ -119,9 +198,9 @@
               <div class="col-sm-auto col-4">
                 <div class="avatar avatar-xl position-relative">
                   {% if profile.profile_picture %}
-                  <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" class="w-100 rounded-circle shadow-sm">
+                  <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" class="rounded-circle shadow-sm">
               {% else %}
-                  <img src="/media/profile_pics/Default_pfp.svg.png" alt="Default Profile Picture" class="w-100 rounded-circle shadow-sm">
+                  <img src="/media/profile_pics/Default.svg.png" alt="Default Profile Picture" class="rounded-circle shadow-sm">
               {% endif %}
               
                 </div>
@@ -187,18 +266,30 @@
               </div>
               
               <div class="row">
-                          <!-- upload profile image -->
-                          
-             <div class="col-md-6 align-self-center">
-              <label class="form-label">Profile Picture</label>
-              <input type="file" class="form-control" name="profile_picture" accept="image/*">
+                <!-- Upload profile image -->
+                <div class="col-md-6 align-self-center">
+                    <label class="form-label">Profile Picture</label>
+                    <div class="custom-file-upload d-flex align-items-center">
+                        <!-- Upload Icon and Input -->
+                        <label for="profile_picture" class="file-input-label d-flex align-items-center me-2">
+                            <i class="material-symbols-rounded text-lg me-2">upload</i> <!-- Material Symbols upload icon -->
+                            Upload <!-- Text beside the icon -->
+                        </label>
+                        <input type="file" id="profile_picture" class="form-control" name="profile_picture" accept="image/*">
+            
+                        <!-- Delete Icon and Text (only shown if a profile picture exists) -->
+                        {% if profile.profile_picture %}
+                            <a href="{% url 'delete_profile_picture' %}" class="text-danger d-flex align-items-center ms-2" title="Delete Profile Picture">
+                                <i class="material-symbols-rounded text-lg me-2">delete</i> <!-- Material Symbols delete icon -->
+                                Delete <!-- Text beside the icon -->
+                            </a>
+                        {% endif %}
+                    </div>
                 </div>
                 <div class="col-md-6 align-self-center">
-                  <button class="btn bg-gradient-dark btn-sm float-end mt-6 mb-0">Update</button>
-
+                    <button class="btn bg-gradient-dark btn-sm float-end mt-6 mb-0">Update</button>
                 </div>
-                  
-              </div>
+            </div>
             </form>
             </div>
           </div>
@@ -209,13 +300,7 @@
   </div>
   <div class="card-body pt-0">
     <!-- Display messages (success/error) -->
-    {% if messages %}
-      {% for message in messages %}
-        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
-          {{ message }}
-        </div>
-      {% endfor %}
-    {% endif %}
+ 
 
     <!-- Change Password Form -->
     <form method="post" action="{% url 'change_password' %}">
@@ -312,178 +397,9 @@
           <!-- Card Accounts -->
           
           <!-- Card Notifications -->
-          <div class="card mt-4" id="notifications">
-            <div class="card-header">
-              <h5>Notifications</h5>
-              <p class="text-sm">Choose how you receive notifications. These notification settings apply to the things you’re watching.</p>
-            </div>
-            <div class="card-body pt-0">
-              <div class="table-responsive">
-                <table class="table mb-0">
-                  <thead>
-                    <tr>
-                      <th class="ps-1" colspan="4">
-                        <p class="mb-0">Activity</p>
-                      </th>
-                      <th class="text-center">
-                        <p class="mb-0">Email</p>
-                      </th>
-                      <th class="text-center">
-                        <p class="mb-0">Push</p>
-                      </th>
-                      <th class="text-center">
-                        <p class="mb-0">SMS</p>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="ps-1" colspan="4">
-                        <div class="my-auto">
-                          <span class="text-dark d-block text-sm">Mentions</span>
-                          <span class="text-xs font-weight-normal">Notify when another user mentions you in a comment</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault11">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault12">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="ps-1" colspan="4">
-                        <div class="my-auto">
-                          <span class="text-dark d-block text-sm">Comments</span>
-                          <span class="text-xs font-weight-normal">Notify when another user comments your item.</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault14">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault15">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault16">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="ps-1" colspan="4">
-                        <div class="my-auto">
-                          <span class="text-dark d-block text-sm">Follows</span>
-                          <span class="text-xs font-weight-normal">Notify when another user follows you.</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault17">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault18">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault19">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="ps-1" colspan="4">
-                        <div class="my-auto">
-                          <p class="text-sm mb-0">Log in from a new device</p>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault20">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault21">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault22">
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+          
           <!-- Card Sessions -->
-          <div class="card mt-4" id="sessions">
-            <div class="card-header pb-3">
-              <h5>Sessions</h5>
-              <p class="text-sm">This is a list of devices that have logged into your account. Remove those that you do not recognize.</p>
-            </div>
-            <div class="card-body pt-0">
-              <div class="d-flex align-items-center">
-                <div class="text-center w-5">
-                  <i class="fas fa-desktop text-lg opacity-6"></i>
-                </div>
-                <div class="my-auto ms-3">
-                  <div class="h-100">
-                    <p class="text-sm mb-1">
-                      Bucharest 68.133.163.201
-                    </p>
-                    <p class="mb-0 text-xs">
-                      Your current session
-                    </p>
-                  </div>
-                </div>
-                <span class="badge badge-success badge-sm my-auto ms-auto me-3">Active</span>
-                <p class="text-secondary text-sm my-auto me-3">EU</p>
-                <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
-                  <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-              <hr class="horizontal dark">
-              <div class="d-flex align-items-center">
-                <div class="text-center w-5">
-                  <i class="fas fa-desktop text-lg opacity-6"></i>
-                </div>
-                <p class="my-auto ms-3">Chrome on macOS</p>
-                <p class="text-secondary text-sm ms-auto my-auto me-3">US</p>
-                <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
-                  <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-              <hr class="horizontal dark">
-              <div class="d-flex align-items-center">
-                <div class="text-center w-5">
-                  <i class="fas fa-mobile text-lg opacity-6"></i>
-                </div>
-                <p class="my-auto ms-3">Safari on iPhone</p>
-                <p class="text-secondary text-sm ms-auto my-auto me-3">US</p>
-                <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
-                  <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          
           <!-- Card Delete Account -->
           <div class="card mt-4" id="delete">
             <div class="card-body">
@@ -774,4 +690,77 @@ document.querySelector(".breadcrumb-item a").innerText = "https://...";
   });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const newPasswordInput = document.querySelector('input[name="new_password"]');
+      const confirmPasswordInput = document.querySelector('input[name="confirm_new_password"]');
+      const submitButton = document.querySelector('button[type="submit"]');
+      
+      // Create a validation message container for the new password
+      const validationMessage = document.createElement("div");
+      validationMessage.className = "error-message";
+      validationMessage.style.fontSize = "14px";
+      validationMessage.style.marginTop = "5px";
+      newPasswordInput.after(validationMessage);
+  
+      // Create a confirmation message container for the confirm password
+      const confirmationMessage = document.createElement("div");
+      confirmationMessage.className = "error-message";
+      confirmationMessage.style.fontSize = "14px";
+      confirmationMessage.style.marginTop = "5px";
+      confirmPasswordInput.after(confirmationMessage);
+  
+      function validatePassword() {
+          const newPassword = newPasswordInput.value;
+          const confirmPassword = confirmPasswordInput.value;
+          let errors = [];
+  
+          // Check for minimum length
+          if (newPassword.length < 6) {
+              errors.push("At least 6 characters");
+          }
+          // Check for at least one number
+          if (!/\d/.test(newPassword)) {
+              errors.push("At least one number");
+          }
+          // Check for at least one special character
+          if (!/[!@#$%^&*(),.?":{}|<>]/.test(newPassword)) {
+              errors.push("At least one special character");
+          }
+  
+          // Update validation message for new password
+          if (errors.length > 0) {
+              validationMessage.innerHTML = errors.join("<br>");
+              validationMessage.style.color = "red";
+              newPasswordInput.style.borderColor = "red";
+              submitButton.disabled = true;
+          } else {
+              validationMessage.innerHTML = "Password is strong!";
+              validationMessage.style.color = "green";
+              newPasswordInput.style.borderColor = "green";
+              submitButton.disabled = false;
+          }
+  
+          // Check if passwords match
+          if (newPassword !== confirmPassword) {
+              confirmationMessage.innerHTML = "Passwords do not match!";
+              confirmationMessage.style.color = "red";
+              confirmPasswordInput.style.borderColor = "red";
+              submitButton.disabled = true;
+          } else {
+              confirmationMessage.innerHTML = "Passwords match!";
+              confirmationMessage.style.color = "green";
+              confirmPasswordInput.style.borderColor = "green";
+              submitButton.disabled = false;
+          }
+      }
+  
+      // Listen for input changes in both fields
+      newPasswordInput.addEventListener("input", validatePassword);
+      confirmPasswordInput.addEventListener("input", validatePassword);
+  });
+  </script>
+
 {% endblock %}
+
+

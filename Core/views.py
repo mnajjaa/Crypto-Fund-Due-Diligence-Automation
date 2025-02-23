@@ -38,6 +38,9 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ChangePasswordForm
 import re
+from django.template.loader import render_to_string
+from .models import User, PasswordReset
+
 
 
 
@@ -136,8 +139,11 @@ def ForgotPassword(request):
             password_reset_url = reverse('reset-password', kwargs={'reset_id': new_password_reset.reset_id})
             full_password_reset_url = f"{request.scheme}://{request.get_host()}{password_reset_url}"
 
-            # Email content
-            email_body = f'Reset your password using the link below:\n\n{full_password_reset_url}'
+            # Render the HTML email template
+            email_body = render_to_string('email/password_reset_email.html', {
+            'username': user.username,
+            'reset_url': full_password_reset_url,
+              })
 
             email_message = EmailMessage(
                 'Reset your password',  # Email subject
@@ -145,7 +151,7 @@ def ForgotPassword(request):
                 settings.EMAIL_HOST_USER,  # Email sender
                 [email]  # Email receiver
             )
-
+            email_message.content_subtype = "html"  # Set the content subtype to html
             email_message.fail_silently = True
             email_message.send()
 
@@ -252,6 +258,15 @@ def edit_profile(request):
 
     return render(request, 'profile.html', {'form': form, 'profile': profile})
 
+@login_required
+def delete_profile_picture(request):
+    profile = request.user.profile
+    if profile.profile_picture:  # Check if a profile picture exists
+        profile.profile_picture.delete(save=False)  # Delete the file from storage
+        profile.profile_picture = None  # Set the field to NULL
+        profile.save()  # Save the changes to the database
+        messages.success(request, "Profile picture deleted successfully")
+    return redirect('profile')  # Redirect to the profile page
   
 
 @login_required

@@ -11,6 +11,7 @@ urlpatterns = [
     path('reset-password/<str:reset_id>/', views.ResetPassword, name='reset-password'),
     path('profile/', views.profile_view, name='profile'),
     path('edit-profile/', views.edit_profile, name='edit_profile'),
+    path('delete-profile-picture/', views.delete_profile_picture, name='delete_profile_picture'),
     path('setup-2fa/', views.setup_2fa, name='setup_2fa'),
     path('verify-2fa/', views.verify_2fa_setup, name='verify_2fa_setup'),
     path('disable-2fa/', views.disable_2fa, name='disable_2fa'),  

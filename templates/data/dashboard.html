@@ -1,0 +1,94 @@
+{% extends 'baseTim.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+
+  <!-- Row 1: Full-Width TradingView Widget -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container" style="height:600px; width:100%;">
+        <div id="tradingview_chart"></div>
+      </div>
+      <!-- TradingView Widget END -->
+    </div>
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  
+</div>
+<!-- TradingView Widget END -->
+  </div>
+
+  <!-- Row 2: Watchlist, Project Details, Deep-Dive -->
+  <div class="row">
+    <!-- Left Sidebar: Watchlist -->
+    <div class="col-md-3">
+      <h4>Watchlist</h4>
+      <ul id="watchlist">
+        {% for symbol in watchlist %}
+          <li>
+            <a href="#" onclick="loadProject('{{ symbol }}')">{{ symbol }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <!-- Form to add new symbol -->
+      <input type="text" id="newSymbol" placeholder="Enter coin symbol">
+      <button onclick="addToWatchlist()">Add</button>
+    </div>
+
+    <!-- Main Content: Project Details -->
+    <div class="col-md-6">
+      <div id="project-details">
+        <h3>Select a coin to view details</h3>
+      </div>
+    </div>
+
+    <!-- Right Sidebar: Deep-Dive Analysis -->
+    <div class="col-md-3">
+      <div id="deep-dive">
+        <h4>Deep-Dive Analysis</h4>
+        <p>Details will appear here...</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Your JavaScript logic for loading projects & watchlist -->
+<script src="{% static 'js/dashboard.js' %}"></script>
+
+<!-- TradingView Advanced Chart Script -->
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+{
+  "width": "100%",
+  "height": "600",
+  "symbol": "BITSTAMP:BTCUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "details": true,
+  "withdateranges": true,
+  "container_id": "tradingview_chart"
+}
+</script>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+  {
+  "feedMode": "symbol",
+  "symbol": "BITSTAMP:BTCUSD",
+  "isTransparent": false,
+  "displayMode": "regular",
+  "width": 400,
+  "height": 550,
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+{% endblock %}

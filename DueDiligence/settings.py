@@ -176,3 +176,8 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
+
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'  # or your Docker host
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+# If using django-celery-beat for advanced scheduling

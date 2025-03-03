@@ -7,6 +7,26 @@
 {% block extra_css %}
 
 <style>
+/* Ensure error messages appear under the input fields */
+.input-group {
+  margin-bottom: 0.5rem; /* Add space between input groups */
+}
+
+.error-message {
+  display: block; /* Ensure the error message is displayed as a block element */
+  margin-top: 0.25rem; /* Add a small margin above the error message */
+  font-size: 12px; /* Smaller font size for error messages */
+  color: red; /* Red color for error messages */
+}
+
+.error-message i {
+  margin-right: 0.25rem; /* Add space between the icon and the text */
+}
+
+
+</style>
+<style>
+
   .custom-file-upload {
     display: flex;
     align-items: center;
@@ -293,32 +313,37 @@
             </form>
             </div>
           </div>
-          <!-- Card Change Password -->
+         <!-- Card Change Password -->
 <div class="card mt-4" id="password">
   <div class="card-header">
     <h5>Change Password</h5>
   </div>
   <div class="card-body pt-0">
-    <!-- Display messages (success/error) -->
- 
-
     <!-- Change Password Form -->
     <form method="post" action="{% url 'change_password' %}">
       {% csrf_token %}
       <!-- Current Password -->
-      <div class="input-group input-group-outline">
+      <div class="input-group input-group-outline mb-3">
         <label class="form-label">Current password</label>
         <input type="password" class="form-control" name="current_password" required>
       </div>
       <!-- New Password -->
-      <div class="input-group input-group-outline my-4">
-        <label class="form-label">New password</label>
-        <input type="password" class="form-control" name="new_password" required>
+      <div class="input-group input-group-outline mb-3">
+        <label for="new_password" class="form-label">New password</label>
+        <input type="password" class="form-control" name="new_password" id="new_password" required>
+      </div>
+      <!-- Error message container for new password -->
+      <div id="password-error" class="text-danger mt-1" style="font-size: 12px;">
+        <span></span>
       </div>
       <!-- Confirm New Password -->
-      <div class="input-group input-group-outline">
-        <label class="form-label">Confirm New password</label>
-        <input type="password" class="form-control" name="confirm_new_password" required>
+      <div class="input-group input-group-outline mb-3">
+        <label for="confirm_password" class="form-label">Confirm New password</label>
+        <input type="password" class="form-control" name="confirm_new_password" id="confirm_password" required>
+      </div>
+      <!-- Error message container for confirm password -->
+      <div id="confirm-password-error" class="text-danger mt-1" style="font-size: 12px;">
+         <span></span>
       </div>
 
       <!-- Password Requirements -->
@@ -342,7 +367,7 @@
       </ul>
 
       <!-- Submit Button -->
-      <button type="submit" class="btn bg-gradient-dark btn-sm float-end mt-6 mb-0">Update password</button>
+      <button type="submit" class="btn bg-gradient-dark btn-sm float-end mt-6 mb-0" id="submit-button" disabled>Update password</button>
     </form>
   </div>
 </div>
@@ -625,7 +650,62 @@ document.querySelector(".breadcrumb-item a").innerText = "https://...";
     }
   });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const newPasswordInput = document.getElementById("new_password");
+  const confirmPasswordInput = document.getElementById("confirm_password");
+  const submitButton = document.getElementById("submit-button");
+  
+  // Get the error message containers
+  const passwordError = document.getElementById("password-error").querySelector("span");
+  const confirmPasswordError = document.getElementById("confirm-password-error").querySelector("span");
 
+  function validatePassword() {
+      const newPassword = newPasswordInput.value;
+      const confirmPassword = confirmPasswordInput.value;
+      let errors = [];
+
+      // Check for minimum length
+      if (newPassword.length < 6) {
+          errors.push("At least 6 characters");
+      }
+      // Check for at least one number
+      if (!/\d/.test(newPassword)) {
+          errors.push("At least one number");
+      }
+      // Check for at least one special character
+      if (!/[!@#$%^&*(),.?":{}|<>]/.test(newPassword)) {
+          errors.push("At least one special character");
+      }
+
+      // Update validation message for new password
+      if (errors.length > 0) {
+          passwordError.innerHTML = errors.join("<br>");
+          newPasswordInput.style.border = "1px solid red"; // Set red border for invalid password
+          submitButton.disabled = true;
+      } else {
+          passwordError.innerHTML = "";
+          newPasswordInput.style.border = "1px solid green"; // Set green border for valid password
+          submitButton.disabled = false;
+      }
+
+      // Check if passwords match
+      if (newPassword !== confirmPassword) {
+          confirmPasswordError.innerHTML = "Passwords do not match!";
+          confirmPasswordInput.style.border = "1px solid red"; // Set red border for mismatched passwords
+          submitButton.disabled = true;
+      } else {
+          confirmPasswordError.innerHTML = "";
+          confirmPasswordInput.style.border = "1px solid green"; // Set green border for matched passwords
+          submitButton.disabled = false;
+      }
+  }
+
+  // Listen for input changes in both fields
+  newPasswordInput.addEventListener("input", validatePassword);
+  confirmPasswordInput.addEventListener("input", validatePassword);
+});
+  </script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -690,76 +770,7 @@ document.querySelector(".breadcrumb-item a").innerText = "https://...";
   });
 </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const newPasswordInput = document.querySelector('input[name="new_password"]');
-      const confirmPasswordInput = document.querySelector('input[name="confirm_new_password"]');
-      const submitButton = document.querySelector('button[type="submit"]');
-      
-      // Create a validation message container for the new password
-      const validationMessage = document.createElement("div");
-      validationMessage.className = "error-message";
-      validationMessage.style.fontSize = "14px";
-      validationMessage.style.marginTop = "5px";
-      newPasswordInput.after(validationMessage);
-  
-      // Create a confirmation message container for the confirm password
-      const confirmationMessage = document.createElement("div");
-      confirmationMessage.className = "error-message";
-      confirmationMessage.style.fontSize = "14px";
-      confirmationMessage.style.marginTop = "5px";
-      confirmPasswordInput.after(confirmationMessage);
-  
-      function validatePassword() {
-          const newPassword = newPasswordInput.value;
-          const confirmPassword = confirmPasswordInput.value;
-          let errors = [];
-  
-          // Check for minimum length
-          if (newPassword.length < 6) {
-              errors.push("At least 6 characters");
-          }
-          // Check for at least one number
-          if (!/\d/.test(newPassword)) {
-              errors.push("At least one number");
-          }
-          // Check for at least one special character
-          if (!/[!@#$%^&*(),.?":{}|<>]/.test(newPassword)) {
-              errors.push("At least one special character");
-          }
-  
-          // Update validation message for new password
-          if (errors.length > 0) {
-              validationMessage.innerHTML = errors.join("<br>");
-              validationMessage.style.color = "red";
-              newPasswordInput.style.borderColor = "red";
-              submitButton.disabled = true;
-          } else {
-              validationMessage.innerHTML = "Password is strong!";
-              validationMessage.style.color = "green";
-              newPasswordInput.style.borderColor = "green";
-              submitButton.disabled = false;
-          }
-  
-          // Check if passwords match
-          if (newPassword !== confirmPassword) {
-              confirmationMessage.innerHTML = "Passwords do not match!";
-              confirmationMessage.style.color = "red";
-              confirmPasswordInput.style.borderColor = "red";
-              submitButton.disabled = true;
-          } else {
-              confirmationMessage.innerHTML = "Passwords match!";
-              confirmationMessage.style.color = "green";
-              confirmPasswordInput.style.borderColor = "green";
-              submitButton.disabled = false;
-          }
-      }
-  
-      // Listen for input changes in both fields
-      newPasswordInput.addEventListener("input", validatePassword);
-      confirmPasswordInput.addEventListener("input", validatePassword);
-  });
-  </script>
+
 
 {% endblock %}
 

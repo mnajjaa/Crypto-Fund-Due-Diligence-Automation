@@ -303,16 +303,18 @@ def verify_2fa_setup(request):
     if request.method == 'POST':
         profile = Profile.objects.get(user=request.user)
         totp = pyotp.TOTP(profile.otp_secret)
-        token = request.POST.get('token')
+
+        # Collect the token as one 6-digit string
+        token = ''.join([request.POST.get(f'token_{i}', '') for i in range(1, 7)])
 
         if totp.verify(token):
-            profile.is_2fa_enabled = True  # Update this field
-            profile.save()  # Save the changes
-            #messages.success(request, '2FA successfully enabled!')
-            return redirect('profile')
+            profile.is_2fa_enabled = True
+            profile.save()
+            return JsonResponse({'success': True})
         else:
-            messages.error(request, 'Invalid token. Please try again.')
-            return redirect('setup_2fa')
+            return JsonResponse({'success': False, 'message': 'Invalid token. Please try again.'})
+    
+    return JsonResponse({'success': False, 'message': 'Invalid request method.'})
 
 @login_required
 def verify_2fa_login(request):

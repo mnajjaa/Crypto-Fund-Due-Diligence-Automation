@@ -1,0 +1,672 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Funds and Investors Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        /* Custom styles for the dashboard - Refined for better alignment and responsiveness */
+        body {
+            font-family: 'Inter', sans-serif; /* More modern font */
+            background-color: #f3f4f6; /* Tailwind's gray-100 */
+            color: #1f2937; /* Tailwind's gray-800 */
+            margin: 0;
+            padding: 0;
+        }
+        .dashboard-container {
+            max-width: 1200px; /* Increased max-width for larger screens */
+            margin: 2rem auto; /* Increased margin for better spacing */
+            padding: 1rem;
+        }
+        .header-section {
+            display: flex;
+            justify-content: space-between; /* Space out title and description */
+            align-items: flex-start; /* Align items to the start, not center */
+            margin-bottom: 2rem; /* Increased margin */
+        }
+        .header-title {
+            font-size: 2.25rem; /* Tailwind's text-3xl */
+            font-weight: 600; /* Tailwind's font-semibold */
+            color: #1e293b; /* Tailwind's gray-900 */
+            margin-bottom: 0.75rem; /* Tailwind's mb-3 */
+        }
+        .header-description {
+            font-size: 1rem; /* Tailwind's text-base */
+            color: #4b5563; /* Tailwind's gray-600 */
+            line-height: 1.75; /* Tailwind's leading-relaxed */
+            max-width: 60%; /* Limit the width of the description */
+        }
+
+        .controls-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .filter-button, .layout-button, .preset-button {
+            display: inline-flex; /* Use inline-flex for better alignment */
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* Tailwind's rounded-md */
+            background-color: white;
+            color: #374151; /* Tailwind's gray-700 */
+            border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Tailwind's shadow-sm */
+            font-size: 0.875rem; /* Tailwind's text-sm */
+            font-weight: 500; /* Tailwind's font-medium */
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth transition */
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+        .filter-button:hover, .layout-button:hover, .preset-button:hover {
+            background-color: #f9fafb; /* Tailwind's gray-50 */
+            transform: translateY(-1px); /* Slight lift on hover */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Slightly larger shadow on hover */
+        }
+        .active-button {
+            background-color: #6b7280 !important; /* Tailwind's gray-500 */
+            color: white !important;
+            border-color: #6b7280 !important;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* Tailwind's rounded-md */
+            background-color: #4CAF50; /* Green */
+            color: white;
+            font-size: 0.875rem; /* Tailwind's text-sm */
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Start with single column for small screens */
+            gap: 1.5rem; /* Tailwind's gap-6 */
+            margin-bottom: 2rem;
+        }
+        /* Media query for 2 columns on medium screens and larger */
+        @media (min-width: 768px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+            }
+        }
+        /* Media query for 4 columns on large screens and larger */
+        @media (min-width: 1200px) {
+            .card-grid {
+                grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+            }
+        }
+
+        .info-card {
+            background-color: white;
+            border-radius: 0.5rem; /* Tailwind's rounded-lg */
+            padding: 1.5rem; /* Tailwind's p-6 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex; /* Use flexbox for vertical alignment of content */
+            flex-direction: column;
+            justify-content: space-between; /* push content to the edges */
+            height: 100%; /* Ensure cards are the same height */
+        }
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .card-title {
+            font-size: 1.25rem; /* Tailwind's text-xl */
+            font-weight: 600; /* Tailwind's font-semibold */
+            color: #1e293b; /* Tailwind's gray-900 */
+            margin-bottom: 0.75rem; /* Tailwind's mb-3 */
+        }
+        .card-value {
+            font-size: 2rem; /* Tailwind's text-3xl */
+            font-weight: 700; /* Tailwind's font-bold */
+            color: #374151; /* Tailwind's gray-700 */
+            margin-bottom: 0.5rem; /* Tailwind's mb-2 */
+        }
+        .card-description {
+            font-size: 0.875rem; /* Tailwind's text-sm */
+            color: #6b7280; /* Tailwind's gray-500 */
+        }
+
+        .table-card {
+            background-color: white;
+            border-radius: 0.5rem; /* Tailwind's rounded-lg */
+            padding: 1.5rem; /* Tailwind's p-6 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+        }
+        .table-title {
+            font-size: 1.25rem; /* Tailwind's text-xl */
+            font-weight: 600; /* Tailwind's font-semibold */
+            color: #1e293b; /* Tailwind's gray-900 */
+            margin-bottom: 1rem; /* Tailwind's mb-4 */
+        }
+        .table-wrapper {
+            overflow-x: auto; /* Enable horizontal scrolling for small screens */
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            min-width: 800px; /* Ensure table doesn't get too narrow on wide screens */
+        }
+        .data-table thead {
+            background-color: #f7fafc; /* Tailwind's gray-50 */
+        }
+        .data-table th {
+            padding: 0.75rem 1rem; /* Tailwind's px-4 py-3 */
+            text-align: left;
+            font-size: 0.875rem; /* Tailwind's text-sm */
+            font-weight: 500; /* Tailwind's font-medium */
+            color: #4b5563; /* Tailwind's gray-600 */
+            border-bottom: 1px solid #e5e7eb; /* Tailwind's border-gray-200 */
+        }
+        .data-table td {
+            padding: 0.75rem 1rem; /* Tailwind's px-4 py-3 */
+            font-size: 0.875rem; /* Tailwind's text-sm */
+            color: #374151; /* Tailwind's gray-700 */
+            border-bottom: 1px solid #e5e7eb; /* Tailwind's border-gray-200 */
+        }
+        .data-table tbody tr:hover {
+            background-color: #f9fafb; /* Tailwind's gray-50 */
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem; /* Tailwind's mt-6 */
+            gap: 0.5rem; /* Tailwind's gap-2 */
+        }
+        .page-button {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* Tailwind's rounded-md */
+            background-color: white;
+            color: #374151; /* Tailwind's gray-700 */
+            border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+            font-size: 0.875rem; /* Tailwind's text-sm */
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+        .page-button:hover {
+            background-color: #f9fafb; /* Tailwind's gray-50 */
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+        .page-button.active {
+            background-color: #6b7280; /* Tailwind's gray-500 */
+            color: white;
+            border-color: #6b7280;
+        }
+        .show-rows {
+            margin-top: 1.5rem; /* Tailwind's mt-6 */
+            text-align: center;
+            font-size: 0.875rem; /* Tailwind's text-sm */
+            color: #4b5563; /* Tailwind's gray-600 */
+        }
+        .show-rows select {
+            margin-left: 0.5rem; /* Tailwind's ml-2 */
+            padding: 0.25rem 0.5rem; /* Tailwind's px-2 py-1 */
+            border-radius: 0.375rem; /* Tailwind's rounded-md */
+            border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+            font-size: 0.875rem; /* Tailwind's text-sm */
+            color: #374151; /* Tailwind's gray-700 */
+        }
+        .chart-container {
+           background-color: white;
+            border-radius: 0.5rem; /* Tailwind's rounded-lg */
+            padding: 1.5rem; /* Tailwind's p-6 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+            margin-bottom: 2rem;
+        }
+
+        .chart-title {
+            font-size: 1.25rem; /* Tailwind's text-xl */
+            font-weight: 600; /* Tailwind's font-semibold */
+            color: #1e293b; /* Tailwind's gray-900 */
+            margin-bottom: 1rem; /* Tailwind's mb-4 */
+        }
+        #myChart {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            max-height: 300px; /* Limit the maximum height of the chart */
+        }
+       .doughnut-chart-container {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            display: flex; /* Use Flexbox */
+            flex-direction: column;
+            align-items: center; /* Center the chart horizontally */
+
+        }
+
+        .doughnut-chart-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            text-align: center; /* Center title */
+        }
+
+        #doughnutChart {
+            width: 100%;
+            height: auto;
+            max-width: 300px; /* Limit the maximum width of the chart */
+            max-height: 300px; /* Limit the maximum height of the chart */
+        }
+        .legend {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align legend items to the start */
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        .legend-color {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+        }
+        .top-investors-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+
+        .top-investors-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .top-investors-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        #topInvestorsChart {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            margin-bottom: 1rem;
+        }
+
+        .investor-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+
+        .investor-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            margin: 0 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #374151;
+        }
+
+        .activity-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    margin: 0 0 15px 0;
+    color: #2d3748;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.progress-container {
+    background: linear-gradient(to right, #ff4d4d 0%, #00cc66 100%);
+    border-radius: 8px;
+    height: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-overlay {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background: white;
+    border-radius: 0 8px 8px 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 8px;
+}
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="dashboard-container">
+        <header class="header-section">
+            <h1 class="header-title">Crypto Funds and Investors</h1>
+            <p class="header-description">Find key data about popular VC funds and investor portfolios.</p>
+        </header>
+        <section class="controls-section">
+            <button class="filter-button active-button">Filter funds</button>
+            <button class="layout-button">Layout</button>
+            <button class="filter-button">Filters</button>
+            <button class="preset-button">Presets</button>
+            <button class="active-funds-button">Active Funds</button>
+             <button class="angel-investors-button">Angel Investors</button>
+            <a href="#" class="download-button">Download Data</a>
+        </section>
+        <section class="card-grid">
+            <div class="activity-card">
+                <h3 class="card-title">Investment Activity</h3>
+                <div class="progress-container">
+                    <div class="progress-overlay" style="width: 26%"></div>
+                </div>
+                <div class="progress-label">
+                    <span>Normal</span>
+                    <span>74%</span>
+                </div>
+            </div>
+
+            
+            <div class="top-investors-card">
+                <h2 class="top-investors-title">Top Investors</h2>
+            
+                <!-- Chart for Top Investors -->
+                <div class="chart-container">
+                    <canvas id="topInvestorsChart" width="400" height="200"></canvas>
+                </div>
+            
+                <!-- Investor Logos Section -->
+                <div class="investor-logos">
+                    {% for investor in investors %}
+                        <div class="investor-logo">
+                            <img src="{{ investor.logo }}" alt="{{ investor.name }}" class="investor-logo-img">
+                            
+                        </div>
+                    {% empty %}
+                        <p class="no-data">No investors data available.</p>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <section class="doughnut-chart-container">
+                <h2 class="doughnut-chart-title">Investment Focus</h2>
+                <div id="doughnutChart" width="300" height="300"></div>
+            </section>
+             
+        </section>
+        
+        
+
+        <section class="table-card">
+            <h2 class="table-title">Funds and Investors Data</h2>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Tier</th>
+                            <th>Latest Deal</th>
+                            <th>Portfolio</th>
+                            <th>Retail ROI</th>
+                            <th>Focus Area</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for fund in funds %}
+                            <tr class="hover:bg-gray-50 cursor-pointer" onclick="window.location.href='/fund/{{ fund.slug|default:'-' }}/'">
+                                <td class="flex items-center gap-3 text-gray-700 font-medium">
+                                    {% if fund.logo %}
+                                        <img src="{{ fund.logo }}" alt="{{ fund.name|default:'N/A' }} Logo" class="w-8 h-8 rounded-md border border-gray-200 bg-white object-contain p-1">
+                                    {% else %}
+                                        <div class="w-8 h-8 rounded-md bg-gray-200 flex items-center justify-center text-xs text-gray-500">N/A</div>
+                                    {% endif %}
+                                    <span>{{ fund.name|default:"N/A" }}</span>
+                                </td>
+                                <td class="text-gray-600">{{ fund.tier|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.type|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.location|default:"N/A" }}</td>
+                                <td class="text-gray-600">
+                                    {% if fund.latestDealName %}
+                                        {{ fund.latestDealName }}<br>
+                                        <span class="text-xs text-gray-400">
+                                            {{ fund.latestDealRaise|default:"N/A" }} USD
+                                        </span>
+                                    {% else %}
+                                        N/A
+                                    {% endif %}
+                                </td>
+                                <td class="text-gray-600">{{ fund.portfolioCount|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.retailRoi|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.focusArea|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.preferredStage|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.fundingRounds|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.leadInvestments|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.mainFundingCountry|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.twitterUsername|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.followersCount|default:"N/A" }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="14" class="text-center text-gray-500 py-4">No funds data available.</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                    
+                    
+                </table>
+            </div>
+            <div class="pagination">
+                <button class="previous">Previous</button>
+                <span class="current-page">Page 1 of {{ total_pages }}</span>
+                <button class="next">Next</button>
+            </div>
+            
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+    <script>
+    
+        // Doughnut Chart using ApexCharts
+        const investmentFocusNames = [{% for name in investment_focus_names %}"{{ name }}"{% if not forloop.last %}, {% endif %}{% endfor %}];
+        console.log(investmentFocusNames); // Debugging line to check the names
+const investmentFocusPercent = [{% for percent in investment_focus_percent %}{{ percent }}{% if not forloop.last %}, {% endif %}{% endfor %}];
+
+// Doughnut Chart using ApexCharts
+var optionDonut = {
+    series: investmentFocusPercent,
+    chart: {
+        type: 'donut',
+        width: '100%',  // Make chart responsive
+    },
+    labels: investmentFocusNames, // Ensure labels are set properly
+    colors: ['#4F46E5', '#6366F1', '#8B5CF6', '#A855F7', '#D946EF'], // Customize the color scheme as needed
+    responsive: [{
+        breakpoint: 480,
+        options: {
+            chart: {
+                width: 200
+            },
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }],
+    legend: {
+        show: true, // Ensure legend is enabled
+        position: 'bottom',
+        fontSize: '10rem', // Tailwind's text-sm
+        fontFamily: 'Inter, sans-serif',
+        labels: {
+            colors: '#4b5563', // Tailwind's gray-600
+        },
+        itemMargin: {
+            horizontal: 8,
+            vertical: 4
+        }
+    }
+};
+
+var chartDonut = new ApexCharts(document.querySelector("#doughnutChart"), optionDonut);
+chartDonut.render();
+
+       // Top Investors Chart Configuration
+const topInvestorsCtx = document.getElementById('topInvestorsChart').getContext('2d');
+
+// Dynamically populate the chart with actual investor data
+const investorNames = [{% for name in investor_names %}"{{ name }}"{% if not forloop.last %}, {% endif %}{% endfor %}];
+const investorCounts = [{% for count in investor_counts %}{{ count }}{% if not forloop.last %}, {% endif %}{% endfor %}];
+
+const topInvestorsData = {
+    labels: investorNames,
+    datasets: [{
+        label: 'Investments',
+        data: investorCounts,
+        backgroundColor: ['#818cf8', '#a78bfa', '#d946ef', '#f43f5e', '#f59e0b', '#34d399', '#0ea5e9'],  // You can add more colors if needed
+        borderColor: ['#818cf8', '#a78bfa', '#d946ef', '#f43f5e', '#f59e0b', '#34d399', '#0ea5e9'],
+        borderWidth: 1,
+    }]
+};
+
+const topInvestorsOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+        y: {
+            beginAtZero: true,
+            ticks: {
+                color: '#6b7280',
+            },
+            grid: {
+                color: '#d1d5db',
+            }
+        },
+        x: {
+            ticks: {
+                color: '#6b7280',
+            },
+            grid: {
+                color: '#d1d5db',
+            },
+        },
+    },
+    plugins: {
+        legend: {
+            display: false,
+        }
+    }
+};
+
+const topInvestorsChart = new Chart(topInvestorsCtx, {
+    type: 'bar',
+    data: topInvestorsData,
+    options: topInvestorsOptions,
+});
+
+
+let currentPage = 1;
+    const rowsPerPage = 10;
+    const rows = document.querySelectorAll('.data-table tbody tr');
+    const totalRows = rows.length;
+
+    // Function to display the current page
+    function displayPage(page) {
+        const start = (page - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        
+        rows.forEach((row, index) => {
+            if (index >= start && index < end) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+        
+        document.querySelector('.page-link .current-page').textContent = `Page ${page} of ${Math.ceil(totalRows / rowsPerPage)}`;
+    }
+
+    // Function to update page number
+    function updatePagination() {
+        const totalPages = Math.ceil(totalRows / rowsPerPage);
+        document.querySelector('.pagination .previous').addEventListener('click', function () {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPage(currentPage);
+            }
+        });
+
+        document.querySelector('.pagination .next').addEventListener('click', function () {
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayPage(currentPage);
+            }
+        });
+    }
+
+    displayPage(currentPage);
+    updatePagination();
+
+
+    </script>
+</body>
+</html>
+
+
+
+{% endblock %}

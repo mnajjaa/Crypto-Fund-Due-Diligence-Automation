@@ -1,0 +1,10 @@
+coinKey,coinName,raise,coinImage,fund_slug,fund_logo,isHidden
+walrus-protocol,Walrus,140000000,https://img.cryptorank.io/coins/60x60.walrus1727864479768.png,standard-crypto,https://img.cryptorank.io/funds/60x60.standard_crypto1658135937193.png,False
+walrus-protocol,Walrus,140000000,https://img.cryptorank.io/coins/60x60.walrus1727864479768.png,andreessen-horowitz,https://img.cryptorank.io/funds/60x60.andreessen horowitz (a16z)1648484432797.png,False
+walrus-protocol,Walrus,140000000,https://img.cryptorank.io/coins/60x60.walrus1727864479768.png,electric-capital,https://img.cryptorank.io/funds/60x60.electric capital1648564160766.png,False
+chronicle-labs,Chronicle,12000000,https://img.cryptorank.io/coins/60x60.chronicle1742910290000.png,strobe-ventures,https://img.cryptorank.io/funds/60x60.strobe_prev_blocktower_capital1742911103973.png,False
+chronicle-labs,Chronicle,12000000,https://img.cryptorank.io/coins/60x60.chronicle1742910290000.png,galaxy-digital,https://img.cryptorank.io/funds/60x60.galaxy1691061461595.png,False
+chronicle-labs,Chronicle,12000000,https://img.cryptorank.io/coins/60x60.chronicle1742910290000.png,stani-kulechov,https://img.cryptorank.io/funds/60x60.stani_kulechov1678784089440.png,False
+front-finance,Mesh,82000000,https://img.cryptorank.io/coins/60x60.mesh1724081161895.png,paradigm,https://img.cryptorank.io/funds/60x60.paradigm capital1648561644615.png,False
+front-finance,Mesh,82000000,https://img.cryptorank.io/coins/60x60.mesh1724081161895.png,consensys,https://img.cryptorank.io/funds/60x60.consen_sys1689061685748.png,False
+front-finance,Mesh,82000000,https://img.cryptorank.io/coins/60x60.mesh1724081161895.png,yoloio,https://img.cryptorank.io/funds/60x60.yolo_investments1664877916821.png,False

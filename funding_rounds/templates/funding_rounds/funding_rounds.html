@@ -1,0 +1,170 @@
+{% extends "baseTim.html" %}
+{% block title %}Funding Rounds{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">📈 Recent Crypto Investments and Fundraising Rounds</h2>
+
+    <div class="row g-4">
+        <!-- Total Funding Overview -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-3">
+                <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+                    <h5 class="card-title">Total Funding Overview <span class="text-muted">30D</span></h5>
+                    <p><strong>Funding Rounds Total:</strong> {{ overview.fundingRoundsTotal }}</p>
+                    <p><strong>Total Investment Volume:</strong> ${{ overview.totalInvestments|floatformat:"0" }}</p>
+                    <p><strong>Investment Focus:</strong> {{ overview.investmentFocus_name }}</p>
+                    <p><strong>Average Round Size:</strong> {{ overview.averageRoundSize }}</p>
+                    <p><strong>Investment Stage:</strong> {{ overview.investmentStage }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hot Rounds -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-3">
+                <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+                    <h5 class="card-title">🔥 Hot Rounds <span class="text-muted">30D</span></h5>
+                    {% for round in hot_rounds %}
+                        <div class="mb-3 border-bottom pb-2">
+                            <strong><img src="{{ round.coinImage }}" width="24"> {{ round.coinName }}</strong><br>
+                            Raised: ${{ round.raise|floatformat:"0" }}<br>
+                            Funders: {{ round.fund_slug }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Fundraising Digest -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm p-3">
+                <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+                    <h5 class="card-title">📰 Fundraising Digest</h5>
+                    <ul class="list-group list-group-flush">
+                    {% for article in digest %}
+                        <li class="list-group-item">
+                            <strong>{{ article.title }}</strong><br>
+                            <small class="text-muted">{{ article.publishDate }}</small>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Separator -->
+    <hr class="my-5">
+
+    <!-- CryptoRank Data Table -->
+    <div id="cryptorank-table" class="mt-5">
+        <h4>🔍 All Recent Funding Rounds (via CryptoRank API)</h4>
+        <div class="table-responsive rounded shadow-sm">
+            <table class="table table-hover align-middle text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Raise</th>
+                        <th>Stage</th>
+                        <th>Funds & Investors</th>
+                        <th>Date</th>
+                        <th>X Score</th>
+                        <th>Followers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item in funding_main_page %}
+                    <tr>
+                        <!-- Name + Logo -->
+                        <td class="text-start">
+                            <img src="{{ item.coinImage }}" width="26" height="26" class="me-2 rounded-circle">
+                            {{ item.coinName }}
+                        </td>
+    
+                        <!-- Raise -->
+                        <td>
+                            {% if item.raise %}
+                                $ {{ item.raise|floatformat:"2" }}
+                            {% else %}
+                                <span class="text-muted">N/A</span>
+                            {% endif %}
+                        </td>
+    
+                        <!-- Stage -->
+                        <td>{{ item.stage|default:"—" }}</td>
+    
+                        <!-- Funds & Investors -->
+<td>
+    {% if item.funds %}
+        {% for fund in item.funds|slice:":2" %}
+            <img src="{{ fund.fund_image }}" title="{{ fund.fund_name }}" width="22" class="me-1 rounded-circle">
+        {% endfor %}
+        {% if item.funds|length > 2 %}
+            <span class="badge bg-light text-muted">+{{ item.funds|length|add:"-2" }}</span>
+        {% endif %}
+    {% else %}
+        —
+    {% endif %}
+</td>
+
+    
+                        <!-- Date -->
+                        <td>
+                            {% if item.date %}
+                                {{ item.date|date:"j M Y" }}
+                            {% else %}
+                                —
+                            {% endif %}
+                        </td>
+    
+                        <!-- X Score -->
+                        <td>{{ item.twitterScore|default:"—" }}</td>
+    
+                        <!-- Followers -->
+                        <td>
+                            {% if item.followers %}
+                                <div class="d-flex align-items-center justify-content-center">
+                                    {% for follower in item.followers|slice:":5" %}
+                                        <img src="{{ follower.follower_image }}" width="22" class="rounded-circle mx-1" title="{{ follower.follower_name }}">
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                —
+                            {% endif %}
+                        </td>
+                        
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Pagination Controls -->
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="text-muted">
+                Showing {{ funding_main_page.start_index }} to {{ funding_main_page.end_index }} of {{ funding_main_page.paginator.count }}
+            </div>
+            <nav>
+                <ul class="pagination mb-0">
+                    {% if funding_main_page.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ funding_main_page.previous_page_number }}">«</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">«</span></li>
+                    {% endif %}
+    
+                    <li class="page-item active"><span class="page-link">{{ funding_main_page.number }}</span></li>
+    
+                    {% if funding_main_page.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ funding_main_page.next_page_number }}">»</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">»</span></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    
+</div>
+{% endblock %}

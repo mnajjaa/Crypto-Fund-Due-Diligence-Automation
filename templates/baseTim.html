@@ -189,6 +189,25 @@
       f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
   </script>
+  
+    <script>
+      document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(el => {
+        el.addEventListener('click', function () {
+          const targetId = this.getAttribute('href');
+          if (!targetId || !targetId.startsWith('#')) return;
+    
+          const target = document.querySelector(targetId);
+          const bsCollapse = bootstrap.Collapse.getInstance(target) || new bootstrap.Collapse(target, { toggle: false });
+    
+          if (target.classList.contains('show')) {
+            bsCollapse.hide();
+          } else {
+            bsCollapse.show();
+          }
+        });
+      });
+    
+  </script>
   <!-- End Google Tag Manager -->
 </head>
 
@@ -208,17 +227,22 @@
     <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item mb-2 mt-0">
-          <a data-bs-toggle="collapse" href="#ProfileNav" class="nav-link text-dark" aria-controls="ProfileNav" role="button" aria-expanded="false">
+          <a data-bs-toggle="collapse"
+            href="#ProfileNav"
+            class="nav-link text-dark {% if request.path == '/profile/' %}active{% endif %}"
+            aria-controls="ProfileNav"
+            role="button"
+            aria-expanded="{% if request.path == '/profile/' %}true{% else %}false{% endif %}"> 
               <img src="{% if request.user.profile.profile_picture %}{{ request.user.profile.profile_picture.url }}{% else %}/media/profile_pics/Default.svg.png{% endif %}" class="avatar rounded-circle shadow-sm">
               <span class="nav-link-text ms-2 ps-1">
                   {{ request.user.first_name }} {{ request.user.last_name }}
               </span>
           </a>
-          <div class="collapse" id="ProfileNav">
+          <div class="collapse {% if request.path == '/profile/' %}show{% endif %}" id="ProfileNav">
               <ul class="nav">
                   <li class="nav-item">
-                      <a class="nav-link text-dark" href="{% url 'profile' %}">
-                          <span class="sidenav-mini-icon"> MP </span>
+                    <a class="nav-link text-dark {% if request.path == '/profile/' %}active{% endif %}" href="{% url 'profile' %}">
+                      <span class="sidenav-mini-icon"> MP </span>
                           <span class="sidenav-normal ms-3 ps-1"> My Profile </span>
                       </a>
                   </li>
@@ -239,20 +263,24 @@
       </li>
         <hr class="horizontal dark mt-0">
         <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link text-dark active" aria-controls="dashboardsExamples" role="button" aria-expanded="false">
+          <a data-bs-toggle="collapse"
+            href="#dashboardsExamples"
+            class="nav-link text-dark {% if request.path == '/' %}active{% endif %}"
+            aria-controls="dashboardsExamples"
+            aria-expanded="{% if request.path == '/' %}true{% else %}false{% endif %}">
             <i class="material-symbols-rounded opacity-5">space_dashboard</i>
             <span class="nav-link-text ms-1 ps-1">Dashboards</span>
           </a>
-          <div class="collapse  show " id="dashboardsExamples">
+          <div class="collapse {% if request.path == '/' %}show{% endif %}" id="dashboardsExamples">
             <ul class="nav ">
               <li class="nav-item active">
-                <a class="nav-link text-dark active" href="analytics.html">
+                <a class="nav-link text-dark {% if request.path == '/analytics/' %}active{% endif %}" href="">
                   <span class="sidenav-mini-icon"> A </span>
                   <span class="sidenav-normal  ms-1  ps-1"> Analytics </span>
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link text-dark " href="discover.html">
+                <a class="nav-link text-dark {% if request.path == '/discover/' %}active{% endif %}" href="">
                   <span class="sidenav-mini-icon"> D </span>
                   <span class="sidenav-normal  ms-1  ps-1"> Discover </span>
                 </a>
@@ -267,72 +295,13 @@
           <h6 class="ps-3  ms-2 text-uppercase text-xs font-weight-bolder text-dark">PAGES</h6>
         </li>
         <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#pagesExamples" class="nav-link text-dark " aria-controls="pagesExamples" role="button" aria-expanded="false">
-            <i class="material-symbols-rounded opacity-5 {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">contract</i>
-            <span class="nav-link-text ms-1 ps-1">Pages</span>
+          <a class="nav-link text-dark {% if request.path == '/sanctions/check/' %}active{% endif %}" href="{% url 'check_sanctions' %}">
+            <i class="material-symbols-rounded opacity-5 ms-2 me-2">contract</i>
+            <span class="nav-link-text ms-1 ps-1">Sanctions</span>
           </a>
-          <div class="collapse " id="pagesExamples">
-            <ul class="nav ">
-              <li class="nav-item ">
-                <a class="nav-link text-dark " data-bs-toggle="collapse" aria-expanded="false" href="#vrExamples">
-                  <span class="sidenav-mini-icon"> V </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Virtual Reality <b class="caret"></b></span>
-                </a>
-                <div class="collapse " id="vrExamples">
-                  <ul class="nav nav-sm flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/pages/vr/vr-default.html">
-                        <span class="sidenav-mini-icon"> V </span>
-                        <span class="sidenav-normal  ms-1  ps-1"> VR Default </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/pages/vr/vr-info.html">
-                        <span class="sidenav-mini-icon"> V </span>
-                        <span class="sidenav-normal  ms-1  ps-1"> VR Info </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/pages/pricing-page.html">
-                  <span class="sidenav-mini-icon"> P </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Pricing Page </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/pages/rtl-page.html">
-                  <span class="sidenav-mini-icon"> R </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> RTL </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/pages/widgets.html">
-                  <span class="sidenav-mini-icon"> W </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Widgets </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/pages/charts.html">
-                  <span class="sidenav-mini-icon"> C </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Charts </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/pages/sweet-alerts.html">
-                  <span class="sidenav-mini-icon"> S </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Sweet Alerts </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/pages/notifications.html">
-                  <span class="sidenav-mini-icon"> N </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Notifications </span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          
+          
+          
         </li>
         
         
@@ -706,7 +675,7 @@
           </div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item">
-              <a href="https://demos.creative-tim.com/material-dashboard-pro/pages/authentication/signin/illustration.html" class="px-1 py-0 nav-link line-height-0" target="_blank">
+              <a href="#" class="px-1 py-0 nav-link line-height-0" target="_blank">
                 <i class="material-symbols-rounded">
               account_circle
             </i>
@@ -827,91 +796,9 @@
 
 
   </main> 
-  <div class="fixed-plugin">
-    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
-      <i class="material-symbols-rounded py-2">settings</i>
-    </a>
-    <div class="card shadow-lg">
-      <div class="card-header pb-0 pt-3">
-        <div class="float-start">
-          <h5 class="mt-3 mb-0">Material UI Configurator</h5>
-          <p>See our dashboard options.</p>
-        </div>
-        <div class="float-end mt-4">
-          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
-            <i class="material-symbols-rounded">clear</i>
-          </button>
-        </div>
-        <!-- End Toggle Button -->
-      </div>
-      <hr class="horizontal dark my-1">
-      <div class="card-body pt-sm-3 pt-0">
-        <!-- Sidebar Backgrounds -->
-        <div>
-          <h6 class="mb-0">Sidebar Colors</h6>
-        </div>
-        <a href="javascript:void(0)" class="switch-trigger background-color">
-          <div class="badge-colors my-2 text-start">
-            <span class="badge filter bg-gradient-primary" data-color="primary" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-dark active" data-color="dark" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
-            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
-          </div>
-        </a>
-        <!-- Sidenav Type -->
-        <div class="mt-3">
-          <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between different sidenav types.</p>
-        </div>
-        <div class="d-flex">
-          <button class="btn bg-gradient-dark px-3 mb-2" data-class="bg-gradient-dark" onclick="sidebarType(this)">Dark</button>
-          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent" onclick="sidebarType(this)">Transparent</button>
-          <button class="btn bg-gradient-dark px-3 mb-2  active ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
-        </div>
-        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
-        <!-- Navbar Fixed -->
-        <div class="mt-3 d-flex">
-          <h6 class="mb-0">Navbar Fixed</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
-          </div>
-        </div>
-        <hr class="horizontal dark my-3">
-        <div class="mt-2 d-flex">
-          <h6 class="mb-0">Sidenav Mini</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarMinimize" onclick="navbarMinimize(this)">
-          </div>
-        </div>
-        <hr class="horizontal dark my-3">
-        <div class="mt-2 d-flex">
-          <h6 class="mb-0">Light / Dark</h6>
-          <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
-          </div>
-        </div>
-        <hr class="horizontal dark my-sm-4">
-        <a class="btn bg-gradient-primary w-100" href="https://www.creative-tim.com/product/material-dashboard-pro">Buy now</a>
-        <a class="btn bg-gradient-info w-100" href="https://www.creative-tim.com/product/material-dashboard">Free demo</a>
-        <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard">View documentation</a>
-        <div class="w-100 text-center">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
-          <h6 class="mt-3">Thank you for sharing!</h6>
-          <a href="https://twitter.com/intent/tweet?text=Check%20Material%20UI%20Dashboard%20PRO%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard-pro" class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-          </a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-dashboard-pro" class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+  
   <!--   Core JS Files   -->
-  <script src="{% static 'js/core/popper.min.js' %}"></script>
-  <script src="{% static 'js/core/bootstrap.min.js' %}"></script>
+
   <script src="{% static 'js/plugins/perfect-scrollbar.min.js' %}"></script>
   <script src="{% static 'js/plugins/smooth-scrollbar.min.js' %}"></script>
   <!-- Kanban scripts -->
@@ -1229,7 +1116,7 @@
     }
   </script>
   <!-- Github buttons -->
-  <script async defer src="../../../../buttons.github.io/buttons.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{% static 'js/material-dashboard.mine63c.js' %}"></script>
   

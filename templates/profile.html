@@ -121,6 +121,23 @@
 .async-hide {
   opacity: 0 !important
 }
+.otp-input {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
+  height: 45px;
+  width: 45px;
+  padding: 0;
+}
+
+.otp-input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+  outline: none;
+  transform: scale(1.05);
+}
+
 </style>
   {% endblock %}
          {% block nav %}
@@ -399,22 +416,35 @@
 
               <!-- OTP Input and Buttons Column -->
               <div class="col-md-6">
-                  <form method="POST" action="{% url 'verify_2fa_setup' %}" id="otpForm">
-                      {% csrf_token %}
-                      <div class="mb-3">
-                          <label for="otpToken" class="form-label">Enter OTP</label>
-                          <div class="d-flex gap-2">
-                              {% for i in "123456" %}
-                                  <input type="text" class="form-control form-control-sm text-center" maxlength="1" autocomplete="off" autocapitalize="off" name="token_{{ i }}" required style="width: 40px;">
-                              {% endfor %}
-                          </div>
+                <form method="POST" action="{% url 'verify_2fa_setup' %}" id="otpForm">
+                  {% csrf_token %}
+                  <div class="mb-3">
+                    <label for="otpToken" class="form-label">Enter OTP</label>
+                    <div class="row gx-2 gx-sm-3 mb-3">
+                      {% for i in "123456" %}
+                      <div class="col">
+                        <div class="input-group input-group-outline">
+                          <input 
+                            type="text"
+                            class="form-control form-control-lg text-center otp-input"
+                            maxlength="1"
+                            autocomplete="off"
+                            autocapitalize="off"
+                            name="token_{{ i }}"
+                            required
+                          >
+                        </div>
                       </div>
-                      <div class="d-flex gap-2">
-                          <button type="submit" class="btn bg-gradient-dark btn-sm">Verify</button>
-                          <button type="button" class="btn btn-sm btn-outline-dark" id="cancel2FAButton">Cancel</button>
-                      </div>
-                  </form>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button type="submit" class="btn bg-gradient-dark btn-sm">Verify</button>
+                    <button type="button" class="btn btn-sm btn-outline-dark" id="cancel2FAButton">Cancel</button>
+                  </div>
+                </form>
               </div>
+              
           </div>
       </div>
   </div>
@@ -707,68 +737,182 @@ document.addEventListener("DOMContentLoaded", function () {
 });
   </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.getElementById('flexSwitchCheckDefault');
-    const setup2FADiv = document.getElementById('2faSetup');
-    const qrCodeImage = document.getElementById('qrCodeImage');
-    const badge = document.getElementById('2faStatusBadge');
-
-    // Function to fetch and display the QR code
-    async function fetchQRCode() {
-      const response = await fetch("{% url 'setup_2fa' %}");
-      const data = await response.json();
-      if (data.success) {
-        qrCodeImage.src = `data:image/png;base64,${data.qr_code_base64}`;
-        setup2FADiv.style.display = 'block';
-      }
-    }
-
-    // Toggle 2FA setup section
-    toggleButton.addEventListener('change', function () {
-      if (toggleButton.checked) {
-        // Enable 2FA
-        fetchQRCode();
-        badge.textContent = 'Enabled';
-        badge.classList.remove('badge-danger');
-        badge.classList.add('badge-success');
-      } else {
-        // Disable 2FA
-        fetch("{% url 'disable_2fa' %}", {
-          method: 'POST',
-          headers: {
-            'X-CSRFToken': '{{ csrf_token }}',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({})
-        })
-        .then(response => response.json())
-        .then(data => {
-          if (data.success) {
-            badge.textContent = 'Disabled';
-            badge.classList.remove('badge-success');
-            badge.classList.add('badge-danger');
-            setup2FADiv.style.display = 'none';
-          } else {
-            alert('Failed to disable 2FA.');
-            toggleButton.checked = true; // Revert the toggle
-          }
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          alert('Failed to disable 2FA.');
-          toggleButton.checked = true; // Revert the toggle
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('flexSwitchCheckDefault');
+      const setup2FADiv = document.getElementById('2faSetup');
+      const qrCodeImage = document.getElementById('qrCodeImage');
+      const badge = document.getElementById('2faStatusBadge');
+      const cancelButton = document.getElementById('cancel2FAButton');
+      const otpForm = document.getElementById('otpForm'); // ✅ define here
+  
+      const updateBadge = (enabled) => {
+        badge.textContent = enabled ? 'Enabled' : 'Disabled';
+        badge.classList.toggle('badge-success', enabled);
+        badge.classList.toggle('badge-danger', !enabled);
+      };
+  
+      const showAlert = (type, message) => {
+        Swal.fire({
+          icon: type,
+          title: message,
+          timer: 3000,
+          showConfirmButton: false
         });
-      }
+      };
+  
+      const fetchQRCode = async () => {
+        try {
+          const response = await fetch("{% url 'setup_2fa' %}");
+          let data;
+          try {
+            data = await response.json();
+          } catch (parseError) {
+            const rawText = await response.text();
+            console.error('Raw response:', rawText);
+            Swal.fire({
+              icon: 'error',
+              title: 'Invalid response format from server.',
+              text: rawText,
+              showConfirmButton: true
+            });
+            return;
+          }
+  
+          if (data.success) {
+            qrCodeImage.src = `data:image/png;base64,${data.qr_code_base64}`;
+            setup2FADiv.style.display = 'block';
+          } else {
+            showAlert('error', 'Failed to fetch QR code.');
+          }
+        } catch (error) {
+          console.error('Fetch error:', error);
+          showAlert('error', 'Unexpected fetch error.');
+        }
+      };
+  
+      const disable2FA = async () => {
+        try {
+          const response = await fetch("{% url 'disable_2fa' %}", {
+            method: 'POST',
+            headers: {
+              'X-CSRFToken': '{{ csrf_token }}',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({})
+          });
+  
+          const data = await response.json();
+          if (data.success) {
+            updateBadge(false);
+            setup2FADiv.style.display = 'none';
+            showAlert('success', '2FA disabled successfully.');
+          } else {
+            showAlert('error', 'Failed to disable 2FA.');
+            toggleButton.checked = true;
+          }
+        } catch (error) {
+          console.error(error);
+          showAlert('error', 'Error disabling 2FA.');
+          toggleButton.checked = true;
+        }
+      };
+  
+      const handleToggleChange = () => {
+        if (toggleButton.checked) {
+          fetchQRCode();
+          updateBadge(true);
+        } else {
+          disable2FA();
+        }
+      };
+  
+      toggleButton.addEventListener('change', handleToggleChange);
+  
+      cancelButton.addEventListener('click', () => {
+        toggleButton.checked = false;
+        toggleButton.dispatchEvent(new Event('change'));
+      });
+  
+      // ✅ AJAX OTP form submission
+      otpForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+  
+        const formData = new FormData(otpForm);
+  
+        try {
+          const response = await fetch("{% url 'verify_2fa_setup' %}", {
+            method: 'POST',
+            headers: {
+              'X-CSRFToken': '{{ csrf_token }}',
+            },
+            body: formData
+          });
+  
+          let data;
+          try {
+            data = await response.json();
+          } catch (parseError) {
+            const raw = await response.text();
+            console.error('Non-JSON response:', raw);
+            Swal.fire({ icon: 'error', title: 'Invalid server response', text: raw });
+            return;
+          }
+  
+          if (data.success) {
+            Swal.fire({
+              icon: 'success',
+              title: '2FA successfully enabled!',
+              timer: 2500,
+              showConfirmButton: false
+            });
+  
+            setup2FADiv.style.display = 'none';
+            updateBadge(true);
+            toggleButton.checked = true;
+  
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: data.message || 'Failed to verify OTP.',
+              timer: 3000,
+              showConfirmButton: false
+            });
+          }
+  
+        } catch (error) {
+          console.error('Fetch error:', error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Unexpected fetch error.',
+            text: error.message,
+            showConfirmButton: true
+          });
+        }
+      });
     });
+  </script>
+  <script>
+    const otpInputs = document.querySelectorAll('.otp-input');
 
-    // Cancel button functionality
-    document.getElementById('cancel2FAButton').addEventListener('click', function () {
-      toggleButton.checked = false;
-      toggleButton.dispatchEvent(new Event('change'));
-    });
+otpInputs.forEach((input, index) => {
+  input.addEventListener('input', (e) => {
+    const value = e.target.value;
+    if (value.length === 1 && index < otpInputs.length - 1) {
+      otpInputs[index + 1].focus();
+    }
   });
-</script>
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace' && !e.target.value && index > 0) {
+      otpInputs[index - 1].focus();
+    }
+  });
+});
+
+  </script>
+  
+  
 
 
 

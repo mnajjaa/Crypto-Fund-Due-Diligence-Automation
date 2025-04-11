@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import JsonResponse
 from .data_manager import load_watchlist, save_watchlist
 from .services import fetch_project_data
@@ -39,76 +39,48 @@ def add_to_watchlist(request, symbol):
 import requests
 from django.shortcuts import render
 
-import requests
-from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.views.decorators.cache import cache_page
 
-import requests
-from django.shortcuts import render
+from data.services import load_fund_cache
 
-import requests
-from django.shortcuts import render
-
-import requests
-from django.shortcuts import render
-
+@cache_page(60 * 5)
 def dashFunds(request):
-    """
-    Render the dashboard page with the current watchlist, top investors, and crypto funds.
-    """
-    # Fetch the watchlist
     watchlist = load_watchlist()
 
-    # === Fetch Top Investors ===
+    # --- Fetch investors ---
     url_investors = "https://api.cryptorank.io/v0/funds/widgets/top-investors"
     response_investors = requests.get(url_investors)
-
     if response_investors.status_code == 200:
         investors_data = response_investors.json()
-        investors = []
-        investor_names = []
-        investor_counts = []
-        for investor in investors_data:
-            investors.append({
-                'name': investor.get('name'),
-                'logo': investor.get('logo'),
-                'count': investor.get('count')
-            })
-            investor_names.append(investor.get('name'))
-            investor_counts.append(investor.get('count'))
+        investors = [{
+            'name': i.get('name'),
+            'logo': i.get('logo'),
+            'count': i.get('count')
+        } for i in investors_data]
+        investor_names = [i['name'] for i in investors]
+        investor_counts = [i['count'] for i in investors]
     else:
         investors, investor_names, investor_counts = [], [], []
 
-    # === Fetch Investment Focus ===
-    url_investment_focus = "https://api.cryptorank.io/v0/funds/widgets/investment-focus"
-    response_investment_focus = requests.get(url_investment_focus)
-
-    if response_investment_focus.status_code == 200:
-        investment_focus_data = response_investment_focus.json()
-        investment_focus_names = [focus['name'] for focus in investment_focus_data]
-        investment_focus_percent = [focus['percent'] for focus in investment_focus_data]
+    # --- Fetch investment focus ---
+    url_focus = "https://api.cryptorank.io/v0/funds/widgets/investment-focus"
+    r_focus = requests.get(url_focus)
+    if r_focus.status_code == 200:
+        focus_data = r_focus.json()
+        investment_focus_names = [f['name'] for f in focus_data]
+        investment_focus_percent = [f['percent'] for f in focus_data]
     else:
         investment_focus_names, investment_focus_percent = [], []
 
-    # === Fetch the Top 1000 Funds ===
-    base_url = "https://api.cryptorank.io/v0/funds/table/"
-    all_funds = []
-
-    for offset in range(0, 1000, 100):
-        params = {"limit": 100, "offset": offset}
-        res = requests.get(base_url, params=params)
-        if res.status_code == 200:
-            data = res.json()
-            all_funds.extend(data.get("data", []))
-
-        else:
-            print(f"Failed to fetch data at offset {offset}")
-
-    # === Clean and Structure the Funds Data ===
+    # --- Get funds from shared cache ---
+    fund_cache = load_fund_cache()
     funds = []
-    for fund in all_funds:
+    for fund in fund_cache.values():
         retail_roi = fund.get("retailRoi")
-    
         funds.append({
+            "id": fund.get("id"),
+            "slug": fund.get("slug"),
             "name": fund.get("name"),
             "logo": fund.get("logo"),
             "tier": fund.get("tier"),
@@ -126,8 +98,15 @@ def dashFunds(request):
             "mainFundingCountry": fund.get("mainFundingCountry"),
             "twitterUsername": (fund.get("twitterData") or {}).get("twitterUsername"),
             "followersCount": (fund.get("twitterData") or {}).get("followersCount"),
-
         })
+
+    # --- Pagination ---
+    paginator = Paginator(funds, 10)
+    page = request.GET.get('page', 1)
+    try:
+        page_obj = paginator.page(page)
+    except (PageNotAnInteger, EmptyPage):
+        page_obj = paginator.page(1)
 
     return render(request, 'data/dashFunds.html', {
         'watchlist': watchlist,
@@ -136,26 +115,102 @@ def dashFunds(request):
         'investor_counts': investor_counts,
         'investment_focus_names': investment_focus_names,
         'investment_focus_percent': investment_focus_percent,
-        'funds': funds  
+        'funds': page_obj.object_list,
+        'page_obj': page_obj,
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #####################################################
 #End dashFunds view
+#####################################################
+
+#####################################################
+#Start Single Fund view
+#####################################################
+def single_fund_view(request, slug):
+    fund = load_fund_cache().get(slug)
+    if not fund:
+        return render(request, "404.html", {"message": "Fund not found"}, status=404)
+
+    return render(request, 'data/singleFund.html', {
+        'fund': fund,
+        'id': fund.get('id'),
+        'name': fund.get('name'),
+        'slug': fund.get('slug'),
+    })
+
+from django.http import JsonResponse
+from data.utils import fetch_focus_area_data, load_focus_area_from_csv
+
+def focus_area_view(request, slug):
+    data = fetch_focus_area_data(slug)
+    if not data:
+        data = load_focus_area_from_csv(slug)
+    return JsonResponse({"slug": slug, "data": data})
+
+
+# views.py
+import requests
+from django.shortcuts import render
+from concurrent.futures import ThreadPoolExecutor
+
+def get_fund_data(request):
+    # Base configuration
+    fund_slug = "coinbase-ventures"
+    fund_id = 5  # Example fund ID
+    api_base = "https://api.cryptorank.io/v0"
+    
+    # API endpoints dictionary
+    endpoints = {
+        'fund_details': f"{api_base}/coin-funds/by-slug/{fund_slug}/?locale=en",
+        'focus_area': f"{api_base}/coin-funds/focus-area/{fund_slug}",
+        'social_activity': f"{api_base}/coin-funds/{fund_id}/social-activity",
+        'funding_countries': f"{api_base}/coin-funds/main-funding-countries/{fund_slug}",
+        'avg_round': f"{api_base}/coin-funds/avg-round-raise/{fund_slug}",
+        'team': f"{api_base}/team/by-fund-key/{fund_slug}",
+        'preferred_stage': f"{api_base}/coin-funds/preferred-stage/{fund_slug}",
+        'recent_rounds': f"{api_base}/coin-funds/recent-funding-rounds/{fund_slug}",
+        'co_funds': f"{api_base}/coin-funds/{fund_id}/co-funds",
+        'investments_by_month': f"{api_base}/fund-chart/{fund_slug}/investments-count-by-month",
+        'investments_by_country': f"{api_base}/fund-chart/{fund_slug}/investments-count-by-country",
+        'news': f"{api_base}/news?lang=en&limit=4&fundsSlugs={fund_slug}",
+    }
+
+    context = {}
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0'}
+
+    def fetch_data(url_key):
+        try:
+            response = requests.get(endpoints[url_key], headers=headers)
+            response.raise_for_status()
+            return {url_key: response.json()}
+        except Exception as e:
+            print(f"Error fetching {url_key}: {str(e)}")
+            return {url_key: None}
+
+    # Fetch data in parallel
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        results = executor.map(fetch_data, endpoints.keys())
+        for result in results:
+            context.update(result)
+
+    # Process data for template
+    processed_data = {
+        'fund': context.get('fund_details', {}).get('data', {}),
+        'focus_areas': context.get('focus_area', {}).get('data', []),
+        'social': context.get('social_activity', {}).get('data', {}),
+        'countries': context.get('funding_countries', {}).get('data', []),
+        'avg_round': context.get('avg_round', {}).get('data', {}),
+        'team': context.get('team', {}).get('data', []),
+        'stages': context.get('preferred_stage', {}).get('data', []),
+        'recent_rounds': context.get('recent_rounds', {}).get('data', []),
+        'co_funds': context.get('co_funds', {}).get('data', []),
+        'investments_chart': context.get('investments_by_month', {}).get('data', {}),
+        'country_data': context.get('investments_by_country', {}).get('data', []),
+        'news': context.get('news', {}).get('data', []),
+    }
+
+    return render(request, 'fund_dashboard.html', {'data': processed_data})
+
+#####################################################
+#End Single Fund view
 #####################################################

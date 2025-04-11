@@ -405,6 +405,7 @@
             <button class="active-funds-button">Active Funds</button>
              <button class="angel-investors-button">Angel Investors</button>
             <a href="#" class="download-button">Download Data</a>
+
         </section>
         <section class="card-grid">
             <div class="activity-card">
@@ -450,6 +451,8 @@
         
 
         <section class="table-card">
+            
+              
             <h2 class="table-title">Funds and Investors Data</h2>
             <div class="table-wrapper">
                 <table class="data-table">
@@ -457,16 +460,28 @@
                         <tr>
                             <th>Name</th>
                             <th>Tier</th>
+                            <th>Type</th>
+                            <th>Location</th>
                             <th>Latest Deal</th>
+                            <th>Deal Date</th>
+                            <th>Deal Raise (USD)</th>
                             <th>Portfolio</th>
                             <th>Retail ROI</th>
                             <th>Focus Area</th>
-                            <th>Location</th>
+                            <th>Preferred Stage</th>
+                            <th>Funding Rounds</th>
+                            <th>Lead Investments</th>
+                            <th>Main Funding Country</th>
+                            <th>Twitter Username</th>
+                            <th>Followers</th>
+                            <th>Compare</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for fund in funds %}
-                            <tr class="hover:bg-gray-50 cursor-pointer" onclick="window.location.href='/fund/{{ fund.slug|default:'-' }}/'">
+                        {% for fund in page_obj %}
+                        <tr class="hover:bg-gray-50 cursor-pointer" onclick="window.location.href='/data/fund/{{ fund.slug|default:'-' }}/'">
+
+                                <!-- Name with logo -->
                                 <td class="flex items-center gap-3 text-gray-700 font-medium">
                                     {% if fund.logo %}
                                         <img src="{{ fund.logo }}" alt="{{ fund.name|default:'N/A' }} Logo" class="w-8 h-8 rounded-md border border-gray-200 bg-white object-contain p-1">
@@ -475,19 +490,21 @@
                                     {% endif %}
                                     <span>{{ fund.name|default:"N/A" }}</span>
                                 </td>
+                    
                                 <td class="text-gray-600">{{ fund.tier|default:"N/A" }}</td>
                                 <td class="text-gray-600">{{ fund.type|default:"N/A" }}</td>
                                 <td class="text-gray-600">{{ fund.location|default:"N/A" }}</td>
+                    
+                                <td class="text-gray-600">{{ fund.latestDealName|default:"N/A" }}</td>
+                                <td class="text-gray-600">{{ fund.latestDealDate|default:"N/A" }}</td>
                                 <td class="text-gray-600">
-                                    {% if fund.latestDealName %}
-                                        {{ fund.latestDealName }}<br>
-                                        <span class="text-xs text-gray-400">
-                                            {{ fund.latestDealRaise|default:"N/A" }} USD
-                                        </span>
+                                    {% if fund.latestDealRaise %}
+                                        {{ fund.latestDealRaise }} USD
                                     {% else %}
                                         N/A
                                     {% endif %}
                                 </td>
+                    
                                 <td class="text-gray-600">{{ fund.portfolioCount|default:"N/A" }}</td>
                                 <td class="text-gray-600">{{ fund.retailRoi|default:"N/A" }}</td>
                                 <td class="text-gray-600">{{ fund.focusArea|default:"N/A" }}</td>
@@ -497,10 +514,17 @@
                                 <td class="text-gray-600">{{ fund.mainFundingCountry|default:"N/A" }}</td>
                                 <td class="text-gray-600">{{ fund.twitterUsername|default:"N/A" }}</td>
                                 <td class="text-gray-600">{{ fund.followersCount|default:"N/A" }}</td>
+                                <td class="text-center">
+                                    <input type="checkbox"
+                                           class="compare-checkbox accent-indigo-600"
+                                           data-fund-name="{{ fund.name }}"
+                                           data-fund-id="{{ fund.id }}">
+                                  </td>
+                                  
                             </tr>
                         {% empty %}
                             <tr>
-                                <td colspan="14" class="text-center text-gray-500 py-4">No funds data available.</td>
+                                <td colspan="16" class="text-center text-gray-500 py-4">No funds data available.</td>
                             </tr>
                         {% endfor %}
                     </tbody>
@@ -508,13 +532,44 @@
                     
                 </table>
             </div>
-            <div class="pagination">
-                <button class="previous">Previous</button>
-                <span class="current-page">Page 1 of {{ total_pages }}</span>
-                <button class="next">Next</button>
+            <div class="flex justify-between items-center mt-6">
+                <div>
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">&laquo; First</a>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">Previous</a>
+                    {% endif %}
+                </div>
+            
+                <div class="text-sm text-gray-700">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </div>
+            
+                <div>
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">Next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">Last &raquo;</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="flex justify-center mt-6 space-x-1">
+                {% for num in page_obj.paginator.page_range %}
+                    {% if num >= page_obj.number|add:'-2' and num <= page_obj.number|add:'2' %}
+                        {% if page_obj.number == num %}
+                            <span class="px-3 py-1 bg-blue-500 text-white rounded">{{ num }}</span>
+                        {% else %}
+                            <a href="?page={{ num }}" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">{{ num }}</a>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
             </div>
             
+              
+            
+            
+            
+            
         </section>
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -524,11 +579,12 @@
     <script>
     
         // Doughnut Chart using ApexCharts
+        console.log("haw hne "); // Debugging line to check data
+        
+        const investmentFocusPercent = [{% for percent in investment_focus_percent %}{{ percent }}{% if not forloop.last %}, {% endif %}{% endfor %}];
         const investmentFocusNames = [{% for name in investment_focus_names %}"{{ name }}"{% if not forloop.last %}, {% endif %}{% endfor %}];
-        console.log(investmentFocusNames); // Debugging line to check the names
-const investmentFocusPercent = [{% for percent in investment_focus_percent %}{{ percent }}{% if not forloop.last %}, {% endif %}{% endfor %}];
-
-// Doughnut Chart using ApexCharts
+        console.log("haw hne ",investmentFocusPercent, investmentFocusNames); // Debugging line to check data
+        // Doughnut Chart using ApexCharts
 var optionDonut = {
     series: investmentFocusPercent,
     chart: {
@@ -619,51 +675,53 @@ const topInvestorsChart = new Chart(topInvestorsCtx, {
     options: topInvestorsOptions,
 });
 
+// Compare Bar Functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const compareCheckboxes = document.querySelectorAll('.compare-checkbox');
+    const compareBar = document.getElementById('compareBar');
+    const compareCount = document.getElementById('compareCount');
 
-let currentPage = 1;
-    const rowsPerPage = 10;
-    const rows = document.querySelectorAll('.data-table tbody tr');
-    const totalRows = rows.length;
+    let selectedFunds = [];
 
-    // Function to display the current page
-    function displayPage(page) {
-        const start = (page - 1) * rowsPerPage;
-        const end = start + rowsPerPage;
-        
-        rows.forEach((row, index) => {
-            if (index >= start && index < end) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
-        });
-        
-        document.querySelector('.page-link .current-page').textContent = `Page ${page} of ${Math.ceil(totalRows / rowsPerPage)}`;
-    }
+    compareCheckboxes.forEach(box => {
+      box.addEventListener('change', () => {
+        const fundId = box.dataset.fundId;
 
-    // Function to update page number
-    function updatePagination() {
-        const totalPages = Math.ceil(totalRows / rowsPerPage);
-        document.querySelector('.pagination .previous').addEventListener('click', function () {
-            if (currentPage > 1) {
-                currentPage--;
-                displayPage(currentPage);
-            }
-        });
+        if (box.checked) {
+          if (selectedFunds.length < 5) {
+            selectedFunds.push(fundId);
+          } else {
+            box.checked = false;
+            alert("You can only compare up to 5 funds.");
+          }
+        } else {
+          selectedFunds = selectedFunds.filter(id => id !== fundId);
+        }
 
-        document.querySelector('.pagination .next').addEventListener('click', function () {
-            if (currentPage < totalPages) {
-                currentPage++;
-                displayPage(currentPage);
-            }
-        });
-    }
+        compareCount.textContent = selectedFunds.length;
+        compareBar.classList.toggle('hidden', selectedFunds.length === 0);
+      });
+    });
+  });
 
-    displayPage(currentPage);
-    updatePagination();
+
+
+
 
 
     </script>
+    <!-- Compare Floating Bar -->
+<div id="compareBar"
+class="fixed bottom-4 right-4 bg-white border border-gray-300 shadow-xl rounded-full px-4 py-2 flex items-center gap-3 z-50 hidden transition-all duration-300 ease-in-out">
+<span class="text-sm text-gray-700 font-medium">
+Comparing <span id="compareCount">0</span>/5
+</span>
+<button id="openCompareModal"
+     class="bg-indigo-600 text-white text-sm px-4 py-1.5 rounded-full font-semibold hover:bg-indigo-700 transition">
+Compare
+</button>
+</div>
+
 </body>
 </html>
 

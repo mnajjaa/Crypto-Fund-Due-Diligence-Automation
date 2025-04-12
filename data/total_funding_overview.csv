@@ -1,2 +1,2 @@
-fundingRoundsTotal,fundingRoundsTotalChange,totalInvestments,totalInvestmentsChange,investmentFocus_id,investmentFocus_name,investmentFocus_description,avgRoundSize_raise_from,avgRoundSize_raise_to,investmentStage
-141,-12.96,4924535500,276.54,17,Payments,Projects that enable payments or create infrastructure for payments,3000000,10000000,SEED
+fundingRoundsTotal,roundsGrowth,totalInvestments,volumeGrowth,investmentFocus_id,investmentFocus_name,investmentFocus_description,averageRoundSize,investmentStage
+140,-15.15,4183105500,19.79,224,Artificial Intelligence (AI),Projects using AI-technology at the core of their product,"$3,000,000 - $10,000,000",SEED

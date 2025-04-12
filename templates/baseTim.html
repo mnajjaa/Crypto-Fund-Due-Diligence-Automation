@@ -52,6 +52,7 @@
 
  <!-- Include SweetAlert2 CSS from CDN -->
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css">
 
   {% block extra_css %}
   {% endblock %}
@@ -264,33 +265,31 @@
         <hr class="horizontal dark mt-0">
         <li class="nav-item">
           <a data-bs-toggle="collapse"
-            href="#dashboardsExamples"
-            class="nav-link text-dark {% if request.path == '/' %}active{% endif %}"
-            aria-controls="dashboardsExamples"
-            aria-expanded="{% if request.path == '/' %}true{% else %}false{% endif %}">
+             href="#dashboardsExamples"
+             class="nav-link text-dark {% if '/funding/' in request.path or request.path == '/' %}active{% endif %}"
+             aria-controls="dashboardsExamples"
+             aria-expanded="{% if '/funding/' in request.path or request.path == '/' %}true{% else %}false{% endif %}">
             <i class="material-symbols-rounded opacity-5">space_dashboard</i>
             <span class="nav-link-text ms-1 ps-1">Dashboards</span>
           </a>
-          <div class="collapse {% if request.path == '/' %}show{% endif %}" id="dashboardsExamples">
-            <ul class="nav ">
-              <li class="nav-item active">
-                <a class="nav-link text-dark {% if request.path == '/analytics/' %}active{% endif %}" href="">
-                  <span class="sidenav-mini-icon"> A </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Analytics </span>
+          <div class="collapse {% if '/funding/' in request.path or request.path == '/' %}show{% endif %}" id="dashboardsExamples">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-dark {% if request.path == '/funding/' %}active{% endif %}" href="{% url 'funding_dashboard' %}">
+                  <span class="sidenav-mini-icon"> F </span>
+                  <span class="sidenav-normal ms-1 ps-1"> Funding Rounds </span>
                 </a>
               </li>
-              <li class="nav-item ">
+              <li class="nav-item">
                 <a class="nav-link text-dark {% if request.path == '/discover/' %}active{% endif %}" href="">
                   <span class="sidenav-mini-icon"> D </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Discover </span>
+                  <span class="sidenav-normal ms-1 ps-1"> Discover </span>
                 </a>
               </li>
-              
-             
-              
             </ul>
           </div>
         </li>
+        
         <li class="nav-item mt-3">
           <h6 class="ps-3  ms-2 text-uppercase text-xs font-weight-bolder text-dark">PAGES</h6>
         </li>
@@ -815,6 +814,7 @@
 
   <script src="{% static 'js/script.js' %}"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" defer></script>
 
 
 

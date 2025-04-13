@@ -1,170 +1,907 @@
 {% extends "baseTim.html" %}
 {% block title %}Funding Rounds{% endblock %}
+{% load humanize %}
+
+{% block extra_css %}
+<style>
+  
+  .top-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+  }
+  .top-card:hover {
+    transform: translateY(-2px);
+  }
+  .card-header {
+    border-bottom: 1px solid #e2e8f0;
+    background-color: #f8f9fa;
+    padding: 1rem 1.25rem;
+  }
+  
+  .stat-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+  
+  .badge-indicator {
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+  }
+.card-wrapper {
+  perspective: 1000px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+.front-face,
+.back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+.back-face {
+  transform: rotateY(180deg);
+}
+
+
+</style>
+<!--funding diegst-->
+<style>
+  .rotate {
+    display: inline-block;
+    animation: spin 1.5s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  </style>
+  <style>
+    .card .badge {
+      font-weight: 500;
+      font-size: 11px;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+    .d-flex.justify-content-center.flex-wrap.gap-1 {
+      row-gap: 4px;
+    }
+    
+  </style>
+  <style>
+    .fs-14 { font-size: 14px; }
+    .digest-content h6 { line-height: 1.3; }
+    .digest-content a:hover { text-decoration: underline; }
+    .badge.bg-light { background-color: #f8f9fa!important; }
+    #digestTimer { font-size: 0.8em; opacity: 0.7; }
+    </style>
+  <!-- DataTables CSS -->
+  <style>
+    /* Improved Table Styling */
+.table-header {
+  background-color: #f8f9fa !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+}
+
+.table-row {
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: #f8fafc !important;
+}
+    .table-one {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.875rem;
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+    }
+    
+    .table-one thead th {
+      background-color: #f8f9fa;
+      color: #6c757d;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #e9ecef;
+      vertical-align: middle;
+    }
+    
+    .table-one tbody td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #f1f3f7;
+      vertical-align: middle;
+      color: #212529;
+    }
+    
+    .table-one tbody tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .table-one tbody tr:hover {
+      background-color: #f8fafc;
+    }
+    
+    .table-one .badge-count {
+      background-color: #f0f2f5;
+      color: #64748b;
+      font-weight: 500;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.6875rem;
+    }
+    
+    .table-one .text-success {
+      color: #10b981 !important;
+    }
+    
+    .table-one .text-danger {
+      color: #ef4444 !important;
+    }
+    
+    /* Progress bar styles */
+    .progress-bar-wrapper {
+      height: 4px;
+      background-color: #e9ecef;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .progress-bar {
+      height: 100%;
+    }
+    
+    .progress-red {
+      background-color: #ef4444;
+    }
+    
+    .progress-orange {
+      background-color: #f59e0b;
+    }
+    
+    .progress-green {
+      background-color: #10b981;
+    }
+    
+    /* Pagination styles */
+    .pagination .page-link {
+      border-radius: 4px !important;
+      margin: 0 2px;
+      min-width: 28px;
+      text-align: center;
+      border: none;
+      color: #64748b;
+      font-size: 0.8125rem;
+    }
+    
+    .pagination .page-item.active .page-link {
+      background-color: #3b82f6;
+      border-color: #3b82f6;
+    }
+    
+    .pagination .page-item.disabled .page-link {
+      color: #94a3b8;
+    }
+    
+    /* Per page selector */
+    .form-select-sm {
+      font-size: 0.8125rem;
+      padding: 0.25rem 1.75rem 0.25rem 0.75rem;
+      border-radius: 4px;
+    }
+  </style>
+  
+  <!-- filter card -->
+  <style>
+    /* Add these styles to your existing extra_css block */
+.filter-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.filter-btn {
+  border-radius: 6px;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: none;
+  padding: 0.5rem;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6c757d;
+  padding: 0.5rem 1rem;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border-right: none;
+}
+
+#tableSearch {
+  border-left: none;
+}
+
+#tableSearch:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #e2e8f0;
+  font-weight: 600;
+}
+/* Enhanced Table Controls Styling */
+.input-group-lg .form-control {
+  font-size: 0.95rem;
+  height: 48px;
+}
+
+.input-group-text {
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+
+.btn-outline-secondary {
+  border-color: #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.dropdown-menu {
+  border: 1px solid #f1f3f7;
+  border-radius: 8px;
+  margin-top: 8px !important;
+}
+
+.dropdown-item {
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:active {
+  background-color: #f8f9fa;
+}
+  </style>
+
+  <style>
+    /* Spinner Animation */
+.load-spinner {
+  animation: spin 1s linear infinite;
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Timer Icon */
+.timer-icon {
+  font-size: 0.9em;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+  </style>
+{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2 class="mb-4">📈 Recent Crypto Investments and Fundraising Rounds</h2>
 
-    <div class="row g-4">
+<h2 class="mb-4">📈 Recent Crypto Investments and Fundraising Rounds</h2>
+    <div class="row g-4 mb-4">
         <!-- Total Funding Overview -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm p-3">
-                <div class="card-body" style="max-height: 300px; overflow-y: auto;">
-                    <h5 class="card-title">Total Funding Overview <span class="text-muted">30D</span></h5>
-                    <p><strong>Funding Rounds Total:</strong> {{ overview.fundingRoundsTotal }}</p>
-                    <p><strong>Total Investment Volume:</strong> ${{ overview.totalInvestments|floatformat:"0" }}</p>
-                    <p><strong>Investment Focus:</strong> {{ overview.investmentFocus_name }}</p>
-                    <p><strong>Average Round Size:</strong> {{ overview.averageRoundSize }}</p>
-                    <p><strong>Investment Stage:</strong> {{ overview.investmentStage }}</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Hot Rounds -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm p-3">
-                <div class="card-body" style="max-height: 300px; overflow-y: auto;">
-                    <h5 class="card-title">🔥 Hot Rounds <span class="text-muted">30D</span></h5>
-                    {% for round in hot_rounds %}
-                        <div class="mb-3 border-bottom pb-2">
-                            <strong><img src="{{ round.coinImage }}" width="24"> {{ round.coinName }}</strong><br>
-                            Raised: ${{ round.raise|floatformat:"0" }}<br>
-                            Funders: {{ round.fund_slug }}
-                        </div>
-                    {% endfor %}
+        <div class="col-md-4 d-flex">
+            <div class="card-wrapper shadow-sm rounded-3 w-100 h-100">
+              <div class="card-inner" id="fundingCard">
+                <div class="card-body p-3 front-face">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h6 class="text-dark fw-bold mb-0">Total Funding Overview <span class="text-muted">30D</span></h6>
+                    <a href="javascript:void(0);" class="text-secondary small" title="Flip Info" onclick="flipCard('fundingCard')">
+                      <i class="fas fa-sync-alt"></i>
+                    </a>
+                  </div>
+                  <div class="d-flex gap-2 mb-3">
+                    <div class="flex-fill p-3 bg-light rounded text-center">
+                      <p class="mb-1 text-muted small">Funding Rounds Total</p>
+                      <h5 class="fw-bold mb-0">{{ overview.fundingRoundsTotal }}</h5>
+                      {% if overview.roundsGrowth is not None %}
+                      <span class="small fw-bold {% if overview.roundsGrowth > 0 %}text-success{% elif overview.roundsGrowth < 0 %}text-danger{% else %}text-muted{% endif %}">
+                        {% if overview.roundsGrowth > 0 %}+{% endif %}{{ overview.roundsGrowth }}%
+                      </span>
+                      {% endif %}
+                    </div>
+                    <div class="flex-fill p-3 bg-light rounded text-center">
+                      <p class="mb-1 text-muted small">Total Investment Volume</p>
+                      <h5 class="fw-bold mb-0">${{ overview.totalInvestments|floatformat:"0" }}</h5>
+                      {% if overview.volumeGrowth is not None %}
+                      <span class="small fw-bold {% if overview.volumeGrowth > 0 %}text-success{% elif overview.volumeGrowth < 0 %}text-danger{% else %}text-muted{% endif %}">
+                        {% if overview.volumeGrowth > 0 %}+{% endif %}{{ overview.volumeGrowth }}%
+                      </span>
+                      {% endif %}
+                    </div>
+                  </div>
+                  <div class="small">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="text-muted">Investment Focus</span>
+                      <span class="text-primary fw-bold"># {{ overview.investmentFocus_name }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="text-muted">Average Round Size</span>
+                      <span class="text-dark fw-semibold">${{ overview.averageRoundSize }}M</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="text-muted">Investment Stage</span>
+                      <span class="text-dark fw-semibold">{{ overview.investmentStage|capfirst }}</span>
+                    </div>
+                  </div>
                 </div>
+                <div class="card-body p-3 back-face">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h6 class="text-dark fw-bold mb-0">Total Funding Overview <span class="text-muted">30D</span></h6>
+                    <a href="javascript:void(0);" class="text-secondary small" title="Flip Back" onclick="flipCard('fundingCard')">
+                      <i class="fas fa-sync-alt"></i>
+                    </a>
+                  </div>
+                  <p class="text-muted small mt-3 mb-0">Key statistics on funding rounds for the past 30 days.</p>
+                </div>
+              </div>
             </div>
+          </div>
+          
+    <!-- Hot Rounds -->
+    <div class="col-md-4 d-flex">
+    <div class="card-wrapper shadow-sm rounded-3 w-100 h-100">
+      <div class="card-inner " id="hotRoundsCard">
+        <div class="card-body p-3 front-face h-100">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <h6 class="text-dark fw-bold mb-0">Hot Rounds <span class="text-muted">30D</span></h6>
+            <a href="javascript:void(0);" class="text-secondary small" title="Flip Info" onclick="flipCard('hotRoundsCard')">
+              <i class="fas fa-sync-alt"></i>
+            </a>
+          </div>
+          <div class="d-flex gap-2 align-items-stretch">
+            {% for round in hot_rounds %}
+            <div class="flex-fill p-3 bg-light rounded text-center d-flex flex-column align-items-center h-100">
+              <img src="{{ round.coinImage }}" class="rounded-circle mb-2" width="36" height="36" alt="{{ round.coinName }}">
+              <div class="fw-semibold small mb-1">{{ round.coinName }}</div>
+              <div class="fw-bold text-dark small mb-2">${{ round.raise|floatformat:2 }}M</div>
+              <div class="d-flex justify-content-center flex-wrap gap-1">
+                {% for fund in round.funds %}
+                <img src="{{ fund.logo }}" class="rounded-circle" width="20" height="20" title="{{ fund.slug }}">
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
         </div>
+        <div class="card-body p-3 back-face h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h6 class="text-dark fw-bold mb-0">Hot Rounds <span class="text-muted">30D</span></h6>
+            <a href="javascript:void(0);" class="text-secondary small" title="Flip Back" onclick="flipCard('hotRoundsCard')">
+              <i class="fas fa-sync-alt"></i>
+            </a>
+          </div>
+          <p class="text-muted small mt-3 mb-0">
+            Highlights the hottest funding rounds from the past 30 days, showcasing the top 3 rounds selected based on our unique formula.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
         <!-- Fundraising Digest -->
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm p-3">
-                <div class="card-body" style="max-height: 300px; overflow-y: auto;">
-                    <h5 class="card-title">📰 Fundraising Digest</h5>
-                    <ul class="list-group list-group-flush">
-                    {% for article in digest %}
-                        <li class="list-group-item">
-                            <strong>{{ article.title }}</strong><br>
-                            <small class="text-muted">{{ article.publishDate }}</small>
-                        </li>
-                    {% endfor %}
-                    </ul>
-                </div>
+<!-- Fundraising Digest (Improved) -->
+  <div class="col-md-4 d-flex">
+    <div class="card-wrapper shadow-sm rounded-3 w-100 h-100">
+      <div class="card-inner" id="digestCard">
+        <div class="card-body p-3 front-face h-100 d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <h6 class="text-dark fw-bold mb-0">Fundraising Digest</h6>
+            <div class="d-flex align-items-center gap-2">
+              <a href="#" onclick="rotateDigest(-1)" class="text-muted p-1">
+                <i class="fas fa-arrow-up fs-14"></i>
+              </a>
+              <a href="#" onclick="rotateDigest(1)" class="text-muted p-1">
+                <i class="fas fa-arrow-down fs-14"></i>
+              </a>
             </div>
+          </div>
+          <div class="digest-content flex-fill d-flex flex-column gap-2">
+            <!-- JS-rendered digest content -->
+          </div>
+          <div class="text-center mt-2">
+            <small class="text-muted" id="digestTimer">Auto-rotate in 30s</small>
+          </div>
         </div>
+        <div class="card-body p-3 back-face">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h6 class="text-dark fw-bold mb-0">Fundraising Digest</h6>
+            <a href="javascript:void(0);" class="text-secondary small" title="Flip Back" onclick="flipCard('digestCard')">
+              <i class="fas fa-sync-alt"></i>
+            </a>
+          </div>
+          <p class="text-muted small mt-3 mb-0">
+            Curated news & fundraising headlines from trusted crypto sources. Updated daily.
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Separator -->
-    <hr class="my-5">
+      
+    </div>
 
     <!-- CryptoRank Data Table -->
-    <div id="cryptorank-table" class="mt-5">
-        <h4>🔍 All Recent Funding Rounds (via CryptoRank API)</h4>
-        <div class="table-responsive rounded shadow-sm">
-            <table class="table table-hover align-middle text-center">
-                <thead class="table-light">
-                    <tr>
-                        <th>Name</th>
-                        <th>Raise</th>
-                        <th>Stage</th>
-                        <th>Funds & Investors</th>
-                        <th>Date</th>
-                        <th>X Score</th>
-                        <th>Followers</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {% for item in funding_main_page %}
-                    <tr>
-                        <!-- Name + Logo -->
-                        <td class="text-start">
-                            <img src="{{ item.coinImage }}" width="26" height="26" class="me-2 rounded-circle">
-                            {{ item.coinName }}
-                        </td>
-    
-                        <!-- Raise -->
-                        <td>
-                            {% if item.raise %}
-                                $ {{ item.raise|floatformat:"2" }}
-                            {% else %}
-                                <span class="text-muted">N/A</span>
-                            {% endif %}
-                        </td>
-    
-                        <!-- Stage -->
-                        <td>{{ item.stage|default:"—" }}</td>
-    
-                        <!-- Funds & Investors -->
-<td>
-    {% if item.funds %}
-        {% for fund in item.funds|slice:":2" %}
-            <img src="{{ fund.fund_image }}" title="{{ fund.fund_name }}" width="22" class="me-1 rounded-circle">
-        {% endfor %}
-        {% if item.funds|length > 2 %}
-            <span class="badge bg-light text-muted">+{{ item.funds|length|add:"-2" }}</span>
-        {% endif %}
-    {% else %}
-        —
-    {% endif %}
-</td>
+    <div class="row mt-4" >
 
-    
-                        <!-- Date -->
-                        <td>
-                            {% if item.date %}
-                                {{ item.date|date:"j M Y" }}
-                            {% else %}
-                                —
-                            {% endif %}
-                        </td>
-    
-                        <!-- X Score -->
-                        <td>{{ item.twitterScore|default:"—" }}</td>
-    
-                        <!-- Followers -->
-                        <td>
-                            {% if item.followers %}
-                                <div class="d-flex align-items-center justify-content-center">
-                                    {% for follower in item.followers|slice:":5" %}
-                                        <img src="{{ follower.follower_image }}" width="22" class="rounded-circle mx-1" title="{{ follower.follower_name }}">
-                                    {% endfor %}
-                                </div>
-                            {% else %}
-                                —
-                            {% endif %}
-                        </td>
-                        
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+        
+        <!-- Replace your current table with this -->
+        
+<div class="card shadow-sm rounded-4 border-0">
+  <div class="card-body p-0">
+    <div class="table-responsive">
+      <!-- Add this right before the table -->
+<!-- Enhanced Table Controls -->
+
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mt-2">
+      <!-- Search Bar -->
+      <div class="flex-grow-1 me-md-3">
+        <div class="input-group input-group-lg">
+          <span class="input-group-text bg-transparent border-end-0 py-3 px-3">
+            <i class="fas fa-search text-secondary"></i>
+          </span>
+          <input type="text" 
+                 class="form-control border-start-0 py-3 px-0" 
+                 placeholder="Search projects..." 
+                 id="tableSearch"
+                 style="min-width: 240px">
         </div>
-    
-        <!-- Pagination Controls -->
-        <div class="d-flex justify-content-between align-items-center mt-3">
-            <div class="text-muted">
-                Showing {{ funding_main_page.start_index }} to {{ funding_main_page.end_index }} of {{ funding_main_page.paginator.count }}
-            </div>
-            <nav>
-                <ul class="pagination mb-0">
-                    {% if funding_main_page.has_previous %}
-                        <li class="page-item"><a class="page-link" href="?page={{ funding_main_page.previous_page_number }}">«</a></li>
+      </div>
+
+      <!-- Control Buttons -->
+      <div class="d-flex flex-wrap gap-2 align-items-stretch">
+        <!-- Layout Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary d-flex align-items-center h-100 px-3 py-2" 
+                  type="button" 
+                  id="layoutDropdown" 
+                  data-bs-toggle="dropdown">
+            <i class="fas fa-table me-2"></i>
+            <span class="me-2">Layout</span>
+            <i class="fas fa-chevron-down small"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm" 
+              style="min-width: 200px">
+            <li><a class="dropdown-item py-2" href="#">8P Layout</a></li>
+            <li><a class="dropdown-item py-2" href="#">Compact View</a></li>
+            <li><a class="dropdown-item py-2" href="#">Detailed View</a></li>
+          </ul>
+        </div>
+
+        <!-- Filters Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary d-flex align-items-center h-100 px-3 py-2" 
+                  type="button" 
+                  id="filterDropdown" 
+                  data-bs-toggle="dropdown">
+            <i class="fas fa-filter me-2"></i>
+            <span class="me-2">Filters</span>
+            <i class="fas fa-chevron-down small"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm" 
+              style="min-width: 220px">
+            <li><h6 class="dropdown-header small py-2">Preset Filters</h6></li>
+            <li><a class="dropdown-item py-2" href="#">
+              <i class="fas fa-star me-2 text-warning"></i>Tier 1 Funds
+            </a></li>
+            <li><a class="dropdown-item py-2" href="#">
+              <i class="fas fa-seedling me-2 text-success"></i>Early Stage
+            </a></li>
+            <li><a class="dropdown-item py-2" href="#">
+              <i class="fas fa-lock me-2 text-primary"></i>Exclusive
+            </a></li>
+            <li><hr class="dropdown-divider my-2"></li>
+            <li><a class="dropdown-item py-2" href="#">
+              <i class="fas fa-download me-2"></i>Export CSV
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+      <table class="table table-one mt-2">
+        <thead>
+          <tr>
+            <th class="text-start">Name</th>
+            <th>Raise</th>
+            <th>Stage</th>
+            <th>Funds & Investors</th>
+            <th>Date</th>
+            <th>X Score</th>
+            <th>Followers</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in funding_main_page %}
+          <tr>
+            <!-- Name + Logo -->
+            <td class="text-start">
+              <div class="d-flex align-items-center">
+                <img src="{{ item.coinImage }}" width="24" height="24" class="me-2 rounded-circle">
+                <span>{{ item.coinName }}</span>
+              </div>
+            </td>
+
+            <!-- Raise -->
+            <td class="fw-medium">
+              {% if item.formatted_raise and item.formatted_raise != "N/A" %}
+                {{ item.formatted_raise }}
+              {% else %}
+                <span class="text-muted">N/A</span>
+              {% endif %}
+            </td>
+
+            <!-- Stage -->
+            <td>
+              <span class="badge bg-light text-dark">{{ item.stage|default:"—" }}</span>
+            </td>
+
+            <!-- Funds & Investors -->
+            <td class="text-nowrap">
+              {% if item.funds %}
+                <div class="d-flex align-items-center">
+                  {% for fund in item.funds|slice:":3" %}
+                    <img src="{{ fund.fund_image }}" title="{{ fund.fund_name }}" width="22" height="22" class="rounded-circle me-1 border">
+                  {% endfor %}
+                  {% if item.funds|length > 3 %}
+                    <span class="badge-count">+{{ item.funds|length|add:"-3" }}</span>
+                  {% endif %}
+                </div>
+              {% else %}
+                <span class="text-muted">—</span>
+              {% endif %}
+            </td>
+
+            <!-- Date -->
+            <td>
+              {% if item.date %}
+                {% now "U" as now_timestamp %}
+                {% with item.date|date:"U" as item_timestamp %}
+                  {% with now_timestamp|add:"-604800" as week_ago_timestamp %}
+                    {% if item_timestamp|add:"0" >= week_ago_timestamp %}
+                      <small class="text-muted">{{ item.date|naturaltime }}</small>
                     {% else %}
-                        <li class="page-item disabled"><span class="page-link">«</span></li>
+                      <small>{{ item.date|date:"j M Y" }}</small>
                     {% endif %}
-    
-                    <li class="page-item active"><span class="page-link">{{ funding_main_page.number }}</span></li>
-    
-                    {% if funding_main_page.has_next %}
-                        <li class="page-item"><a class="page-link" href="?page={{ funding_main_page.next_page_number }}">»</a></li>
+                  {% endwith %}
+                {% endwith %}
+              {% else %}
+                <span class="text-muted">—</span>
+              {% endif %}
+            </td>
+
+            <!-- X Score -->
+            <td>
+              {% if item.twitterScore and item.normalizedScore %}
+                <div class="d-flex flex-column">
+                  <span class="fw-medium">{{ item.twitterScore|floatformat:"1" }}</span>
+                  <div class="progress-bar-wrapper mt-1">
+                    {% if item.normalizedScore|add:"0" <= 39 %}
+                      <div class="progress-bar progress-red" style="width: {{ item.normalizedScore|floatformat:'1' }}%"></div>
+                    {% elif item.normalizedScore|add:"0" <= 69 %}
+                      <div class="progress-bar progress-orange" style="width: {{ item.normalizedScore|floatformat:'1' }}%"></div>
                     {% else %}
-                        <li class="page-item disabled"><span class="page-link">»</span></li>
+                      <div class="progress-bar progress-green" style="width: {{ item.normalizedScore|floatformat:'1' }}%"></div>
                     {% endif %}
-                </ul>
-            </nav>
+                  </div>
+                </div>
+              {% else %}
+                <span class="text-muted">—</span>
+              {% endif %}
+            </td>
+
+            <!-- Followers -->
+            <td>
+              {% if item.followers %}
+                <div class="d-flex align-items-center">
+                  {% for follower in item.followers|slice:":3" %}
+                    <img src="{{ follower.follower_image }}" width="22" height="22" class="rounded-circle me-1 border" title="{{ follower.follower_name }}">
+                  {% endfor %}
+                  {% if item.followers|length > 3 %}
+                    <span class="badge-count">+{{ item.followers|length|add:"-3" }}</span>
+                  {% endif %}
+                </div>
+              {% else %}
+                <span class="text-muted">—</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center px-3 py-3 border-top">
+      <div class="text-muted small mb-2 mb-sm-0">
+        Showing <span class="fw-medium">{{ funding_main_page.start_index }}</span> to 
+        <span class="fw-medium">{{ funding_main_page.end_index }}</span> of 
+        <span class="fw-medium">{{ funding_main_page.paginator.count }}</span> entries
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <nav>
+          <ul class="pagination pagination-sm mb-0">
+            {% if funding_main_page.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ funding_main_page.previous_page_number }}&per_page={{ per_page }}">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
+            </li>
+            {% endif %}
+
+            {% for num in funding_main_page.paginator.page_range %}
+              {% if num >= funding_main_page.number|add:"-2" and num <= funding_main_page.number|add:"2" %}
+              <li class="page-item {% if funding_main_page.number == num %}active{% endif %}">
+                <a class="page-link" href="?page={{ num }}&per_page={{ per_page }}">{{ num }}</a>
+              </li>
+              {% endif %}
+            {% endfor %}
+
+            {% if funding_main_page.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ funding_main_page.next_page_number }}&per_page={{ per_page }}">
+                <i class="fas fa-chevron-right"></i>
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+
+        <div class="d-flex align-items-center">
+          <label for="perPageSelect" class="text-muted small me-2 mb-0">Show</label>
+          <select id="perPageSelect" class="form-select form-select-sm w-auto">
+            <option value="10" {% if per_page == 10 %}selected{% endif %}>10</option>
+            <option value="20" {% if per_page == 20 %}selected{% endif %}>20</option>
+            <option value="50" {% if per_page == 50 %}selected{% endif %}>50</option>
+            <option value="100" {% if per_page == 100 %}selected{% endif %}>100</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
         </div>
     </div>
+
+   
+   
     
+        
     
-</div>
 {% endblock %}
+
+
+
+
+{% block extra_js %}
+
+
+<script>
+function flipCard(cardId) {
+  const card = document.getElementById(cardId);
+  card.classList.toggle("flipped");
+}
+
+
+</script>
+{{ digest|json_script:"digest-data" }}
+
+<script>
+  let digestIndex = 0;
+  const DIGEST_PAGE_SIZE = 2;
+  let autoRotateInterval = null;
+  let countdown = 30;
+  
+  function renderDigestArticles() {
+    const container = document.querySelector('.digest-content');
+    const digestData = JSON.parse(document.getElementById('digest-data').textContent);
+    
+    if (!container || !digestData?.length) {
+      container.innerHTML = '<div class="text-muted text-center py-2">No articles available</div>';
+      return;
+    }
+  
+    const maxPages = Math.ceil(digestData.length / DIGEST_PAGE_SIZE);
+    digestIndex = (digestIndex + maxPages) % maxPages; // Ensure valid index
+    
+    const start = digestIndex * DIGEST_PAGE_SIZE;
+    const end = start + DIGEST_PAGE_SIZE;
+    const articles = digestData.slice(start, end);
+  
+    container.innerHTML = articles.map(item => {
+      let dateString = '—';
+      try {
+        if (item.publishDate) {
+          const date = new Date(item.publishDate);
+          dateString = date.toLocaleDateString('en-GB', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric'
+          });
+        }
+      } catch (e) {
+        console.warn('Invalid date:', item.publishDate);
+      }
+  
+      return `
+        <div class="border-top pt-2">
+          <a href="/news/${item.url}" class="text-decoration-none d-block mb-1">
+            <h6 class="fw-semibold text-dark mb-0" style="font-size:14px;">${item.title}</h6>
+          </a>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="badge bg-light text-secondary border">
+              ${(item.tags?.length ? item.tags[0] : 'General')}
+            </span>
+            <small class="text-muted">${dateString}</small>
+          </div>
+        </div>
+      `;
+    }).join('');
+    
+    resetAutoRotate();
+  }
+  
+  function rotateDigest(direction) {
+    const digestData = JSON.parse(document.getElementById('digest-data').textContent);
+    const maxPages = Math.ceil(digestData.length / DIGEST_PAGE_SIZE);
+    digestIndex = (digestIndex + direction + maxPages) % maxPages;
+    renderDigestArticles();
+  }
+  
+  function resetAutoRotate() {
+    clearInterval(autoRotateInterval);
+    countdown = 30;
+    
+    autoRotateInterval = setInterval(() => {
+      countdown--;
+      document.getElementById('digestTimer').textContent = `Auto-rotate in ${countdown}s`;
+      
+      if (countdown <= 0) {
+        rotateDigest(1);
+        countdown = 30;
+      }
+    }, 1000);
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    renderDigestArticles();
+    resetAutoRotate();
+  });
+  </script>
+
+  <!-- temporary debug -->
+  <!-- Add this right after the digest card -->
+<script>
+  console.log('Digest Data:', {{ digest|safe }});
+  console.log('Digest JSON:', document.getElementById('digest-data').textContent);
+  </script>
+
+<!-- DataTables JS -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new simpleDatatables.DataTable("#datatable-search", {
+      searchable: true,
+      fixedHeight: true
+    });
+  });
+</script>
+<script>
+  document.getElementById("perPageSelect").addEventListener("change", function () {
+    const perPage = this.value;
+    const params = new URLSearchParams(window.location.search);
+    params.set('per_page', perPage);
+    params.set('page', 1); // reset to first page
+    window.location.search = params.toString();
+  });
+</script>
+
+
+<!-- Add this script to handle the search functionality -->
+  <script>
+    // Add this to your extra_js block
+document.addEventListener('DOMContentLoaded', function() {
+  // Search functionality
+  const searchInput = document.getElementById('tableSearch');
+  if (searchInput) {
+    searchInput.addEventListener('keyup', function() {
+      const searchTerm = this.value.toLowerCase();
+      const rows = document.querySelectorAll('.table-one tbody tr');
+      
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(searchTerm) ? '' : 'none';
+      });
+    });
+  }
+  
+  // Initialize tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+});
+  </script>
+{% endblock %}
+
+
+

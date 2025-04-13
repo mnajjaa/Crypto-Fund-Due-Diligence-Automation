@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_totp',
     'sanctions',
     'funding_rounds',
+    'django.contrib.humanize',
+
 
 ]
 

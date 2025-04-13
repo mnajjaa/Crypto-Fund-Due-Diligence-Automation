@@ -281,6 +281,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a class="nav-link text-dark {% if request.path == '/analytics/' %}active{% endif %}" href="{% url 'fundraising_chart' %}">
+                  <span class="sidenav-mini-icon"> F </span>
+                  <span class="sidenav-normal ms-1 ps-1"> Analytics </span>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link text-dark {% if request.path == '/discover/' %}active{% endif %}" href="">
                   <span class="sidenav-mini-icon"> D </span>
                   <span class="sidenav-normal ms-1 ps-1"> Discover </span>

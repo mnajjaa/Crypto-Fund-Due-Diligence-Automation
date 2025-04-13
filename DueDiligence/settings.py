@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'sanctions',
     'funding_rounds',
     'django.contrib.humanize',
+    'analytics',
 
 
 ]

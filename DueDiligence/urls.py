@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from . import urls
 
 
 urlpatterns = [
@@ -25,6 +26,8 @@ urlpatterns = [
     path('', include('Core.urls')),  
     path("sanctions/", include("sanctions.urls")),
     path('funding/', include('funding_rounds.urls')),
+    path('overview/', include('overViewDash.urls')),
+
 
 
     

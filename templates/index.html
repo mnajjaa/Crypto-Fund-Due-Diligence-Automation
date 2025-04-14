@@ -1,15 +1,1916 @@
-{% extends 'baseTim.html' %}
 
+{% extends 'baseTim.html' %}
+{% load static %}
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <p>Hello World</p>
-    {% if access_token %}
+<link rel="stylesheet" href="{% static 'css/firstPage.css' %}">
+<div class="container py-4">
+  <!-- Header -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <h3 class="text-dark">Crypto Market Insights and Analytics</h3>
+
+
+    </div>
+  </div>
+
+  <!-- Dominance & Fear/Greed -->
+  <div class="row g-4">
+    <!-- Bitcoin Dominance Card -->
+    <div class="col-md-4 h-100 d-flex">
+      <div class="card shadow-sm h-100 w-100">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0 d-flex align-items-center">
+              <img src="{% static 'img/small-logos/bitcoin.svg.png' %}" width="30" class="me-2"> Bitcoin Dominance
+            </h5>
+            <select id="period-select" class="form-select form-select-sm w-auto">
+              <option value="24H">24H</option>
+              <option value="7D" selected>7D</option>
+              <option value="1M">1M</option>
+              <option value="1Y">1Y</option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span id="btc-dominance-value" class="fs-3">--%</span>
+            <span id="btc-dominance-change" class="text-success">--%</span>
+          </div>
+          <canvas id="btcDominanceChart" height="130"></canvas>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Fear & Greed Index Card -->
+    <div class="col-md-4 h-100 d-flex">
+      <div class="card shadow-sm h-100 w-100">
+        <div class="card-body d-flex flex-column">
+          <h5 class="mb-3 d-flex align-items-center">
+            <img src="{% static 'img/small-logos/gauge.svg' %}" width="24" class="me-2"> Fear & Greed Index
+          </h5>
+          <div id="fg-container">
+            <div class="circular-gauge mb-3">
+              <div class="circle">
+                <span id="fg-today">--</span>
+              </div>
+              <div class="sentiment-label" id="fg-sentiment">--</div>
+              <p class="sentiment-desc" id="fg-desc">Market sentiment is very bearish, many assets may be undervalued.</p>
+              <div class="color-bar">
+                <div class="bar orange"></div>
+                <div class="bar yellow"></div>
+                <div class="bar lightgreen"></div>
+                <div class="bar green"></div>
+                <div class="dot-indicator" id="dot-indicator"></div>
+              </div>
+            </div>
+            <div class="history-section">
+              <div class="fg-item">
+                <div class="circle-small" id="fg-yesterday">--</div>
+                <div>
+                  <div class="fg-label">Yesterday</div>
+                  <div class="fg-value" id="fg-sentiment-yesterday">--</div>
+                </div>
+              </div>
+              <div class="fg-item">
+                <div class="circle-small" id="fg-week">--</div>
+                <div>
+                  <div class="fg-label">7d ago</div>
+                  <div class="fg-value" id="fg-sentiment-week">--</div>
+                </div>
+              </div>
+              <div class="fg-item">
+                <div class="circle-small" id="fg-month">--</div>
+                <div>
+                  <div class="fg-label">1m ago</div>
+                  <div class="fg-value" id="fg-sentiment-month">--</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Hot Events Card -->
+     <!-- Hot Events -->
+     <div class="col-md-4 h-100 d-flex">
+      <div class="card shadow-sm h-100 w-100">
+        <div class="card-body d-flex flex-column">
+          <h5 class="mb-3">🔥Hot events</h5>
+          <script id="hot-events-data" type="application/json">
+            {{ hot_events|safe }}
+          </script>
+          
+          <div id="featured-project-slider" class="mb-3 flex-grow-1"></div>
+          <ul id="ido-list" class="list-group list-group-flush mt-auto"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Coin Table -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="d-flex justify-content-between mb-3">
+              <input type="text" id="coinSearch" class="form-control w-50" placeholder="Search coins...">
+              <button class="btn btn-success btn-sm" id="searchBtn">Search</button>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle text-center">
+                <thead class="table-light">
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Market Cap</th>
+                    <th>Volume</th>
+                    <th>Supply</th>
+                  </tr>
+                </thead>
+                <tbody id="coinTableBody">
+                  <tr><td colspan="8">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="pagination" class="text-center mt-3 pagination-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- Pass coins_list from Django context -->
+  <script>
+    const coins = JSON.parse('{{ coins_list|escapejs }}');
+  </script>
+
+  <!-- Gainers & Losers -->
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <script id="gainers-data" type="application/json">
+            {{ gainers|safe }}
+          </script>
+          
+          <h5>Top Gainers</h5>
+          <ul id="gainers-list" class="list-group list-group-flush"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5>Top Losers</h5>
+          <ul id="losers-list" class="list-group list-group-flush"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Charts -->
+  <div class="row mt-5">
+    <div class="col-6">
+      <div class="card shadow-sm p-4">
+        <h4 class="fw-bold">Crypto Fundraising Trend</h4>
+        <p class="text-muted">Total funds raised and total number of funding rounds by month</p>
+        <div class="chart-wrapper" style="position: relative; height: 320px;">
+          <canvas id="fundraisingChart"></canvas>
+        </div>
+    </div>
+    </div>
+    <div class="col-6">
+      <div class="card shadow-sm p-4">
+        <h4 class="fw-bold">IDO/ICO Fundraising Trend</h4>
+        <p class="text-muted">Monthly IDO/ICO activity and capital raised</p>
+        <div class="chart-wrapper" style="position: relative; height: 320px;">
+          <canvas id="idoChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const upcomingfunds = JSON.parse('{{ upcoming_funds|escapejs }}');
+  </script>
+  <!-- IDO Section -->
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5>Recent Funding Rounds</h5>
+          <ul id="funding-rounds-list" class="list-group list-group-flush"></ul>
+        </div>
+      </div>
+    </div>
     <script>
-        const access = "{{ access_token }}";
-        localStorage.setItem("access", access);
+      const upcomingData = JSON.parse('{{ upcoming_ido|escapejs }}');
     </script>
-    {% endif %}
-    <br><br>
-    <a href="{% url 'logout' %}">Logout</a>
+    
+ <div class="col-md-6">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h5>Upcoming IDO/ICO</h5>
+      <div id="upcoming-list" class="list-group list-group-flush"></div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+<section class="market-insights-section">
+  <div class="dashboard-columns">
+    <div class="dashboard-column">
+      <div class="launchpad-roi-card">
+        <h3>Top Launchpads Ranked by Average ROI <span class="arrow">›</span></h3>
+        <canvas id="launchpadChart" height="300"></canvas>
+        <ul id="launchpad-list" class="launchpad-list"></ul>
+      </div>
+    </div>
+
+    <div class="dashboard-column">
+      <div class="market-heatmap-card">
+        <h3>Market State Visualization <span class="arrow">›</span></h3>
+        <div id="marketStateChartHighcharts" class="market-chart"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trending-coins-card">
+    <div class="trending-header">
+      <div class="tab-switch">
+        <span id="trendingTab" class="active-tab">Trending Coins</span>
+        <span id="recentTab" class="inactive-tab">Recently Listed</span>
+      </div>
+      <button class="view-all-btn">View All</button>
+    </div>
+
+    <!-- Trending coins list -->
+    <ul id="trendingCoinsList" class="trending-coins-list"></ul>
+
+    <!-- Recently listed coins list -->
+    <ul id="recentCoinsList" class="trending-coins-list" style="display: none;"></ul>
+  </div>
+
+  <!-- Empty Cards for New ATH and New ATL -->
+  <div class="empty-cards-container">
+    <div class="empty-card">
+      <h3>New ATH <span class="arrow">›</span></h3>
+      <div class="new-ath-cards" id="new-ath-cards">
+        <!-- Cards will be inserted here dynamically -->
+      </div>
+    </div>
+    <div class="empty-card">
+      <h3>New ATL <span class="arrow">›</span></h3>
+      <div class="new-atl-cards" id="new-atl-cards">
+        <!-- Cards will be inserted here dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest Insights and Reports -->
+  <div class="latest-insights">
+    <h2>Latest Insights and Reports <span class="arrow">›</span></h2>
+    <div class="insights-container">
+      <!-- Articles will be dynamically rendered here -->
+    </div>
+  </div>
+
+  <!-- Futures Volume and Interest Cards -->
+  <div class="futures-cards-container">
+    <div class="futures-volume-card">
+      <h3>24h BTC Futures Volumes <span class="arrow">›</span></h3>
+      <div class="futures-volume-chart">
+        <canvas id="futuresVolumeChart"></canvas>
+      </div>
+    </div>
+
+    <div class="futures-interest-card">
+      <h3>BTC Futures Open Interest <span class="arrow">›</span></h3>
+      <div class="futures-interest-chart">
+        <canvas id="futuresInterestChart" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+
+<script >document.addEventListener("DOMContentLoaded", function () {
+  function formatAbbreviated(value) {
+    if (value >= 1_000_000_000) return (value / 1_000_000_000).toFixed(2) + ' B';
+    if (value >= 1_000_000) return (value / 1_000_000).toFixed(2) + ' M';
+    if (value >= 1_000) return (value / 1_000).toFixed(2) + ' K';
+    return value?.toLocaleString() ?? '—';
+  }
+
+  const coins_list = JSON.parse(`{{ coins_list|safe }}`);
+  const tableBody = document.getElementById("coinTableBody");
+  const paginationContainer = document.getElementById("pagination");
+  const searchInput = document.getElementById("coinSearch");
+  const searchBtn = document.getElementById("searchBtn");
+
+  let filteredCoins = [...coins_list];
+  let currentPage = 1;
+  const rowsPerPage = 10;
+
+  function renderTable(data, page = 1) {
+    tableBody.innerHTML = "";
+    const start = (page - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    const paginatedCoins = data.slice(start, end);
+
+    if (paginatedCoins.length === 0) {
+      tableBody.innerHTML = `<tr><td colspan="8">No matching coins found.</td></tr>`;
+      return;
+    }
+
+    paginatedCoins.forEach((coin, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${start + index + 1}</td>
+        <td class="text-start">
+          <img src="${coin["image.icon"]}" alt="${coin.symbol}" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 8px;">
+          <strong>${coin.name}</strong> <span class="text-muted">(${coin.symbol})</span>
+        </td>
+        <td>$${parseFloat(coin["athPrice.USD"] || 0).toFixed(4)}</td>
+      
+        <td>$${formatAbbreviated(Number(coin.marketCap))}</td>
+        <td>$${formatAbbreviated(Number(coin.volume24h))}</td>
+        <td>${formatAbbreviated(Number(coin.availableSupply))}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    renderPagination(data.length, page);
+  }
+
+  function renderPagination(totalRows, current) {
+    paginationContainer.innerHTML = "";
+    const totalPages = Math.ceil(totalRows / rowsPerPage);
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.className = `btn btn-sm ${i === current ? 'btn-primary' : 'btn-outline-primary'} m-1`;
+      btn.textContent = i;
+      btn.addEventListener("click", () => {
+        currentPage = i;
+        renderTable(filteredCoins, currentPage);
+      });
+      paginationContainer.appendChild(btn);
+    }
+  }
+
+  searchBtn.addEventListener("click", function () {
+    const query = searchInput.value.trim().toLowerCase();
+    filteredCoins = coins_list.filter(coin =>
+      coin.name.toLowerCase().includes(query)
+    );
+    currentPage = 1;
+    renderTable(filteredCoins, currentPage);
+  });
+
+  // Initial render
+  renderTable(filteredCoins, currentPage);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+// IDO Chart
+let idochart;
+const ctx2 = document.getElementById('idoChart').getContext('2d');
+const IDO_TREND = JSON.parse('{{ funding_ido|escapejs }}');
+
+const labels1 = IDO_TREND.map(entry => {
+const date = new Date(entry.date);
+return `${date.toLocaleString('default', { month: 'short' })} ${date.getFullYear()}`;
+});
+const sumData1 = IDO_TREND.map(entry => entry.sum / 1e6); // convert to millions
+const countData1 = IDO_TREND.map(entry => entry.count);
+
+idochart = new Chart(ctx2, {
+type: 'bar',
+data: {
+  labels: labels1,
+  datasets: [
+    {
+      label: "Raised in USD value",
+      data: sumData1,
+      backgroundColor: "#021b59",
+      borderRadius: 6,
+      barThickness: 20,
+      yAxisID: 'y1'
+    },
+    {
+      label: "IDO/ICO/IEO by month",
+      data: countData1,
+      type: 'line',
+      borderColor: "#007bff",
+      backgroundColor: "#007bff",
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      fill: false,
+      tension: 0.4,
+      yAxisID: 'y2'
+    }
+  ]
+},
+options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'top',
+      labels: {
+        font: { size: 13 },
+        color: '#828181'
+      }
+    },
+    tooltip: {
+      backgroundColor: '#fff',
+      borderColor: '#ccc',
+      borderWidth: 1,
+      titleColor: '#222',
+      bodyColor: '#444',
+      padding: 10,
+      callbacks: {
+        label: function (context) {
+          const value = context.raw;
+          return context.dataset.label.includes("Raised")
+            ? `$${value.toFixed(2)}M`
+            : `${value} rounds`;
+        }
+      }
+    }
+  },
+  scales: {
+    x: {
+      ticks: {
+        color: '#828181',
+        font: { size: 12 }
+      },
+      grid: {
+        drawBorder: false,
+        color: 'rgba(0,0,0,0.05)'
+      }
+    },
+    y1: {
+      position: 'left',
+      beginAtZero: true,
+      ticks: {
+        color: '#808080',
+        callback: v => `$${v.toFixed(0)}M`
+      },
+      title: {
+        display: true,
+        text: 'Raised Amount',
+        color: '#a1a1a1',
+        font: { size: 12 }
+      }
+    },
+    y2: {
+      position: 'right',
+      beginAtZero: true,
+      grid: { drawOnChartArea: false },
+      ticks: {
+        color: '#808080'
+      },
+      title: {
+        display: true,
+        text: 'Number of IDO/ICO/IEO',
+        color: '#a1a1a1',
+        font: { size: 12 }
+      }
+    }
+  }
+}
+});
+
+// Fundraising Chart
+const ctx1 = document.getElementById('fundraisingChart').getContext('2d');
+const FUNDING_TREND = JSON.parse('{{ funding_trend|escapejs }}');
+
+const labels = FUNDING_TREND.map(entry => {
+const date = new Date(entry.date);
+return `${date.toLocaleString('default', { month: 'short' })} ${date.getFullYear()}`;
+});
+
+const raiseData = FUNDING_TREND.map(entry => entry.raise / 1e6); // in millions
+const countData = FUNDING_TREND.map(entry => entry.count);
+
+let fundraisingChart = new Chart(ctx1, {
+type: 'bar',
+data: {
+  labels,
+  datasets: [
+    {
+      label: "Raised in USD value",
+      data: raiseData,
+      backgroundColor: "#007bff",
+      borderRadius: 6,
+      barThickness: 20,
+      yAxisID: 'y1'
+    },
+    {
+      label: "Number of fundraising rounds",
+      data: countData,
+      type: 'line',
+      borderColor: "#7cb342",
+      backgroundColor: "#7cb342",
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      fill: false,
+      tension: 0.4,
+      yAxisID: 'y2'
+    }
+  ]
+},
+options: {
+  responsive: true,
+  maintainAspectRatio: false,
+  layout: {
+    padding: 0
+  },
+  interaction: {
+    mode: 'index',
+    intersect: false
+  },
+  plugins: {
+    legend: {
+      position: 'top',
+      labels: {
+        font: { size: 13 },
+        color: '#828181'
+      }
+    },
+    tooltip: {
+      backgroundColor: '#fff',
+      borderColor: '#ccc',
+      borderWidth: 1,
+      titleColor: '#222',
+      bodyColor: '#444',
+      padding: 10,
+      callbacks: {
+        label: function(context) {
+          const value = context.raw;
+          return context.dataset.label.includes("Raised")
+            ? `$${(value/1000).toFixed(2)}B`
+            : `${value} rounds`;
+        }
+      }
+    }
+  },
+  scales: {
+    x: {
+      ticks: {
+        color: '#828181',
+        font: { size: 12 }
+      },
+      grid: {
+        drawBorder: false,
+        color: 'rgba(0,0,0,0.0)'
+      }
+    },
+    y1: {
+      position: 'left',
+      beginAtZero: true,
+      ticks: {
+        color: '#808080',
+        callback: v => `$${v/1000}B`
+      },
+      grid: {
+        drawBorder: false,
+        color: 'rgba(0,0,0,0.0)'
+      },
+      title: {
+        display: true,
+        text: 'Raised Amount',
+        color: '#a1a1a1',
+        font: { size: 12 }
+      }
+    },
+    y2: {
+      position: 'right',
+      beginAtZero: true,
+      grid: { drawOnChartArea: false },
+      ticks: { color: '#808080' },
+      title: {
+        display: true,
+        text: 'Number of Rounds',
+        color: '#a1a1a1',
+        font: { size: 12 }
+      }
+    }
+  }
+}
+});
+
+// Fear & Greed Index
+const levels = {
+0: "Extreme fear",
+25: "Fear",
+50: "Neutral",
+75: "Greed",
+100: "Extreme greed"
+};
+
+const interpret = (score) => {
+if (score < 25) return "Extreme fear";
+if (score < 50) return "Fear";
+if (score < 75) return "Greed";
+return "Extreme greed";
+};
+
+const fearGreed = JSON.parse('{{ fear_greed|escapejs }}');
+const data = fearGreed[0] || {};
+
+const today = data.today;
+const yesterday = data.yesterday;
+const lastWeek = data.lastWeek;
+const lastMonth = data.lastMonth;
+
+document.getElementById("fg-today").innerText = today;
+document.getElementById("fg-sentiment").innerText = interpret(today);
+document.getElementById("fg-desc").innerText =
+interpret(today) === "Extreme fear"
+  ? "Market sentiment is very bearish, many assets may be undervalued."
+  : "Market sentiment is improving, but volatility remains.";
+
+document.getElementById("fg-yesterday").innerText = yesterday;
+document.getElementById("fg-sentiment-yesterday").innerText = interpret(yesterday);
+
+document.getElementById("fg-week").innerText = lastWeek;
+document.getElementById("fg-sentiment-week").innerText = interpret(lastWeek);
+
+document.getElementById("fg-month").innerText = lastMonth;
+document.getElementById("fg-sentiment-month").innerText = interpret(lastMonth);
+
+function placeDotIndicator(score) {
+const dot = document.getElementById("dot-indicator");
+const percentage = Math.min(100, Math.max(0, score));
+dot.style.left = `calc(${percentage}% - 8px)`;
+}
+
+placeDotIndicator(today);
+
+// Upcoming IDOs
+const container = document.getElementById("upcoming-list");
+container.innerHTML = "<p>Loading...</p>";
+
+try {
+const items = upcomingData || [];
+
+if (items.length === 0) {
+  container.innerHTML = "<p>No upcoming IDOs found.</p>";
+  return;
+}
+
+container.innerHTML = ""; // Clear loading
+
+items.slice(0, 5).forEach(item => {
+  const name = item.name || item.name;
+  const symbol = item.symbol || item.symbol;
+  const image = item.image || item.image;
+  const category = item.category_name;
+  const date = new Date(item.startDate || item.when).toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short"
+  });
+  
+  const raise = item.raise
+    ? `$ ${formatRaise(item.raise)}`
+    : "TBA";
+  const launchpad = item.launchpad;
+  const launchpadLogo = item.launchpad_logo;
+
+  const li = document.createElement("li");
+      li.className = "list-group-item d-flex justify-content-between align-items-center py-3 px-2";
+      li.style.border = "none";
+
+  li.innerHTML = `
+    <div class="ido-col ido-left">
+      <div class="ido-logo-wrapper">
+        <img src="${image}" alt="${name}" class="ido-logo">
+      </div>
+      <div class="ido-info">
+        <div class="ido-name">
+          <strong>${name}</strong> <span class="ido-symbol">${symbol}</span>
+        </div>
+        <div class="ido-date">${date}</div>
+      </div>
+    </div>
+
+    <div class="ido-col ido-middle text-end d-flex flex-column align-items-end">
+      <div class="ido-raise">${raise}</div>
+      <div class="ido-category">${category}</div>
+    </div>
+
+    <div class="ido-col ido-right d-flex align-items-center gap-2">
+      ${launchpadLogo ? `<img src="${launchpadLogo}" alt="${launchpad}" class="ido-launchpad-logo">` : ""}
+      <div class="ido-launchpad-name">${launchpad}</div>
+    </div>
+  `;
+
+  container.appendChild(li);
+});
+} catch (err) {
+console.error("Error rendering upcoming IDOs:", err);
+container.innerHTML = "<p>Error loading IDO list.</p>";
+}
+
+function formatRaise(amount) {
+if (amount >= 1e6) return (amount / 1e6).toFixed(2) + "M";
+if (amount >= 1e3) return (amount / 1e3).toFixed(2) + "K";
+return amount.toFixed(0);
+}
+
+// BTC Dominance Chart
+const BTC_DOMINANCE = JSON.parse('{{ btc_data|escapejs }}');
+const SELECTED_PERIOD = "{{ selected_period }}";
+
+const ctx = document.getElementById('btcDominanceChart').getContext('2d');
+const periodSelect = document.getElementById("period-select");
+const valueEl = document.getElementById("btc-dominance-value");
+const changeEl = document.getElementById("btc-dominance-change");
+let btcChart;
+
+renderBtcChartFromViewData(SELECTED_PERIOD);
+
+periodSelect.addEventListener("change", () => {
+renderBtcChartFromViewData(periodSelect.value);
+});
+
+function renderBtcChartFromViewData(period) {
+const data = BTC_DOMINANCE[period];
+
+if (!data || data.length < 2) {
+  console.warn("No data for selected period:", period);
+  return;
+}
+
+const values = data.map(d => parseFloat(d.dominance));
+const timestamps = data.map(d => new Date(d.timestamp));
+
+const current = values.at(-1);
+const previous = values.at(-2);
+const change = ((current - previous) / previous) * 100;
+const sign = change >= 0 ? "+" : "";
+const direction = change >= 0 ? "↑" : "↓";
+
+valueEl.textContent = `${current.toFixed(2)}%`;
+changeEl.innerHTML = `${sign}${change.toFixed(2)}% <span class="arrow">${direction}</span>`;
+changeEl.style.color = change >= 0 ? "green" : "red";
+
+if (btcChart) btcChart.destroy();
+
+btcChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: timestamps,
+    datasets: [{
+      data: values,
+      borderColor: '#f27935',
+      backgroundColor: 'rgba(242, 121, 53, 0.1)',
+      tension: 0.3,
+      fill: true,
+      pointRadius: 0,
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        enabled: true,
+        backgroundColor: '#fff',
+        titleColor: '#222',
+        bodyColor: '#222',
+        borderColor: '#ddd',
+        borderWidth: 1,
+        usePointStyle: true,
+        padding: 12,
+        cornerRadius: 6,
+        callbacks: {
+          title: function (tooltipItems) {
+            const date = new Date(tooltipItems[0].label);
+            return `Date: ${date.toLocaleDateString('en-US', {
+              month: 'short',
+              day: 'numeric',
+              year: 'numeric'
+            })}, ${date.toLocaleTimeString('en-US', {
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false
+            })}`;
+          },
+          label: function (tooltipItem) {
+            return `Dominance: ${tooltipItem.formattedValue}%`;
+          }
+        }
+      }
+    },
+    scales: {
+      x: { display: false },
+      y: {
+        position: 'right',
+        display: true,
+        ticks: {
+          callback: value => value.toFixed(1) + "%",
+          color: "#aaa",
+          font: { size: 10 },
+          stepSize: 0.5
+        },
+        border: { display: false },
+        grid: {
+          drawTicks: false,
+          drawBorder: false,
+          color: "rgba(0,0,0,0.05)"
+        }
+      }
+    }
+  }
+});
+}
+
+// Gainers and Losers
+function renderGainers(gainers = TOP_GAINERS) {
+const list = document.getElementById("gainers-list");
+list.innerHTML = "";
+gainers.slice(0, 5).forEach((coin, i) => {
+  const li = document.createElement("li");
+  li.classList.add("gainer-item");
+  li.innerHTML = `
+    <div class="market-rank">${i + 1}</div>
+    <img class="market-logo" src="${coin.image}" alt="${coin.symbol}">
+    <div class="market-info">
+      <div><strong>${coin.name}</strong> 
+        <span class="symbol">${coin.symbol}</span></div>
+      <div class="market-category">${coin.category || '—'}</div>
+    </div>
+    <div class="market-change" style="color:green;">+${parseFloat(coin.gainPercent).toFixed(1)}%</div>
+  `;
+  list.appendChild(li);
+});
+}
+
+function renderLosers(losers = TOP_LOSERS) {
+const list = document.getElementById("losers-list");
+list.innerHTML = "";
+losers.slice(0, 5).forEach((coin, i) => {
+  const li = document.createElement("li");
+  li.classList.add("losers-item");
+  li.innerHTML = `
+    <div class="market-rank">${i + 1}</div>
+    <img class="market-logo" src="${coin.image}" alt="${coin.symbol}">
+    <div class="market-info">
+      <div><strong>${coin.name}</strong> <span class="symbol">${coin.symbol}</span></div>
+      <div class="market-category">${coin.category || '—'}</div>
+    </div>
+    <div class="market-change" style="color:red;">+${parseFloat(coin.losePercent).toFixed(1)}%</div>
+  `;
+  list.appendChild(li);
+});
+}
+
+renderGainers();
+renderLosers();
+
+// Featured Project Slider
+
+let sliderInterval;
+
+function resetSliderInterval() {
+clearInterval(sliderInterval);
+sliderInterval = setInterval(() => {
+  currentIndex = (currentIndex + 1) % projects.length;
+  renderProject(currentIndex);
+}, 30000);
+}
+
+function startSlider() {
+renderProject(currentIndex);
+sliderInterval = setInterval(() => {
+  currentIndex = (currentIndex + 1) % projects.length;
+  renderProject(currentIndex);
+}, 30000);
+}
+
+if (projects.length > 0) {
+startSlider();
+} else {
+slider.innerHTML = "<p>No projects found</p>";
+}
+
+// Coins Table
+function formatAbbreviated(value) {
+if (value >= 1_000_000_000) return (value / 1_000_000_000).toFixed(2) + ' B';
+if (value >= 1_000_000) return (value / 1_000_000).toFixed(2) + ' M';
+if (value >= 1_000) return (value / 1_000).toFixed(2) + ' K';
+return value?.toLocaleString() ?? '—';
+}
+
+const coins_list = JSON.parse(`{{ coins_list|safe }}`);
+const tableBody = document.getElementById("coinTableBody");
+const paginationContainer = document.getElementById("pagination");
+const searchInput = document.getElementById("coinSearch");
+const searchBtn = document.getElementById("searchBtn");
+
+let filteredCoins = [...coins_list];
+let currentPage = 1;
+const rowsPerPage = 10;
+
+function renderTable(data, page = 1) {
+tableBody.innerHTML = "";
+const start = (page - 1) * rowsPerPage;
+const end = start + rowsPerPage;
+const paginatedCoins = data.slice(start, end);
+
+if (paginatedCoins.length === 0) {
+  tableBody.innerHTML = `<tr><td colspan="8">No matching coins found.</td></tr>`;
+  return;
+}
+
+paginatedCoins.forEach((coin, index) => {
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td>${start + index + 1}</td>
+    <td class="text-start">
+      <img src="${coin["image.icon"]}" alt="${coin.symbol}" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 8px;">
+      <strong>${coin.name}</strong> <span class="text-muted">(${coin.symbol})</span>
+    </td>
+    <td>$${parseFloat(coin["athPrice.USD"] || 0).toFixed(4)}</td>
+    <td>$${formatAbbreviated(Number(coin.marketCap))}</td>
+    <td>$${formatAbbreviated(Number(coin.volume24h))}</td>
+    <td>${formatAbbreviated(Number(coin.availableSupply))}</td>
+  `;
+  tableBody.appendChild(row);
+});
+
+renderPagination(data.length, page);
+}
+
+function renderPagination(totalRows, current) {
+paginationContainer.innerHTML = "";
+const totalPages = Math.ceil(totalRows / rowsPerPage);
+for (let i = 1; i <= totalPages; i++) {
+  const btn = document.createElement("button");
+  btn.className = `btn btn-sm ${i === current ? 'btn-primary' : 'btn-outline-primary'} m-1`;
+  btn.textContent = i;
+  btn.addEventListener("click", () => {
+    currentPage = i;
+    renderTable(filteredCoins, currentPage);
+  });
+  paginationContainer.appendChild(btn);
+}
+}
+
+searchBtn.addEventListener("click", function () {
+const query = searchInput.value.trim().toLowerCase();
+filteredCoins = coins_list.filter(coin =>
+  coin.name.toLowerCase().includes(query)
+);
+currentPage = 1;
+renderTable(filteredCoins, currentPage);
+});
+
+renderTable(filteredCoins, currentPage);
+  });
+
+const slider = document.getElementById("featured-project-slider");
+let currentIndex = 0;
+let projects = [];
+
+// Get data from the injected script tag
+const raw = JSON.parse(document.getElementById("hot-events-data").textContent);
+
+// Group backers by project_key
+const projectMap = new Map();
+
+raw.forEach(row => {
+const key = row.project_key;
+if (!projectMap.has(key)) {
+  projectMap.set(key, {
+    name: row.project_name,
+    logo: row.project_logo,
+    totalRaise: row.totalRaise,
+    taskTypes: row.taskTypes.split(",")[0].trim(),
+    topFunds: []
+  });
+}
+projectMap.get(key).topFunds.push({
+  name: row.backer_name,
+  logo: row.backer_logo
+});
+});
+
+projects = Array.from(projectMap.values());
+
+function renderProject(index) {
+const proj = projects[index];
+
+const tag = proj.taskTypes || '—';
+const backerLogo = proj.topFunds?.[0]?.logo || '';
+const raised = (proj.totalRaise / 1e6).toFixed(2);
+
+slider.innerHTML = `
+  <div class="project-card hot-event-card">
+    <div class="hot-event-main">
+      <img src="${proj.logo}" class="event-logo" alt="${proj.name}">
+      <div class="event-info">
+        <h4 class="event-title">${proj.name}</h4>
+        <span class="event-tag">${tag}</span>
+      </div>
+      <div class="event-rank">
+        <div class="nav-up" style="cursor:pointer;">↑</div>
+        <div class="nav-down" style="cursor:pointer;">↓</div>
+      </div>
+    </div>
+
+    <div class="hot-event-footer">
+      <div class="event-backers">
+        <span>Backers:</span>
+        <img src="${backerLogo}" alt="backer" class="backer-icon">
+      </div>
+      <div class="event-raised">
+        Raised: <strong>$ ${raised}M</strong>
+      </div>
+    </div>
+  </div>
+`;
+
+document.querySelector('.nav-up').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+  renderProject(currentIndex);
+  resetSliderInterval();
+});
+
+document.querySelector('.nav-down').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % projects.length;
+  renderProject(currentIndex);
+  resetSliderInterval();
+});
+}
+
+let sliderInterval;
+
+function resetSliderInterval() {
+clearInterval(sliderInterval);
+sliderInterval = setInterval(() => {
+  currentIndex = (currentIndex + 1) % projects.length;
+  renderProject(currentIndex);
+}, 30000);
+}
+
+function startSlider() {
+renderProject(currentIndex);
+sliderInterval = setInterval(() => {
+  currentIndex = (currentIndex + 1) % projects.length;
+  renderProject(currentIndex);
+}, 30000);
+}
+
+// ✅ Now use the preloaded data
+if (projects.length > 0) {
+startSlider();
+} else {
+slider.innerHTML = "<p>No projects found</p>";
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+const gainers = JSON.parse(document.getElementById("gainers-data").textContent);
+const list = document.getElementById("gainers-list");
+list.innerHTML = "";
+
+gainers
+  .slice(0, 5)  // Optional: top 5
+  .forEach((coin, index) => {
+    const li = document.createElement("li");
+    li.className = "d-flex justify-content-between align-items-center mb-3";
+
+    const priceFormatted = parseFloat(coin.current_price).toLocaleString("en-US", {
+      minimumFractionDigits: 4,
+      maximumFractionDigits: 6,
+    });
+
+    li.innerHTML = `
+      <div class="d-flex align-items-center gap-3">
+        <strong class="text-muted">${index + 1}</strong>
+        <img src="${coin.image}" alt="${coin.name}" style="width: 32px; height: 32px; border-radius: 50%;">
+        <div>
+          <div><strong>${coin.name}</strong> <span class="text-muted">${coin.symbol}</span></div>
+          <div class="text-muted small">${coin.category}</div>
+        </div>
+      </div>
+      <span class="badge bg-success-subtle text-success fw-bold" style="font-size: 0.9rem;">$${priceFormatted}</span>
+    `;
+    list.appendChild(li);
+  });
+});</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const rounds = JSON.parse(`{{ upcoming_funds|escapejs }}`);  // Or use a `<script>` tag with ID if passing manually
+    const list = document.getElementById("funding-rounds-list");
+  
+    rounds.slice(0, 5).forEach(item => {
+      const name = item.name || "—";
+      const icon = item.icon || "";
+      const date = new Date(item.date).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short"
+      });
+      const raise = item.raise
+        ? `$ ${(item.raise / 1e6).toFixed(2)}M`
+        : "N/A";
+  
+      const fundName = item.fund_name || "—";
+      const fundLogo = item.fund_image || "";
+      const stage = item.stage || "Undisclosed";
+  
+      const li = document.createElement("li");
+      li.className = "list-group-item d-flex justify-content-between align-items-center py-3 px-2";
+      li.style.border = "none";
+
+      li.innerHTML = `
+       <div class="ido-col ido-left">
+      <div class="ido-logo-wrapper">
+        <img src="${icon}" alt="${name}" class="ido-logo">
+      </div>
+      <div class="ido-info">
+        <div class="ido-name">
+          <strong>${name}</strong> 
+        </div>
+        <div class="ido-info">${stage}</div>
+      </div>
+    </div>
+
+    <div class="ido-col ido-middle text-end d-flex flex-column align-items-end">
+      <div class="ido-raise">${raise}</div>
+      <div class="ido-date">${date}</div>
+    </div>
+
+    <div class="ido-col ido-right d-flex align-items-center gap-2">
+      ${fundLogo ? `<img src="${fundLogo}" alt="${fundName}" class="ido-launchpad-logo">` : ""}
+      <div class="ido-launchpad-name">${fundName}</div>
+    </div>
+  `;
+  
+      list.appendChild(li);
+    });
+  });
+  </script>
+  <script>
+    fetch("/overview/api/launchpads-roi/")
+  .then(res => res.json())
+  .then(data => {
+    if (!Array.isArray(data)) {
+      console.error("Launchpad ROI data malformed:", data);
+      return;
+    }
+
+    const topLaunchpads = data
+      .sort((a, b) => b.currentRoiPercent - a.currentRoiPercent)
+      .slice(0, 10);
+
+    const labels = topLaunchpads.map(p => p.name);
+    const roiData = topLaunchpads.map(p => p.currentRoiPercent);
+    const barColors = roiData.map(v => v >= 0 ? '#00c49f' : '#ff5c5c');
+
+    const iconImages = topLaunchpads.map(p => {
+      const img = new Image();
+      img.src = p.icon;
+      return img;
+    });
+
+    const canvas = document.getElementById("launchpadChart");
+    const ctx = canvas.getContext("2d");
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'ROI',
+          data: roiData,
+          backgroundColor: barColors,
+          borderRadius: 5,
+          barThickness: 24
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+          padding: {
+            left: 70 // ✅ ensures enough space for icons + text
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            ticks: {
+              callback: val => `${val}%`,
+              font: { size: 12 }
+            },
+            grid: { color: '#eee' }
+          },
+          y: {
+            ticks: {
+              font: { size: 14 },
+              padding: 10
+            },
+            grid: { display: false }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => {
+                const value = ctx.dataset.data[ctx.dataIndex];
+                return `${value >= 0 ? '+' : ''}${value.toFixed(1)}%`;
+              }
+            }
+          }
+        }
+      },
+      plugins: [{
+        id: "drawLaunchpadIcons",
+        beforeDraw(chart) {
+          const yAxis = chart.scales.y;
+          const ctx = chart.ctx;
+
+          topLaunchpads.forEach((p, i) => {
+            const y = yAxis.getPixelForTick(i) - 12;
+            const x = yAxis.left - 45;
+
+            const icon = iconImages[i];
+            ctx.drawImage(icon, x, y, 24, 24);
+          });
+        }
+      }]
+    });
+  })
+  .catch(err => console.error("Launchpad ROI chart error:", err));
+
+  
+
+
+
+ 
+
+
+  fetch("/overview/api/market-state/")
+  .then(res => res.json())
+  .then(data => {
+    const rawGroups = data?.data?.children || [];
+    const chartData = [];
+    const categories = [];
+
+    // Process the data into categories and coins
+    rawGroups.forEach((group, i) => {
+      const groupId = `group-${i}`;
+      categories.push({ id: groupId, name: group.name });
+
+      (group.children || []).forEach(coin => {
+        const change = parseFloat(coin.percent) || 0;
+        chartData.push({
+          name: coin.name,
+          parent: groupId,
+          value: coin.value,
+          price: coin.price,
+          change,
+          colorValue: change
+        });
+      });
+    });
+
+    let categoryLabels = [];
+
+    Highcharts.chart('marketStateChartHighcharts', {
+      chart: {
+        type: 'treemap',
+        backgroundColor: '#f5f5f5',
+        style: {
+          fontFamily: 'Poppins, sans-serif'
+        },
+        events: {
+          render: function () {
+            const chart = this;
+            categoryLabels.forEach(l => l.destroy());
+            categoryLabels = [];
+
+            const cats = chart.series[0].data.filter(d => d.id && d.name && !d.parent);
+            cats.forEach(category => {
+              const node = category.node;
+              if (!node) return;
+              const x = node.x + 6;
+              const y = node.y + 5;
+              const label = chart.renderer.text(category.name, x, y)
+                .css({
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: '#333'
+                })
+                .add();
+              categoryLabels.push(label);
+            });
+          }
+        }
+      },
+
+      title: { text: '' },
+
+      credits: {
+        enabled: false
+      },
+
+      colorAxis: {
+        min: -10,
+        max: 10,
+        stops: [
+          [0, '#ff6f61'],
+          [0.5, '#e0e0e0'],
+          [1, '#66bb6a']
+        ],
+        labels: {
+          format: '{value}%'
+        },
+        minColor: '#ff6f61',
+        maxColor: '#66bb6a'
+      },
+
+      tooltip: {
+        useHTML: true,
+        formatter: function () {
+          return `
+            <div style="padding:8px;font-size:13px;font-family:Poppins;">
+              <strong>${this.point.name}</strong><br/>
+              Market Cap: $${(this.point.value / 1e9).toFixed(2)}B<br/>
+              Price: $${this.point.price.toLocaleString(undefined, { maximumFractionDigits: 2 })}<br/>
+              24H Change: ${this.point.change >= 0 ? '+' : ''}${this.point.change.toFixed(2)}%
+            </div>
+          `;
+        }
+      },
+
+      plotOptions: {
+        treemap: {
+          layoutAlgorithm: 'squarified',
+          borderColor: '#ffffff',
+          borderWidth: 3, // Increased for more spacing
+          pointPadding: 3, // Increased for more spacing between tiles
+          levels: [
+            {
+              level: 1, // Category level
+              dataLabels: {
+                enabled: false
+              }
+            },
+            {
+              level: 2, // Coin level
+              dataLabels: {
+                enabled: true,
+                useHTML: true,
+                align: 'center',
+                verticalAlign: 'middle',
+                style: {
+                  textOutline: 'none',
+                  fontWeight: '500'
+                },
+                formatter: function () {
+                  const area = this.point.node?.val || 0;
+                  const name = this.point.name || '';
+                  const price = this.point.price || 0;
+                  const change = this.point.change || 0;
+                  const sign = change >= 0 ? '+' : '';
+                  const changeText = `${sign}${change.toFixed(2)}%`;
+                  const priceText = `$${price.toLocaleString(undefined, { maximumFractionDigits: 2 })}`;
+
+                  const fontColor = '#333';
+                  const minFontSize = 8; // Reduced for smaller tiles
+                  const maxFontSize = 14; // Reduced for better proportionality
+                  const areaThreshold = 1000000; // Increased to hide text in smaller tiles
+
+                  if (area < areaThreshold) return '';
+
+                  const fontSize = Math.min(maxFontSize, minFontSize + Math.round(area * 0.00003)); // Adjusted scaling factor
+
+                  return `
+                    <div style="text-align:center; line-height:1.2;">
+                      <div style="font-size:${fontSize}px; font-weight:600; color:${fontColor};">${name}</div>
+                      <div style="font-size:${fontSize - 2}px; color:${change >= 0 ? '#4caf50' : '#f44336'};">${changeText}</div>
+                      <div style="font-size:${fontSize - 2}px; color:${fontColor};">${priceText}</div>
+                    </div>`;
+                }
+              }
+            }
+          ]
+        }
+      },
+
+      series: [{
+        type: 'treemap',
+        layoutAlgorithm: 'squarified',
+        allowDrillToNode: false,
+        colorKey: 'colorValue',
+        data: [...categories, ...chartData]
+      }]
+    });
+  })
+  .catch(err => console.error("Market state chart error:", err));
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Function to render coins
+  function renderCoins(containerId, coins) {
+    const container = document.getElementById(containerId);
+    if (!container) return; // Prevent null errors
+    
+    container.innerHTML = coins.map(coin => {
+      // Ensure price is valid before using toFixed()
+      const price = coin.price ?? 0; // Use 0 if price is null or undefined
+      const change = coin.priceChange24h ?? 0; // Ensure priceChange24h is not undefined
+      const isPositive = change > 0;
+      const changeClass = isPositive ? 'positive' : 'negative';
+      const formattedChange = `${isPositive ? '+' : ''}${change.toFixed(2)}%`;
+  
+      return `
+        <li>
+          <img src="${coin.icon}" alt="${coin.name}" />
+          <div>
+            <div class="coin-name">${coin.name}</div>
+            <div class="coin-price">$ ${price.toFixed(4)}</div>
+            <div class="coin-change ${changeClass}">${formattedChange}</div>
+          </div>
+        </li>`;
+    }).join('');
+  }
+  
+  // Tab Switching
+  document.getElementById("trendingTab").addEventListener("click", () => {
+    document.getElementById("trendingCoinsList").style.display = "flex";
+    document.getElementById("recentCoinsList").style.display = "none";
+    toggleActiveTab("trending");
+  });
+
+  document.getElementById("recentTab").addEventListener("click", () => {
+    document.getElementById("trendingCoinsList").style.display = "none";
+    document.getElementById("recentCoinsList").style.display = "flex";
+    toggleActiveTab("recent");
+  });
+
+  function toggleActiveTab(tab) {
+    document.getElementById("trendingTab").classList.toggle("active-tab", tab === "trending");
+    document.getElementById("trendingTab").classList.toggle("inactive-tab", tab !== "trending");
+    document.getElementById("recentTab").classList.toggle("active-tab", tab === "recent");
+    document.getElementById("recentTab").classList.toggle("inactive-tab", tab !== "recent");
+  }
+
+  // Fetch Trending Coins
+  fetch("/overview/api/trending-coins/")
+    .then(res => res.json())
+    .then(data => renderCoins("trendingCoinsList", data?.data || []));
+
+  // Fetch Recently Listed
+  fetch("/overview/api/recently-listed/")
+    .then(res => res.json())
+    .then(data => {
+      console.log("Recently Listed Data:", data);  // log the data
+      renderCoins("recentCoinsList", data?.data || []);
+    });
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch Latest Insights and Reports
+  fetch("/overview/api/articles/") // Replace with your actual Django view URL
+    .then(res => res.json())
+    .then(data => {
+      const insightsContainer = document.querySelector('.insights-container');
+      let articles = data.data;
+
+      // Log the number of articles fetched
+      console.log(`Fetched ${articles.length} articles`);
+
+      // Ensure a minimum of 10 articles to trigger scrolling
+      const minArticles = 10;
+      if (articles.length < minArticles) {
+        const repeatCount = Math.ceil(minArticles / articles.length);
+        articles = Array(repeatCount).fill(articles).flat().slice(0, minArticles);
+        console.log(`Expanded to ${articles.length} articles to ensure scrolling`);
+      }
+
+      // Clear the container before adding articles
+      insightsContainer.innerHTML = '';
+
+      // Add articles to the container
+      articles.forEach(article => {
+        const articleCard = `
+          <div class="insight-card">
+            <img src="${article.leadImage}" alt="${article.title}" class="insight-image" />
+            <div class="insight-info">
+              <h3><a href="https://cryptorank.io/articles/${article.slug}" class="article-title">${article.title}</a></h3>
+              <div class="tags">
+                ${article.tags.map(tag => `<span>${tag.name}</span>`).join('')}
+              </div>
+              <p class="author-info">
+                <span>${new Date(article.date).toLocaleDateString()} | ${article.readingTimeMinutes.toFixed(1)} min read</span>
+              </p>
+            </div>
+          </div>`;
+        insightsContainer.innerHTML += articleCard;
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching articles:", error);
+      // Fallback: Add placeholder articles if the API fails
+      const insightsContainer = document.querySelector('.insights-container');
+      insightsContainer.innerHTML = '';
+      for (let i = 1; i <= 10; i++) {
+        const articleCard = `
+          <div class="insight-card">
+            <img src="https://via.placeholder.com/240x110" alt="Placeholder ${i}" class="insight-image" />
+            <div class="insight-info">
+              <h3><a href="#" class="article-title">Placeholder Article ${i}</a></h3>
+              <div class="tags">
+                <span>Tag ${i}</span><span>Tag ${i + 1}</span>
+              </div>
+              <p class="author-info">
+                <span>${new Date().toLocaleDateString()} | 5.0 min read</span>
+              </p>
+            </div>
+          </div>`;
+        insightsContainer.innerHTML += articleCard;
+      }
+    });
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch 24h BTC Futures Volumes
+  fetch("/overview/api/futures-exchange-volumes/") // Replace this with your actual Django view URL
+    .then(res => res.json())
+    .then(data => {
+      if (!Array.isArray(data.data)) {
+        console.error("Futures volume data malformed:", data);
+        return;
+      }
+
+      // Get the top 10 exchanges sorted by volume
+      const topExchanges = data.data.slice(0, 10);
+
+      const exchangeNames = topExchanges.map(exchange => exchange.exchangeName);
+      const volumes = topExchanges.map(exchange => exchange.volume);
+      const exchangeIcons = topExchanges.map(exchange => exchange.exchangeIcon);
+
+      // Get the canvas element for the chart
+      const canvas = document.getElementById("futuresVolumeChart");
+      const ctx = canvas.getContext("2d");
+
+      // Helper function to format numbers into billions with $number+B format
+      function formatVolume(volume) {
+        const volumeInBillions = volume / 1e9;
+        return `$${volumeInBillions.toFixed(1)}B`; // Format with one decimal place and 'B' for billions
+      }
+
+      // Set up the chart
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: exchangeNames,
+          datasets: [{
+            label: "24h Volume",
+            data: volumes,
+            backgroundColor: "#7db6f3", // Custom color for bars
+            borderRadius: 5,
+            barThickness: 24
+          }]
+        },
+        options: {
+          indexAxis: "y", // Horizontal bar chart
+          responsive: true,
+          maintainAspectRatio: false,
+          layout: {
+            padding: {
+              left: 70 // To leave space for icons and text
+            }
+          },
+          scales: {
+            x: {
+              beginAtZero: true,
+              ticks: {
+                callback: function (val) {
+                  return formatVolume(val); // Format volume as $number+B
+                },
+                font: { size: 12 }
+              },
+              grid: { color: "#eee" }
+            },
+            y: {
+              ticks: {
+                font: { size: 14 },
+                padding: 10
+              },
+              grid: { display: false }
+            }
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  const value = context.dataset.data[context.dataIndex];
+                  return formatVolume(value); // Format volume as $number+B
+                }
+              }
+            }
+          }
+        },
+        plugins: [{
+          id: "drawExchangeIcons",
+          beforeDraw(chart) {
+            const yAxis = chart.scales.y;
+            const ctx = chart.ctx;
+
+            topExchanges.forEach((exchange, index) => {
+              const y = yAxis.getPixelForTick(index) - 12;
+              const x = yAxis.left - 45;
+
+              const icon = new Image();
+              icon.src = exchangeIcons[index];
+              icon.onload = () => {
+                ctx.drawImage(icon, x, y, 24, 24);
+              };
+            });
+          }
+        }]
+      });
+    })
+    .catch(err => {
+      console.error("Error fetching futures volume data:", err);
+    });
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch 24h BTC Futures Open Interest
+  fetch("/overview/api/futures-open-interest/") // Replace with your actual API endpoint
+    .then(res => res.json())
+    .then(data => {
+      if (!Array.isArray(data.data)) {
+        console.error("Futures open interest data malformed:", data);
+        return;
+      }
+
+      // Prepare the data for the Futures Open Interest
+      const interestData = data.data.map(exchange => ({
+        name: exchange.exchangeName,
+        interest: exchange.interest
+      }));
+
+      // Prepare the chart data for Futures Open Interest
+      const labels = interestData.map(item => item.name);
+      const interestValues = interestData.map(item => item.interest);
+
+      // Display the chart
+      const ctx = document.getElementById("futuresInterestChart").getContext("2d");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "BTC Futures Open Interest",
+            data: interestValues,
+            backgroundColor: "#424961", // Blue color
+            borderRadius: 8,
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              display: false, // Hides the x-axis labels (exchange names)
+            },
+            y: {
+              beginAtZero: true,
+              ticks: {
+                callback: function(value) {
+                  return `$${(value / 1e9).toFixed(1)}B`; // Display values in billions
+                },
+                font: {
+                  size: 12
+                }
+              },
+              grid: {
+                display: false
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false // Hides the legend
+            },
+            tooltip: {
+              callbacks: {
+                label: function(tooltipItem) {
+                  const value = tooltipItem.raw;
+                  return `$${(value / 1e9).toFixed(1)}B`; // Display tooltip in billions
+                }
+              }
+            }
+          }
+        }
+      });
+    })
+    .catch(err => {
+      console.error("Error fetching futures open interest data:", err);
+    });
+});
+
+
+
+
+fetch('/overview/api/new-ath/')
+  .then(response => response.json())
+  .then(data => {
+    const athContainer = document.getElementById('new-ath-cards');
+
+    if (data.error || !Array.isArray(data)) {
+      athContainer.innerHTML = '<p>No ATH data available.</p>';
+      return;
+    }
+
+    // Create two divs for the two columns
+    const columnLeft = document.createElement('div');
+    const columnRight = document.createElement('div');
+    columnLeft.classList.add('ath-column');
+    columnRight.classList.add('ath-column');
+
+    // Loop through the data and create cards dynamically
+    data.forEach((item, index) => {
+      const card = document.createElement('div');
+      card.classList.add('ath-card');
+
+      // Map API data to the required format
+      const name = item.name || 'Unknown';
+      const symbol = item.symbol || '';
+      const image = item.image || 'path/to/default-icon.png'; // Fallback image if none provided
+      const currentPrice = item.price?.USD || 0;
+      const athPrice = item.athPrice?.USD || 0;
+
+      // Recalculate the percentage change
+      let change = 0;
+      if (currentPrice && athPrice && athPrice !== 0) {
+        change = ((currentPrice - athPrice) / athPrice) * 100;
+        change = parseFloat(change.toFixed(2)); // Round to 2 decimal places
+      }
+
+      // Format price to match the image (e.g., $3.25K for thousands)
+      let formattedPrice = currentPrice;
+      if (currentPrice >= 1000) {
+        formattedPrice = `${(currentPrice / 1000).toFixed(2)}K`;
+      } else if (currentPrice < 1) {
+        formattedPrice = currentPrice.toFixed(4);
+      } else {
+        formattedPrice = currentPrice.toFixed(2);
+      }
+
+      card.innerHTML = `
+        <img src="${image}" alt="${name}" class="ath-card-img" />
+        <div class="ath-card-info">
+          <h4 class="ath-name">${name} <span class="ath-symbol">${symbol}</span></h4>
+          <div class="ath-price-change">
+            <span class="ath-price">$${formattedPrice}</span>
+            <span class="ath-change ${change >= 0 ? 'green' : 'red'}">${change >= 0 ? '+' : ''}${change}%</span>
+          </div>
+        </div>
+      `;
+
+      // Add the card to the appropriate column
+      if (index < 3) {
+        columnLeft.appendChild(card); // First 3 items in the left column
+      } else {
+        columnRight.appendChild(card); // Next 3 items in the right column
+      }
+    });
+
+    // Append the columns to the container
+    athContainer.appendChild(columnLeft);
+    athContainer.appendChild(columnRight);
+  })
+  .catch(error => {
+    const athContainer = document.getElementById('new-ath-cards');
+    athContainer.innerHTML = '<p>Error loading ATH data.</p>';
+    console.error('Error fetching ATH data:', error);
+  });
+
+
+
+
+
+
+  fetch('/overview/api/new-ath/')
+  .then(response => response.json())
+  .then(data => {
+    const atlContainer = document.getElementById('new-atl-cards');
+
+    if (data.error || !Array.isArray(data)) {
+      atlContainer.innerHTML = '<p>No ATL data available.</p>';
+      return;
+    }
+
+    // Create two divs for the two columns
+    const columnLeft = document.createElement('div');
+    const columnRight = document.createElement('div');
+    columnLeft.classList.add('atl-column');
+    columnRight.classList.add('atl-column');
+
+    // Loop through the data and create cards dynamically
+    data.forEach((item, index) => {
+      const card = document.createElement('div');
+      card.classList.add('atl-card');
+
+      // Map API data to the required format
+      const name = item.name || 'Unknown';
+      const symbol = item.symbol || '';
+      const image = item.image || 'path/to/default-icon.png'; // Fallback image if none provided
+      const currentPrice = item.price?.USD || 0;
+      const atlPrice = item.atlPrice?.USD || 0;
+
+      // Calculate the percentage change relative to ATL price
+      let change = 0;
+      if (currentPrice && atlPrice && atlPrice !== 0) {
+        change = ((currentPrice - atlPrice) / atlPrice) * 100;
+        change = parseFloat(change.toFixed(2)); // Round to 2 decimal places
+      }
+
+      // Format price to match the style (e.g., $3.25K for thousands)
+      let formattedPrice = currentPrice;
+      if (currentPrice >= 1000) {
+        formattedPrice = `${(currentPrice / 1000).toFixed(2)}K`;
+      } else if (currentPrice < 1) {
+        formattedPrice = currentPrice.toFixed(4);
+      } else {
+        formattedPrice = currentPrice.toFixed(2);
+      }
+
+      card.innerHTML = `
+        <img src="${image}" alt="${name}" class="atl-card-img" />
+        <div class="atl-card-info">
+          <h4 class="atl-name">${name} <span class="atl-symbol">${symbol}</span></h4>
+          <div class="atl-price-change">
+            <span class="atl-price">$${formattedPrice}</span>
+            <span class="atl-change ${change >= 0 ? 'green' : 'red'}">${change >= 0 ? '+' : ''}${change}%</span>
+          </div>
+        </div>
+      `;
+
+      // Add the card to the appropriate column
+      if (index < 3) {
+        columnLeft.appendChild(card); // First 3 items in the left column
+      } else {
+        columnRight.appendChild(card); // Next 3 items in the right column
+      }
+    });
+
+    // Append the columns to the container
+    atlContainer.appendChild(columnLeft);
+    atlContainer.appendChild(columnRight);
+  })
+  .catch(error => {
+    const atlContainer = document.getElementById('new-atl-cards');
+    atlContainer.innerHTML = '<p>Error loading ATL data.</p>';
+    console.error('Error fetching ATL data:', error);
+  });
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+
+    <script src="https://code.highcharts.com/11.4.8/highcharts.js"></script>
+    <script src="https://code.highcharts.com/11.4.8/modules/treemap.js"></script>
+    <script src="https://code.highcharts.com/11.4.8/modules/coloraxis.js"></script>
+    <script src="https://code.highcharts.com/11.4.8/modules/exporting.js"></script>
+  
 {% endblock %}

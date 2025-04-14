@@ -49,7 +49,13 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_totp',
     'sanctions',
     'funding_rounds',
+<<<<<<< HEAD
     'overViewDash',
+=======
+    'django.contrib.humanize',
+    'analytics',
+
+>>>>>>> cc7bf219f212036b6eb9168ff176e053aef30bef
 
 ]
 

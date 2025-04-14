@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 project_key,project_name,project_logo,totalRaise,taskTypes,backer_name,backer_logo
 huddle-01-activity764,Huddle01,https://img.cryptorank.io/coins/150x150.huddle_011680857179191.png,2800000,"Social, Testnet, Bounty Platforms",Balaji Srinivasan,https://img.cryptorank.io/funds/60x60.balaji_srinivasan1666791966754.png
 huddle-01-activity764,Huddle01,https://img.cryptorank.io/coins/150x150.huddle_011680857179191.png,2800000,"Social, Testnet, Bounty Platforms",Stani Kulechov,https://img.cryptorank.io/funds/60x60.stani_kulechov1678784089440.png
@@ -8,3 +9,9 @@ pluralis-research-activity765,Pluralis Research,https://img.cryptorank.io/coins/
 pluralis-research-activity765,Pluralis Research,https://img.cryptorank.io/coins/150x150.pluralis_research1742396710935.png,7600000,Fill The Form,CoinFund,https://img.cryptorank.io/funds/60x60.coinfund1648750399605.png
 pluralis-research-activity765,Pluralis Research,https://img.cryptorank.io/coins/150x150.pluralis_research1742396710935.png,7600000,Fill The Form,Union Square Ventures (USV),https://img.cryptorank.io/funds/60x60.union square ventures1653917088736.png
 pluralis-research-activity765,Pluralis Research,https://img.cryptorank.io/coins/150x150.pluralis_research1742396710935.png,7600000,Fill The Form,Variant,https://img.cryptorank.io/funds/60x60.variant1653903740447.png
+=======
+coinKey,coinName,raise,coinImage,funds
+walrus-protocol,Walrus,140.0,https://img.cryptorank.io/coins/60x60.walrus1727864479768.png,"[{'slug': 'standard-crypto', 'logo': 'https://img.cryptorank.io/funds/60x60.standard_crypto1658135937193.png'}, {'slug': 'andreessen-horowitz', 'logo': 'https://img.cryptorank.io/funds/60x60.andreessen horowitz (a16z)1648484432797.png'}, {'slug': 'electric-capital', 'logo': 'https://img.cryptorank.io/funds/60x60.electric capital1648564160766.png'}]"
+chronicle-labs,Chronicle,12.0,https://img.cryptorank.io/coins/60x60.chronicle1742910290000.png,"[{'slug': 'strobe-ventures', 'logo': 'https://img.cryptorank.io/funds/60x60.strobe_prev_blocktower_capital1742911103973.png'}, {'slug': 'galaxy-digital', 'logo': 'https://img.cryptorank.io/funds/60x60.galaxy1691061461595.png'}, {'slug': 'stani-kulechov', 'logo': 'https://img.cryptorank.io/funds/60x60.stani_kulechov1678784089440.png'}]"
+moonpay,MoonPay,200.0,https://img.cryptorank.io/coins/60x60.moon_pay1668496356608.png,"[{'slug': 'galaxy-digital', 'logo': 'https://img.cryptorank.io/funds/60x60.galaxy1691061461595.png'}]"
+>>>>>>> cc7bf219f212036b6eb9168ff176e053aef30bef

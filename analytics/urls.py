@@ -18,19 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from . import urls
-
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('Core.urls')),  
-    path("sanctions/", include("sanctions.urls")),
-    path('funding/', include('funding_rounds.urls')),
-    path('overview/', include('overViewDash.urls')),
-    path('analytics/', include('analytics.urls')),
-
-
-    
+    path('fundraising-chart/', views.fundraising_chart, name='fundraising_chart'),
 ]
 
 if settings.DEBUG:

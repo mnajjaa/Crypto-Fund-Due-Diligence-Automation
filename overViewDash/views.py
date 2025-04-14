@@ -282,12 +282,12 @@ def overview_page(request):
         "btc_data": json.dumps(btc_data),  # ✅ add json.dumps here!
         "selected_period": selected_period,
         'fear_greed': json.dumps(fear_greed),  # serialize here
-    "hot_events": json.dumps(hot_events),  # ✅ must be json.dumps!
+        "hot_events": json.dumps(hot_events),  # ✅ must be json.dumps!
         "funding_trend": json.dumps(funding_trend), 
         "funding_ido": json.dumps(funding_ido),
         "gainers": json.dumps(gainers), 
         "upcoming_ido": json.dumps(upcoming_ido),
-         "coins_list": json.dumps(coins_list),
+        "coins_list": json.dumps(coins_list),
         "upcoming_funds": json.dumps(upcoming_funds),
  # serialize here
           # serialize here

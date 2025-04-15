@@ -221,7 +221,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <div class="sidebar-header">
-        <a href="https://themepixels.me/demo/dashbyte/" class="sidebar-logo center-text">DueDeals</a>
+        <a href="{% url 'overview_page' %}" class="sidebar-logo center-text">DueDeals</a>
       </div>      
     </div>
     <hr class="horizontal dark mt-0 mb-2">
@@ -1132,10 +1132,6 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"90a3be06de89324f","version":"2025.1.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"1b7cbb72744b40c580f8633c6b62637e","b":1}' crossorigin="anonymous"></script>
 
-
-
-</body>
-
 {% if messages %}
   {% for message in messages %}
     <script>
@@ -1150,6 +1146,10 @@
     </script>
   {% endfor %}
 {% endif %}
+
+</body>
+
+
 
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/pages/dashboards/analytics.html?_ga=2.231992159.1189888840.1738179052-658755675.1738179052 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 19:07:24 GMT -->
 </html>

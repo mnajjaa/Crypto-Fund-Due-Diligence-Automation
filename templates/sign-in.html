@@ -33,12 +33,13 @@
         <div class="mb-0">
           <!-- Display error messages -->
           {% if messages %}
-            <div class="alert alert-danger ">
-              {% for message in messages %}
-                <p class="mb-0">{{ message }}</p>
-              {% endfor %}
-            </div>
+            {% for message in messages %}
+              <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+                {{ message }}
+              </div>
+            {% endfor %}
           {% endif %}
+
 
           <form method="POST">
             {% csrf_token %}
@@ -107,7 +108,19 @@ fetch('/user/sign-in/', {
       }
     </script>
 
+    <script>
 
+      // Auto-hide alerts after 4 seconds
+      setTimeout(function () {
+        const alerts = document.querySelectorAll('.alert');
+        alerts.forEach(function(alert) {
+          alert.style.transition = 'opacity 0.5s ease';
+          alert.style.opacity = '0';
+          setTimeout(() => alert.remove(), 500);
+        });
+      }, 4000);
+    </script>
 
+ 
   </body>
 </html>

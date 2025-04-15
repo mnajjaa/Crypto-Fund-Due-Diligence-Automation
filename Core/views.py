@@ -56,6 +56,7 @@ def RegisterView(request):
         username = request.POST.get('username')
         email = request.POST.get('email')  
         password = request.POST.get('password')
+        confirm_password = request.POST.get('confirm_password')
 
         user_data_has_error = False
 
@@ -68,10 +69,15 @@ def RegisterView(request):
             user_data_has_error = True
             messages.error(request, 'Email already exists')
 
-        # Password validation: Min 6 chars, 1 number, 1 special character
+        # Password validation
         if len(password) < 6 or not re.search(r"\d", password) or not re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
             user_data_has_error = True
             messages.error(request, 'Password must be at least 6 characters long, contain at least one number, and one special character.')
+
+        # Confirm password match
+        if password != confirm_password:
+            user_data_has_error = True
+            messages.error(request, 'Passwords do not match')
 
         if user_data_has_error:
             return redirect('register')
@@ -106,7 +112,7 @@ def LoginView(request):
             access_token = str(refresh.access_token)
 
             # ewdirect to home page
-            return redirect(f"/?access_token={access_token}")
+            return redirect(f"/overview/?access_token={access_token}")
 
         else:
             messages.error(request, 'Invalid user credentials')

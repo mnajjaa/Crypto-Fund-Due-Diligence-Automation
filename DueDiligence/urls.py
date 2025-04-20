@@ -28,6 +28,7 @@ urlpatterns = [
     path('funding/', include('funding_rounds.urls')),
     path('overview/', include('overViewDash.urls')),
     path('analytics/', include('analytics.urls')),
+    path('pptxGen/', include('pptxGen.urls')),
 
 
     

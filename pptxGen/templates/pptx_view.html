@@ -1,0 +1,122 @@
+{% extends "baseTim.html" %}
+{% load static %}
+{% block title %}PowerPoint Generator{% endblock %}
+{% load humanize %}
+
+
+{% block nav %}
+        <nav  aria-label="breadcrumb" class="ps-2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-6 me-5">
+            <li class=" text-sm p-1">Question Bank  / </li>
+            <li class=" text-sm p-1 text-dark active font-weight-bold" aria-current="page"> powerPoint Generator</li>
+          </ol>
+        </nav>
+
+{% endblock %}
+
+{% block extra_css %}
+<link id="pagestyle" href="{% static 'style.min.css' %}" rel="stylesheet" />
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="d-md-flex align-items-center justify-content-between mb-4">
+    <div>
+     
+      <h4 class="main-title mb-0">Welcome to PowerPoint Generator</h4>
+    </div>
+    <div class="d-flex gap-2 mt-3 mt-md-0">
+      
+      <button type="button" class="btn btn-primary d-flex align-items-center gap-2 mt-3">
+        <i class="fas fa-file-alt fs-18 lh-1"></i>
+        Generate<span class="d-none d-sm-inline"> Report</span>
+      </button>    </div>
+  </div>
+<div class="row mt-3">
+    <div class="col-lg-4 col-md-6">
+      <div class="card" data-animation="true">
+        <div class="card-header p-2 position-relative z-index-2 bg-transparent">
+          <a class="d-block blur-shadow-image">
+            <img src="/media/template-crypto.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+          </a>
+          <div class="colored-shadow" style="background-image: url('/media/template-crypto.png')"></div>
+        </div>
+        <div class="card-body text-left">
+            <div class="d-flex mt-n6 mx-auto">
+                <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Refresh">
+                  <i class="material-symbols-rounded text-lg">...</i>
+                </a>
+                <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                </button>
+              </div>
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <h5 class="font-weight-bold mb-0 mt-3">
+                <a href="javascript:;">Black and Gold Modern</a>
+              </h5>        
+              
+            </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="card" data-animation="true">
+        <div class="card-header p-2 position-relative z-index-2 bg-transparent">
+          <a class="d-block blur-shadow-image">
+            <img src="https://images.unsplash.com/photo-1622485480253-8abe11c61751?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+          </a>
+          <div class="colored-shadow" style="background-image: url(https://images.unsplash.com/photo-1622485480253-8abe11c61751?q=80&amp;w=1200&amp;auto=format&amp;fit=crop);"></div>
+        </div>
+        <div class="card-body text-left">
+            <div class="d-flex mt-n6 mx-auto">
+                <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Refresh">
+                  <i class="material-symbols-rounded text-lg">...</i>
+                </a>
+                <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                </button>
+              </div>
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <h5 class="font-weight-bold mb-0 mt-3">
+                <a href="javascript:;">Tibetan Buddhist Temple</a>
+              </h5>        
+              
+            </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="card" data-animation="true">
+        <div class="card-header p-2 position-relative z-index-2 bg-transparent">
+          <a class="d-block blur-shadow-image">
+            <img src="https://images.unsplash.com/photo-1527246201253-ce566026066e?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+          </a>
+          <div class="colored-shadow" style="background-image: url(https://images.unsplash.com/photo-1527246201253-ce566026066e?q=80&w=1200&auto=format&fit=crop"></div>
+        </div>
+        <div class="card-body text-left">
+            <div class="d-flex mt-n6 mx-auto">
+                <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Refresh">
+                  <i class="material-symbols-rounded text-lg">...</i>
+                </a>
+                <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                  
+                </button>
+              </div>
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <h5 class="font-weight-bold mb-0 mt-3">
+                <a href="javascript:;">Tibetan Buddhist Temple</a>
+              </h5>        
+              
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block extra_js %}
+{% endblock %}

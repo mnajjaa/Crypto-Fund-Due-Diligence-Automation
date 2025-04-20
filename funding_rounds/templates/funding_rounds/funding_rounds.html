@@ -1,4 +1,5 @@
 {% extends "baseTim.html" %}
+{% load static %}
 {% block title %}Funding Rounds{% endblock %}
 {% load humanize %}
 
@@ -14,6 +15,8 @@
 {% endblock %}
 
 {% block extra_css %}
+<link id="pagestyle" href="{% static 'style.min.css' %}" rel="stylesheet" />
+
 <style>
   
   .top-card {

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const altWalletsBlock = document.getElementById("alt-wallets-block");
     const descriptionBlock = document.getElementById("description-block");
 
+    
     walletInput.addEventListener("input", function () {
         submitButton.disabled = walletInput.value.trim() === "";
     });
@@ -44,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (data.error) {
                 resultDiv.innerHTML = `<p class='text-danger'>Error: ${data.error}</p>`;
-                sanctionStatus.classList.remove("badge-success", "badge-danger");
-                sanctionStatus.classList.add("badge-warning");
+                sanctionStatus.className = "badge bg-warning text-dark rounded-pill px-3 py-2";
                 sanctionStatus.innerText = "Error Checking";
+
                 return;
             }
 
@@ -63,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const nationalityMatch = description.match(/nationality\s+([A-Za-z]+)/i);
                 const altWallets = description.match(/0x[a-fA-F0-9]{40}/g)?.slice(1);
 
-                sanctionStatus.classList.remove("badge-success");
-                sanctionStatus.classList.add("badge-danger");
+                sanctionStatus.className = "badge bg-danger text-white rounded-pill px-3 py-2";
                 sanctionStatus.innerText = "Sanctioned";
+
 
                 const leftCard = `
                     <div class="card p-3 shadow-sm h-100">
@@ -78,20 +79,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>`;
 
                 const rightCard = `
-                    <div class="card p-3 shadow-sm h-100 d-flex flex-column justify-content-between">
+                     <div class="card p-3 shadow-sm h-100 d-flex flex-column justify-content-between sticky-side">
                         <div>
-                          <h6>Wallet Profile (via Moralis)</h6>
-                          <div id="moralis-networth"></div>
-                          <div id="moralis-tokens"></div>
+                        <h6 class="fw-bold mb-3 text-primary">Wallet Profile</h6>
+                        <div id="moralis-networth" class="text-muted small"></div>
+                        <div id="moralis-tokens" class="collapse text-muted small mt-2"></div>
                         </div>
-                        <div class="text-center mt-3">
-                          <a href="#" class="text-primary small">Show more ▼</a>
+                        <div class="text-center pt-2 border-top">
+                        <a href="#" id="toggle-details" class="text-primary small" data-bs-toggle="collapse" data-bs-target="#moralis-tokens" aria-expanded="false">Show more ▼</a>
                         </div>
                     </div>`;
 
                 sanctionCards.innerHTML = `
-                    <div class="col-md-6 d-flex">${leftCard}</div>
-                    <div class="col-md-6 d-flex">${rightCard}</div>`;
+                      <div class="row g-4">
+                            <div class="col-lg-9">
+                            ${leftCard}
+                            </div>
+                            <div class="col-lg-3">
+                            ${rightCard}
+                            </div>
+                        </div>`;
 
                 const networthDiv = document.getElementById("moralis-networth");
                 const tokensDiv = document.getElementById("moralis-tokens");
@@ -127,8 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 }
             } else {
-                sanctionStatus.classList.remove("badge-danger");
-                sanctionStatus.classList.add("badge-success");
+                sanctionStatus.className = "badge bg-success text-white rounded-pill px-3 py-2";
                 sanctionStatus.innerText = "Not Sanctioned";
                 sanctionCards.innerHTML = "<p class='text-success'>This address is not sanctioned.</p>";
             }
@@ -174,3 +180,31 @@ document.addEventListener("DOMContentLoaded", function () {
         return document.cookie.split("; ").find(row => row.startsWith("csrftoken"))?.split("=")[1];
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownItems = document.querySelectorAll(".dropdown-item");
+  const hiddenInput = document.getElementById("chain-select");
+  const label = document.getElementById("selected-chain-label");
+
+  dropdownItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const value = this.getAttribute("data-value");
+      const name = this.textContent;
+      hiddenInput.value = value;
+      label.textContent = name;
+    });
+  });
+});
+
+document.addEventListener("click", function (e) {
+    const toggleBtn = document.getElementById("toggle-details");
+    const details = document.getElementById("moralis-tokens");
+  
+    if (e.target === toggleBtn) {
+      e.preventDefault();
+  
+      const expanded = details.classList.contains("show");
+      toggleBtn.innerHTML = expanded ? "Show more ▼" : "Show less ▲";
+    }
+  });
+  

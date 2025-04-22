@@ -1163,7 +1163,7 @@ gainers
   });
   </script>
   <script>
-    fetch("/overview/api/launchpads-roi/")
+    fetch("/api/launchpads-roi/")
   .then(res => res.json())
   .then(data => {
     if (!Array.isArray(data)) {
@@ -1264,7 +1264,7 @@ gainers
  
 
 
-  fetch("/overview/api/market-state/")
+  fetch("/api/market-state/")
   .then(res => res.json())
   .then(data => {
     const rawGroups = data?.data?.children || [];
@@ -1477,12 +1477,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Fetch Trending Coins
-  fetch("/overview/api/trending-coins/")
+  fetch("/api/trending-coins/")
     .then(res => res.json())
     .then(data => renderCoins("trendingCoinsList", data?.data || []));
 
   // Fetch Recently Listed
-  fetch("/overview/api/recently-listed/")
+  fetch("/api/recently-listed/")
     .then(res => res.json())
     .then(data => {
       console.log("Recently Listed Data:", data);  // log the data
@@ -1496,7 +1496,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch Latest Insights and Reports
-  fetch("/overview/api/articles/") // Replace with your actual Django view URL
+  fetch("/api/articles/") // Replace with your actual Django view URL
     .then(res => res.json())
     .then(data => {
       const insightsContainer = document.querySelector('.insights-container');
@@ -1564,7 +1564,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch 24h BTC Futures Volumes
-  fetch("/overview/api/futures-exchange-volumes/") // Replace this with your actual Django view URL
+  fetch("/api/futures-exchange-volumes/") // Replace this with your actual Django view URL
     .then(res => res.json())
     .then(data => {
       if (!Array.isArray(data.data)) {
@@ -1673,7 +1673,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch 24h BTC Futures Open Interest
-  fetch("/overview/api/futures-open-interest/") // Replace with your actual API endpoint
+  fetch("/api/futures-open-interest/") // Replace with your actual API endpoint
     .then(res => res.json())
     .then(data => {
       if (!Array.isArray(data.data)) {
@@ -1752,7 +1752,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-fetch('/overview/api/new-ath/')
+fetch('/api/new-ath/')
   .then(response => response.json())
   .then(data => {
     const athContainer = document.getElementById('new-ath-cards');
@@ -1831,7 +1831,7 @@ fetch('/overview/api/new-ath/')
 
 
 
-  fetch('/overview/api/new-ath/')
+  fetch('/api/new-ath/')
   .then(response => response.json())
   .then(data => {
     const atlContainer = document.getElementById('new-atl-cards');

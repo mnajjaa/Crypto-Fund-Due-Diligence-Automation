@@ -23,10 +23,10 @@ from . import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('Core.urls')),  
+    path('/core', include('Core.urls')),  
     path("sanctions/", include("sanctions.urls")),
     path('funding/', include('funding_rounds.urls')),
-    path('overview/', include('overViewDash.urls')),
+    path('', include('overViewDash.urls')),
     path('analytics/', include('analytics.urls')),
 
 

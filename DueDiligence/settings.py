@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'overViewDash',
     'django.contrib.humanize',
     'analytics',
+    'pptxGen',
 
 
 ]

@@ -2,73 +2,174 @@
 {% load static %}
 {% block title %}Sanctions{% endblock %}
 
+{% block extra_css %}
+<link id="pagestyle" href="{% static 'sanctions/css/style.min.css' %}" rel="stylesheet" />
+
+<style>
+  .sticky-side {
+    position: sticky;
+    top: 100px;
+  }
+  
+</style>>
+
+{% endblock %}
+
+
+
 {% block content %}
 <h2 class="mb-4">Sanctions Checker</h2>
 
-    <div class="row g-4 mb-4">
-            <div class="card shadow-sm rounded-4 border-0">
-                <div class="card-header">
-                    <h4>Sanctions Checker</h4>
-                    <p class="text-muted">
-                        Enter a cryptocurrency wallet address to check if it's associated with any sanctions.
-                    </p>
-                </div>
-                <div class="card-body p-0">
-                    <form id="sanctions-form">
-                        <div class="row mb-3">
-                            <div class="col-md-7">
-                                <label class="form-label" for="wallet-address">Wallet Address</label>
-                                <input type="text" class="form-control" id="wallet-address" name="wallet_address" required>
-                            </div>
-                            <div class="col-md-5">
-                                <label class="form-label" for="chain-select">Blockchain</label>
-                                <select id="chain-select" class="form-select">
-                                    <option value="eth" selected>Ethereum</option>
-                                    <option value="bsc">BNB Chain</option>
-                                    <option value="polygon">Polygon</option>
-                                    <option value="avalanche">Avalanche</option>
-                                    <option value="fantom">Fantom</option>
-                                    <option value="arbitrum">Arbitrum</option>
-
-                                    <!-- Add more as needed -->
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 d-flex align-items-center">
-                                <button type="submit" class="btn bg-gradient-dark w-100" id="submit-button" disabled>
-                                    Check
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Section to display results -->
-                    <div id="result" class="mt-3"></div>
-
-                    <!-- Sanctions Check Result and Badge in the same line -->
-                    <div class="mt-4">
-                        <h5 class="d-inline-block mb-0">Sanctions Check Result</h5>
-                        <span class="badge badge-danger ms-2 d-inline-block align-middle" id="sanction-status">
-                            Not Checked
-                        </span>
-                    </div>
-                    <div id="sanction-details-container" class="mt-3">
-                        <p id="sanction-details" class="text-muted mt-2">Results will be displayed here.</p>
-                    </div>
-
-                    <!--Moralis-->
-                    <hr>
-                    <h5>💼 Wallet Profile (via Moralis)</h5>
-                    <div id="wallet-networth" class="mb-2"></div>
-                    <div id="wallet-tokens"></div>
-
-                </div>
-            </div>
-        
+<div class="row g-4 ">
+  <div class="card shadow-sm rounded-4 border-0">
+    <div class="card-header mt-3">
+      <h4>Sanctions Checker</h4>
+      <p class="text-muted mb-0">
+        Enter a cryptocurrency wallet address to check if it's associated with any sanctions.
+      </p>
     </div>
+    <div class="card-body p-0">
+        <form id="sanctions-form" class="p-0">
+            {% csrf_token %}
+            <div class="row gx-3 align-items-end">
+              
+              <!-- Wallet Address Input (Floating Label) -->
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label for="wallet-address" class="form-label">Wallet Address</label>
+                  <input class="form-control rounded-3 px-3 py-2 shadow-sm" style="height: 45px;" type="text" id="wallet-address" name="wallet_address" aria-label="wallet address input">
+                </div>
+              </div>
+          
+                <!-- Blockchain Dropdown -->
+          <div class="col-lg-3">
+            <div class="mb-3">
+              <label class="form-label" for="chain-select">Blockchain</label>
+              <select id="chain-select" name="chain" class="form-select border rounded-3 px-3 py-2 shadow-sm" style="height: 45px;" required>
+                <option value="" disabled hidden selected>Select blockchain</option>
+                <option value="eth">Ethereum</option>
+                <option value="bsc">BNB Chain</option>
+                <option value="polygon">Polygon</option>
+                <option value="avalanche">Avalanche</option>
+                <option value="fantom">Fantom</option>
+                <option value="arbitrum">Arbitrum</option>
+              </select>
+            </div>
+          </div>
+              
+              
+          
+              <!-- Submit Button -->
+              <div class="col-lg-3" style="max-width: 180px;">
+                <button type="submit" class="btn btn-primary w-100" style="height: 45px;" id="submit-button" disabled>
+                  <span class="spinner-border spinner-border-sm me-2 d-none" role="status" id="sanction-spinner"></span>
+                  Check Wallet
+                </button>
+              </div>
+          
+            </div>
+          </form>
+          
+          
+          
+      
+</div>
+      <!-- Section to display results -->
+      <div id="result" ></div>
+
+     <!-- Sanctions Check Result and Badge in the same line -->
+<div class="d-flex align-items-center gap-2 mt-3" id="sanction-status-container">
+  <h6 class="fw-semibold text-muted mb-0">Sanctions Check Status:</h6>
+  <span class="badge bg-secondary text-white rounded-pill px-3 py-2" id="sanction-status">Not Checked</span>
+</div>
+
+
+      <div class="row g-4 mt-3 align-items-stretch" id="sanction-inner-cards">
+        <!-- Left Card -->
+        <div class="col-md-6 d-flex">
+          <div class="card shadow-sm rounded-4 w-100 border-0">
+            <div class="card-body p-4">
+              <h6 class="fw-bold mb-3 text-primary">Identity Summary</h6>
+              <!-- Details injected via JS -->
+            </div>
+          </div>
+        </div>
+      
+        <!-- Right Card -->
+        <div class="col-md-6 d-flex">
+          <div class="card shadow-sm rounded-4 w-100 border-0 d-flex flex-column">
+            <div class="card-body p-4 card-body-scrollable flex-grow-1">
+              <h6 class="fw-bold mb-3 text-primary">Wallet Profile</h6>
+              <div id="moralis-networth" class="text-muted small"></div>
+              <div id="moralis-tokens" class="mt-2"></div>
+            </div>
+            <div class="text-center p-3 border-top">
+              <a href="#" class="text-primary small">Show more ▼</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Redesigned sanctions details container -->
+      <div id="sanction-details-container" class="mt-3">
+        <div class="row g-3" id="sanction-inner-cards"></div>
+        <hr class="my-3">
+        <h6 class="text-muted fw-bold">Additional Wallets</h6>
+
+        <div class="mt-3" id="alt-wallets-block"></div>
+        <div class="mt-2" id="description-block"></div>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block extra_js %}
-    <script src="{% static 'sanctions/sanctions.js' %}" defer></script>
+<script src="{% static 'sanctions/js/db.analytics.js' %}"></script>
+<script src="{% static 'sanctions/js/db.crypto.js' %}"></script>
+<script src="{% static 'sanctions/js/db.data.js' %}"></script>
+<script src="{% static 'sanctions/js/db.events.js' %}"></script>
+<script src="{% static 'sanctions/js/db.finance.js' %}"></script>
+<script src="{% static 'sanctions/js/db.helpdesk.js' %}"></script>
+<script src="{% static 'sanctions/js/db.product.js' %}"></script>
+<script src="{% static 'sanctions/js/db.sales.js' %}"></script>
+<script src="{% static 'sanctions/js/db.storage.js' %}"></script>
+<script src="{% static 'sanctions/js/script.js' %}"></script>
+<script src="{% static 'sanctions/js/sanctions.js' %}" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const inputs = document.querySelectorAll('.input-group-outline input, .input-group-outline select');
+
+    inputs.forEach(input => {
+      const wrapper = input.closest('.input-group-outline');
+
+      function updateState() {
+        if (input.value) {
+          wrapper.classList.add('is-filled', 'is-focused');
+        } else {
+          wrapper.classList.remove('is-filled');
+        }
+      }
+
+      input.addEventListener('focus', () => {
+        wrapper.classList.add('is-focused');
+      });
+
+      input.addEventListener('blur', () => {
+        if (!input.value) {
+          wrapper.classList.remove('is-focused');
+        }
+      });
+
+      input.addEventListener('input', updateState);
+      input.addEventListener('change', updateState);
+
+      updateState();
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 {% endblock %}

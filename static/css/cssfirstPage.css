@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f6f8fa;
+  }
+  
+  .header {
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .stats-panel {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  
+  .tabs {
+    background: white;
+    display: flex;
+    padding: 10px 20px;
+    gap: 15px;
+  }
+  
+  .tabs a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  .tabs .active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .coin-table {
+    padding: 20px;
+    background: white;
+  }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed; /* Ensures consistent column widths */
+    }
+  
+    th, td {
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle; /* Centers content vertically */
+      word-wrap: break-word; /* Prevents overflow */
+    }
+  
+  thead {
+    background: #f0f0f0;
+  }
+  
+  tbody tr:nth-child(odd) {
+      background-color: #eeeeee46; /* Couleur pour les lignes impaires */
+    }
+  
+    tbody tr:nth-child(even) {
+      background-color: #ffffff; /* Couleur pour les lignes paires */
+    }
+  
+    tbody tr:hover {
+      background-color: #f1f1f1a2; /* Couleur au survol */
+    }
+  
+  .lower-widgets {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .funding-rounds, .fundraising-chart {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+  }
+  .up { color: green; }
+  .down { color: red; }
+  canvas {
+    width: 100%;
+  }
+  
+    .coin-name {
+      display: flex;
+      align-items: center; /* Aligns image and text vertically */
+      gap: 10px; /* Adds spacing between the image and text */
+    }
+  
+    .coin-name {
+      display: flex;
+      align-items: center; /* Aligns image and text vertically */
+      gap: 10px; /* Adds spacing between the image and text */
+      justify-content: flex-start; /* Aligns content to the left */
+    }
+  
+    .coin-name img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover; /* Ensures the image fits within the dimensions */
+      border-radius: 50%; /* Makes the image circular */
+    }
+  
+    .coin-name div {
+      display: flex;
+      flex-direction: column; /* Stacks the name and symbol vertically */
+      align-items: flex-start; /* Aligns text to the left */
+    }
+  
+    .coin-symbol {
+      font-size: 0.8em; /* Smaller font size for the symbol */
+      color: #888; /* Lighter color for the symbol */
+    }
+    .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    gap: 0.6rem;
+    margin: 3rem auto 0;
+    max-width:min-content;
+  }
+  
+  .page__btn,
+  .page__numbers {
+    font-size: 10px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    transition: background 0.25s ease-in-out, color 0.25s;
+  }
+  
+  .page__numbers.active {
+    background-color: var(--primary);
+    color: #b1e0ff;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  .page__btn[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  
+  .page__btn:hover:not([disabled]),
+  .page__numbers:hover:not(.active) {
+    color: var(--primary);
+  }
+  
+   .top-gainers-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 320px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-gainers-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.top-gainers-card .arrow {
+  color: #555;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.gainers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gainer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.8rem;
+}
+
+.gainer-rank {
+  font-weight: bold;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.gainer-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.gainer-info {
+  flex-grow: 1;
+}
+
+.gainer-info .symbol {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: 0.3rem;
+}
+
+.gainer-category {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.gainer-change {
+  background-color: #e7f8ee;
+  color: #1db954;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+.top-losers-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  width: 320px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-losers-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.top-losers-card .arrow {
+  color: #555;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.losers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.loser-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.8rem;
+}
+
+.loser-rank {
+  font-weight: bold;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.loser-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.loser-info {
+  flex-grow: 1;
+}
+
+.loser-info .symbol {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: 0.3rem;
+}
+
+.loser-category {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.loser-change {
+  background-color: #fcecec;
+  color: #e53935;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.filter-bar {
+  margin-bottom: 1rem;
+}
+
+#coinSearch {
+  padding: 8px 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+

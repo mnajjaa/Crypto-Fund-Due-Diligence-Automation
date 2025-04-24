@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto Market Dashboard</title>
+
+
+  <!-- Chart.js v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+
+  <script src="https://code.highcharts.com/11.4.8/highcharts.js"></script>
+  <script src="https://code.highcharts.com/11.4.8/modules/treemap.js"></script>
+  <script src="https://code.highcharts.com/11.4.8/modules/coloraxis.js"></script>
+  <script src="https://code.highcharts.com/11.4.8/modules/exporting.js"></script>
+
+  
+  
+  <script src="{% static 'js/jscode.js' %}"></script>
+  <script src="{% static 'js/jspartsisi.js' %}"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="{% static 'css/cssfirstPage.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/csscard.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/csspartsisi.css' %}" rel="stylesheet" />
+
+
+
+
+
+</head>
+
+<body style="padding: 5%;">
+
+<header class="header">
+  <h1>Crypto Market Insights and Analytics</h1>
+</header>
+
+<section class="stats-panel">
+  <div class="card dominance-card">
+      <div class="card-header">
+        <span class="card-title">
+          <img src="{% static 'icons/bitcoin.svg.png' %}" class="icon"  style="   width: 45px;
+  height: 45px;"/>
+          Bitcoin Dominance
+        </span>
+        <select id="period-select" class="period-dropdown">
+          <option value="24H">24H</option>
+          <option value="7D" selected>7D</option>
+          <option value="1M">1M</option>
+          <option value="1Y">1Y</option>
+        </select>
+                </div>
+    
+      <div class="dominance-values">
+        <span id="btc-dominance-value" class="dominance-number">--%</span>
+        <span id="btc-dominance-change" class="dominance-change">--%</span>
+      </div>
+    
+      <canvas id="btcDominanceChart" height="140"></canvas>
+    </div>
+    
+    
+<div class="card">
+  <h3>Fear & Greed Index</h3>
+  <p>23 - Extreme Fear</p>
+  <div class="gauge-bar"></div>
+</div>
+<div class="card">
+  <h3>🔥Hot Events</h3>
+  <div id="featured-project-slider" class="project-slider">
+      <div class="project-card">Loading project...</div>
+    </div>
+    
+    
+</div>
+</section>
+
+<nav class="tabs">
+  <a href="#" class="active">Overview</a>
+  <a href="#">All Coins</a>
+  <a href="#">Performance</a>
+  <a href="#">ATH</a>
+  <a href="#">Gainers</a>
+  <a href="#">Losers</a>
+</nav>
+
+<section class="filter-bar">
+  <input type="text" id="coinSearch" placeholder="Search coins...">
+  <button id="searchBtn">Search</button>
+</section>
+
+
+<section class="coin-table">
+  <table>
+    <thead>
+      <tr>
+    
+        <th>#</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>24h %</th>
+        <th>Market Cap</th>
+        <th>Volume</th>
+        <th>Supply</th>
+        <th>7D Chart</th>
+      </tr>
+      
+    </thead>
+    <tbody id="coinTableBody">
+      <!-- JS will populate -->
+    </tbody>
+  </table>
+</section>
+<div id="pagination" class="page"></div>
+
+
+<section class="gainers-losers-section">
+  <div class="dashboard-columns">
+    <div class="dashboard-column">
+      <div class="top-gainers-card">
+        <h3>Top Gainers <span class="arrow">›</span></h3>
+        <ul id="gainers-list" class="gainers-list"><li>Loading...</li></ul>
+      </div>
+    </div>
+
+    <div class="dashboard-column">
+      <div class="top-losers-card">
+        <h3>Top Losers <span class="arrow">›</span></h3>
+        <ul id="losers-list" class="losers-list"><li>Loading...</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="market-insights-section">
+  <div class="dashboard-columns">
+    <div class="dashboard-column">
+      <div class="launchpad-roi-card">
+        <h3>Top Launchpads Ranked by Average ROI <span class="arrow">›</span></h3>
+        <canvas id="launchpadChart" height="300"></canvas>
+        <ul id="launchpad-list" class="launchpad-list"></ul>
+      </div>
+    </div>
+
+    <div class="dashboard-column">
+      <div class="market-heatmap-card">
+        <h3>Market State Visualization <span class="arrow">›</span></h3>
+        <div id="marketStateChartHighcharts" class="market-chart"></div>
+      </div>
+    </div>
+  </div>
+
+<div class="trending-coins-card">
+  <div class="trending-header">
+    <div class="tab-switch">
+      <span id="trendingTab" class="active-tab">Trending Coins</span>
+      <span id="recentTab" class="inactive-tab">Recently Listed</span>
+    </div>
+    <button class="view-all-btn">View All</button>
+  </div>  
+
+  <!-- Trending coins list -->
+  <ul id="trendingCoinsList" class="trending-coins-list"></ul>
+
+  <!-- Recently listed coins list -->
+  <ul id="recentCoinsList" class="trending-coins-list" style="display: none;"></ul>
+</div>
+
+
+<!-- Empty Cards for New ATH and New ATL -->
+<div class="empty-cards-container">
+  <div class="empty-card">
+    <h3>New ATH</h3>
+    <div class="new-ath-cards" id="new-ath-cards">
+      <!-- Cards will be inserted here dynamically -->
+    </div>
+  </div>
+  <div class="empty-card">
+    <h3>New ATL</h3>
+    <div class="new-atl-cards" id="new-atl-cards">
+      <!-- Cards will be inserted here dynamically -->
+    </div>
+  </div>
+
+<!-- Latest Insights and Reports section under the empty cards -->
+<div class="latest-insights">
+  <h2>Latest Insights and Reports</h2>
+  <div class="insights-container">
+    <!-- Articles will be dynamically rendered here -->
+  </div>
+</div>
+
+<div class="futures-cards-container">
+  <div class="futures-volume-card">
+    <h3>24h BTC Futures Volumes</h3>
+    <div class="futures-volume-chart">
+      <canvas id="futuresVolumeChart"></canvas>
+    </div>
+  </div>
+
+  <div class="futures-interest-card">
+    <h3>BTC Futures Open Interest</h3>
+    <div class="futures-interest-chart">
+      <canvas id="futuresInterestChart" height="300"></canvas>
+    </div>
+  </div>
+  
+  
+
+
+</section>
+
+
+
+
+
+
+
+
+</body>
+</html>

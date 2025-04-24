@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('Core.urls')),  
     path("sanctions/", include("sanctions.urls")),
     path('funding/', include('funding_rounds.urls')),
+    path('firstPage/', include('chatbot.urls')),
 
 
     

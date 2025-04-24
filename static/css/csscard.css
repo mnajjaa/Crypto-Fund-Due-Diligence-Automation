@@ -1,0 +1,269 @@
+.hot-event-card {
+    text-align: center; /* Centre le contenu des événements */
+  }
+    .card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px; /* Ajoute du padding à l'intérieur des cartes */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Ajoute une ombre légère */
+    width: 300px; /* Largeur fixe pour les cartes */
+    text-align: center; /* Centre le texte à l'intérieur des cartes */
+    font-family: "Poppins", sans-serif;
+  }
+    .card.dominance-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-header {
+    background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.card-header select {
+    font-size: 15px;
+}
+.card-title {
+    background-color: white;
+  font-weight: 600;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-title .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.period-dropdown {
+    background-color: white;
+  color: #007bff;
+  font-weight: 60px;
+}
+
+.dominance-values {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.dominance-number {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #f9f9f9;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+}
+
+.dominance-change {
+  font-size: 1.2rem;
+  color: green;
+  font-weight: 500;
+}
+
+.period-dropdown {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: #007bff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.period-dropdown option {
+  background: white;
+  color: #333;
+}
+.dominance-values span{
+    font-size: 15px;
+}
+.img{
+    width: 45px;
+    height: 45px;
+}
+
+
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.project-slider {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  transition: opacity 0.5s ease;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.project-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.task-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.task-types span {
+  background: #eef2f6;
+  color: #333;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+.fund-logos {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.fund-logos img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.stats-panel {
+    display: flex;
+    justify-content: center; /* Centre les cartes horizontalement */
+    gap: 20px; /* Espace entre les cartes */
+    padding: 20px; /* Ajoute du padding autour de la section */
+    background-color: #f9f9f9; /* Couleur de fond pour correspondre au design */
+  }
+.hot-event-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  font-family: "Poppins", sans-serif;
+}
+
+.hot-event-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.refresh-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.hot-event-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.event-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.event-info {
+  flex-grow: 1;
+}
+
+.event-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.event-tag {
+  background: #e6f0ff;
+  color: #007bff;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+.event-rank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 1.2rem;
+  gap: 0.2rem;
+}
+
+.hot-event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.backer-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}

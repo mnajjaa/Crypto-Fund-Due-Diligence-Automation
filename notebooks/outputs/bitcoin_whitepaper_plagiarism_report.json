@@ -1,0 +1,34 @@
+{
+    "project_file": "bitcoin_whitepaper.pdf",
+    "comparisons": [
+        {
+            "reference_file": "avalanche_whitepaper.pdf",
+            "similarity_score": 0.4024
+        },
+        {
+            "reference_file": "bitcoin_whitepaper.pdf",
+            "similarity_score": 1.0
+        },
+        {
+            "reference_file": "cardano_whitepaper.pdf",
+            "similarity_score": 0.1447
+        },
+        {
+            "reference_file": "ethereum_whitepaper.pdf",
+            "similarity_score": 0.4696
+        },
+        {
+            "reference_file": "litecoin_whitepaper.pdf",
+            "similarity_score": 0.4771
+        },
+        {
+            "reference_file": "polkadot_whitepaper.pdf",
+            "similarity_score": 0.1447
+        },
+        {
+            "reference_file": "solana-whitepaper.pdf",
+            "similarity_score": 0.2529
+        }
+    ],
+    "overall_result": "Rejected due to high similarity."
+}

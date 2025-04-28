@@ -1,0 +1,188 @@
+name,symbol,rank,price_usd,market_cap,volume_24h,circulating_supply,max_supply,all_time_high,ath_date,category,launch_date,website,coin_key
+Bitcoin,BTC,1.0,84588.76908196067,1678314654736.8992,7844191039.067007,19852975,21000000,108824.38453571018,2025-01-20,Currency,2010-03-17T00:00:00.000Z,https://bitcoin.org/,bitcoin
+EOS,EOS,70.0,0.624872159424,947476775.5153906,88996911.92835677,1516885789,0,22.8904,2018-04-29,Chain,2017-07-01T19:14:00.000Z,https://eosnetwork.com/,eos
+Ethereum,ETH,2.0,1587.403481047279,191248353718.2058,3889404269.2742414,120700645,0,4859.61823224,2021-11-10,Chain,2015-07-30T00:00:00.000Z,https://www.ethereum.org/,ethereum
+NEO,NEO,150.0,5.612626539949,395052072.772035,16021611.84544247,70530000,100000000,196.853,2018-01-15,Chain,2016-09-09T03:09:00.000Z,https://neo.org/,neo
+XRP,XRP,4.0,2.073522937646,121037716335.50348,1459678247.840201,58338141684,100000000000,3.84194,2018-01-04,Currency,2013-08-04T18:51:00.000Z,https://ripple.com/,ripple
+Stellar,XLM,18.0,0.243792422519,7510209628.35206,80895724.30429377,30833170004,50001786911,0.938144,2018-01-04,Chain,2014-08-05T05:44:00.000Z,https://www.stellar.org,stellar
+Cardano,ADA,10.0,0.615036430316,22085772728.192554,271990920.210225,36010655200,45000000000,3.08461573,2021-09-02,Chain,2017-10-01T20:34:00.000Z,https://www.cardano.org,cardano
+Litecoin,LTC,23.0,75.637728274626,5726524129.871299,135754844.70511824,75757489,84000000,415.05832129,2021-05-10,Currency,2013-04-28T18:47:00.000Z,https://www.litecoin.net/,litecoin
+Bitcoin Cash,BCH,22.0,331.30168680518,6567124779.728122,60332180.98730842,19857591,21000000,4355.62,2017-12-20,Currency,2017-07-23T16:29:00.000Z,https://bch.info/,bitcoin-cash
+IOTA,IOTA,95.0,0.159917117944,595847605.1065727,16695441.368614858,3727086003,4600000000,5.69002,2017-12-19,Chain,2017-06-13T00:00:00.000Z,https://www.iota.org/,iota
+Monero,XMR,29.0,218.663981331995,4038271058.964332,51823643.79357489,18446744,0,500.22552434,2021-05-07,Currency,2014-05-21T01:41:00.000Z,http://www.monero.cc,monero
+NEM,XEM,273.0,0.016816079621,151326930.8621859,17803498.45122336,8999999999,8999999999,2.09188,2018-01-04,Chain,2015-08-12T00:04:00.000Z,https://docs.nem.io/pages/,nem
+TRON,TRX,8.0,0.245028272794,23270907761.71863,333112783.27956754,94950317212,0,0.434151446383,2024-12-04,Chain,2017-09-13T01:15:00.000Z,https://tron.network/,tron
+Ethereum Classic,ETC,39.0,15.379128357507,2330030162.4065084,26390003.32259787,151568885,210700000,167.4701077,2021-05-06,Chain,2016-07-24T13:44:00.000Z,https://ethereumclassic.github.io/,ethereum-classic
+Dash,DASH,196.0,20.707170230248,252919022.90777,13779755.61558218,12222222,0,1642.22,2017-12-20,Currency,2014-02-14T13:44:00.000Z,https://www.dash.org/,dash
+Qtum,QTUM,213.0,2.080030323919,220235274.1302192,12742035.19795846,105607349,107822406,106.876,2018-01-07,Chain,2017-05-24T15:19:00.000Z,https://qtum.org/,qtum
+Nano,XNO,309.0,0.910809954273,121501226.53555323,4182915.739680332,133248290,133248290,37.6212,2018-01-02,Currency,2017-03-07T00:34:00.000Z,https://nano.org/en,nano
+Bitcoin Gold,BTG,,0.649939411014,11382989.88709217,36870.42298646802,17513924,21000000,539.72,2017-10-23,Currency,2017-10-23T19:39:00.000Z,https://btgofficial.org/,bitcoin-gold
+Zcash,ZEC,133.0,30.116840091775,481411361.86899805,12291294.469854353,16010049,21000000,5941.8,2016-10-29,Currency,2016-10-29T15:19:00.000Z,https://z.cash/,zcash
+ICON,ICX,340.0,0.100565261234,106596081.91156027,2721127.0209320416,1059969224,0,12.6387,2018-01-09,Chain,2017-10-27T00:19:00.000Z,https://icon.community/,icon
+BNB,BNB,5.0,589.587909077828,86034610242.901,375630270.6228741,145887576,0,792.875445889715,2024-12-04,Chain,2017-07-15T00:00:00.000Z,https://www.binance.com/?ref=TJXL28PT,bnb
+Steem,STEEM,401.0,0.156331360572,79556936.12730587,33970030.09978382,509158189,0,8.57442,2018-01-03,Social,2016-04-18T16:19:00.000Z,https://steem.com/,steem
+Verge,XVG,421.0,0.004426020942,73137205.22542508,4408540.303641544,16521951236,16555000000,0.300588,2017-12-23,Currency,2015-08-12T00:04:00.000Z,http://vergecurrency.com/,verge
+Stratis,STRAX,308.0,0.060452826263,124975382.73830497,27047657.708419908,2055022448,0,22.6555,2018-01-08,Chain,2016-08-12T01:45:00.000Z,http://stratisplatform.com/,stratis
+Bytecoin,BCN,,2.5828824e-05,4750994.50032,9860.971302567841,184020000000,184470000000,0.0301338,2018-05-08,Currency,2015-08-12T00:04:00.000Z,https://bytecoin.org/,bytecoin-bcn
+Siacoin,SC,231.0,0.003386368112,195079955.93369526,15088707.319901435,57740361723,0,0.111708,2018-01-06,Blockchain Infrastructure,2015-08-26T18:19:00.000Z,https://sia.tech/,siacoin
+Waves,WAVES,345.0,1.048957634448,104908741.1116,5592663.094567176,100000000,0,62.657067719092,2022-03-31,Chain,2016-06-02T21:14:00.000Z,https://waves.tech/,waves
+BitShares,BTS,1541.0,0.000966239003,2618697.073244676,161613.95929772453,2710195992,3600570502,0.916782,2018-01-02,Blockchain Service,2015-08-12T00:04:00.000Z,https://bitshares.github.io/,bitshares
+Decred,DCR,233.0,11.550804981244,194403347.2662051,5669981.7899868535,16743558,21000000,250.31457054,2021-04-17,Currency,2016-02-10T19:59:00.000Z,https://www.decred.org/,decred
+Aeternity,AE,1159.0,0.017757989792,7635765.7746869,209466.71680510975,432850713,0,5.8558900000000005,2018-04-29,Chain,2017-06-01T16:39:00.000Z,https://www.aeternity.com/,aeternity
+Dogecoin,DOGE,9.0,0.155210253794,23077410031.283657,378902002.50340146,148897266384,0,0.74982732,2021-05-08,Meme,2013-12-15T14:42:00.000Z,http://dogecoin.com/,dogecoin
+Electroneum,ETN,731.0,0.00148177326,26622737.70128262,3409853.8760863794,17979817605,21000000000,0.236234,2017-11-02,Currency,2017-11-02T00:24:00.000Z,http://electroneum.com/,electroneum
+Komodo,KMD,874.0,0.123173897864,17371701.496714205,1703483.3703957237,140660566,200000000,15.4149,2017-12-21,Blockchain Infrastructure,2017-02-05T23:49:00.000Z,https://komodoplatform.com/,komodo
+Ark,ARK,380.0,0.46040406259,85196815.16112544,21226532.208036695,185719914,0,10.915,2018-01-09,Chain,2017-03-22T14:19:00.000Z,http://ark.io/,ark
+Ardor,ARDR,310.0,0.121254452302,121068475.98194721,33792719.383660726,998466231,998999495,2.55371,2018-01-13,Chain,2016-07-23T14:40:00.000Z,https://www.jelurida.com/ardor,ardor
+HyperCash,HC,,,0.0,0.0,0,84000000,43.1679,2017-08-27,Currency,2017-08-20T14:54:00.000Z,https://h.cash/,hshare
+Cryptonex,CNX,,,0.0,0.0,0,210000000,10.5145,2018-01-28,CeFi,2017-10-07T18:24:00.000Z,https://cryptonex.org/,cryptonex
+Syscoin,SYS,720.0,0.03392689537,27326853.05166076,1954739.1053920786,805226921,0,1.30965191,2022-01-03,Chain,2015-08-12T00:04:00.000Z,http://syscoin.org,syscoin
+DigiByte,DGB,251.0,0.009808381298,172942055.10721943,3247374.298805425,17636225574,21000000000,0.18846985,2021-05-01,Chain,2014-02-06T13:13:00.000Z,http://www.digibyte.io/,digibyte
+PIVX,PIVX,1022.0,0.120542605212,11124658.28869845,1463971.3722181898,92184504,0,14.5587,2018-01-23,Currency,2016-02-13T21:14:00.000Z,http://www.pivx.org,pivx
+KuCoin Token,KCS,61.0,10.141463168185,1267960099.612662,650224.4016680721,125043918,200000000,28.68347922,2021-12-01,CeFi,2017-10-24T17:39:00.000Z,https://www.kucoin.com,kucoin-shares
+Zilliqa,ZIL,203.0,0.011678189157,231118135.45376956,11417342.20055896,19791377136,21000000000,0.25703966,2021-05-06,Chain,2018-01-25T23:09:00.000Z,https://www.zilliqa.com/,zilliqa
+Factom,FCT,,,0.0,0.0,0,0,87.1637,2018-01-07,Blockchain Infrastructure,2015-10-06T01:34:00.000Z,https://www.factomprotocol.org/,factom
+MonaCoin,MONA,,0.208724528284,13719395.408635627,324.8774740491406,65729675,105120000,20.2339,2017-12-06,Currency,2015-08-12T00:04:00.000Z,http://monacoin.org,monacoin
+Aion,AION,,0.001029881455,502063.3956443823,22.965326565045,487496874,0,11.508,2018-01-07,Blockchain Infrastructure,2017-10-18T16:34:00.000Z,https://aion.network/,aion
+Particl,PART,,0.025356870848,377146.66342695086,86.68902788775054,14870846,0,52.3985,2018-01-14,DeFi,2017-07-20T23:44:00.000Z,http://particl.io/,particl
+Nebulas,NAS,,,0.0,0.0,0,0,16.6417,2018-01-09,Blockchain Infrastructure,2017-08-23T04:29:00.000Z,https://nebulas.io/,nebulas-token
+ReddCoin,RDD,,4.2275867e-05,1406626.4391566438,78.97332160155077,33271941829,0,0.0323907,2018-01-07,Currency,2015-08-12T00:04:00.000Z,http://www.reddcoin.com/,reddcoin
+GXChain,GXC,,0.264640060813,19848004.560975,1606.951373333617,75000000,100000000,11.2427,2018-01-07,Blockchain Service,2017-06-25T00:30:00.000Z,http://gxs.gxb.io/en/,gxchain
+IOStoken,IOST,374.0,0.003770888713,88515021.49794954,60319624.84165274,23416072091,90000000000,0.136496,2018-01-24,Chain,2018-01-16T01:44:00.000Z,http://iost.io/,iostoken
+Blocknet,BLOCK,,,0.0,0.0,0,0,57.2387,2018-01-06,Blockchain Infrastructure,2015-08-12T00:04:00.000Z,http://blocknet.co/,blocknet
+Firo,FIRO,1158.0,0.445447343584,7661212.508352995,343643.9913099661,17167132,21400000,169.991,2017-12-26,Currency,2016-10-06T20:34:00.000Z,https://firo.org/,firo
+Neblio,NEBL,2753.0,0.001109886542,23198.464927127174,67992.46683897407,20939498,0,64.8731,2018-01-09,Chain,2017-09-12T13:50:00.000Z,https://nebl.io/,neblio
+Nxt,NXT,,0.000652260961,651608.6622078642,1243.0442633895564,998999942,1000000000,2.15912,2017-12-23,Chain,2015-08-12T00:04:00.000Z,https://nxtplatform.org/,nxt
+Emercoin,EMC,,,0.0,0.0,0,0,10.5313,2018-01-14,Blockchain Infrastructure,2015-08-12T00:04:00.000Z,http://emercoin.com/,emercoin
+SmartCash,SMART,,,0.0,0.0,0,5000000000,3.45221,2018-01-13,Currency,2017-07-21T01:54:00.000Z,https://smartcash.cc/,smartcash
+Vertcoin,VTC,,0.068108807573,4891352.486897273,13288.611259911033,71813999,84000000,10.5329,2017-12-06,Currency,2015-08-12T00:04:00.000Z,http://vertcoin.org/,vertcoin
+BitcoinDark,BTCD,,,0.0,0.0,0,100000000,110.77630435,2018-09-04,Currency,2018-06-16T01:00:00.000Z,http://bitcoindark.com/,bitcoindark
+Pura,PURA,,,0.0,0.0,0,350000000,1.1747,2017-12-31,Currency,2015-08-12T00:04:00.000Z,http://www.pura.one/,pura
+Achain,ACT,,0.000118592902,101686.3506647214,1516.2605273249749,857440445,1000000000,1.39036,2018-01-10,Chain,2017-08-27T19:45:00.000Z,https://www.achain.com/,achain
+Asch,XAS,,,0.0,0.0,0,0,1.88708,2017-12-21,Blockchain Infrastructure,2017-04-01T21:40:00.000Z,https://www.asch.io/,asch
+Einsteinium,EMC2,,,0.0,0.0,0,0,2.8788,2017-12-07,Currency,2015-08-12T00:04:00.000Z,https://www.emc2.foundation/,einsteinium
+Gulden,NLG,,,0.0,0.0,0,0,0.499114,2018-01-12,Currency,2015-08-12T00:04:00.000Z,https://gulden.com/,gulden
+Flash,FLASH,,,0.0,0.0,0,0,0.246797,2018-01-08,Currency,2017-06-26T05:50:00.000Z,https://flashcoin.io/,flash
+ColossusXT,COLX,,,0.0,0.0,0,0,0.0228515,2018-01-07,Currency,2017-09-29T21:24:00.000Z,http://colossusxt.io,colossuscoinxt
+XEL,XEL,,,0.0,0.0,0,0,1.98067,2017-06-24,,2017-06-24T14:44:00.000Z,https://xel.org/,elastic
+Zoin,ZOI,,,0.0,0.0,0,21000000,2.52388,2018-05-21,Currency,2018-03-01T00:04:00.000Z,http://zoinofficial.com/,zoin
+Validity,VAL,,0.553625013512,2948845.374974281,0.0,5325614,9000000,21.7311,2018-01-10,Blockchain Service,2016-01-18T07:54:00.000Z,https://validitytech.com/,radium
+EDC Blockchain,EDC,,,0.0,0.0,0,1000000000,2872.91,2016-08-29,Blockchain Service,2016-08-26T15:44:00.000Z,https://blockchain.mn/,edc-blockchain
+ToaCoin,TOA,,,0.0,0.0,0,0,0.0132696,2017-12-07,Currency,2017-07-24T19:10:00.000Z,http://www.toacoin.com/,toacoin
+Clams,CLAM,,,0.0,0.0,0,0,20.40599825,2019-05-26,Currency,2018-01-01T00:04:00.000Z,http://clamcoin.org/,clams
+E-coin,ECN,,,0.0,0.0,0,270000000,290.124,2018-02-06,Currency,2017-04-11T20:59:00.000Z,https://www.ecoinsource.com/,e-coin
+The ChampCoin,TCC,,,0.0,0.0,0,70000000,0.826135,2018-05-27,,2017-08-15T20:19:00.000Z,https://tccworld.org/,the-champcoin
+Sphere,SPHR,,,0.0,0.0,0,12484344,15.7295,2018-01-04,Currency,2015-08-12T03:34:00.000Z,https://sphrpay.io/,sphere
+ArtByte,ABY,,,0.0,0.0,0,0,0.0499485,2018-01-11,,2015-08-12T00:04:00.000Z,https://www.artbyte.me/,artbyte
+Denarius,DNR,,,0.0,0.0,0,10000000,3.9729200000000002,2018-03-05,Currency,2018-03-01T00:04:00.000Z,https://denarius.io/,denarius-dnr
+Sumokoin,SUMO,,,0.0,0.0,0,88888888,11.7389,2017-12-29,Currency,2017-05-30T20:44:00.000Z,https://www.sumokoin.org/,sumokoin
+BunnyCoin,BUN,,,0.0,0.0,0,0,0.000167271,2018-01-07,Currency,2015-08-12T00:04:00.000Z,http://bunnycoin.org/,bunnycoin
+Bulwark,BWK,,,0.0,0.0,0,16876778,17.6172,2018-01-12,Currency,2018-01-01T00:04:00.000Z,https://bulwarkcrypto.com/,bulwark
+HunterCoin,HUC,,,0.0,0.0,0,0,0.557816,2018-01-12,Currency,2018-01-01T00:04:00.000Z,http://huntercoin.org/,huntercoin
+Zero,ZER,,,0.0,0.0,0,17000000,12.6782,2018-01-09,Currency,2017-03-20T21:49:00.000Z,https://zerocurrency.io/,zero
+SpreadCoin,SPR,,,0.0,0.0,0,0,3.67121,2018-01-09,Currency,2015-08-12T00:04:00.000Z,http://www.spreadcoin.info,spreadcoin
+Ellaism,ELLA,,,0.0,0.0,0,280000000,4.73591,2018-01-10,,2017-10-30T17:54:00.000Z,https://ellaism.org/,ellaism
+Magi,XMG,,,0.0,0.0,0,0,2.50628,2017-12-28,Currency,2015-08-12T00:04:00.000Z,http://coinmagi.org/,magi
+GravityCoin,GXX,,,0.0,0.0,0,9999999,17.8897,2018-05-14,Currency,2015-08-12T00:04:00.000Z,https://www.gravitycoin.io/,hexx
+DigitalPrice,DP,,,0.0,0.0,0,0,0.473349,2018-01-14,Currency,2015-08-12T00:04:00.000Z,http://digitalprice.org/,digitalprice
+SmileyCoin,SMLY,,,0.0,0.0,0,48000000000,0.0,,Currency,2021-08-15T09:09:00.000Z,http://tutor-web.info,smileycoin
+MagicCoin,MAGE,,,0.0,0.0,0,0,0.498344,2018-06-01,,2018-03-01T00:04:00.000Z,https://magiccoin.io/,magiccoin
+Dinastycoin,DCY,,,0.0,0.0,0,0,0.0136094,2018-02-13,Currency,2017-06-24T23:20:00.000Z,http://www.dinastycoin.com/,dinastycoin
+Bitradio,BRO,,,0.0,0.0,0,0,1.5878793500000001,2019-05-22,Blockchain Service,2018-07-25T08:21:00.000Z,http://www.bitrad.io/,bitradio
+BritCoin,BRIT,,,0.0,0.0,0,0,0.02740679,2018-10-05,,2018-09-28T15:21:00.000Z,http://britcoin.xyz/,britcoin
+Elcoin,EL,,,0.0,0.0,0,0,0.434571,2017-07-06,,2016-05-05T18:04:00.000Z,https://elcoin.space/,elcoin-el
+Limitless VIP,TTC,,,0.0,0.0,0,6900000000,0.000913,2018-07-17,,2018-07-15T12:03:00.000Z,http://tittiecoin.com,tittiecoin
+Kurrent,KURT,,,0.0,0.0,0,228000000,0.0820048,2018-01-10,Currency,2016-12-01T19:32:00.000Z,http://kurrentproject.com/,kurrent
+PureVidz,VIDZ,,3.7639739e-05,4715.497995338986,0.0,125279774,0,0.323609,2018-01-15,,2017-01-19T22:54:00.000Z,http://purevidz.net/,purevidz
+HiCoin,XHI,,,0.0,0.0,0,0,0.0907925,2016-05-08,,2016-05-04T00:04:00.000Z,http://xhicoin.io/,hicoin
+CoinonatX,XCXT,,,0.0,0.0,0,48252000,0.924818,2017-12-31,Currency,2017-08-14T02:24:00.000Z,https://community.coinonatx.io/,coinonatx
+Ammo Reloaded,AMMO,,,0.0,0.0,0,0,0.00080464,2018-10-15,,2018-09-30T13:52:00.000Z,http://ammoreloaded.io/,ammo-reloaded
+Helleniccoin,HNC,,,0.0,0.0,0,100000000,2.48236897243974,2021-08-15,,2015-08-12T00:04:00.000Z,http://www.helleniccoin.gr/,helleniccoin
+Bitcoin Fast,BCF,,,0.0,0.0,0,2500000000,0.394534,2018-01-14,Currency,2015-08-12T00:04:00.000Z,http://bitcoinfast.co/,bitcoinfast
+Mincoin,MNC,,,0.0,0.0,0,0,0.2984672,2019-02-04,,2018-07-25T10:01:00.000Z,https://www.mincoin.us/,mincoin
+ReeCoin,REE,,,0.0,0.0,0,0,0.028511,2018-06-16,Currency,2018-06-16T01:00:00.000Z,https://reecoin.tech/,reecoin
+SOILcoin,SOIL,,,0.0,0.0,0,0,0.144327,2018-01-07,,2015-11-12T18:35:00.000Z,https://soil.cash/,soilcoin
+CompuCoin,CPN,,,0.0,0.0,0,0,0.0118835,2018-03-05,,2018-03-01T00:04:00.000Z,http://compucoin.org/,compucoin
+GoldPieces,GP,,,0.0,0.0,0,0,0.521746,2018-01-15,,2015-08-12T00:04:00.000Z,http://goldpieces.net/,goldpieces
+LiteCoin Ultra,LTCU,,,0.0,0.0,0,0,0.857652,2018-01-14,Currency,2017-08-30T02:55:00.000Z,http://www.litecoinultra.com/,litecoin-ultra
+Rawcoin,XRC,,,0.0,0.0,0,0,0.0928003,2018-03-01,,2018-03-01T00:04:00.000Z,http://rawcoin.co/,rawcoin2
+Vault Coin,VLTC,,,0.0,0.0,0,1000000000,0.000543621,2018-03-02,,2018-03-01T00:04:00.000Z,http://vltcoin.org/,vault-coin
+HarmonyCoin,HMC,,,0.0,0.0,0,67130000000,0.00112126,2018-10-09,,2018-09-16T09:21:00.000Z,https://www.hmc21.co/,harmonycoin-hmc
+YashCoin,YASH,,,0.0,0.0,0,0,0.0,,,,https://www.yashcoin.com/,yashcoin
+FlutterCoin,FLT,,,0.0,0.0,0,0,0.00486788,2018-03-01,Currency,2018-03-01T00:04:00.000Z,http://www.fluttercoin.me/,fluttercoin
+Rustbits,RUSTBITS,,,0.0,0.0,0,0,0.0,,,,https://spacepirate.io/,rustbits
+Link Platform,LNK,,,0.0,0.0,0,0,8.690635,2018-06-21,,2018-06-16T01:00:00.000Z,https://ethereum.link/,link-platform
+FuelCoin,FC2,,,0.0,0.0,0,0,0.0033346,2018-09-03,Currency,2018-06-16T01:00:00.000Z,http://www.fuelcoin.org/,fuelcoin
+Phoenixcoin,PXC,,,0.0,0.0,0,98000000,0.0370678,2018-01-09,,2015-08-12T00:04:00.000Z,http://phoenixcoin.org/,phoenixcoin
+Chronos,CRX,,,0.0,0.0,0,1680841,0.00930924,2018-03-01,,2018-03-01T00:04:00.000Z,http://chronos-coin.com/,chronos
+Prototanium,PR,,,0.0,0.0,0,0,4.51313,2018-03-13,,2018-03-01T00:04:00.000Z,http://prototanium.uno/,prototanium
+Coin2.1,C2,,,0.0,0.0,0,0,0.0077175,2018-03-02,Currency,2018-03-01T00:04:00.000Z,http://www.coin2.us,coin2-1
+Mao Zedong,MAO,,,0.0,0.0,0,0,0.32539,2017-11-05,,2017-08-08T23:39:00.000Z,,mao-zedong
+Dollarcoin,DLC,,,0.0,0.0,0,0,0.0552032,2018-03-02,,2018-03-01T00:04:00.000Z,,dollarcoin
+Independent Money System,IMS,,,0.0,0.0,0,29999997,0.01514481,2018-08-10,,2018-06-16T12:30:00.000Z,http://independentmoneysystem.com/,independent-money-system
+Bitcoin 21,XBTC21,,,0.0,0.0,0,0,0.513273,2018-01-20,,2016-05-05T17:59:00.000Z,http://www.bitcoin-21.com/,bitcoin-21
+Digital Rupees,DRS,,,0.0,0.0,0,0,3.00836204,2019-01-03,,2018-09-30T10:01:00.000Z,https://www.digitalrs.me/,digital-rupees
+Allion,ALL,,,0.0,0.0,0,0,0.171352,2018-01-13,,2017-02-24T21:39:00.000Z,http://www.trollpay.com/,allion
+Flaxscript,FLAX,,,0.0,0.0,0,0,0.16801,2018-01-15,,2015-08-12T00:04:00.000Z,http://flaxscript.org,flaxscript
+BenjiRolls,BENJI,,,0.0,0.0,0,0,0.0317466,2018-01-22,,2017-01-19T22:54:00.000Z,http://benjirolls.cf/,benjirolls
+Californium,CF,,,0.0,0.0,0,0,0.08971125,2019-02-19,Currency,2018-03-01T00:04:00.000Z,http://www.californium.info/,californium
+MindCoin,MND,,,0.0,0.0,0,0,0.003584,2018-06-18,,2018-06-16T16:05:00.000Z,http://www.mindcoin.xyz/,mindcoin
+DAPPSTER,DLISK,,,0.0,0.0,0,0,0.000659,2018-06-25,,2018-06-16T01:00:00.000Z,https://dlisk.com/,dappster
+Orlycoin,ORLY,,,0.0,0.0,0,0,0.001874,2018-06-16,,2018-06-16T01:00:00.000Z,http://www.orlycoin.com/,orlycoin
+Braincoin,BRAIN,,,0.0,0.0,0,22000000,0.00460299,2021-04-17,,2018-06-16T01:00:00.000Z,,braincoin
+PLNcoin,PLNC,,,0.0,0.0,0,38540000,0.00418741,2018-03-04,,2018-03-01T00:04:00.000Z,http://www.plncoin.org/,plncoin
+Xonecoin,XOC,,,0.0,0.0,0,0,0.050361,2018-06-25,,2018-06-17T21:50:00.000Z,,xonecoin
+BioBar,BIOB,,,0.0,0.0,0,0,0.0376271,2018-03-03,,2018-03-01T00:04:00.000Z,http://biobar-crypto.ml/,biobar
+Antilitecoin,ALTC,,,0.0,0.0,0,0,0.00033354,2018-07-25,,2018-06-16T01:00:00.000Z,http://antilitecoin.pw/,antilitecoin
+Coimatic 2.0,CTIC2,,,0.0,0.0,0,102000000,0.104956,2017-07-25,,2017-07-24T21:50:00.000Z,http://coimatic.org/,coimatic-2
+DIBCOIN,DIBC,,,0.0,0.0,0,0,0.0,,,,https://www.dibcoin.io,dibcoin
+True Chain,TRUE,,,0.0,0.0,0,0,3.71165,2018-05-14,Blockchain Infrastructure,2018-01-24T02:09:00.000Z,http://www.truechain.pro,true-chain
+BitcoinX,BCX,,0.00013288832,,65771.28557298944,0,210000000000,0.127305,2017-12-15,Currency,2017-12-15T03:49:00.000Z,https://bcx.org/,bitcoinx
+Fargocoin,FRGC,,,0.0,0.0,0,0,0.0,,,,https://fargocoin.org/,fargocoin
+MOAC,MOAC,,,0.0,0.0,0,0,18.4616,2018-01-26,Blockchain Infrastructure,2018-01-16T01:19:00.000Z,http://moac.io/,moac
+Animecoin,ANI,,,0.0,0.0,0,0,0.09673371,2021-03-10,,2016-02-14T13:24:00.000Z,http://anime-coin.com/,animecoin
+KZ Cash,KZC,,,0.0,0.0,0,18900000,0.21761764,2018-11-07,,2018-11-07T06:15:00.000Z,https://kzpool.com/,kzcash
+Tokugawa,TOK,,,0.0,0.0,0,0,7.23458,2018-01-13,,2017-12-11T20:09:00.000Z,http://www.tokugawacoin.com/,tokugawa
+Shekel,JEW,,,0.0,0.0,0,0,0.00216338,2019-05-14,Currency,2018-09-29T06:24:00.000Z,https://shekel.io/,shekel
+NamoCoin,NAMO,,,0.0,0.0,0,1200000000,0.00051906,2018-05-13,,2018-03-01T00:04:00.000Z,http://namocoin.co.in/,namocoin
+SHACoin,SHA,,,0.0,0.0,0,0,0.0163102,2018-01-21,,2015-08-15T01:39:00.000Z,http://www.shacoin2.com/,shacoin
+Bitcoin God,GOD,,,0.0,0.0,0,21000000,220.302,2018-01-13,Blockchain Service,2018-01-12T04:54:00.000Z,https://www.bitcoingod.org/,bitcoin-god
+Muse DAO,MUSE,1186.0,6.977570723306,6977159.046633325,133383.99552435562,999941,1000000,56.92661256,2022-01-12,NFT,2021-12-07T11:39:00.000Z,https://musedao.io/,bitshares-music
+DynamicCoin,DMC,,,0.0,0.0,0,0,1.00001,2017-08-02,,2016-10-24T23:37:00.000Z,http://dynamiccoin.org/,dynamiccoin
+Wowcoin,WOW,,,0.0,0.0,0,0,0.0,,,,,wowcoin
+First Bitcoin,BIT,,,0.0,0.0,0,0,1.98731731,2021-09-16,,2016-07-25T21:05:00.000Z,http://bitcoincapitalcorp.com/,first-bitcoin
+IronCoin,PRN,,,0.0,0.0,0,0,5.342e-05,2019-04-20,,2018-09-25T13:22:00.000Z,https://protean.ga/,protean
+UniversalRoyalCoin,UNRC,,,0.0,0.0,0,0,0.000791672,2018-05-05,,2018-03-01T00:04:00.000Z,https://universalroyalcoin.com/,universalroyalcoin
+Pirate Blocks,SKULL,,,0.0,0.0,0,240000000,0.00457873,2018-03-05,Currency,2018-03-01T00:04:00.000Z,,pirate-blocks
+LinkedCoin,LKC,,,0.0,0.0,0,0,0.00107409,2018-07-25,,2018-03-01T00:04:00.000Z,https://www.linkedcoin.com/,linkedcoin
+Qora,QORA,,,0.0,0.0,0,0,0.0,,,,http://qora.org,qora
+RHFCoin,RHFC,,,0.0,0.0,0,0,0.0,,,,http://rhfcoin.com/,rhfcoin
+Halloween Coin,HALLO,,,0.0,0.0,0,1500000000,0.00137604,2018-01-15,,2017-05-17T15:19:00.000Z,,halloween-coin
+BitAlphaCoin,BAC,,,0.0,0.0,0,0,0.05278925460754,2021-08-15,,2018-03-01T00:04:00.000Z,http://bitalphacoin.com/,bitalphacoin
+Xaucoin,XAU,,,0.0,0.0,0,0,0.050323,2018-06-19,,2018-06-16T01:00:00.000Z,,xaucoin
+The Vegan Initiative,XVE,,,0.0,0.0,0,0,0.000933785,2018-03-05,,2018-03-01T00:04:00.000Z,,the-vegan-initiative
+Psilocybin,PSY,,,0.0,0.0,0,0,0.0743886,2018-03-01,,2018-03-01T00:04:00.000Z,,psilocybin
+Tattoocoin (Limited Edition),TLE,,,0.0,0.0,0,0,1.24415606,2019-06-22,,2018-06-16T01:00:00.000Z,http://tattoocoin.net/,tattoocoin-limited
+Viction,VIC,773.0,0.197703177094,23815238.267210208,1382588.8972060604,120670756,0,3.91188814,2021-09-06,Chain,2018-03-08T22:34:00.000Z,https://www.viction.xyz/,tomochain
+CryptCoin,CRYPT,,,0.0,0.0,0,0,0.24225,2018-05-09,,2018-03-19T23:19:00.000Z,http://cryptco.org/,cryptcoin
+Interzone,ITZ,,,0.0,0.0,0,0,0.00311699,2018-10-15,,2018-09-29T08:09:00.000Z,https://interzone.space/,interzone
+NuBits,NBT,,,0.0,0.0,0,0,0.20184387455868,2021-08-15,,2019-01-02T10:11:00.000Z,https://www.nubits.com,nubits
+StakeNet,XSN,,,0.0,0.0,0,0,0.89023,2018-06-10,Currency,2018-04-13T20:54:00.000Z,https://xsncoin.io/,stakenet
+TideBit Token,TBT,,,0.0,0.0,0,200000000,0.0,,,2021-08-15T09:09:00.000Z,,tidebit-token
+Kids Cash,KASH,,,0.0,0.0,0,0,0.0,,,2021-08-15T09:09:00.000Z,,kids-cash
+Tokenpay,TPAY,,,0.0,0.0,0,25000000,10.8823,2018-04-21,Currency,2018-04-05T15:39:00.000Z,https://www.tokenpay.com/,tokenpay
+Token Echo,ECHO,,,0.0,0.0,0,0,0.0,,,,,token-echo
+Fantasy Cash,FANS,,,0.0,0.0,0,0,3.00939,2018-01-07,,2017-09-25T20:59:00.000Z,https://www.fantasycash.io/,fantasy-cash
+United Crypto Community,UCOM,,,0.0,0.0,0,0,0.17116701,2018-08-14,Currency,2018-08-14T10:55:00.000Z,https://unitedcryptocommunity.com/,ucom
+Dascoin,DASC,,,0.0,0.0,0,0,0.06497293,2018-09-04,Currency,2018-08-14T11:15:00.000Z,https://dascoin.com/,dascoin
+Phantasma,SOUL,1210.0,0.053595194104,6652731.254063191,69778.12317671755,124129198,0,3.94089013,2021-12-01,Chain,2018-05-28T19:44:00.000Z,https://phantasma.info/,phantasma
+BLOC.MONEY,BLOC,,,0.0,0.0,0,50000000,0.00922825856095,2021-08-15,,2018-10-17T00:38:00.000Z,https://bloc.money/,bloc-money
+Arbidex,ABX,,,0.0,0.0,0,0,0.14766916,2021-11-13,,2018-08-16T17:54:00.000Z,https://www.arbidex.uk.com,arbidex
+Saifu,SFU,,,0.0,0.0,0,0,0.18628472,2018-10-25,,2018-07-21T22:54:00.000Z,https://saifu.ai/,saifu
+Serenity,SRNT,,,0.0,0.0,0,100000000000000000,0.04417487,2021-01-29,,2020-07-07T16:46:00.000Z,,serenity
+TWIST,TWIST,,,0.0,0.0,0,0,0.00424664,2018-08-25,Currency,2018-08-20T16:07:00.000Z,https://twist.network/,twist
+GOAT COIN,GOAT,,,0.0,0.0,0,0,0.0,,,2021-08-15T09:10:00.000Z,,goat-coin
+BNBX Finance,BNBX,,,0.0,0.0,0,0,0.0,,,2021-08-15T09:10:00.000Z,,bnbx-finance
+Empire Warriors,EMP,,,0.0,0.0,0,6042439,0.0,,,,,empire-warriors
+SIX Network,SIX,1337.0,0.016144789236,4417863.485123319,369531.7203279968,273776596,0,0.37831494,2021-11-29,Blockchain Infrastructure,2018-10-12T18:34:00.000Z,https://six.network/,six
+Friction Finance,TAO,,,0.0,0.0,0,0,0.05543269,2021-10-21,,2021-04-01T00:31:00.000Z,https://friction.finance/,friction-finance

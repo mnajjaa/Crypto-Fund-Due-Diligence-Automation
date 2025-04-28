@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\mahmo\OneDrive\Bureau\Crypto-Fund-Due-Diligence-Automation\venv"
+VIRTUAL_ENV="C:\Users\mahmo\OneDrive\Bureau\PIDS_Code\Crypto-Fund-Due-Diligence-Automation\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

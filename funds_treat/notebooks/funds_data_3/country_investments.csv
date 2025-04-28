@@ -1,0 +1,1564 @@
+name,code,normal,lead,categories,fund_slug
+United States,US,7,0,"[{'name': 'DeFi', 'count': 4, 'percent': 57.14}, {'name': 'Blockchain Service', 'count': 2, 'percent': 28.57}, {'name': 'Social', 'count': 1, 'percent': 14.29}]",block0
+United Kingdom,GB,3,0,"[{'name': 'DeFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",block0
+Cayman Islands,KY,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",block0
+Japan,JP,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",block0
+Sweden,SE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",block0
+Switzerland,CH,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",block0
+United Kingdom,GB,2,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",xbto-group
+France,FR,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",xbto-group
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",xbto-group
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",xbto-group
+United States,US,2,0,"[{'name': 'Social', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",perpetual-value-partners
+Canada,CA,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",perpetual-value-partners
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",foundership
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",zellic
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",atesis-capital
+Spain,ES,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",atesis-capital
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",atesis-capital
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",atesis-capital
+Israel,IL,3,1,"[{'name': 'DeFi', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'GameFi', 'count': 1, 'percent': 25.0}]",nodecapital
+United Kingdom,GB,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 2, 'percent': 100.0}]",nodecapital
+United States,US,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",nodecapital
+Cayman Islands,KY,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",nodecapital
+Switzerland,CH,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",nodecapital
+New Zealand,NZ,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",nodecapital
+China,CN,1,0,"[{'name': 'Others', 'count': 1, 'percent': 100.0}]",nodecapital
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",enzacresearch
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",enzacresearch
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",enzacresearch
+Hong Kong,HK,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",bullet-labs
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",bullet-labs
+Singapore,SG,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",pexx
+Germany,DE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",edessa-capital
+Hong Kong,HK,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",edessa-capital
+UAE,AE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",edessa-capital
+China,CN,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",fusion-fund
+United States,US,4,0,"[{'name': 'DeFi', 'count': 3, 'percent': 75.0}, {'name': 'GameFi', 'count': 1, 'percent': 25.0}]",fomocraft-ventures
+Indonesia,ID,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",fomocraft-ventures
+Vietnam,VN,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",fomocraft-ventures
+Estonia,EE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fomocraft-ventures
+Turkey,TR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",fomocraft-ventures
+UAE,AE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",fomocraft-ventures
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",fomocraft-ventures
+Finland,FI,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",fomocraft-ventures
+South Korea,KR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",fomocraft-ventures
+Singapore,SG,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}]",redpoint-china-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",redpoint-china-ventures
+Singapore,SG,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",jstcapital
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",jstcapital
+United States,US,15,3,"[{'name': 'Blockchain Service', 'count': 12, 'percent': 66.67}, {'name': 'GameFi', 'count': 3, 'percent': 16.67}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 5.56}, {'name': 'DeFi', 'count': 1, 'percent': 5.56}, {'name': 'NFT', 'count': 1, 'percent': 5.56}]",bessemer-venture-partners
+Germany,DE,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",bessemer-venture-partners
+Ireland,IE,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",bessemer-venture-partners
+India,IN,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",bessemer-venture-partners
+Brazil,BR,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",l4-venture-builder
+Brazil,BR,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",nuclea
+United States,US,16,1,"[{'name': 'Blockchain Service', 'count': 5, 'percent': 29.41}, {'name': 'GameFi', 'count': 5, 'percent': 29.41}, {'name': 'DeFi', 'count': 5, 'percent': 29.41}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 5.88}, {'name': 'Chain', 'count': 1, 'percent': 5.88}]",momentum-6
+Singapore,SG,11,0,"[{'name': 'GameFi', 'count': 4, 'percent': 36.36}, {'name': 'Blockchain Service', 'count': 2, 'percent': 18.18}, {'name': 'Blockchain Infrastructure', 'count': 2, 'percent': 18.18}, {'name': 'DeFi', 'count': 2, 'percent': 18.18}, {'name': 'NFT', 'count': 1, 'percent': 9.09}]",momentum-6
+Vietnam,VN,6,0,"[{'name': 'GameFi', 'count': 5, 'percent': 83.33}, {'name': 'Others', 'count': 1, 'percent': 16.67}]",momentum-6
+India,IN,4,0,"[{'name': 'DeFi', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 25.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}]",momentum-6
+Hong Kong,HK,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",momentum-6
+Indonesia,ID,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",momentum-6
+United Kingdom,GB,1,1,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Others', 'count': 1, 'percent': 50.0}]",momentum-6
+South Korea,KR,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",momentum-6
+Seychelles,SC,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",momentum-6
+Norway,NO,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",momentum-6
+Taiwan,TW,1,0,[],momentum-6
+Thailand,TH,1,0,[],momentum-6
+Turkey,TR,1,0,[],momentum-6
+Latvia,LV,1,0,[],momentum-6
+Canada,CA,1,0,[],momentum-6
+Czech Republic,CZ,1,0,[],momentum-6
+Denmark,DK,1,0,[],momentum-6
+France,FR,1,0,[],momentum-6
+Germany,DE,1,0,[],momentum-6
+Japan,JP,1,0,[],momentum-6
+Australia,AU,1,0,[],momentum-6
+Malaysia,MY,1,0,[],momentum-6
+United States,US,14,0,"[{'name': 'Blockchain Service', 'count': 6, 'percent': 42.86}, {'name': 'DeFi', 'count': 4, 'percent': 28.57}, {'name': 'GameFi', 'count': 3, 'percent': 21.43}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 7.14}]",fourthrevolutioncap
+India,IN,3,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",fourthrevolutioncap
+United Kingdom,GB,3,0,"[{'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}, {'name': 'NFT', 'count': 1, 'percent': 33.33}]",fourthrevolutioncap
+Brazil,BR,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",fourthrevolutioncap
+Hong Kong,HK,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fourthrevolutioncap
+New Zealand,NZ,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",fourthrevolutioncap
+Norway,NO,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",fourthrevolutioncap
+Poland,PL,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",fourthrevolutioncap
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fourthrevolutioncap
+Cayman Islands,KY,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fourthrevolutioncap
+Bulgaria,BG,1,0,[],fourthrevolutioncap
+China,CN,5,3,"[{'name': 'CeFi', 'count': 3, 'percent': 37.5}, {'name': 'Blockchain Service', 'count': 2, 'percent': 25.0}, {'name': 'Social', 'count': 1, 'percent': 12.5}, {'name': 'DeFi', 'count': 1, 'percent': 12.5}, {'name': 'Chain', 'count': 1, 'percent': 12.5}]",matrix-partners
+United States,US,7,1,"[{'name': 'Blockchain Infrastructure', 'count': 3, 'percent': 37.5}, {'name': 'Blockchain Service', 'count': 1, 'percent': 12.5}, {'name': 'GameFi', 'count': 1, 'percent': 12.5}, {'name': 'Social', 'count': 1, 'percent': 12.5}, {'name': 'NFT', 'count': 1, 'percent': 12.5}, {'name': 'CeFi', 'count': 1, 'percent': 12.5}]",matrix-partners
+Singapore,SG,1,2,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",matrix-partners
+Seychelles,SC,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",matrix-partners
+India,IN,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",matrix-partners
+Switzerland,CH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",matrix-partners
+United Kingdom,GB,1,1,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",sl2-capital
+United States,US,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",sl2-capital
+Hong Kong,HK,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",sl2-capital
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",sl2-capital
+Switzerland,CH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",sl2-capital
+UAE,AE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",sl2-capital
+Australia,AU,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",sl2-capital
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",sl2-capital
+Germany,DE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",sl2-capital
+India,IN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sl2-capital
+United States,US,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",emoote
+Japan,JP,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",emoote
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",emoote
+UAE,AE,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",emoote
+Switzerland,CH,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",sts-digital
+France,FR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",liquidx
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",liquidx
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",liquidx
+United States,US,3,0,"[{'name': 'Social', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",dao-jones
+Austria,AT,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",dao-jones
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",dao-jones
+Kenya,KE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",dao-jones
+Puerto Rico,PR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",dao-jones
+Estonia,EE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",propeller
+UAE,AE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",propeller
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",propeller
+Germany,DE,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",crypto-banter
+San Marino,SM,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",crypto-banter
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",crypto-banter
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",vvv
+Germany,DE,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",factor
+Switzerland,CH,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",factor
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",factor
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fat-cat-ventures
+India,IN,7,0,"[{'name': 'DeFi', 'count': 3, 'percent': 42.86}, {'name': 'NFT', 'count': 2, 'percent': 28.57}, {'name': 'CeFi', 'count': 1, 'percent': 14.29}, {'name': 'Chain', 'count': 1, 'percent': 14.29}]",amestencap
+United States,US,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",amestencap
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",amestencap
+United States,US,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",8186capital
+Canada,CA,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",8186capital
+India,IN,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",8186capital
+Norway,NO,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",8186capital
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",8186capital
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",8186capital
+Australia,AU,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",8186capital
+British Virgin Islands,VG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",8186capital
+United States,US,4,0,"[{'name': 'Social', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'GameFi', 'count': 1, 'percent': 25.0}]",double-down
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",double-down
+France,FR,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",dci-capital
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",dci-capital
+Malta,MT,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",dci-capital
+Saint Kitts and Nevis,KN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",dci-capital
+Singapore,SG,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",dci-capital
+Curacao,CW,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",dci-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",g20-ventures
+Colombia,CO,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",g20-ventures
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",g20-ventures
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",astrax-capital
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",gydra-capital
+UAE,AE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",mentat-innovations
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",gm-capital
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",hexens
+United States,US,3,0,"[{'name': 'DeFi', 'count': 3, 'percent': 100.0}]",hypotenuse-labs
+Japan,JP,3,0,"[{'name': 'GameFi', 'count': 3, 'percent': 100.0}]",arriba-studio
+Singapore,SG,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",arriba-studio
+Ukraine,UA,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",everstake-capital
+Spain,ES,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",everstake-capital
+UAE,AE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",everstake-capital
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",everstake-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",panga-ventures
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",panga-ventures
+Portugal,PT,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",mixmarvel-dao-venture
+Singapore,SG,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",mixmarvel-dao-venture
+Argentina,AR,4,0,"[{'name': 'DeFi', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 25.0}]",newtopia-vc
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",devfolio
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",devfolio
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",truebridge-capital
+United States,US,5,2,"[{'name': 'Blockchain Service', 'count': 5, 'percent': 71.43}, {'name': 'Social', 'count': 1, 'percent': 14.29}, {'name': 'CeFi', 'count': 1, 'percent': 14.29}]",decasonic
+United Kingdom,GB,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",decasonic
+South Korea,KR,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",fzf-ventures
+South Korea,KR,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",dubai-labs
+Vietnam,VN,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",halvings-capital
+Canada,CA,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",halvings-capital
+Panama,PA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",halvings-capital
+Spain,ES,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",halvings-capital
+Sweden,SE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",halvings-capital
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",halvings-capital
+Estonia,EE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",legion-ventures
+Israel,IL,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",legion-ventures
+Kenya,KE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",legion-ventures
+Romania,RO,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",legion-ventures
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",legion-ventures
+UAE,AE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",legion-ventures
+United Kingdom,GB,3,0,"[{'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",aussie-capital
+Singapore,SG,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",aussie-capital
+France,FR,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",aussie-capital
+Singapore,SG,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",unicorn-factory-ventures
+Singapore,SG,4,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 25.0}, {'name': 'DeFi', 'count': 1, 'percent': 25.0}]",smrti-lab
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'Social', 'count': 1, 'percent': 33.33}]",smrti-lab
+China,CN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",smrti-lab
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",smrti-lab
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",blocklabs
+United States,US,6,0,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 66.67}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 16.67}, {'name': 'Chain', 'count': 1, 'percent': 16.67}]",amplifypartners
+Israel,IL,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",amplifypartners
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",amplifypartners
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",chainview-capital
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",iceberg-capital
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",find-satoshi-lab
+Thailand,TH,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",tnb-aura
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",mercatu-center
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'Others', 'count': 1, 'percent': 33.33}]",luxor-technologies
+Singapore,SG,1,1,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",quonacapital
+Brazil,BR,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",quonacapital
+India,IN,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",quonacapital
+Singapore,SG,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",zventures
+Brazil,BR,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",class-5-global
+Singapore,SG,1,1,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",standard-chartered
+United Kingdom,GB,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",standard-chartered
+United States,US,1,0,"[{'name': 'Currency', 'count': 1, 'percent': 100.0}]",standard-chartered
+India,IN,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",hiro-capital
+Luxembourg,LU,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",hiro-capital
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",rocinante-research
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",rocinante-research
+United States,US,4,0,"[{'name': 'Chain', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 25.0}]",galileo
+Spain,ES,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",galileo
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",galileo
+United States,US,2,1,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 100.0}]",gmjp
+Australia,AU,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",gmjp
+Japan,JP,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",gmjp
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",gmjp
+Singapore,SG,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",blockrock-capital
+India,IN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",blockrock-capital
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",blockrock-capital
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",blockrock-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",litentry
+Cyprus,CY,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",litentry
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",miracleplus
+Singapore,SG,3,3,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 50.0}, {'name': 'NFT', 'count': 2, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 16.67}]",qimingvp
+United States,US,3,3,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 33.33}, {'name': 'GameFi', 'count': 2, 'percent': 33.33}, {'name': 'Chain', 'count': 2, 'percent': 33.33}]",qimingvp
+Hong Kong,HK,1,1,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",qimingvp
+Australia,AU,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",qimingvp
+Vietnam,VN,1,0,"[{'name': 'Others', 'count': 1, 'percent': 100.0}]",qimingvp
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'Social', 'count': 1, 'percent': 33.33}]",sneaky-ventures
+United Kingdom,GB,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",sneaky-ventures
+Norway,NO,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sneaky-ventures
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",lavender-capital
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",lavender-capital
+Hong Kong,HK,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",fomo-ventures
+France,FR,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",punk-dao
+Puerto Rico,PR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",punk-dao
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",punk-dao
+Israel,IL,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",pitango
+Singapore,SG,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",pitango
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",pitango
+Poland,PL,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",alphemy-capital
+United States,US,0,1,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",alphemy-capital
+British Virgin Islands,VG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",alphemy-capital
+Indonesia,ID,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",genopets
+Singapore,SG,0,1,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",bitkeep
+Portugal,PT,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",hercules-dao
+United States,US,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",gmo-internet
+Japan,JP,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",gmo-internet
+United States,US,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",exness
+United States,US,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",pepperstone
+United States,US,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",think-markets
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",pascal-capital
+Singapore,SG,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",bison-fund
+United States,US,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",bison-fund
+Germany,DE,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",bison-fund
+Kenya,KE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",bison-fund
+United Kingdom,GB,3,0,"[{'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}, {'name': 'NFT', 'count': 1, 'percent': 33.33}]",digital-renaissance
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 100.0}]",digital-renaissance
+China,CN,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",digital-renaissance
+New Zealand,NZ,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",digital-renaissance
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",digital-renaissance
+UAE,AE,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",digital-renaissance
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",digital-renaissance
+France,FR,0,1,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",digital-renaissance
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",tsing-tech-ventures
+Switzerland,CH,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",tsing-tech-ventures
+Singapore,SG,4,1,"[{'name': 'DeFi', 'count': 3, 'percent': 60.0}, {'name': 'GameFi', 'count': 1, 'percent': 20.0}, {'name': 'Chain', 'count': 1, 'percent': 20.0}]",defi-capital
+United States,US,4,0,"[{'name': 'DeFi', 'count': 4, 'percent': 100.0}]",defi-capital
+Indonesia,ID,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",defi-capital
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",defi-capital
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",defi-capital
+British Virgin Islands,VG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",defi-capital
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",raven
+India,IN,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",synapse-ventures
+Indonesia,ID,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",synapse-ventures
+Singapore,SG,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",synapse-ventures
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",synapse-ventures
+United States,US,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",jrr-capital
+Canada,CA,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",jrr-capital
+Bulgaria,BG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",jrr-capital
+Israel,IL,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",jrr-capital
+Vietnam,VN,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",jrr-capital
+Hong Kong,HK,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",jrr-capital
+China,CN,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",jrr-capital
+United States,US,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",7updao
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",7updao
+Lithuania,LT,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",zen-capital
+China,CN,2,0,"[{'name': 'NFT', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",super-chain-capital
+Hong Kong,HK,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",super-chain-capital
+Singapore,SG,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",super-chain-capital
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",super-chain-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",super-chain-capital
+France,FR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",spirit-dao
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",spirit-dao
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",spirit-dao
+Hong Kong,HK,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",doo-group
+Israel,IL,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",finsec-innovation-lab
+China,CN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",brilliance-ventures
+Estonia,EE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",brilliance-ventures
+Hong Kong,HK,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",brilliance-ventures
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",brilliance-ventures
+Poland,PL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",brilliance-ventures
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",brilliance-ventures
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",brilliance-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",alpha-praetorian-capital
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",v3ntures
+Hong Kong,HK,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",v3ntures
+United States,US,5,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}, {'name': 'NFT', 'count': 1, 'percent': 20.0}, {'name': 'CeFi', 'count': 1, 'percent': 20.0}]",avalanchevc
+Singapore,SG,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",avalanchevc
+Canada,CA,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",avalanchevc
+Gibraltar,GI,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",avalanchevc
+Nicaragua,NI,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",avalanchevc
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",avalanchevc
+Vietnam,VN,3,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'Chain', 'count': 1, 'percent': 33.33}]",redline-labs
+Estonia,EE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",redline-labs
+Hong Kong,HK,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",redline-labs
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",redline-labs
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",redline-labs
+Japan,JP,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",bella-protocol
+Singapore,SG,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",bella-protocol
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",bella-protocol
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",aztlan-capital
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",undefined-labs
+United Kingdom,GB,2,1,"[{'name': 'Social', 'count': 2, 'percent': 66.67}, {'name': 'Chain', 'count': 1, 'percent': 33.33}]",LocalGlobe
+United States,US,2,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}, {'name': 'Others', 'count': 1, 'percent': 33.33}]",LocalGlobe
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",triple-gem-capital
+Estonia,EE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",poolside
+Estonia,EE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",undefined-capital
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",intella-x
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",wtic
+United States,US,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",banter-capital
+Vietnam,VN,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",banter-capital
+Israel,IL,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",banter-capital
+Lithuania,LT,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",banter-capital
+Poland,PL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",banter-capital
+Estonia,EE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",banter-capital
+Switzerland,CH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",banter-capital
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",banter-capital
+Serbia,RS,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",banter-capital
+India,IN,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",banter-capital
+South Korea,KR,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",whitelist-ventures
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",whitelist-ventures
+British Virgin Islands,VG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",whitelist-ventures
+Switzerland,CH,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",smart-token-labs
+Austria,AT,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",ledgercapital
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ledgercapital
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",ledgercapital
+China,CN,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",metrics-ventures
+United States,US,4,0,"[{'name': 'DeFi', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 25.0}]",cipholio-ventures
+Singapore,SG,3,0,"[{'name': 'DeFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",cipholio-ventures
+Hong Kong,HK,2,0,"[{'name': 'Social', 'count': 2, 'percent': 100.0}]",cipholio-ventures
+Australia,AU,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cipholio-ventures
+Taiwan,TW,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cipholio-ventures
+UAE,AE,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",cipholio-ventures
+India,IN,3,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 25.0}, {'name': 'DeFi', 'count': 1, 'percent': 25.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}]",alphawaveglobal
+Singapore,SG,2,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'Social', 'count': 1, 'percent': 33.33}, {'name': 'NFT', 'count': 1, 'percent': 33.33}]",alphawaveglobal
+Cayman Islands,KY,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",alphawaveglobal
+Hong Kong,HK,1,0,"[{'name': 'Others', 'count': 1, 'percent': 100.0}]",alphawaveglobal
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",alphawaveglobal
+Liechtenstein,LI,1,1,"[{'name': 'Social', 'count': 2, 'percent': 100.0}]",atlantic-labs
+Germany,DE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",atlantic-labs
+Switzerland,CH,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",atlantic-labs
+United States,US,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",talos
+United States,US,2,2,"[{'name': 'Blockchain Infrastructure', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'GameFi', 'count': 1, 'percent': 25.0}]",cherubicventures
+Singapore,SG,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",cherubicventures
+Hong Kong,HK,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",cherubicventures
+Taiwan,TW,1,1,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",cherubicventures
+Japan,JP,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",cherubicventures
+UAE,AE,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",cherubicventures
+United States,US,2,0,"[{'name': 'Social', 'count': 2, 'percent': 100.0}]",m31-capital
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",m31-capital
+United States,US,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",blocktech-ventures
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",infstones
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",ottersec
+United States,US,3,0,"[{'name': 'Chain', 'count': 2, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",strangelove-ventures
+United States,US,0,2,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",ejf-capital
+Portugal,PT,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",eaglestone-group
+Portugal,PT,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",reorganiza
+Portugal,PT,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",republica
+United States,US,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",forbole
+Greece,GR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",metaplanet
+Singapore,SG,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",monad-labs
+France,FR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",seven-capital
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",pentos-ventures
+UAE,AE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",typhon-v
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",typhon-v
+San Marino,SM,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",azimutgroup
+Italy,IT,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",azimutgroup
+Singapore,SG,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",azimutgroup
+Switzerland,CH,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",azimutgroup
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",azimutgroup
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",azimutgroup
+Singapore,SG,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Others', 'count': 1, 'percent': 50.0}]",kryptos
+Indonesia,ID,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",kryptos
+Spain,ES,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",kryptos
+Vietnam,VN,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",kryptos
+United Kingdom,GB,4,0,"[{'name': 'DeFi', 'count': 2, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 25.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}]",batuhandasgin
+France,FR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",batuhandasgin
+India,IN,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",batuhandasgin
+Romania,RO,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",batuhandasgin
+Australia,AU,4,2,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 50.0}, {'name': 'Chain', 'count': 2, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 16.67}]",air-tree-ventures
+United States,US,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",air-tree-ventures
+New Zealand,NZ,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",air-tree-ventures
+France,FR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",frst
+United States,US,4,1,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 60.0}, {'name': 'Social', 'count': 1, 'percent': 20.0}, {'name': 'NFT', 'count': 1, 'percent': 20.0}]",ince-capital
+Cayman Islands,KY,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",ince-capital
+France,FR,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ince-capital
+Singapore,SG,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ince-capital
+United Kingdom,GB,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",ince-capital
+India,IN,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",gossamer-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",gossamer-capital
+Hong Kong,HK,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",gossamer-capital
+South Korea,KR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",creditcoin
+China,CN,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",nothingresearch
+Japan,JP,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",nothingresearch
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",nothingresearch
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",nothingresearch
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",nothingresearch
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",nothingresearch
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",swc-global
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",swc-global
+South Korea,KR,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",alpha-capital
+Sweden,SE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",alpha-capital
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",alpha-capital
+Hong Kong,HK,1,1,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",hailstone-ventures
+United States,US,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",hailstone-ventures
+Bulgaria,BG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",hailstone-ventures
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",hailstone-ventures
+Singapore,SG,0,2,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",krustuniverse
+Japan,JP,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",krustuniverse
+South Korea,KR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",krustuniverse
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",room40-ventuers
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",room40-ventuers
+Hong Kong,HK,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",conflux-network
+Hong Kong,HK,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",bitcoinlab
+Sweden,SE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",moonstarter
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",zora
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",zora
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ambient-network
+Spain,ES,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",disrupt-com
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",e1-ventures
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",fortified-ventures
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",layer-labs
+Switzerland,CH,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",even-labs
+United States,US,7,1,"[{'name': 'Blockchain Service', 'count': 5, 'percent': 62.5}, {'name': 'DeFi', 'count': 2, 'percent': 25.0}, {'name': 'GameFi', 'count': 1, 'percent': 12.5}]",resolute-ventures
+United States,US,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",andromeda-capital
+Singapore,SG,1,0,"[{'name': 'Others', 'count': 1, 'percent': 100.0}]",andromeda-capital
+Canada,CA,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cointelligence-fund
+Israel,IL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cointelligence-fund
+Poland,PL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cointelligence-fund
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cointelligence-fund
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",hamilton-lane
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",hamilton-lane
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",narwhal-ventures
+United States,US,5,0,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 80.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}]",alphagrep
+Singapore,SG,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",alphagrep
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",alphagrep
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",blue-bay-capital
+Switzerland,CH,1,1,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",mindset-ventures
+United States,US,8,5,"[{'name': 'GameFi', 'count': 6, 'percent': 46.15}, {'name': 'NFT', 'count': 3, 'percent': 23.08}, {'name': 'Social', 'count': 2, 'percent': 15.38}, {'name': 'DeFi', 'count': 2, 'percent': 15.38}]",courtside-ventures
+Belgium,BE,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",courtside-ventures
+India,IN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",courtside-ventures
+United States,US,3,1,"[{'name': 'GameFi', 'count': 2, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}, {'name': 'Chain', 'count': 1, 'percent': 25.0}]",hartmann-capital
+Estonia,EE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",hartmann-capital
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",hartmann-capital
+United States,US,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",supercell
+Germany,DE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",supercell
+Spain,ES,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",supercell
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",supercell
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",phemex-venture
+United States,US,4,2,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 50.0}, {'name': 'CeFi', 'count': 2, 'percent': 33.33}, {'name': 'Chain', 'count': 1, 'percent': 16.67}]",bitmain
+Norway,NO,3,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 100.0}]",bitmain
+Argentina,AR,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",bitmain
+Singapore,SG,0,2,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",bitmain
+Israel,IL,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",bitmain
+Taiwan,TW,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",bitmain
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",bitmain
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",theta-blockchain-ventures
+Germany,DE,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",theta-blockchain-ventures
+United States,US,4,0,"[{'name': 'DeFi', 'count': 3, 'percent': 75.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}]",d64ventures
+India,IN,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",d64ventures
+Bulgaria,BG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",d64ventures
+Switzerland,CH,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",d64ventures
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",d64ventures
+Spain,ES,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",d64ventures
+Lithuania,LT,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",d64ventures
+Estonia,EE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",safe-ecosystem-foundation
+India,IN,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",safe-ecosystem-foundation
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",safe-ecosystem-foundation
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",safe-ecosystem-foundation
+United States,US,6,1,"[{'name': 'Blockchain Service', 'count': 5, 'percent': 71.43}, {'name': 'CeFi', 'count': 2, 'percent': 28.57}]",bny-mellon
+Luxembourg,LU,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",bny-mellon
+United Kingdom,GB,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",bny-mellon
+France,FR,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",bnp-paribas
+Luxembourg,LU,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",bnp-paribas
+United Kingdom,GB,1,1,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",bnp-paribas
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",bnp-paribas
+France,FR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",future-fund
+Singapore,SG,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",future-fund
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",future-fund
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",tsv-cap
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",chainlink-capital
+Australia,AU,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",chainlink-capital
+Luxembourg,LU,3,0,"[{'name': 'CeFi', 'count': 3, 'percent': 100.0}]",deutsche-borse
+United States,US,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",deutsche-borse
+United States,US,3,1,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 75.0}, {'name': 'DeFi', 'count': 1, 'percent': 25.0}]",kommune
+Switzerland,CH,3,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}, {'name': 'Chain', 'count': 1, 'percent': 33.33}]",kommune
+United Kingdom,GB,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",kommune
+Cayman Islands,KY,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",kommune
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",kommune
+Germany,DE,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",kommune
+Hong Kong,HK,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",kommune
+Hong Kong,HK,0,1,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",boxmining
+South Korea,KR,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",boxmining
+Lithuania,LT,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",boxmining
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",boxmining
+Singapore,SG,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",dec-ventures
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",dec-ventures
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cryptodiscover
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",kaizen-finance
+Germany,DE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",protocap
+Taiwan,TW,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",kyber-capital
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",kyber-capital
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",rarible
+United States,US,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",stakefish
+United States,US,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sorenson-impact
+France,FR,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",insignius-capital
+United Kingdom,GB,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",insignius-capital
+Singapore,SG,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",insignius-capital
+Czech Republic,CZ,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",insignius-capital
+Switzerland,CH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",insignius-capital
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",insignius-capital
+Sweden,SE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",insignius-capital
+New Zealand,NZ,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",insignius-capital
+Finland,FI,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",firexcapital
+Philippines,PH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",firexcapital
+Australia,AU,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",asteroid-capital
+Canada,CA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",asteroid-capital
+UAE,AE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",asteroid-capital
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",asteroid-capital
+United States,US,4,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}, {'name': 'Blockchain Infrastructure', 'count': 2, 'percent': 40.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}]",g1-ventures
+United Kingdom,GB,3,0,"[{'name': 'DeFi', 'count': 3, 'percent': 100.0}]",g1-ventures
+Cyprus,CY,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",g1-ventures
+Luxembourg,LU,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",g1-ventures
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",g1-ventures
+United States,US,13,1,"[{'name': 'Blockchain Service', 'count': 9, 'percent': 64.29}, {'name': 'DeFi', 'count': 2, 'percent': 14.29}, {'name': 'Social', 'count': 1, 'percent': 7.14}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 7.14}, {'name': 'NFT', 'count': 1, 'percent': 7.14}]",village-global
+Switzerland,CH,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",village-global
+United States,US,4,1,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 80.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 20.0}]",stillmark
+Germany,DE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",stillmark
+Ghana,GH,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",stillmark
+Guatemala,GT,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",stillmark
+United States,US,7,3,"[{'name': 'Blockchain Service', 'count': 7, 'percent': 70.0}, {'name': 'Social', 'count': 1, 'percent': 10.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 10.0}, {'name': 'CeFi', 'count': 1, 'percent': 10.0}]",mayfield
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",mvp-ventures
+Canada,CA,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",mvp-ventures
+United States,US,2,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}]",stepstone-group
+Japan,JP,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",stepstone-group
+Israel,IL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",maverick-ventures-israel
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",maverick-ventures-israel
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",celesta-capital
+United States,US,5,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 60.0}, {'name': 'GameFi', 'count': 1, 'percent': 20.0}, {'name': 'CeFi', 'count': 1, 'percent': 20.0}]",gbic
+South Korea,KR,3,0,"[{'name': 'DeFi', 'count': 2, 'percent': 66.67}, {'name': 'NFT', 'count': 1, 'percent': 33.33}]",gbic
+India,IN,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",gbic
+Singapore,SG,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",gbic
+Hong Kong,HK,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",gbic
+Germany,DE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",gbic
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",gbic
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",vista-lab
+South Korea,KR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",vista-lab
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",new-incubation-ventures
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",portico-ventures
+Canada,CA,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",portico-ventures
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",portico-ventures
+Ukraine,UA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",portico-ventures
+UAE,AE,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",portico-ventures
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",portico-ventures
+UAE,AE,3,0,"[{'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}, {'name': 'Chain', 'count': 1, 'percent': 33.33}]",launchpool
+Nigeria,NG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",launchpool
+Norway,NO,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",launchpool
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",launchpool
+China,CN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",drk-lab
+Israel,IL,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",sheesha-finance
+Estonia,EE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",sheesha-finance
+UAE,AE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",sheesha-finance
+Ireland,IE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",top-7
+China,CN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",nervoscorp
+Hong Kong,HK,3,0,"[{'name': 'Others', 'count': 3, 'percent': 100.0}]",gobi-partners
+Singapore,SG,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",gobi-partners
+South Korea,KR,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",nexus-one
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",nexus-one
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",titancapital
+Thailand,TH,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",titancapital
+United States,US,6,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 33.33}, {'name': 'GameFi', 'count': 1, 'percent': 16.67}, {'name': 'Social', 'count': 1, 'percent': 16.67}, {'name': 'DeFi', 'count': 1, 'percent': 16.67}, {'name': 'CeFi', 'count': 1, 'percent': 16.67}]",ww-ventures
+Portugal,PT,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",ww-ventures
+Puerto Rico,PR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",ww-ventures
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",ww-ventures
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",valhalla-ventures
+Canada,CA,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",valhalla-ventures
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",valhalla-ventures
+Spain,ES,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",clearsky
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",clearsky
+United States,US,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",innovating-capital
+United States,US,5,0,"[{'name': 'NFT', 'count': 3, 'percent': 60.0}, {'name': 'GameFi', 'count': 1, 'percent': 20.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}]",focus-labs
+Netherlands,NL,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",focus-labs
+China,CN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",focus-labs
+Hong Kong,HK,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",focus-labs
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",focus-labs
+United States,US,3,8,"[{'name': 'Blockchain Service', 'count': 6, 'percent': 54.55}, {'name': 'CeFi', 'count': 3, 'percent': 27.27}, {'name': 'GameFi', 'count': 1, 'percent': 9.09}, {'name': 'Social', 'count': 1, 'percent': 9.09}]",medici-ventures
+Belgium,BE,1,1,"[{'name': 'Social', 'count': 2, 'percent': 100.0}]",medici-ventures
+Argentina,AR,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",medici-ventures
+United States,US,4,0,"[{'name': 'NFT', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}]",pareto
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",pareto
+Germany,DE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",pareto
+Germany,DE,0,2,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",negentropycapital
+France,FR,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",cathay-capital
+Germany,DE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cathay-capital
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cathay-capital
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",oss-capital
+Singapore,SG,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",taihill-venture
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",taihill-venture
+Australia,AU,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",goldenchain
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",goldenchain
+France,FR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",theia-ventures
+Germany,DE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",theia-ventures
+Germany,DE,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",agnostic-fund
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",agnostic-fund
+United Kingdom,GB,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",agnostic-fund
+Australia,AU,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",rising-capital
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",rising-capital
+France,FR,2,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",one-ragtime
+Hong Kong,HK,1,1,"[{'name': 'Chain', 'count': 2, 'percent': 100.0}]",one-ragtime
+Canada,CA,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",axion-asia
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",axion-asia
+South Korea,KR,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",rollup-finance
+Australia,AU,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",n8-capital
+United States,US,5,0,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 80.0}, {'name': 'Social', 'count': 1, 'percent': 20.0}]",cultur3-capital
+Singapore,SG,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",cultur3-capital
+United Kingdom,GB,2,0,"[{'name': 'NFT', 'count': 2, 'percent': 100.0}]",cultur3-capital
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cultur3-capital
+United States,US,4,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'GameFi', 'count': 1, 'percent': 25.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 25.0}]",2-punks-capital
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",2-punks-capital
+Canada,CA,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",future3-campus
+Australia,AU,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",nural-capital
+Poland,PL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",estoty
+Kenya,KE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",mission-street-ventures
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",mission-street-ventures
+Singapore,SG,1,0,"[{'name': 'Others', 'count': 1, 'percent': 100.0}]",bip32-ventures
+Vietnam,VN,0,1,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",bip32-ventures
+Singapore,SG,4,0,"[{'name': 'DeFi', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}]",m77-ventures
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",m77-ventures
+United States,US,9,0,"[{'name': 'DeFi', 'count': 5, 'percent': 55.56}, {'name': 'CeFi', 'count': 3, 'percent': 33.33}, {'name': 'Blockchain Service', 'count': 1, 'percent': 11.11}]",ascend-ex
+United Kingdom,GB,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",ascend-ex
+Bulgaria,BG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",ascend-ex
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",ascend-ex
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",ascend-ex
+Spain,ES,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",ascend-ex
+United States,US,8,0,"[{'name': 'Blockchain Infrastructure', 'count': 3, 'percent': 37.5}, {'name': 'DeFi', 'count': 2, 'percent': 25.0}, {'name': 'CeFi', 'count': 2, 'percent': 25.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 12.5}]",monday-capital
+United Kingdom,GB,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",monday-capital
+China,CN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",monday-capital
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",monday-capital
+China,CN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ymcapital
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ymcapital
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",ymcapital
+Canada,CA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",bluenode-capital
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",bluenode-capital
+China,CN,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",qf-capital
+Bulgaria,BG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",spec-capital
+Singapore,SG,6,1,"[{'name': 'GameFi', 'count': 3, 'percent': 42.86}, {'name': 'Social', 'count': 1, 'percent': 14.29}, {'name': 'DeFi', 'count': 1, 'percent': 14.29}, {'name': 'CeFi', 'count': 1, 'percent': 14.29}, {'name': 'Chain', 'count': 1, 'percent': 14.29}]",arcane-group
+China,CN,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",arcane-group
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",arcane-group
+United States,US,2,0,"[{'name': 'Social', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",apollodao
+Hong Kong,HK,5,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}, {'name': 'GameFi', 'count': 1, 'percent': 20.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}, {'name': 'Chain', 'count': 1, 'percent': 20.0}]",blackpine
+Hong Kong,HK,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",pulsar-trading
+Kenya,KE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",pulsar-trading
+Puerto Rico,PR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",pulsar-trading
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",pulsar-trading
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",pulsar-trading
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",shorooq-partners
+Hong Kong,HK,0,1,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",shorooq-partners
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",shorooq-partners
+Belgium,BE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fuse-capital
+Brazil,BR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",fuse-capital
+Hong Kong,HK,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",fuse-capital
+Germany,DE,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",three-point
+Hong Kong,HK,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",three-point
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",three-point
+Portugal,PT,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",apex-capital
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",apex-capital
+Hong Kong,HK,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",virtuzone
+Taiwan,TW,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",innovion
+United States,US,17,9,"[{'name': 'Blockchain Service', 'count': 15, 'percent': 57.69}, {'name': 'NFT', 'count': 4, 'percent': 15.38}, {'name': 'Social', 'count': 2, 'percent': 7.69}, {'name': 'CeFi', 'count': 2, 'percent': 7.69}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 3.85}, {'name': 'GameFi', 'count': 1, 'percent': 3.85}, {'name': 'DeFi', 'count': 1, 'percent': 3.85}]",liberty-city-ventures
+Hong Kong,HK,7,1,"[{'name': 'Others', 'count': 5, 'percent': 62.5}, {'name': 'Blockchain Service', 'count': 2, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 12.5}]",liberty-city-ventures
+United Kingdom,GB,3,2,"[{'name': 'DeFi', 'count': 2, 'percent': 40.0}, {'name': 'GameFi', 'count': 1, 'percent': 20.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 20.0}, {'name': 'CeFi', 'count': 1, 'percent': 20.0}]",liberty-city-ventures
+Canada,CA,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",liberty-city-ventures
+UAE,AE,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",liberty-city-ventures
+Switzerland,CH,1,0,"[{'name': 'Others', 'count': 1, 'percent': 100.0}]",liberty-city-ventures
+Germany,DE,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",liberty-city-ventures
+Israel,IL,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",liberty-city-ventures
+Singapore,SG,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",bsc-station
+Vietnam,VN,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",bsc-station
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",bsc-station
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",bsc-station
+United States,US,3,3,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 50.0}, {'name': 'CeFi', 'count': 2, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 16.67}]",point72-ventures
+Netherlands,NL,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",point72-ventures
+South Korea,KR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",goal-ventures
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",goal-ventures
+United States,US,3,0,"[{'name': 'GameFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",baselayer-capital
+India,IN,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",baselayer-capital
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",baselayer-capital
+Hong Kong,HK,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",meteorite-labs
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",meteorite-labs
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",lmax-group
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",zodia-custody
+United States,US,7,1,"[{'name': 'Blockchain Infrastructure', 'count': 4, 'percent': 50.0}, {'name': 'GameFi', 'count': 2, 'percent': 25.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 12.5}, {'name': 'Chain', 'count': 1, 'percent': 12.5}]",neo-vc
+China,CN,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",neo-vc
+Hong Kong,HK,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",neo-vc
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",neo-vc
+United States,US,4,0,"[{'name': 'Blockchain Infrastructure', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 25.0}]",matrix-capital-management
+Saint Kitts and Nevis,KN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",matrix-capital-management
+San Marino,SM,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",matrix-capital-management
+Japan,JP,4,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}, {'name': 'GameFi', 'count': 2, 'percent': 40.0}, {'name': 'CeFi', 'count': 1, 'percent': 20.0}]",mz-web3-fund
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",mz-web3-fund
+Singapore,SG,1,1,"[{'name': 'CeFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",mz-web3-fund
+Canada,CA,4,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 25.0}]",maple-vc
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",maple-vc
+Barbados,BB,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",cryptooasis
+India,IN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",cryptooasis
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",artemis-fund
+South Africa,ZA,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",launch-lab
+United States,US,7,1,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 50.0}, {'name': 'DeFi', 'count': 2, 'percent': 25.0}, {'name': 'GameFi', 'count': 1, 'percent': 12.5}, {'name': 'Social', 'count': 1, 'percent': 12.5}]",southparkcommons
+Canada,CA,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",southparkcommons
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",bitcoin-magazine
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",ethos-vc
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",spirit-blockchain
+Ecuador,EC,2,1,"[{'name': 'CeFi', 'count': 3, 'percent': 100.0}]",magma-partners
+Argentina,AR,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",magma-partners
+Chile,CL,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",magma-partners
+Colombia,CO,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",magma-partners
+Colombia,CO,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",simma-capital
+United States,US,3,2,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}, {'name': 'CeFi', 'count': 2, 'percent': 40.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}]",launchpad-capital
+Israel,IL,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",launchpad-capital
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",launchpad-capital
+Israel,IL,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",impatient-ventures
+Colombia,CO,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",impatient-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",impatient-ventures
+Israel,IL,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",inspired-capital
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",inspired-capital
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",coho-deeptech
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",motherson-group
+Finland,FI,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",conflux-foundation
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",conflux-foundation
+United States,US,4,0,"[{'name': 'DeFi', 'count': 2, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}]",flow-ventures
+Sweden,SE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",flow-ventures
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",flow-ventures
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",flow-ventures
+United States,US,7,0,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 57.14}, {'name': 'GameFi', 'count': 1, 'percent': 14.29}, {'name': 'DeFi', 'count': 1, 'percent': 14.29}, {'name': 'CeFi', 'count': 1, 'percent': 14.29}]",xoogler
+United States,US,5,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 60.0}, {'name': 'CeFi', 'count': 2, 'percent': 40.0}]",flybridge-capital
+Singapore,SG,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",kira-studio
+Singapore,SG,0,2,"[{'name': 'Blockchain Infrastructure', 'count': 2, 'percent': 100.0}]",pi-ventures
+United States,US,9,0,"[{'name': 'CeFi', 'count': 3, 'percent': 33.33}, {'name': 'Blockchain Service', 'count': 2, 'percent': 22.22}, {'name': 'DeFi', 'count': 2, 'percent': 22.22}, {'name': 'Chain', 'count': 2, 'percent': 22.22}]",version-one
+Canada,CA,2,2,"[{'name': 'NFT', 'count': 3, 'percent': 75.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}]",version-one
+Cayman Islands,KY,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",version-one
+Serbia,RS,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",version-one
+United Kingdom,GB,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",version-one
+France,FR,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",kx
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",kx
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",kx
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",neotokyo
+Singapore,SG,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",iterative
+Canada,CA,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",iterative
+Philippines,PH,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",iterative
+Germany,DE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",rooshvc
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",rooshvc
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",steel-dao
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",gotbit
+UAE,AE,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",gotbit
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",aves-lair
+United Kingdom,GB,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",aves-lair
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",parc-capital
+United States,US,3,0,"[{'name': 'Social', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",propel-venture-partners
+Canada,CA,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",propel-venture-partners
+United Kingdom,GB,2,1,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 100.0}]",skyfall-ventures
+Denmark,DK,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",skyfall-ventures
+Norway,NO,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",skyfall-ventures
+Germany,DE,2,1,"[{'name': 'CeFi', 'count': 2, 'percent': 66.67}, {'name': 'NFT', 'count': 1, 'percent': 33.33}]",notion-capital
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",notion-capital
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",inovo-vc
+United States,US,6,0,"[{'name': 'GameFi', 'count': 4, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 2, 'percent': 33.33}]",snackclub
+Portugal,PT,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",snackclub
+Singapore,SG,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",snackclub
+Brazil,BR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",snackclub
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",snackclub
+United Kingdom,GB,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",parachain-ventures
+Estonia,EE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",parachain-ventures
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",parachain-ventures
+Spain,ES,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",parachain-ventures
+Turkey,TR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",parachain-ventures
+United States,US,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",parachain-ventures
+United Kingdom,GB,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",fisher8-capital
+Australia,AU,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fisher8-capital
+Bahamas,BS,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fisher8-capital
+Finland,FI,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fisher8-capital
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fisher8-capital
+Canada,CA,0,1,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",definancex
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",definancex
+United States,US,8,0,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 50.0}, {'name': 'NFT', 'count': 2, 'percent': 25.0}, {'name': 'DeFi', 'count': 1, 'percent': 12.5}, {'name': 'CeFi', 'count': 1, 'percent': 12.5}]",quiet-capital
+Germany,DE,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",quiet-capital
+Hong Kong,HK,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",quiet-capital
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",quiet-capital
+Singapore,SG,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",quiet-capital
+Australia,AU,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",chainlayer
+Sweden,SE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",chainlayer
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",chainlayer
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",01node
+United States,US,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",01node
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",acacia-digital-holdings
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",kronos-asset-management
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",twelve-below
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",zetachain
+South Korea,KR,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",verse-2
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",notion
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",israeli-blockchain-association
+Canada,CA,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",israeli-blockchain-association
+Vietnam,VN,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",israeli-blockchain-association
+Canada,CA,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",dao-kondr-vc
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",dao-kondr-vc
+China,CN,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",vitalbridgecapital
+Hong Kong,HK,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",vitalbridgecapital
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",the-batchery
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'Social', 'count': 1, 'percent': 33.33}]",dv-chain
+Canada,CA,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",dv-chain
+Cyprus,CY,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",dv-chain
+United States,US,5,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 60.0}, {'name': 'Social', 'count': 1, 'percent': 20.0}, {'name': 'CeFi', 'count': 1, 'percent': 20.0}]",belvedere-trading
+Australia,AU,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",block3v
+Australia,AU,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",jellyc
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",metropolitan-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",nameless-ventures
+Japan,JP,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",sony-innovation-fund
+South Africa,ZA,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",sony-innovation-fund
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",sony-innovation-fund
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",mobox
+United States,US,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",xt-labs
+Germany,DE,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",xt-labs
+British Virgin Islands,VG,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",xt-labs
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",mandala-capital
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",market-across
+Israel,IL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",market-across
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",market-across
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",market-across
+Finland,FI,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",jabrecap
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",jabrecap
+British Virgin Islands,VG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",valkyrie-protocol
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",bedrock-capital
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 100.0}]",picus-capital
+Germany,DE,1,1,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",picus-capital
+Netherlands,NL,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",picus-capital
+Puerto Rico,PR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",moon-boots-capital
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",moon-boots-capital
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",moon-boots-capital
+United States,US,3,1,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 75.0}, {'name': 'DeFi', 'count': 1, 'percent': 25.0}]",script-capital
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",script-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",brinks
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",champion-hill-ventures
+Vietnam,VN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",trade-coin-vietnam
+South Korea,KR,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",prodigy-investment
+United States,US,2,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}, {'name': 'Chain', 'count': 1, 'percent': 33.33}]",basis-set
+Canada,CA,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",dgventures
+Japan,JP,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",dgventures
+China,CN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sancus-ventures
+Israel,IL,0,2,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",walden-catalyst
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",marketvector
+Brazil,BR,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",chain-ridge-capital
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",chain-ridge-capital
+Malta,MT,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",chain-ridge-capital
+San Marino,SM,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",chain-ridge-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",chain-ridge-capital
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",diaspora-ventures
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",time-research
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",pulsar-global
+British Virgin Islands,VG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",pulsar-global
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",cartography-capital
+Germany,DE,2,0,"[{'name': 'NFT', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",gravity-x-capital
+India,IN,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Others', 'count': 1, 'percent': 50.0}]",gravity-x-capital
+Singapore,SG,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",gravity-x-capital
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",gravity-x-capital
+Cyprus,CY,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",gravity-x-capital
+British Virgin Islands,VG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",gravity-x-capital
+Georgia,GE,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",gravity-x-capital
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",gravity-x-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",general-motors-ventures
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",main-quad-capital
+South Korea,KR,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",kakao-ventures
+United States,US,14,0,"[{'name': 'Blockchain Service', 'count': 8, 'percent': 57.14}, {'name': 'CeFi', 'count': 3, 'percent': 21.43}, {'name': 'Social', 'count': 1, 'percent': 7.14}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 7.14}, {'name': 'Chain', 'count': 1, 'percent': 7.14}]",CoinShares
+France,FR,3,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 50.0}, {'name': 'CeFi', 'count': 2, 'percent': 50.0}]",CoinShares
+Singapore,SG,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",CoinShares
+Canada,CA,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",CoinShares
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",CoinShares
+United Kingdom,GB,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",CoinShares
+Germany,DE,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",CoinShares
+Singapore,SG,2,1,"[{'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'Social', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",cryptomeria-capital
+Estonia,EE,1,1,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",cryptomeria-capital
+United Kingdom,GB,1,1,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",cryptomeria-capital
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cryptomeria-capital
+Seychelles,SC,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cryptomeria-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",cryptomeria-capital
+British Virgin Islands,VG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",cryptomeria-capital
+Hong Kong,HK,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",widus-partners
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",widus-partners
+United States,US,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",widus-partners
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",jambo
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",meta-impact-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",meta-impact-capital
+Liechtenstein,LI,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",dokia-capital
+Poland,PL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",dokia-capital
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",dokia-capital
+United Kingdom,GB,0,2,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",lda-capital
+Italy,IT,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",lda-capital
+Singapore,SG,0,1,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",lda-capital
+Barbados,BB,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",lda-capital
+UAE,AE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",lda-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",lda-capital
+Thailand,TH,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",lda-capital
+Hong Kong,HK,2,0,"[{'name': 'Others', 'count': 2, 'percent': 100.0}]",octava
+Singapore,SG,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",octava
+Argentina,AR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",octava
+Canada,CA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",octava
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",eos-network-foundation
+Argentina,AR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",barn-investimentos
+Argentina,AR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",bunge
+Argentina,AR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",xperiment-ventures
+United Kingdom,GB,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",iverse-vision
+Vietnam,VN,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",iverse-vision
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",iverse-vision
+Canada,CA,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",funplus
+Singapore,SG,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",funplus
+Switzerland,CH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",funplus
+Canada,CA,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",moore-strategic-ventures
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",moore-strategic-ventures
+United States,US,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",optimista-capital
+United Kingdom,GB,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",launch-code-capital
+Germany,DE,3,1,"[{'name': 'CeFi', 'count': 4, 'percent': 100.0}]",venture-stars
+United States,US,5,0,"[{'name': 'GameFi', 'count': 2, 'percent': 40.0}, {'name': 'DeFi', 'count': 2, 'percent': 40.0}, {'name': 'CeFi', 'count': 1, 'percent': 20.0}]",evernewcapital
+Hong Kong,HK,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",evernewcapital
+Vietnam,VN,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",evernewcapital
+Taiwan,TW,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",evernewcapital
+United Kingdom,GB,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",evernewcapital
+Australia,AU,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",evernewcapital
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",evernewcapital
+Seychelles,SC,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",evernewcapital
+United States,US,2,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'GameFi', 'count': 1, 'percent': 33.33}]",sosvvc
+Netherlands,NL,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",sosvvc
+Romania,RO,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 2, 'percent': 100.0}]",sosvvc
+Greece,GR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sosvvc
+Canada,CA,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",sosvvc
+China,CN,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sosvvc
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",sosvvc
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",sosvvc
+Czech Republic,CZ,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",sosvvc
+United States,US,1,2,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 100.0}]",global-ventures
+Hong Kong,HK,0,1,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",global-ventures
+UAE,AE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",global-ventures
+United Kingdom,GB,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",global-ventures
+Vietnam,VN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cryptomind
+United States,US,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",scc-investments
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",scc-investments
+Singapore,SG,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",vespertine-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",vespertine-capital
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",vespertine-capital
+Japan,JP,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",vespertine-capital
+South Korea,KR,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",vespertine-capital
+France,FR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",winkrypto
+Hong Kong,HK,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",winkrypto
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",winkrypto
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",winkrypto
+UAE,AE,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",phoenix-group
+Australia,AU,0,2,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",bluesky-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",method-capital
+Israel,IL,1,2,"[{'name': 'Social', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",viola-ventures
+United States,US,2,0,"[{'name': 'Social', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",crt-labs
+Germany,DE,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",crt-labs
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",crt-labs
+Switzerland,CH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",crt-labs
+Vietnam,VN,1,0,"[{'name': 'Others', 'count': 1, 'percent': 100.0}]",crt-labs
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",beacon-accelerator
+British Virgin Islands,VG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",beacon-accelerator
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'NFT', 'count': 1, 'percent': 33.33}]",unpopular-ventures
+Luxembourg,LU,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",apex-group
+Argentina,AR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",crusoeenergysys
+Hong Kong,HK,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",cth
+Argentina,AR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",pampa-energia
+Japan,JP,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sakura-united-platform
+United States,US,4,0,"[{'name': 'CeFi', 'count': 2, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}]",serenaventures
+France,FR,1,2,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",serenaventures
+Nigeria,NG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",serenaventures
+United States,US,3,1,"[{'name': 'CeFi', 'count': 3, 'percent': 75.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}]",pathfinder
+New Zealand,NZ,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",pathfinder
+United States,US,3,0,"[{'name': 'CeFi', 'count': 2, 'percent': 66.67}, {'name': 'Social', 'count': 1, 'percent': 33.33}]",animal-capital
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",ft-partners
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",ulta-beauty
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",whampoa-digital
+United States,US,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",stackerventures
+Germany,DE,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",stackerventures
+Sweden,SE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",stackerventures
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",stackerventures
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",stackerventures
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",upsparks
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",upsparks
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",upsparks
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}]",asymmetry-ventures
+South Korea,KR,0,1,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",crescendo-equity-partners
+Vietnam,VN,1,1,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",megala-ventures
+New Zealand,NZ,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",megala-ventures
+Philippines,PH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",megala-ventures
+Malta,MT,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",megala-ventures
+UAE,AE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",megala-ventures
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",megala-ventures
+Slovakia,SK,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",megala-ventures
+Estonia,EE,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",deltahub-capital
+India,IN,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",deltahub-capital
+Hong Kong,HK,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",deltahub-capital
+Switzerland,CH,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",deltahub-capital
+Thailand,TH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",deltahub-capital
+United States,US,1,0,"[{'name': 'Stablecoin', 'count': 1, 'percent': 100.0}]",deltahub-capital
+Japan,JP,5,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 60.0}, {'name': 'GameFi', 'count': 1, 'percent': 20.0}, {'name': 'CeFi', 'count': 1, 'percent': 20.0}]",b-dash-ventures
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",bitjungle
+Norway,NO,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",research-council-of-norway
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",f7-ventures
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",sound-xyz
+United Kingdom,GB,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",mg-investments
+Japan,JP,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",bastion-trading
+Japan,JP,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",big-time-games
+Singapore,SG,2,0,"[{'name': 'Social', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",chainfund-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",chainfund-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",roguecap
+Croatia,HR,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",roguecap
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",narcissus-ventures
+United States,US,5,1,"[{'name': 'CeFi', 'count': 3, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 16.67}, {'name': 'GameFi', 'count': 1, 'percent': 16.67}, {'name': 'Others', 'count': 1, 'percent': 16.67}]",hof-capital
+Switzerland,CH,1,1,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",hof-capital
+South Korea,KR,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",hof-capital
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",hof-capital
+Singapore,SG,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",hof-capital
+Republic of the Congo,CG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",hof-capital
+Brazil,BR,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",hof-capital
+United States,US,2,0,"[{'name': 'NFT', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",sbx-capital
+India,IN,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",sbx-capital
+Spain,ES,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sbx-capital
+United Kingdom,GB,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",nextgen
+Hong Kong,HK,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",nextgen
+Hong Kong,HK,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",qtum
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",qtum
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",good-news
+Portugal,PT,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",good-news
+United States,US,6,0,"[{'name': 'NFT', 'count': 2, 'percent': 33.33}, {'name': 'Blockchain Service', 'count': 1, 'percent': 16.67}, {'name': 'Social', 'count': 1, 'percent': 16.67}, {'name': 'Stablecoin', 'count': 1, 'percent': 16.67}, {'name': 'CeFi', 'count': 1, 'percent': 16.67}]",marcy-venture
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",marcy-venture
+Estonia,EE,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",tinyvc
+Bangladesh,BD,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",tinyvc
+Canada,CA,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",tinyvc
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",tinyvc
+Hong Kong,HK,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",new-layer-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",new-layer-capital
+United States,US,2,0,"[{'name': 'Social', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",thirty-five
+Japan,JP,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",anri
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",credit-agricole
+United States,US,4,1,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 80.0}, {'name': 'Chain', 'count': 1, 'percent': 20.0}]",zhenfund
+Hong Kong,HK,2,0,"[{'name': 'DeFi', 'count': 2, 'percent': 100.0}]",zhenfund
+Cayman Islands,KY,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",zhenfund
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",zhenfund
+UAE,AE,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",f-actor
+United States,US,4,3,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 57.14}, {'name': 'Blockchain Infrastructure', 'count': 3, 'percent': 42.86}]",northzone
+United Kingdom,GB,4,1,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 80.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}]",northzone
+Sweden,SE,2,1,"[{'name': 'GameFi', 'count': 2, 'percent': 66.67}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",northzone
+France,FR,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",northzone
+Germany,DE,1,1,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",northzone
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",coraldefi
+Puerto Rico,PR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",coraldefi
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",hetz-ventures
+Spain,ES,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",actyus
+Spain,ES,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",crane-earth
+Japan,JP,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",j-cam
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",slvc
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",aqn-digital
+Canada,CA,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",bitbuy
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",odos
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",outsiders-fund
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",rough-draft-ventures
+United States,US,3,2,"[{'name': 'CeFi', 'count': 3, 'percent': 60.0}, {'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}]",barclays
+United Kingdom,GB,3,1,"[{'name': 'CeFi', 'count': 3, 'percent': 75.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}]",barclays
+Germany,DE,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",barclays
+United Kingdom,GB,6,1,"[{'name': 'CeFi', 'count': 4, 'percent': 57.14}, {'name': 'Others', 'count': 2, 'percent': 28.57}, {'name': 'DeFi', 'count': 1, 'percent': 14.29}]",lakestarvc
+United States,US,3,2,"[{'name': 'GameFi', 'count': 2, 'percent': 40.0}, {'name': 'CeFi', 'count': 2, 'percent': 40.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 20.0}]",lakestarvc
+United Kingdom,GB,3,0,"[{'name': 'CeFi', 'count': 3, 'percent': 100.0}]",baillie-gifford
+United States,US,3,0,"[{'name': 'Others', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}]",baillie-gifford
+Canada,CA,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",baillie-gifford
+United Kingdom,GB,3,0,"[{'name': 'CeFi', 'count': 3, 'percent': 100.0}]",ubs
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",ubs
+United States,US,3,0,"[{'name': 'DeFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",dtcc
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",dtcc
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",pioneer-fund
+United Kingdom,GB,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",state-street
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",state-street
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",Algae-ventures
+United Kingdom,GB,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",ing-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ing-ventures
+Hong Kong,HK,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",bgx
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",nyu-venture-innovation-fund
+United States,US,5,0,"[{'name': 'CeFi', 'count': 2, 'percent': 40.0}, {'name': 'Chain', 'count': 2, 'percent': 40.0}, {'name': 'Others', 'count': 1, 'percent': 20.0}]",terraformcap
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",terraformcap
+Singapore,SG,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",terraformcap
+United Kingdom,GB,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",ton-coin-fund
+North Korea,KP,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",laguna-investment
+North Korea,KP,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",sm-culture-partners
+Spain,ES,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",investcorp
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",investcorp
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",dair-capital
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",record
+India,IN,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",intervest
+South Korea,KR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",intervest
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",intervest
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ay-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",draper-b1
+Israel,IL,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",matchboxdao
+Singapore,SG,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",menyala
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",haven-ventures
+Canada,CA,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",spacecadet-ventures
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",spacecadet-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",designer-fund
+Singapore,SG,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",zero-age-ventures
+Austria,AT,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",volksbank-raiffeisenbank-bayern-mitte
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",blackwood-ventures
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",calligraphy-digital
+United States,US,8,1,"[{'name': 'Blockchain Service', 'count': 5, 'percent': 55.56}, {'name': 'GameFi', 'count': 2, 'percent': 22.22}, {'name': 'Social', 'count': 1, 'percent': 11.11}, {'name': 'Chain', 'count': 1, 'percent': 11.11}]",floodgate
+United Kingdom,GB,9,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 33.33}, {'name': 'DeFi', 'count': 3, 'percent': 33.33}, {'name': 'CeFi', 'count': 3, 'percent': 33.33}]",tokentus
+Singapore,SG,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",tokentus
+Singapore,SG,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",devc
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",k2-access-fund
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",triatomic-capital
+Brazil,BR,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",abseed-ventures
+Brazil,BR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",honey-island
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",aragon-dao
+Lithuania,LT,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",firstpick
+Lithuania,LT,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",super-how
+Spain,ES,4,0,"[{'name': 'CeFi', 'count': 3, 'percent': 75.0}, {'name': 'DeFi', 'count': 1, 'percent': 25.0}]",conexo-ventures
+Ecuador,EC,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",conexo-ventures
+Spain,ES,2,1,"[{'name': 'DeFi', 'count': 2, 'percent': 66.67}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",cometa
+Mexico,MX,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",cometa
+Spain,ES,1,1,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",jme-ventures
+Brazil,BR,1,0,"[{'name': 'Stablecoin', 'count': 1, 'percent': 100.0}]",coins-ph
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",coins-ph
+United States,US,9,1,"[{'name': 'CeFi', 'count': 5, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 2, 'percent': 20.0}, {'name': 'Social', 'count': 2, 'percent': 20.0}, {'name': 'NFT', 'count': 1, 'percent': 10.0}]",fin-capital
+UAE,AE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",core-vision
+UAE,AE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",bim-ventures
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",w11-capital
+India,IN,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",nexusvp
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",nexusvp
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",nexusvp
+United Kingdom,GB,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",layer-one-ventures
+British Virgin Islands,VG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",layer-one-ventures
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",web3auth
+United States,US,8,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 37.5}, {'name': 'DeFi', 'count': 3, 'percent': 37.5}, {'name': 'Chain', 'count': 2, 'percent': 25.0}]",metaweb-venture
+United Kingdom,GB,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",metaweb-venture
+British Virgin Islands,VG,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",metaweb-venture
+Norway,NO,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",metaweb-venture
+Switzerland,CH,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",metaweb-venture
+United Kingdom,GB,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fasanara-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",genius-ventures
+United Kingdom,GB,2,0,"[{'name': 'CeFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",cerulean-ventures
+Germany,DE,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",cerulean-ventures
+Israel,IL,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",cerulean-ventures
+Switzerland,CH,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cerulean-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",cerulean-ventures
+United States,US,2,1,"[{'name': 'DeFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",redalpine-capital
+France,FR,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",redalpine-capital
+Spain,ES,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",redalpine-capital
+Switzerland,CH,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",redalpine-capital
+United Kingdom,GB,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",redalpine-capital
+United States,US,11,0,"[{'name': 'Blockchain Service', 'count': 6, 'percent': 54.55}, {'name': 'Social', 'count': 2, 'percent': 18.18}, {'name': 'CeFi', 'count': 2, 'percent': 18.18}, {'name': 'NFT', 'count': 1, 'percent': 9.09}]",americanexpress-ventures
+Australia,AU,2,0,"[{'name': 'Chain', 'count': 2, 'percent': 100.0}]",prosus-ventures
+Canada,CA,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",prosus-ventures
+India,IN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",prosus-ventures
+Lithuania,LT,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",prosus-ventures
+San Marino,SM,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",prosus-ventures
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",prosus-ventures
+United States,US,2,0,"[{'name': 'Social', 'count': 1, 'percent': 50.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}]",sublime-ventures
+United States,US,4,3,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 57.14}, {'name': 'CeFi', 'count': 3, 'percent': 42.86}]",ten31
+United Kingdom,GB,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",ten31
+Guatemala,GT,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ten31
+Greece,GR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",metaplanetcom
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",metaplanetcom
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",metaplanetcom
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",appold
+United Kingdom,GB,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",adjuvo
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",massive
+United States,US,4,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'GameFi', 'count': 1, 'percent': 25.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 25.0}]",founders-inc
+United States,US,5,2,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 42.86}, {'name': 'CeFi', 'count': 2, 'percent': 28.57}, {'name': 'GameFi', 'count': 1, 'percent': 14.29}, {'name': 'Social', 'count': 1, 'percent': 14.29}]",streamlined-ventures
+United States,US,3,0,"[{'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'Social', 'count': 1, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",florida-funders
+Israel,IL,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",tectona
+Japan,JP,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",money-forward
+United States,US,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",money-forward
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ankurit-capital
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",heitner-group
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",network-vc
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",snr-vc
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",valon-capital
+Canada,CA,2,0,"[{'name': 'GameFi', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",not3lau-capital
+United States,US,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'NFT', 'count': 1, 'percent': 50.0}]",not3lau-capital
+Gibraltar,GI,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",not3lau-capital
+South Korea,KR,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",not3lau-capital
+United Kingdom,GB,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",not3lau-capital
+United States,US,2,0,"[{'name': 'NFT', 'count': 2, 'percent': 100.0}]",tamarack-global
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",act-one-ventures
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",bitwave
+Germany,DE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",link-vc
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",link-vc
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",link-vc
+United States,US,10,1,"[{'name': 'Blockchain Service', 'count': 6, 'percent': 54.55}, {'name': 'GameFi', 'count': 2, 'percent': 18.18}, {'name': 'NFT', 'count': 2, 'percent': 18.18}, {'name': 'CeFi', 'count': 1, 'percent': 9.09}]",box-group
+Estonia,EE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",box-group
+Japan,JP,4,0,"[{'name': 'CeFi', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}]",dg-daiwa-ventures
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",dg-daiwa-ventures
+India,IN,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",dg-daiwa-ventures
+Philippines,PH,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",dg-daiwa-ventures
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",dg-daiwa-ventures
+United States,US,7,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 28.57}, {'name': 'GameFi', 'count': 2, 'percent': 28.57}, {'name': 'NFT', 'count': 2, 'percent': 28.57}, {'name': 'DeFi', 'count': 1, 'percent': 14.29}]",pear-vc
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",pear-vc
+United States,US,5,0,"[{'name': 'CeFi', 'count': 3, 'percent': 60.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 20.0}, {'name': 'GameFi', 'count': 1, 'percent': 20.0}]",longjourneyvc
+Canada,CA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",portofino-technologies
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",portofino-technologies
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",portofino-technologies
+Canada,CA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cryptoast
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",cryptoast
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",alpha-jwc
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",comma-capital
+Canada,CA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",parallel-studio
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",promatrix-capital
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",prysm-group
+United States,US,3,0,"[{'name': 'NFT', 'count': 2, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",protofund
+Canada,CA,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",protofund
+India,IN,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",protofund
+Singapore,SG,0,3,"[{'name': 'CeFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",elevation-capital
+India,IN,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",elevation-capital
+United States,US,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",elevation-capital
+Portugal,PT,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",commonwealth
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",commonwealth
+India,IN,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",sbi-mutual-fund
+Portugal,PT,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",venly
+Singapore,SG,3,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'Social', 'count': 1, 'percent': 33.33}, {'name': 'Chain', 'count': 1, 'percent': 33.33}]",insignia-ventures-partners
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",insignia-ventures-partners
+Indonesia,ID,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",insignia-ventures-partners
+Philippines,PH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",insignia-ventures-partners
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",endeavor
+Brazil,BR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",endeavor
+Philippines,PH,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",endeavor
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'Chain', 'count': 1, 'percent': 33.33}]",1111media
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",joint-effects
+United States,US,2,0,"[{'name': 'Chain', 'count': 2, 'percent': 100.0}]",two-small-fish-ventures
+San Marino,SM,1,1,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",abalone-group
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",abalone-group
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",golden-record-ventures
+United Kingdom,GB,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",golden-record-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",lunoglobal
+Hong Kong,HK,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",rss3
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",rss3
+United States,US,3,0,"[{'name': 'Social', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",nextview
+UAE,AE,1,2,"[{'name': 'CeFi', 'count': 3, 'percent': 100.0}]",wamda-capital
+France,FR,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",wamda-capital
+United Kingdom,GB,4,2,"[{'name': 'Blockchain Service', 'count': 5, 'percent': 83.33}, {'name': 'CeFi', 'count': 1, 'percent': 16.67}]",connectventures
+United States,US,4,0,"[{'name': 'Social', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}]",connectventures
+Barbados,BB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",connectventures
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",connectventures
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",connectventures
+Netherlands,NL,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",connectventures
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",foreword
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",new-forge
+Turkey,TR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",oyunfor
+Turkey,TR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",rocofinance
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",squareone-venture-capital
+Turkey,TR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",triple-dragon
+China,CN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",k2vc
+Singapore,SG,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",k2vc
+Estonia,EE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",presto-ventures
+Georgia,GE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",presto-ventures
+United States,US,7,1,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 37.5}, {'name': 'Currency', 'count': 1, 'percent': 12.5}, {'name': 'DeFi', 'count': 1, 'percent': 12.5}, {'name': 'CeFi', 'count': 1, 'percent': 12.5}, {'name': 'Chain', 'count': 1, 'percent': 12.5}, {'name': 'Others', 'count': 1, 'percent': 12.5}]",vy-capital
+United Kingdom,GB,1,1,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",vy-capital
+China,CN,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",vy-capital
+United States,US,4,1,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 80.0}, {'name': 'NFT', 'count': 1, 'percent': 20.0}]",human-capital
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",human-capital
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",human-capital
+South Korea,KR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cryptokudasaijp
+United States,US,3,0,"[{'name': 'DeFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",parataxis-capital
+Philippines,PH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",parataxis-capital
+Seychelles,SC,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",parataxis-capital
+Singapore,SG,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",parataxis-capital
+Spain,ES,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",parataxis-capital
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",card1ventures
+Hong Kong,HK,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",2140-bitcoin-ecosystem-fund
+United States,US,6,1,"[{'name': 'GameFi', 'count': 2, 'percent': 28.57}, {'name': 'Social', 'count': 1, 'percent': 14.29}, {'name': 'Stablecoin', 'count': 1, 'percent': 14.29}, {'name': 'CeFi', 'count': 1, 'percent': 14.29}, {'name': 'Chain', 'count': 1, 'percent': 14.29}, {'name': 'Others', 'count': 1, 'percent': 14.29}]",pillar-vc
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",pillar-vc
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",pillar-vc
+United Kingdom,GB,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",pillar-vc
+Estonia,EE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",ta-ventures
+India,IN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",juno
+United States,US,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",wagmi33-foundation
+France,FR,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",bright-opportunities
+India,IN,3,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 25.0}]",better-capital
+Singapore,SG,3,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 25.0}, {'name': 'CeFi', 'count': 1, 'percent': 25.0}]",better-capital
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",better-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",better-capital
+United Kingdom,GB,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",backend-capital
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",backend-capital
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",iqoniq-growth
+Hong Kong,HK,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",nexara-ventures
+United Kingdom,GB,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",luminous-ventures
+Hong Kong,HK,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",bored-room-ventures
+Japan,JP,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",utec
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",akash-network
+Switzerland,CH,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",akash-network
+Japan,JP,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",tis-japan
+Singapore,SG,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",tis-japan
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",snowflake
+Belgium,BE,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",seeder-fund
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",nil
+United States,US,4,3,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 57.14}, {'name': 'Social', 'count': 3, 'percent': 42.86}]",amino-capital
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",amino-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'GameFi', 'count': 1, 'percent': 50.0}]",lead-capital
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",lead-capital
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",lead-capital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",tsingting-capital
+New Zealand,NZ,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",tsingting-capital
+Switzerland,CH,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",tsingting-capital
+Kenya,KE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",gravity-ventures
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",red-swiss-venture-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",red-swiss-venture-capital
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",string-ventures
+Singapore,SG,1,1,"[{'name': 'NFT', 'count': 2, 'percent': 100.0}]",heliconia-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",loneLine
+United States,US,2,3,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 60.0}, {'name': 'GameFi', 'count': 2, 'percent': 40.0}]",patron
+Nicaragua,NI,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",patron
+South Korea,KR,2,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",dsc-investment
+United States,US,4,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 25.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}]",uta-ventures
+United States,US,3,0,"[{'name': 'NFT', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",caa-ventures
+United States,US,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",coinwcorp
+Estonia,EE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",coinwcorp
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",coinwcorp
+UAE,AE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",coinwcorp
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",the-legaltech
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",tribute-labs
+Canada,CA,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",xsolla
+South Korea,KR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",xsolla
+Poland,PL,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",xsolla
+Netherlands,NL,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",angelwise
+Netherlands,NL,2,0,"[{'name': 'NFT', 'count': 2, 'percent': 100.0}]",graduate-entrepreneur
+Netherlands,NL,2,0,"[{'name': 'NFT', 'count': 2, 'percent': 100.0}]",rockstart
+Poland,PL,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",scalo-technologies
+Netherlands,NL,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",seedblink
+China,CN,1,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",sinovation-ventures
+United States,US,4,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 75.0}, {'name': 'Social', 'count': 1, 'percent': 25.0}]",gradient-ventures
+Bermuda,BM,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",gradient-ventures
+United States,US,3,4,"[{'name': 'Social', 'count': 3, 'percent': 42.86}, {'name': 'DeFi', 'count': 2, 'percent': 28.57}, {'name': 'CeFi', 'count': 1, 'percent': 14.29}, {'name': 'Others', 'count': 1, 'percent': 14.29}]",draper-goren-holm
+France,FR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",draper-goren-holm
+Switzerland,CH,0,1,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",draper-goren-holm
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",draper-goren-holm
+United States,US,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",draper-round-table
+United States,US,13,0,"[{'name': 'Blockchain Service', 'count': 6, 'percent': 46.15}, {'name': 'NFT', 'count': 5, 'percent': 38.46}, {'name': 'GameFi', 'count': 1, 'percent': 7.69}, {'name': 'DeFi', 'count': 1, 'percent': 7.69}]",shrug-capital
+United States,US,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'Others', 'count': 1, 'percent': 50.0}]",susa-ventures
+South Korea,KR,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",atinum-investment
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",atinum-investment
+Thailand,TH,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",asphere-innovations
+United States,US,7,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 42.86}, {'name': 'GameFi', 'count': 2, 'percent': 28.57}, {'name': 'CeFi', 'count': 1, 'percent': 14.29}, {'name': 'Chain', 'count': 1, 'percent': 14.29}]",struck-capital
+China,CN,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",struck-capital
+Russia,RU,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",struck-capital
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",struck-capital
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",struck-capital
+United States,US,3,0,"[{'name': 'Social', 'count': 3, 'percent': 100.0}]",own-fund
+Netherlands,NL,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",own-fund
+India,IN,2,0,"[{'name': 'Social', 'count': 2, 'percent': 100.0}]",infoedge-ventures
+United Kingdom,GB,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",coinoperatedgroup
+Denmark,DK,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",morph-capital
+Denmark,DK,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",the-aventures
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",fork-ventures
+Australia,AU,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sandton-capital-partners
+Indonesia,ID,0,2,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",ac-ventures
+Hong Kong,HK,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",ac-ventures
+United States,US,2,2,"[{'name': 'Social', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'Others', 'count': 1, 'percent': 25.0}]",vulcan-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",jones-dao
+United States,US,5,0,"[{'name': 'CeFi', 'count': 3, 'percent': 60.0}, {'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}]",creditease
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",creditease
+Puerto Rico,PR,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",openwebcollective
+Sweden,SE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",openwebcollective
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",openwebcollective
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",openwebcollective
+Spain,ES,2,0,"[{'name': 'Social', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",telefonica-innovation-ventures
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",telefonica-innovation-ventures
+United Kingdom,GB,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",telefonica-innovation-ventures
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",amasia
+Spain,ES,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",amasia
+Singapore,SG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",dentsu-ventures
+Singapore,SG,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",nazca
+Spain,ES,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",stratminds-vc
+United States,US,4,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 20.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 20.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}, {'name': 'NFT', 'count': 1, 'percent': 20.0}, {'name': 'Others', 'count': 1, 'percent': 20.0}]",salesforce-ventures
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",salesforce-ventures
+Seychelles,SC,2,0,"[{'name': 'Social', 'count': 2, 'percent': 100.0}]",vc-sila
+Canada,CA,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",lightning-capital
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",passion-capital
+United Kingdom,GB,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",id4-ventures
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'Social', 'count': 1, 'percent': 50.0}]",fire-eyes
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fire-eyes
+South Africa,ZA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fire-eyes
+United Kingdom,GB,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",fire-eyes
+United States,US,2,1,"[{'name': 'Social', 'count': 1, 'percent': 33.33}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",bonfire-ventures
+Canada,CA,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",bonfire-ventures
+Hong Kong,HK,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",bonfire-ventures
+Nigeria,NG,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",bonfire-ventures
+United States,US,1,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",leo-capital
+India,IN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",leo-capital
+Singapore,SG,0,1,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",leo-capital
+United States,US,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",ruttenberg-gordon
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",axl-ventures
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",big-sky-capital
+United States,US,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",cargill
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'NFT', 'count': 1, 'percent': 33.33}]",noise-dao
+United States,US,4,1,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 80.0}, {'name': 'NFT', 'count': 1, 'percent': 20.0}]",crv
+Argentina,AR,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",crv
+India,IN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",kearny-jackson
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",kearny-jackson
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",perridon-holdings
+Germany,DE,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",perridon-holdings
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",perridon-holdings
+Switzerland,CH,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",perridon-holdings
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",north-beta-capital
+United States,US,1,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 100.0}]",synchrony-ventures
+Singapore,SG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",uxd-protocol
+United States,US,2,1,"[{'name': 'NFT', 'count': 3, 'percent': 100.0}]",kakaoinvestment
+South Korea,KR,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",kakaoinvestment
+Philippines,PH,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",kakaoinvestment
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",kakaoinvestment
+Singapore,SG,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",tomooncapital
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",vc3-dao
+Argentina,AR,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",vc3-dao
+United States,US,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",ripio
+Argentina,AR,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",ripio
+Argentina,AR,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",reserve-protocol
+United States,US,7,2,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 44.44}, {'name': 'NFT', 'count': 3, 'percent': 33.33}, {'name': 'DeFi', 'count': 1, 'percent': 11.11}, {'name': 'Chain', 'count': 1, 'percent': 11.11}]",future-perfect-ventures
+United Kingdom,GB,5,0,"[{'name': 'CeFi', 'count': 2, 'percent': 40.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 20.0}, {'name': 'DeFi', 'count': 1, 'percent': 20.0}, {'name': 'NFT', 'count': 1, 'percent': 20.0}]",future-perfect-ventures
+Canada,CA,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 2, 'percent': 100.0}]",future-perfect-ventures
+Kenya,KE,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",future-perfect-ventures
+Cayman Islands,KY,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",future-perfect-ventures
+India,IN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",future-perfect-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",aleka-capital
+India,IN,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",force-ventures
+United States,US,2,0,"[{'name': 'Currency', 'count': 1, 'percent': 50.0}, {'name': 'Chain', 'count': 1, 'percent': 50.0}]",berggruen-holdings
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",berggruen-holdings
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 100.0}]",westwave-capital
+United States,US,5,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}, {'name': 'CeFi', 'count': 2, 'percent': 40.0}, {'name': 'Chain', 'count': 1, 'percent': 20.0}]",cygni-capital
+France,FR,4,0,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 75.0}, {'name': 'NFT', 'count': 1, 'percent': 25.0}]",cygni-capital
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 33.33}]",cota-capital
+United Kingdom,GB,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",cota-capital
+United States,US,3,1,"[{'name': 'CeFi', 'count': 2, 'percent': 50.0}, {'name': 'Blockchain Service', 'count': 1, 'percent': 25.0}, {'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 25.0}]",goldcrest-capital
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",alarko-ventures
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",esas-ventures
+United States,US,4,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}, {'name': 'Social', 'count': 2, 'percent': 40.0}, {'name': 'NFT', 'count': 1, 'percent': 20.0}]",mac-venture-capital
+United Kingdom,GB,6,0,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 16.67}, {'name': 'Chain', 'count': 1, 'percent': 16.67}]",entrepreneur-first
+United States,US,4,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 50.0}, {'name': 'DeFi', 'count': 2, 'percent': 50.0}]",entrepreneur-first
+Singapore,SG,2,1,"[{'name': 'Social', 'count': 2, 'percent': 66.67}, {'name': 'DeFi', 'count': 1, 'percent': 33.33}]",entrepreneur-first
+India,IN,1,1,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",entrepreneur-first
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",entrepreneur-first
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",entrepreneur-first
+United States,US,2,1,"[{'name': 'Blockchain Service', 'count': 3, 'percent': 100.0}]",strategic-cyber-ventures
+Canada,CA,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",strategic-cyber-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",bt-growth-capital
+United States,US,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",psy-p-nation
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",goat-capital
+Germany,DE,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",goat-capital
+Nigeria,NG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",goat-capital
+Singapore,SG,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",goat-capital
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",symboliccap
+United States,US,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",caffeinated-capital
+United Kingdom,GB,0,1,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",first-stage-labs
+United States,US,2,1,"[{'name': 'CeFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",augmentventures
+Sweden,SE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",augmentventures
+United States,US,1,1,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",pelion-venture-partners
+United Kingdom,GB,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",peak
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",kluz-ventures
+Hong Kong,HK,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",blockhype
+Philippines,PH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",blockhype
+Sweden,SE,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",blockhype
+Singapore,SG,2,0,"[{'name': 'Blockchain Infrastructure', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",limitless-crypto-investments
+Malta,MT,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",limitless-crypto-investments
+United States,US,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",limitless-crypto-investments
+Seychelles,SC,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",lapin-digital
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",lapin-digital
+United States,US,3,0,"[{'name': 'CeFi', 'count': 2, 'percent': 66.67}, {'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}]",red-building-capital
+China,CN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",red-building-capital
+Japan,JP,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",red-building-capital
+Taiwan,TW,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",red-building-capital
+United States,US,3,0,"[{'name': 'CeFi', 'count': 2, 'percent': 66.67}, {'name': 'GameFi', 'count': 1, 'percent': 33.33}]",pirata-capital
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",pirata-capital
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",paradigm-co
+Taiwan,TW,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",tribe-accelerator
+Canada,CA,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",perpetual-protocol
+Taiwan,TW,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",perpetual-protocol
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",perpetual-protocol
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",perpetual-protocol
+United Kingdom,GB,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",market-one-capital
+United States,US,7,0,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 57.14}, {'name': 'NFT', 'count': 2, 'percent': 28.57}, {'name': 'Social', 'count': 1, 'percent': 14.29}]",betaworks
+Puerto Rico,PR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",betaworks
+India,IN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",foxconn
+Taiwan,TW,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",foxconn
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",foxconn
+United States,US,3,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'NFT', 'count': 1, 'percent': 33.33}]",hypervc
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 50.0}, {'name': 'DeFi', 'count': 1, 'percent': 50.0}]",halborn
+United States,US,2,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 100.0}]",very-serious-ventures
+Kenya,KE,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",qredo
+Singapore,SG,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",qredo
+Switzerland,CH,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",qredo
+France,FR,1,1,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",cassius
+Sweden,SE,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cassius
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",cassius
+United States,US,0,1,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",cassius
+France,FR,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",moonfire-ventures
+Sweden,SE,2,0,"[{'name': 'GameFi', 'count': 2, 'percent': 100.0}]",moonfire-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",moonfire-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",form-capital
+United States,US,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",prompt-ventures
+United States,US,0,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",sinewave-ventures
+United States,US,9,0,"[{'name': 'CeFi', 'count': 5, 'percent': 55.56}, {'name': 'Blockchain Service', 'count': 4, 'percent': 44.44}]",commerce-ventures
+France,FR,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",commerce-ventures
+United Kingdom,GB,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",commerce-ventures
+United States,US,3,0,"[{'name': 'CeFi', 'count': 3, 'percent': 100.0}]",ecliptic-capital
+Switzerland,CH,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",ecliptic-capital
+United States,US,0,1,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",march-capital
+Nigeria,NG,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",hoaq
+Mexico,MX,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",perseverance-capital
+United States,US,0,1,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",csa-partners
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",droid-capital
+United Kingdom,GB,1,0,"[{'name': 'CeFi', 'count': 1, 'percent': 100.0}]",multichain-advisors-inc
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",mysterium-network
+Germany,DE,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",xyo
+United States,US,2,3,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 40.0}, {'name': 'NFT', 'count': 2, 'percent': 40.0}, {'name': 'GameFi', 'count': 1, 'percent': 20.0}]",digital
+United Kingdom,GB,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",digital
+Vietnam,VN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",digital
+France,FR,2,0,"[{'name': 'NFT', 'count': 2, 'percent': 100.0}]",venrex
+United Kingdom,GB,2,0,"[{'name': 'NFT', 'count': 2, 'percent': 100.0}]",venrex
+Luxembourg,LU,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",venrex
+France,FR,1,0,"[{'name': 'NFT', 'count': 1, 'percent': 100.0}]",bold
+France,FR,2,1,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 33.33}, {'name': 'NFT', 'count': 1, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",aglae-ventures
+United States,US,2,1,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 66.67}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}]",aglae-ventures
+India,IN,3,0,"[{'name': 'GameFi', 'count': 1, 'percent': 33.33}, {'name': 'CeFi', 'count': 1, 'percent': 33.33}, {'name': 'Chain', 'count': 1, 'percent': 33.33}]",steadview-capital
+United States,US,2,0,"[{'name': 'CeFi', 'count': 2, 'percent': 100.0}]",steadview-capital
+United States,US,1,0,"[{'name': 'Chain', 'count': 1, 'percent': 100.0}]",asymmetric-capital-partners
+Singapore,SG,1,0,"[{'name': 'DeFi', 'count': 1, 'percent': 100.0}]",daoverse-capital
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",punja-global-ventures
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",the-luxury-fund
+India,IN,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",truecaller
+United States,US,1,0,"[{'name': 'Blockchain Service', 'count': 1, 'percent': 100.0}]",w3i
+United States,US,1,0,"[{'name': 'Social', 'count': 1, 'percent': 100.0}]",atomic
+United States,US,4,0,"[{'name': 'Blockchain Service', 'count': 2, 'percent': 50.0}, {'name': 'Social', 'count': 2, 'percent': 50.0}]",spice-capital
+France,FR,1,0,"[{'name': 'GameFi', 'count': 1, 'percent': 100.0}]",spice-capital
+United Kingdom,GB,4,0,"[{'name': 'Blockchain Service', 'count': 4, 'percent': 100.0}]",mouro-capital
+United States,US,2,0,"[{'name': 'DeFi', 'count': 1, 'percent': 50.0}, {'name': 'CeFi', 'count': 1, 'percent': 50.0}]",mouro-capital

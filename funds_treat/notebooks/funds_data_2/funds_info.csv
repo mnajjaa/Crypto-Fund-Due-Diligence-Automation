@@ -1,0 +1,313 @@
+id,slug,name,tier,category,country,tabs,fund_slug
+63,hash-key-capital,HashKey Capital,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['team', 'analytics', 'upcomingCrowdsales', 'portfolio', 'fundingRounds']",hash-key-capital
+5,coinbase-ventures,Coinbase Ventures,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",coinbase-ventures
+44,delphi-ventures,Delphi Ventures,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['team', 'analytics', 'upcomingCrowdsales', 'portfolio', 'fundingRounds']",delphi-ventures
+144,circle,Circle,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",circle
+10360,a16z-csx,a16z CSX,1,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",,"['analytics', 'fundingRounds', 'portfolio']",a16z-csx
+43,polychain-capital,Polychain Capital,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",polychain-capital
+366,sandeep-nailwal,Sandeep Nailwal,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",India,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",sandeep-nailwal
+37,spartan-group,The Spartan Group,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",spartan-group
+62,galaxy-digital,Galaxy,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",galaxy-digital
+812,stani-kulechov,Stani Kulechov,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United Kingdom,"['analytics', 'fundingRounds', 'portfolio']",stani-kulechov
+57,andreessen-horowitz,Andreessen Horowitz (a16z),1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",andreessen-horowitz
+3471,vaneck,VanEck,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",vaneck
+40,dragon-fly-capital,DragonFly Capital,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",dragon-fly-capital
+372,balaji-srinivasan,Balaji Srinivasan,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",balaji-srinivasan
+24,paradigm,Paradigm,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",paradigm
+26,sequoia-capital,Sequoia Capital,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",sequoia-capital
+38,binance-labs,YZi Labs (Prev. Binance Labs),1,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",Malta,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",binance-labs
+308,santiago-santos,Santiago R. Santos,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United Kingdom,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",santiago-santos
+9563,bryan-pellegrino,Bryan Pellegrino,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",Canada,"['analytics', 'fundingRounds', 'portfolio']",bryan-pellegrino
+336,consensys,ConsenSys,1,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",consensys
+42,multicoin-capital,Multicoin Capital,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",multicoin-capital
+3503,black-rock,BlackRock,1,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",black-rock
+808,raj-gokal,Raj Gokal,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",raj-gokal
+7,pantera-capital,Pantera Capital,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",pantera-capital
+430,paul-veradittakit,Paul Veradittakit,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",paul-veradittakit
+4901,vitalik-buterin,Vitalik Buterin,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",Switzerland,"['analytics', 'fundingRounds', 'portfolio']",vitalik-buterin
+58,blockchain-capital,Blockchain Capital,1,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",blockchain-capital
+753,alex-svanevik,Alex Svanevik,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",alex-svanevik
+964,y-combinator,Y Combinator,1,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",y-combinator
+1746,arthur-hayes,Arthur Hayes,1,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",Hong Kong,"['analytics', 'fundingRounds', 'portfolio']",arthur-hayes
+28,animoca-brands,Animoca Brands,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",animoca-brands
+1533,quantstamp,Quantstamp,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",quantstamp
+170,amber-group,Amber Group,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",amber-group
+697,greenfield-one,Greenfield Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Germany,"['team', 'analytics', 'fundingRounds', 'portfolio']",greenfield-one
+7062,tether,Tether,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",tether
+240,polygon-ventures,P2 Ventures (Polygon Ventures),2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",polygon-ventures
+369,mh-ventures,MH Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",mh-ventures
+19,fenbushi-capital,Fenbushi Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",China,"['team', 'analytics', 'fundingRounds', 'portfolio']",fenbushi-capital
+132,robot-ventures,Robot Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",robot-ventures
+80,infinity-ventures-crypto,IVC,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Taiwan,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",infinity-ventures-crypto
+150,6th-man-ventures,6th Man Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",6th-man-ventures
+123,hypersphereventures,Hypersphere Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",hypersphereventures
+136,lightspeed-venture-partners,Lightspeed Venture Partners,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",lightspeed-venture-partners
+222,rockaway-blockchain-fund,RockawayX,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Czech Republic,"['team', 'analytics', 'fundingRounds', 'portfolio']",rockaway-blockchain-fund
+135,alliance-dao,Alliance DAO,2,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",United States,"['analytics', 'fundingRounds', 'portfolio']",alliance-dao
+41,framework-ventures,Framework Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Canada,"['team', 'analytics', 'portfolio', 'fundingRounds']",framework-ventures
+93,mirana-ventures,Mirana Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",mirana-ventures
+65,electric-capital,Electric Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",electric-capital
+148,standard-crypto,Standard Crypto,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",standard-crypto
+59,coin-fund,CoinFund,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",coin-fund
+116,variant,Variant,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",variant
+118,unionsquare,Union Square Ventures (USV),2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",unionsquare
+147,ribbit-capital,Ribbit Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",ribbit-capital
+124,cmt-digital,CMT Digital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",cmt-digital
+9790,paul-taylor,Paul Taylor,2,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",paul-taylor
+61,dcg-group,Digital Currency Group (DCG),2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'portfolio', 'fundingRounds']",dcg-group
+39,okx-ventures,OKX Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Seychelles,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",okx-ventures
+12,kenetic-capital,Kenetic Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['team', 'analytics', 'portfolio', 'fundingRounds']",kenetic-capital
+5013,sequoia-capital-china,HongShan (ex-Sequoia China),2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",China,"['analytics', 'fundingRounds', 'portfolio']",sequoia-capital-china
+134,gsr,GSR,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",gsr
+11024,mgx,MGX,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",UAE,"['fundingRounds', 'portfolio']",mgx
+27,arrington-xrp-capital,Arrington XRP Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",arrington-xrp-capital
+122,slowventures,Slow Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",slowventures
+146,1kx,1kx,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Netherlands,"['team', 'analytics', 'fundingRounds', 'portfolio']",1kx
+102,maven11,Maven 11 Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Netherlands,"['team', 'analytics', 'portfolio', 'fundingRounds']",maven11
+188,wintermute,Wintermute,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['team', 'analytics', 'fundingRounds', 'portfolio']",wintermute
+67,boost-vc,Boost VC,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",boost-vc
+907,ripple,Ripple,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",ripple
+115,iosg,IOSG Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['team', 'analytics', 'fundingRounds', 'portfolio']",iosg
+246,hack-vc,Hack VC,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",hack-vc
+10968,a16z-speedrun,a16z speedrun,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",a16z-speedrun
+6642,web3-foundation,Web3 Foundation,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Switzerland,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",web3-foundation
+149,nascent,Nascent,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",nascent
+10928,mexc-ventures,MEXC Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",mexc-ventures
+117,paraficapital,ParaFi Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",paraficapital
+71,shima-capital,Shima Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",shima-capital
+164,draper-dragon,Draper Dragon,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",China,"['team', 'analytics', 'fundingRounds', 'portfolio']",draper-dragon
+337,alchemy,Alchemy,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",alchemy
+5117,avalanche-foundation,Avalanche Foundation,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",avalanche-foundation
+3122,gv,GV Google Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",gv
+111,egirlcapital,eGirl Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",egirlcapital
+10,fabric-ventures,Fabric Ventures,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['team', 'analytics', 'portfolio', 'fundingRounds']",fabric-ventures
+15,mechanism-capital,Mechanism Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",mechanism-capital
+750,dwf-labs,DWF Labs,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['team', 'analytics', 'fundingRounds', 'portfolio']",dwf-labs
+23,hashed-fund,Hashed Fund,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",South Korea,"['team', 'analytics', 'portfolio', 'fundingRounds']",hashed-fund
+302,bain-capital-crypto,Bain Capital Crypto,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",bain-capital-crypto
+636,the-sandbox,The Sandbox,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",the-sandbox
+34,yield-guild-games,Yield Guild Games (YGG),2,"{'id': 7, 'name': 'DAO', 'slug': 'dao'}",Philippines,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",yield-guild-games
+68,1-confirmation,1confirmation,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",1-confirmation
+112,tribecapital,Tribe Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",tribecapital
+275,redpoint,Redpoint,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",redpoint
+173,mapleblock-capital,Mapleblock Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",India,"['analytics', 'upcomingCrowdsales', 'portfolio', 'fundingRounds']",mapleblock-capital
+105,fbg-capital,FBG Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",China,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",fbg-capital
+128,tiger-global-management,Tiger Global Management,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",tiger-global-management
+7400,animoca-brands-kk,Animoca Brands Japan,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Japan,"['analytics', 'fundingRounds', 'portfolio']",animoca-brands-kk
+650,visa,Visa,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",visa
+3807,tronfoundation,TRON Foundation,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",tronfoundation
+98,sinoglobalcapital,Ryze Labs (Sino Global Capital),2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Bahamas,"['team', 'analytics', 'fundingRounds', 'portfolio']",sinoglobalcapital
+94,genblock-capital,Genblock Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",genblock-capital
+3556,sequoia-capital-india,Peak XV Partners(ex-Sequoia India),2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",India,"['analytics', 'fundingRounds', 'portfolio']",sequoia-capital-india
+77,ava-labs,Ava Labs,2,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",ava-labs
+153,eden-block,Eden Block,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Israel,"['team', 'analytics', 'fundingRounds', 'portfolio']",eden-block
+139,polygon-studios,Polygon Studios,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",polygon-studios
+2347,jumptrading,Jump Trading,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",jumptrading
+411,jp-morgan,J.P. Morgan,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",jp-morgan
+2719,temasek,Temasek,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",temasek
+4977,alibaba-group,Alibaba Group,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",China,"['analytics', 'fundingRounds', 'portfolio']",alibaba-group
+200,qcp-capital,QCP Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",qcp-capital
+9916,robinhood,Robinhood,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['fundingRounds', 'portfolio']",robinhood
+56,de-fiance-capital,DeFiance Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['team', 'analytics', 'portfolio', 'fundingRounds']",de-fiance-capital
+1724,galxe,Galxe,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",galxe
+60,pet-rock-capital,PetRock Capital,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['team', 'analytics', 'fundingRounds', 'portfolio']",pet-rock-capital
+312,goldman-sachs,Goldman Sachs,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",goldman-sachs
+51,icetea-labs,Icetea Labs,2,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",icetea-labs
+268,seven-seven-six,Seven Seven Six,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",seven-seven-six
+69,dapper-labs,Dapper Labs,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Canada,"['team', 'analytics', 'fundingRounds', 'portfolio']",dapper-labs
+158,greylock-partners,Greylock Partners,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",greylock-partners
+574,samsung,Samsung,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",South Korea,"['analytics', 'portfolio', 'fundingRounds']",samsung
+1499,ubisoft-entertainment-sa,Ubisoft Entertainment SA,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",France,"['analytics', 'fundingRounds', 'portfolio']",ubisoft-entertainment-sa
+3833,binance-us,Binance.US,2,"{'id': 5, 'name': 'Exchange', 'slug': 'exchange'}",United States,"['analytics', 'fundingRounds', 'portfolio']",binance-us
+6664,morgan-stanley,Morgan Stanley,2,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",morgan-stanley
+3239,sequoia-heritage,Sequoia Heritage,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",sequoia-heritage
+7190,samsung-venture-investment,Samsung Venture Investment,2,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",South Korea,"['analytics', 'fundingRounds', 'portfolio']",samsung-venture-investment
+9070,castrum-capital,Castrum Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",British Virgin Islands,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",castrum-capital
+278,foresight-ventures,Foresight Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['team', 'analytics', 'fundingRounds', 'portfolio']",foresight-ventures
+3641,aptos,Aptos,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",aptos
+9968,jupiter,Jupiter,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",jupiter
+10300,morph,Morph,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",morph
+705,brevan-howard-digital,Brevan Howard Digital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['analytics', 'fundingRounds', 'portfolio']",brevan-howard-digital
+1870,tech-stars,Techstars,3,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",United States,"['analytics', 'fundingRounds', 'portfolio']",tech-stars
+8878,dewhales,Dewhales,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",dewhales
+356,daedalus,Daedalus,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Switzerland,"['analytics', 'fundingRounds', 'portfolio']",daedalus
+5526,symbolic-capital,Symbolic Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",symbolic-capital
+2592,reciprocal-ventures,Reciprocal Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",reciprocal-ventures
+2835,escape-velocity,Escape Velocity (EV3),3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Australia,"['analytics', 'fundingRounds', 'portfolio']",escape-velocity
+6419,circle-ventures,Circle Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",circle-ventures
+1318,gate-io,Gate.io,3,"{'id': 5, 'name': 'Exchange', 'slug': 'exchange'}",China,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",gate-io
+120,bitkraftventures,Bitkraft Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",bitkraftventures
+217,strobe-ventures,Strobe (Prev. BlockTower Capital),3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",strobe-ventures
+340,gnosis,Gnosis,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",gnosis
+1058,hardyaka,Hard Yaka,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",hardyaka
+263,canonical-crypto,Canonical Crypto,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",canonical-crypto
+9191,bitgo,BitGo,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",bitgo
+1371,norwest,Norwest,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",norwest
+17,ngc-ventures,NGC Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",ngc-ventures
+151,lattice,Lattice,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",lattice
+2656,blueyard-capital,BlueYard Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Germany,"['analytics', 'fundingRounds', 'portfolio']",blueyard-capital
+758,faction,Faction,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",faction
+1750,first-round-capital,First Round Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",first-round-capital
+11088,bmw-i-ventures,BMW i Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",bmw-i-ventures
+11087,bosch-ventures,Bosch Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Germany,"['analytics', 'fundingRounds', 'portfolio']",bosch-ventures
+6126,ibc-ventures,IBC Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",UAE,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",ibc-ventures
+256,collab-currency,Collab+Currency,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",collab-currency
+55,outlier-ventures,Outlier Ventures,3,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",United Kingdom,"['analytics', 'upcomingCrowdsales', 'portfolio', 'fundingRounds']",outlier-ventures
+10086,dwf-ventures,DWF Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",dwf-ventures
+3192,blockchain-founders-fund,Blockchain Founders Fund,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",blockchain-founders-fund
+1079,anagram-crypto,Anagram Crypto,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",anagram-crypto
+9501,paper-ventures,Paper Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['team', 'analytics', 'fundingRounds', 'portfolio']",paper-ventures
+9450,cyber-fund,cyber Fund,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Cayman Islands,"['team', 'analytics', 'fundingRounds', 'portfolio']",cyber-fund
+353,mystenlabs,Mysten Labs,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",mystenlabs
+172,borderless-capital,Borderless Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",borderless-capital
+820,dao5,dao5,3,"{'id': 7, 'name': 'DAO', 'slug': 'dao'}",United States,"['analytics', 'fundingRounds', 'portfolio']",dao5
+9548,dba,DBA,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",dba
+10143,delphi-labs,Delphi Labs,3,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",,"['analytics', 'fundingRounds', 'portfolio']",delphi-labs
+1935,gate-ventures,Gate Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Cayman Islands,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",gate-ventures
+716,cypher-capital,Cypher Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",UAE,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",cypher-capital
+583,founders-fund,Founders Fund,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",founders-fund
+565,haun-ventures,Haun Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",haun-ventures
+9886,phantom,Phantom,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",phantom
+8686,no-limit-holdings,No Limit Holdings,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",no-limit-holdings
+597,alphalab-capital,Caladan,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",alphalab-capital
+182,snz-holding,SNZ Holding,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['analytics', 'upcomingCrowdsales', 'portfolio', 'fundingRounds']",snz-holding
+368,faculty-group,Faculty Group,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Australia,"['analytics', 'fundingRounds', 'portfolio']",faculty-group
+416,polymorphic-capital,Polymorphic Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",polymorphic-capital
+9542,optimism,Optimism,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",optimism
+8956,generative-vc,Generative Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",generative-vc
+10330,bingX-labs,BingX Labs,3,"{'id': 5, 'name': 'Exchange', 'slug': 'exchange'}",,"['analytics', 'fundingRounds', 'portfolio']",bingX-labs
+11,morningstar-ventures,Morningstar Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",UAE,"['analytics', 'fundingRounds', 'portfolio']",morningstar-ventures
+143,uniswap-labs-ventures,Uniswap Labs Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",uniswap-labs-ventures
+1029,finality-capital-partners,Finality Capital Partners,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",finality-capital-partners
+419,palm-tree-crew,Palm Tree Crew,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",palm-tree-crew
+133,master-ventures,MV Global,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",master-ventures
+313,chapter-one,Chapter One,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'fundingRounds', 'portfolio']",chapter-one
+10087,ton-ventures,TON Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",ton-ventures
+9998,ledger,Ledger,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",ledger
+9184,arbitrum-foundation,Arbitrum Foundation,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",arbitrum-foundation
+10288,movement,Movement,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",movement
+10237,coinbureau,CoinBureau,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",coinbureau
+204,arkstream-capital,ArkStream Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",China,"['team', 'analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",arkstream-capital
+9565,sky-mavis,Sky Mavis,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",sky-mavis
+7808,axelar-network,Axelar,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Canada,"['analytics', 'fundingRounds', 'portfolio']",axelar-network
+2501,y2z-ventures,y2z Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",y2z-ventures
+7231,abcde,ABCDE,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",abcde
+6707,reverie,Reverie,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",reverie
+9008,chain-gpt-labs,ChainGPT Labs,3,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",Saint Vincent and the Grenadines,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",chain-gpt-labs
+9568,ape-terminal,Ape Terminal,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",ape-terminal
+179,ethereal-ventures,Ethereal Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",ethereal-ventures
+7458,bankless,Bankless Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",bankless
+9553,decubate,Decubate Ventures,3,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",Netherlands,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",decubate
+9732,burnt,XION,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",burnt
+9352,offchain-labs,Offchain Labs,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",offchain-labs
+1236,kronosresearch,Kronos,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Taiwan,"['analytics', 'fundingRounds', 'portfolio']",kronosresearch
+129,a-capital,a_capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",a-capital
+66,magnus-capital,Magnus Capital,3,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",United States,"['analytics', 'upcomingCrowdsales', 'portfolio', 'fundingRounds']",magnus-capital
+95,7xvc,SevenX Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",7xvc
+226,global-coin-research,Global Coin Research,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",global-coin-research
+9821,north-rock-capital,North Rock Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",north-rock-capital
+85,longhashvc,LongHash Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",longhashvc
+2485,gamefi-ventures,GameFi Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",gamefi-ventures
+2219,nexocorp,Nexo,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United Kingdom,"['analytics', 'fundingRounds', 'portfolio']",nexocorp
+2867,token-metrics,Token Metrics Ventures,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",token-metrics
+231,everest-ventures,Everest Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Hong Kong,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",everest-ventures
+547,race-capital,Race Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",race-capital
+9589,pokergo,PokerGO,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",pokergo
+9880,ton-foundation,TON Foundation,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Switzerland,"['team', 'analytics', 'fundingRounds', 'portfolio']",ton-foundation
+10096,bitwise,Bitwise,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['fundingRounds', 'portfolio']",bitwise
+10349,dune,Dune,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",dune
+10337,kip-protocol,KIP Protocol,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",kip-protocol
+10336,avacloud,AvaCloud,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",avacloud
+9500,mantle,Mantle,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",mantle
+10313,nexus-mutual,Nexus Mutual,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",nexus-mutual
+64,chromia,Chromia,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Sweden,"['analytics', 'portfolio', 'fundingRounds']",chromia
+10302,pstake,pSTAKE,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",pstake
+1599,anthos-capital,Anthos Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",anthos-capital
+10280,coindesk,CoinDesk,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['fundingRounds', 'portfolio']",coindesk
+3979,wormhole,Wormhole,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",wormhole
+10258,chia-network,Chia Network,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",chia-network
+14,ld-capital,LD Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",China,"['analytics', 'portfolio', 'fundingRounds']",ld-capital
+9,placeholder-ventures,Placeholder Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['team', 'analytics', 'portfolio', 'fundingRounds']",placeholder-ventures
+10231,ether-fi,ether.fi,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",ether-fi
+10205,pancakeswap,PancakeSwap,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",pancakeswap
+9541,manta-network,Manta Network,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",China,"['analytics', 'fundingRounds', 'portfolio']",manta-network
+9976,igloo,Igloo,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",igloo
+2931,marshland-capital,Marshland Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Saint Lucia,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",marshland-capital
+1674,ceras-ventures,Ceras Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['analytics', 'fundingRounds', 'portfolio']",ceras-ventures
+588,m12,M12,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",m12
+10110,fjord-foundry,Fjord Foundry,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",fjord-foundry
+1904,xbtohumla,Humla Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",France,"['analytics', 'fundingRounds', 'portfolio']",xbtohumla
+10107,notcoin,Notcoin,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",notcoin
+10104,bitfarms,Bitfarms,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",bitfarms
+6,good-games-guild,Good Games Guild,3,"{'id': 6, 'name': 'Guild', 'slug': 'guild'}",Indonesia,"['analytics', 'upcomingCrowdsales', 'portfolio', 'fundingRounds']",good-games-guild
+9118,matter-labs,Matter Labs,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Germany,"['team', 'analytics', 'fundingRounds', 'portfolio']",matter-labs
+9952,memeland,Memeland,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Hong Kong,"['analytics', 'fundingRounds', 'portfolio']",memeland
+10074,zksync,ZKsync,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",zksync
+9942,longhashX,LongHashX,3,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",,"['analytics', 'fundingRounds', 'portfolio']",longhashX
+333,stratos-technologies,Stratos Technologies,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",stratos-technologies
+10029,riot-blockchain,Riot Blockchain,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",riot-blockchain
+3840,iotex,IoTeX,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",iotex
+2722,tencent,Tencent,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",China,"['analytics', 'fundingRounds', 'portfolio']",tencent
+160,matrixport,Matrixport,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",matrixport
+10008,draper-goren-blockchain,draper goren blockchain,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",draper-goren-blockchain
+249,op-crypto,Inception capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",op-crypto
+9999,defi-technologies,DeFi Technologies,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",defi-technologies
+9255,foresightx,ForesightX,3,"{'id': 2, 'name': 'Incubator', 'slug': 'incubation'}",,"['analytics', 'fundingRounds', 'portfolio']",foresightx
+9975,cleanspark,Cleanspark,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['fundingRounds', 'portfolio']",cleanspark
+5900,hashed-emergent,Hashed Emergent,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",hashed-emergent
+9921,eigenlayer,EigenLayer,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['fundingRounds', 'portfolio']",eigenlayer
+9959,linea,Linea,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['fundingRounds', 'portfolio']",linea
+298,kr1,KR1,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['analytics', 'portfolio', 'fundingRounds']",kr1
+2503,kb-investment,KB Investment,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",South Korea,"['analytics', 'fundingRounds', 'portfolio']",kb-investment
+87,backedvc,BACKED,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['analytics', 'fundingRounds', 'portfolio']",backedvc
+9901,braza-bank,Braza Bank,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",braza-bank
+9351,frax,Frax,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",frax
+482,ryan-selkis,Ryan Selkis,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",ryan-selkis
+9874,fuel-network,Fuel Network,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",fuel-network
+9824,tradeweb,Tradeweb,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",tradeweb
+9705,boxcars-ventures,Boxcars Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",boxcars-ventures
+272,gfr-fund,GFR Fund,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",gfr-fund
+1895,kevinlin,Kevin Lin,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",kevinlin
+9641,dymension,Dymension,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",dymension
+9642,osmosis,Osmosis,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['analytics', 'fundingRounds', 'portfolio']",osmosis
+2082,hjmomtazi,Jordan Momtazi,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",Bermuda,"['analytics', 'fundingRounds', 'portfolio']",hjmomtazi
+125,continuecapital,Continue Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'portfolio', 'fundingRounds']",continuecapital
+9616,tcg-crypto,TCG Crypto,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",,"['analytics', 'fundingRounds', 'portfolio']",tcg-crypto
+804,marc-bhargava,Marc Bhargava,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",marc-bhargava
+9558,t-b-media-global,T&B Media Global,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Thailand,"['analytics', 'fundingRounds', 'portfolio']",t-b-media-global
+9561,deus-x-capital,Deus X Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['analytics', 'fundingRounds', 'portfolio']",deus-x-capital
+9535,eco,Eco,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Switzerland,"['fundingRounds', 'portfolio']",eco
+9476,etherscan,Etherscan,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",etherscan
+1242,night-ventures,Night Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",night-ventures
+612,scott-belsky,Scott Belsky,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",scott-belsky
+494,justin-kan,Justin Kan,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",justin-kan
+307,ryan-adams,Ryan Sean Adams,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",ryan-adams
+1497,kevin-durant,Kevin Durant,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",kevin-durant
+6736,second-live,SecondLive,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Hong Kong,"['analytics', 'fundingRounds', 'portfolio']",second-live
+1271,greycroft,Greycroft,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",greycroft
+3184,bond-capital,Bond Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",bond-capital
+4241,benchmark,Benchmark,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",benchmark
+5765,telos,Telos,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Cayman Islands,"['analytics', 'fundingRounds', 'portfolio']",telos
+152,angeldao,AngelDAO,3,"{'id': 7, 'name': 'DAO', 'slug': 'dao'}",United Kingdom,"['analytics', 'upcomingCrowdsales', 'fundingRounds', 'portfolio']",angeldao
+3475,new-enterprise,New Enterprise Associates (NEA),3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",new-enterprise
+168,vendetta-capital,Vendetta Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Australia,"['analytics', 'fundingRounds', 'portfolio']",vendetta-capital
+121,plutodigitalassets,Pluto Digital Assets,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United Kingdom,"['analytics', 'fundingRounds', 'portfolio']",plutodigitalassets
+1120,berachain,Berachain,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Cayman Islands,"['analytics', 'fundingRounds', 'portfolio']",berachain
+323,mantis-vc,Mantis VC,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",mantis-vc
+273,z-venture-capital,Z Venture Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Japan,"['analytics', 'fundingRounds', 'portfolio']",z-venture-capital
+9179,messari,Messari,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",,"['fundingRounds', 'portfolio']",messari
+2136,luka-sucic,Luka Sucic,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",Poland,"['analytics', 'fundingRounds', 'portfolio']",luka-sucic
+4821,double-top,DOUBLETOP,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Ukraine,"['analytics', 'portfolio', 'fundingRounds']",double-top
+3204,raydium,Raydium,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",raydium
+2510,ontario-teachers-pension-plan,Ontario Teachers Pension Plan,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Canada,"['analytics', 'fundingRounds', 'portfolio']",ontario-teachers-pension-plan
+110,mgnr,mgnr,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Singapore,"['analytics', 'fundingRounds', 'portfolio']",mgnr
+6211,bitdao,BitDAO,3,"{'id': 7, 'name': 'DAO', 'slug': 'dao'}",,"['analytics', 'fundingRounds', 'portfolio']",bitdao
+5989,gem-capital,Gem Capital,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Cyprus,"['analytics', 'fundingRounds', 'portfolio']",gem-capital
+4148,tyler-ward,Tyler Ward,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",United States,"['analytics', 'fundingRounds', 'portfolio']",tyler-ward
+1768,jinglan-wang,Jinglan Wang,3,"{'id': 9, 'name': 'Angel Investor', 'slug': 'angel-investor'}",,"['analytics', 'fundingRounds', 'portfolio']",jinglan-wang
+6525,connext,Everclear (prev Connext),3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",connext
+4417,11-11-dg-partners,11–11 DG partners,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",11-11-dg-partners
+3399,protocol-ventures,Protocol Ventures,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",United States,"['analytics', 'fundingRounds', 'portfolio']",protocol-ventures
+5983,launchzone,LaunchZone ,3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",Vietnam,"['analytics', 'fundingRounds', 'portfolio']",launchzone
+4734,makerdao,Sky (ex-Maker),3,"{'id': 8, 'name': 'Corporation', 'slug': 'corporate'}",United States,"['analytics', 'fundingRounds', 'portfolio']",makerdao
+3887,zola-global-investors,Zola Global Investors,3,"{'id': 3, 'name': 'Venture', 'slug': 'venture'}",Canada,"['analytics', 'fundingRounds', 'portfolio']",zola-global-investors

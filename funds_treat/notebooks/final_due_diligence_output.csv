@@ -1,0 +1,605 @@
+question,category,error,raw_output,expert_compliance_officer_score,expert_compliance_officer_rationale,expert_regulatory_attorney_score,expert_regulatory_attorney_rationale,expert_audit_specialist_score,expert_audit_specialist_rationale,aggregate_severity,aggregate_data_accessibility,aggregate_category_risk,aggregate_strategic_impact,risk_profile,risk_score,expert_hedge_fund_manager_score,expert_hedge_fund_manager_rationale,expert_financial_auditor_score,expert_financial_auditor_rationale,expert_risk_analyst_score,expert_risk_analyst_rationale,expert_forensic_auditor_score,expert_forensic_auditor_rationale,expert_data_integrity_specialist_score,expert_data_integrity_specialist_rationale,expert_compliance_manager_score,expert_compliance_manager_rationale,expert_blockchain_architect_score,expert_blockchain_architect_rationale,expert_smart_contract_auditor_score,expert_smart_contract_auditor_rationale,expert_network_security_score,expert_network_security_rationale,expert_brand_strategist_score,expert_brand_strategist_rationale,expert_crisis_manager_score,expert_crisis_manager_rationale,expert_market_analyst_score,expert_market_analyst_rationale
+In which jurisdictions is the digital asset/cryptocurrency operating?,Legal and Compliance,"Expecting ',' delimiter: line 15 column 2 (char 382)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Compliance Officer"": {""score"": 8, ""rationale"": """"},
+      ""Regulatory Attorney"": {""score"": 9, ""rationale"": """"},
+      ""Audit Specialist"": {""score"": 6, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 0,
+      ""data_accessibility"": 0,
+      ""category_risk"": 5.3,
+      ""strategic_impact"": 4
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What is the legal structure of the entity behind the digital asset?,Legal and Compliance,"Expecting ',' delimiter: line 15 column 2 (char 384)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Compliance Officer"": {""score"": 8, ""rationale"": """"},
+      ""Regulatory Attorney"": {""score"": 9, ""rationale"": """"},
+      ""Audit Specialist"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 0,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2.5,
+      ""strategic_impact"": 1
+    },
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Has the project obtained all necessary licenses and registrations?,Legal and Compliance,,,8.0,,9.0,,7.0,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,,,,,,,,,,,,
+What are the applicable laws and regulations in those jurisdictions?,Legal and Compliance,,,7.0,,9.0,,6.0,,8.0,0.0,1.0,3.0,Medium,3.57,,,,,,,,,,,,,,,,,,,,,,,,
+What are the legal rights and obligations of token holders?,Legal and Compliance,,,8.0,,7.0,,6.0,,7.0,5.0,4.0,3.0,Medium,3.21,,,,,,,,,,,,,,,,,,,,,,,,
+"How does the project comply with data privacy regulations (e.g., GDPR)?",Legal and Compliance,,,8.0,,7.0,,9.0,,6.0,5.0,4.0,3.0,Moderate,2.93,,,,,,,,,,,,,,,,,,,,,,,,
+"What data is collected from users, and how is it stored and protected?",Legal and Compliance,,,8.0,,9.0,,7.0,,8.0,6.0,5.0,3.0,Medium,3.57,,,,,,,,,,,,,,,,,,,,,,,,
+What is the project's policy on data breaches and incident response?,Legal and Compliance,,,8.0,,9.0,,6.0,,7.0,8.0,5.0,4.0,Moderate,3.36,,,,,,,,,,,,,,,,,,,,,,,,
+What is the project's revenue model and financial performance?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 376)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 8, ""rationale"": """"}, 
+      ""Financial Auditor"": {""score"": 7, ""rationale"": """"}, 
+      ""Risk Analyst"": {""score"": 9, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 5,
+      ""category_risk"": 6,
+      ""strategic_impact"": 8
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What is the token distribution and allocation?,Financial,,,,,,,,,7.0,5.0,8.0,6.0,Moderate,5.14,8.0,,6.0,,9.0,,,,,,,,,,,,,,,,,,,
+What is the token's utility and value proposition?,Financial,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,7.0,,4.0,,6.0,,,,,,,,,,,,,,,,,,,
+What is the token's supply and demand dynamics?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 374)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 8, ""rationale"": """"},
+      ""Financial Auditor"": {""score"": 6, ""rationale"": """"},
+      ""Risk Analyst"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 4,
+      ""data_accessibility"": 3,
+      ""category_risk"": 2,
+      ""strategic_impact"": 1
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Are there any risks of inflation or deflation?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 312)","{
+""analysis"": {
+""experts"": {
+""Hedge Fund Manager"": {""score"": 6, ""rationale"": """"},
+""Financial Auditor"": {""score"": 8, ""rationale"": """"},
+""Risk Analyst"": {""score"": 4, ""rationale"": """"}
+},
+""aggregates"": {
+""severity"": 18,
+""data_accessibility"": 0,
+""category_risk"": 6,
+""strategic_impact"": 12
+},
+""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What are the key financial risks associated with the digital asset?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 394)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 7, ""rationale"": """"}, 
+      ""Financial Auditor"": {""score"": 6, ""rationale"": """"}, 
+      ""Risk Analyst"": {""score"": 8, ""rationale"": """"}
+    }, 
+    ""aggregates"": {
+      ""severity"": 7.0, 
+      ""data_accessibility"": 6.5, 
+      ""category_risk"": 7.5, 
+      ""strategic_impact"": 7.5
+    }, 
+    ""risk_profile"": ""Medium-High""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+How does the project manage volatility and market fluctuations?,Financial,,,,,,,,,5.0,0.0,3.0,2.0,Medium,2.79,8.0,,6.0,,4.0,,,,,,,,,,,,,,,,,,,
+What are the potential risks of fraud or market manipulation?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 378)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 8, ""rationale"":""""},
+      ""Financial Auditor"": {""score"": 9, ""rationale"":""""},
+      ""Risk Analyst"": {""score"": 7, ""rationale"":""""}
+    },
+    ""aggregates"": {
+      ""severity"": 8,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2.5,
+      ""strategic_impact"": 6
+    },
+    ""risk_profile"": ""Medium-High""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What blockchain technology is used?,Technical,"Expecting ',' delimiter: line 15 column 2 (char 385)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Blockchain Architect"": {""score"": 8, ""rationale"": """"},
+      ""Smart Contract Auditor"": {""score"": 9, ""rationale"": """"},
+      ""Network Security"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 8,
+      ""data_accessibility"": 0,
+      ""category_risk"": 5,
+      ""strategic_impact"": 4
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What is the security of the blockchain network?,Technical,"Expecting ',' delimiter: line 15 column 2 (char 385)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Blockchain Architect"": {""score"": 8, ""rationale"": """"},
+      ""Smart Contract Auditor"": {""score"": 6, ""rationale"": """"},
+      ""Network Security"": {""score"": 9, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 5,
+      ""category_risk"": 8,
+      ""strategic_impact"": 6
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Has the blockchain been audited for vulnerabilities?,Auditability,"Expecting ',' delimiter: line 15 column 2 (char 388)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Forensic Auditor"": {""score"": 8, ""rationale"": """"}, 
+      ""Data Integrity Specialist"": {""score"": 9, ""rationale"": """"}, 
+      ""Compliance Manager"": {""score"": 6, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 8,
+      ""category_risk"": 6,
+      ""strategic_impact"": 5
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Are smart contracts used?,Auditability,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,8.0,,9.0,,7.0,,,,,,,,,,,,,
+Have the smart contracts been audited for security and functionality?,Technical,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,8.0,,9.0,,7.0,,,,,,,
+What is the risk of smart contract bugs or exploits?,Technical,"Expecting ',' delimiter: line 15 column 2 (char 392)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Blockchain Architect"": {""score"": 6, ""rationale"": """"}, 
+      ""Smart Contract Auditor"": {""score"": 8, ""rationale"": """"}, 
+      ""Network Security"": {""score"": 5, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 6,
+      ""category_risk"": 7,
+      ""strategic_impact"": 8
+    },
+    ""risk_profile"": ""Medium-High""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Has the project undergone penetration testing and security audits?,Technical,,,,,,,,,7.0,5.0,1.0,3.0,Medium,2.57,,,,,,,,,,,,,8.0,,9.0,,6.0,,,,,,,
+Are the private keys stored safely?,Technical,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,8.0,,9.0,,7.0,,,,,,,
+What are the procedures for recovering lost or stolen keys?,Technical,"Expecting ',' delimiter: line 15 column 2 (char 389)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Blockchain Architect"": {""score"": 8, ""rationale"": """"}, 
+      ""Smart Contract Auditor"": {""score"": 7, ""rationale"": """"}, 
+      ""Network Security"": {""score"": 9, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 8,
+      ""data_accessibility"": 6.5,
+      ""category_risk"": 4,
+      ""strategic_impact"": 2
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What is the team's track record?,Reputational and Strategic,"Expecting ',' delimiter: line 15 column 2 (char 377)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Brand Strategist"": {""score"": 8, ""rationale"": """"}, 
+      ""Crisis Manager"": {""score"": 6, ""rationale"": """"}, 
+      ""Market Analyst"": {""score"": 5, ""rationale"": """"}
+    }, 
+    ""aggregates"": {
+      ""severity"": 6,
+      ""data_accessibility"": 7,
+      ""category_risk"": 4,
+      ""strategic_impact"": 8
+    }, 
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Has the project obtained necessary licenses or approvals from regulatory bodies?,Legal and Compliance,,,7.0,,8.0,,6.0,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,,,,,,,,,,,,
+Are there any restrictions or bans on the asset in specific jurisdictions?,Legal and Compliance,"Expecting ',' delimiter: line 15 column 2 (char 385)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Compliance Officer"": {""score"": 8, ""rationale"": """"}, 
+      ""Regulatory Attorney"": {""score"": 7, ""rationale"": """"}, 
+      ""Audit Specialist"": {""score"": 9, ""rationale"": """"}
+    }, 
+    ""aggregates"": {
+      ""severity"": 6,
+      ""data_accessibility"": 0,
+      ""category_risk"": 5,
+      ""strategic_impact"": 2
+    },
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"How does the project handle data privacy and protection (e.g., GDPR compliance)?",Legal and Compliance,,,7.0,,8.0,,6.0,,7.0,6.0,3.0,4.0,Medium,3.21,,,,,,,,,,,,,,,,,,,,,,,,
+"Are there clear terms of service, disclaimers, and risk disclosures for users?",Legal and Compliance,"Expecting ',' delimiter: line 15 column 2 (char 384)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Compliance Officer"": {""score"": 8, ""rationale"": """"}, 
+      ""Regulatory Attorney"": {""score"": 9, ""rationale"": """"}, 
+      ""Audit Specialist"": {""score"": 6, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2,
+      ""strategic_impact"": 1
+    },
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Does the project have a legal opinion or whitepaper addressing its regulatory status?,Legal and Compliance,,,7.0,,8.0,,6.0,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,,,,,,,,,,,,
+Is the community engaged and supportive of the project?,Reputational and Strategic,,,,,,,,,0.0,0.0,0.0,1.0,Low,0.36,,,,,,,,,,,,,,,,,,,8.0,,7.0,,9.0,
+Are there any signs of manipulation or fake accounts inflating community metrics?,Reputational and Strategic,,,,,,,,,5.0,2.0,4.0,6.0,Moderate,4.14,,,,,,,,,,,,,,,,,,,4.0,,6.0,,3.0,
+Does the project have a governance model that allows community participation?,Reputational and Strategic,"Expecting ',' delimiter: line 15 column 2 (char 371)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Brand Strategist"": {""score"": 8, ""rationale"": """"},
+      ""Crisis Manager"": {""score"": 9, ""rationale"": """"},
+      ""Market Analyst"": {""score"": 6, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 0,
+      ""category_risk"": 3,
+      ""strategic_impact"": 4
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"Are there any grants, incentives, or developer programs to grow the ecosystem?",Reputational and Strategic,,,,,,,,,6.0,0.0,7.0,2.0,Medium,3.93,,,,,,,,,,,,,,,,,,,7.0,,6.0,,8.0,
+Has the project undergone a financial audit?,Auditability,"Expecting ',' delimiter: line 15 column 2 (char 390)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Forensic Auditor"": {""score"": 8, ""rationale"": """"},
+      ""Data Integrity Specialist"": {""score"": 9, ""rationale"": """"},
+      ""Compliance Manager"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 24,
+      ""data_accessibility"": 0,
+      ""category_risk"": 21.5,
+      ""strategic_impact"": 0
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Are the project’s treasury and funds managed transparently?,Auditability,"Expecting ',' delimiter: line 15 column 2 (char 386)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Forensic Auditor"": {""score"": 7, ""rationale"": """"},
+      ""Data Integrity Specialist"": {""score"": 8, ""rationale"": """"},
+      ""Compliance Manager"": {""score"": 9, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 4,
+      ""data_accessibility"": 6,
+      ""category_risk"": 5,
+      ""strategic_impact"": 3
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+How are funds raised through token sales or investments being allocated?,Auditability,,,,,,,,,7.0,4.0,3.0,2.0,Moderate,2.79,,,,,,,8.0,,6.0,,5.0,,,,,,,,,,,,,
+Are there any concerns about the project’s financial sustainability or runway?,Auditability,"Expecting ',' delimiter: line 15 column 2 (char 400)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Forensic Auditor"": {""score"": 7, ""rationale"": """"}, 
+      ""Data Integrity Specialist"": {""score"": 5, ""rationale"": """"}, 
+      ""Compliance Manager"": {""score"": 8, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 20,
+      ""data_accessibility"": 0,
+      ""category_risk"": 6.67,
+      ""strategic_impact"": 7.33
+    },
+    ""risk_profile"": ""Medium-High""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"What is the environmental impact of the cryptocurrency (e.g., energy consumption)?",Reputational and Strategic,,,,,,,,,8.0,0.0,6.0,7.0,Medium,6.07,,,,,,,,,,,,,,,,,,,8.0,,7.0,,9.0,
+Does the project promote social good or inclusivity?,Reputational and Strategic,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,,,,,,,8.0,,6.0,,4.0,
+Are there governance mechanisms in place to ensure fair decision-making?,Reputational and Strategic,"Expecting ',' delimiter: line 15 column 2 (char 373)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Brand Strategist"": {""score"": 7, ""rationale"": """"}, 
+      ""Crisis Manager"": {""score"": 8, ""rationale"": """"}, 
+      ""Market Analyst"": {""score"": 6, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2,
+      ""strategic_impact"": 5
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+How does the project address ethical concerns related to its operations?,Reputational and Strategic,,,,,,,,,0.0,0.0,21.33,15.0,Medium,9.93,,,,,,,,,,,,,,,,,,,8.0,,7.0,,6.0,
+Is the entity or project registered with any regulatory bodies?,Legal and Compliance,,,9.0,,8.0,,7.0,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,,,,,,,,,,,,
+Is there a clear ownership structure for the project’s intellectual property?,Legal and Compliance,,,8.0,,6.0,,4.0,,5.0,0.0,3.0,2.0,Medium,2.79,,,,,,,,,,,,,,,,,,,,,,,,
+"Is the blockchain platform decentralized, or is it permissioned?",Technical,"Expecting ',' delimiter: line 15 column 2 (char 386)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Blockchain Architect"": {""score"": 7, ""rationale"": """"}, 
+      ""Smart Contract Auditor"": {""score"": 8, ""rationale"": """"}, 
+      ""Network Security"": {""score"": 9, ""rationale"": """"}
+    }, 
+    ""aggregates"": {
+      ""severity"": 0,
+      ""data_accessibility"": 0,
+      ""category_risk"": 0,
+      ""strategic_impact"": 0
+    }, 
+    ""risk_profile"": ""Low""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What security measures are in place to prevent hacks or breaches?,Technical,,,,,,,,,24.0,21.0,14.0,17.0,Medium,12.93,,,,,,,,,,,,,8.0,,7.0,,9.0,,,,,,,
+Are there bug bounty programs to encourage reporting vulnerabilities?,Technical,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,8.0,,9.0,,7.0,,,,,,,
+What is the current throughput (transactions per second)?,Technical,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,7.0,,6.0,,8.0,,,,,,,
+How does the platform handle scalability issues during periods of high usage?,Technical,,,,,,,,,6.0,0.0,2.0,1.0,Moderate,2.5,,,,,,,,,,,,,8.0,,6.0,,4.0,,,,,,,
+What are the plans for upgrades or improvements to the technical stack?,Technical,"Expecting ',' delimiter: line 15 column 2 (char 385)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Blockchain Architect"": {""score"": 8, ""rationale"": """"},
+      ""Smart Contract Auditor"": {""score"": 9, ""rationale"": """"},
+      ""Network Security"": {""score"": 6, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2,
+      ""strategic_impact"": 4
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"How many tokens are in circulation, and what is the total supply?",Financial,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,8.0,,9.0,,7.0,,,,,,,,,,,,,,,,,,,
+Are there any existing partnerships or business agreements driving revenue?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 376)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 8, ""rationale"": """"},
+      ""Financial Auditor"": {""score"": 6, ""rationale"": """"},
+      ""Risk Analyst"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 21,
+      ""data_accessibility"": 18,
+      ""category_risk"": 5,
+      ""strategic_impact"": 2
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"How are raised funds stored (e.g., cold wallets, multi-signature wallets)?",Financial,,,,,,,,,7.0,5.0,8.0,6.0,Medium,5.14,8.0,,6.0,,9.0,,,,,,,,,,,,,,,,,,,
+What is the burn or inflation rate of the token?,Financial,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,7.0,,5.0,,6.0,,,,,,,,,,,,,,,,,,,
+Does the project have any known community advocates or influencers?,Reputational and Strategic,,,,,,,,,6.0,0.0,3.0,5.0,Medium,4.14,,,,,,,,,,,,,,,,,,,7.0,,5.0,,8.0,
+Does the project provide guidance or support for tax reporting?,Legal and Compliance,"Expecting ',' delimiter: line 15 column 2 (char 388)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Compliance Officer"": {""score"": 8, ""rationale"": """"}, 
+      ""Regulatory Attorney"": {""score"": 6, ""rationale"": """"}, 
+      ""Audit Specialist"": {""score"": 9, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2,
+      ""strategic_impact"": 1
+    },
+    ""risk_profile"": ""Low-Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Have the smart contracts been audited by reputable third parties?,Technical,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,8.0,,9.0,,7.0,,,,,,,
+Are the audit reports publicly accessible for review?,Technical,"Expecting ',' delimiter: line 15 column 2 (char 387)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Blockchain Architect"": {""score"": 7, ""rationale"": """"},
+      ""Smart Contract Auditor"": {""score"": 8, ""rationale"": """"},
+      ""Network Security"": {""score"": 9, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 4,
+      ""data_accessibility"": 6,
+      ""category_risk"": 3,
+      ""strategic_impact"": 2
+    },
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What are the project's current and projected revenue streams?,Financial,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,8.0,,9.0,,7.0,,,,,,,,,,,,,,,,,,,
+How does the project plan to achieve financial sustainability?,Financial,,,,,,,,,7.0,0.0,3.0,4.0,Moderate,4.07,8.0,,6.0,,7.0,,,,,,,,,,,,,,,,,,,
+What are the primary use cases for the token within the project's ecosystem?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 376)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 8, ""rationale"": """"},
+      ""Financial Auditor"": {""score"": 9, ""rationale"": """"},
+      ""Risk Analyst"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 0,
+      ""data_accessibility"": 0,
+      ""category_risk"": 1.5,
+      ""strategic_impact"": 2
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Is there a clear demand for the token that supports its value proposition?,Financial,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,8.0,,7.0,,6.0,,,,,,,,,,,,,,,,,,,
+Is there an active developer community contributing to the project's growth?,Reputational and Strategic,,,,,,,,,8.0,0.0,2.0,4.0,Medium,4.14,,,,,,,,,,,,,,,,,,,8.0,,9.0,,7.0,
+What is the general sentiment of the community towards the project?,Reputational and Strategic,,,,,,,,,7.0,0.0,2.5,4.0,Moderate,3.96,,,,,,,,,,,,,,,,,,,7.0,,8.0,,6.0,
+"Are there channels for users to provide feedback, and how is it addressed?",Reputational and Strategic,,,,,,,,,7.0,5.0,2.0,4.0,Low,3.14,,,,,,,,,,,,,,,,,,,8.0,,7.0,,6.0,
+"Does the project have a clear legal structure (e.g., foundation, corporation, DAO)?",Legal and Compliance,,,8.0,,9.0,,6.0,,7.0,0.0,2.0,4.0,Medium,3.86,,,,,,,,,,,,,,,,,,,,,,,,
+Are there any tax implications for holding or transacting with the asset?,Legal and Compliance,,,8.0,,9.0,,6.0,,7.0,5.0,3.0,2.0,Moderate,2.64,,,,,,,,,,,,,,,,,,,,,,,,
+How does the project handle cross-border transactions and regulatory differences?,Legal and Compliance,,,8.0,,7.0,,6.0,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,,,,,,,,,,,,
+Are there any restrictions on the transfer or ownership of the asset?,Legal and Compliance,,,8.0,,7.0,,6.0,,7.0,0.0,2.0,4.0,Medium,3.86,,,,,,,,,,,,,,,,,,,,,,,,
+Are there any pending or potential legislative changes that could impact the asset?,Legal and Compliance,,,6.0,,7.0,,5.0,,18.0,0.0,6.0,2.0,Moderate,7.14,,,,,,,,,,,,,,,,,,,,,,,,
+How does the project manage inflation or deflation of the token?,Financial,,,,,,,,,7.0,0.0,2.0,1.0,Medium,2.79,7.0,,8.0,,6.0,,,,,,,,,,,,,,,,,,,
+How does the project handle community disputes or disagreements?,Reputational and Strategic,,,,,,,,,6.0,0.0,2.0,4.0,Moderate,3.57,,,,,,,,,,,,,,,,,,,7.0,,9.0,,5.0,
+Are there any incentives for developers to build on the platform?,Reputational and Strategic,"Expecting ',' delimiter: line 15 column 2 (char 377)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Brand Strategist"": {""score"": 8, ""rationale"": """"}, 
+      ""Crisis Manager"": {""score"": 5, ""rationale"": """"}, 
+      ""Market Analyst"": {""score"": 9, ""rationale"": """"}
+    }, 
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2.33,
+      ""strategic_impact"": 8
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+How does the project onboard new users or developers?,Reputational and Strategic,,,,,,,,,18.0,0.0,6.0,12.0,Medium,10.71,,,,,,,,,,,,,,,,,,,6.0,,8.0,,4.0,
+Are there any educational resources or documentation for the community?,Reputational and Strategic,,,,,,,,,2.0,3.0,1.0,5.0,Low,2.14,,,,,,,,,,,,,,,,,,,8.0,,7.0,,6.0,
+How does the project handle negative feedback or criticism from the community?,Reputational and Strategic,,,,,,,,,7.0,0.0,2.0,5.0,Medium,4.21,,,,,,,,,,,,,,,,,,,7.0,,8.0,,6.0,
+Are there any signs of insider trading or market manipulation?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 392)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 5, ""rationale"": """"},
+      ""Financial Auditor"": {""score"": 4, ""rationale"": """"},
+      ""Risk Analyst"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 16,
+      ""data_accessibility"": 0,
+      ""category_risk"": 5.33333333333333,
+      ""strategic_impact"": 6
+    },
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Are there regular financial reports or updates for investors?,Auditability,"Expecting ',' delimiter: line 15 column 2 (char 391)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Forensic Auditor"": {""score"": 8, ""rationale"": """"}, 
+      ""Data Integrity Specialist"": {""score"": 9, ""rationale"": """"}, 
+      ""Compliance Manager"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 24,
+      ""data_accessibility"": 27,
+      ""category_risk"": 8,
+      ""strategic_impact"": 15
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+How does the project manage its treasury or reserve funds?,Auditability,"Expecting ',' delimiter: line 15 column 2 (char 388)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Forensic Auditor"": {""score"": 8, ""rationale"": """"},
+      ""Data Integrity Specialist"": {""score"": 7, ""rationale"": """"},
+      ""Compliance Manager"": {""score"": 9, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 2,
+      ""data_accessibility"": 1,
+      ""category_risk"": 3,
+      ""strategic_impact"": 4
+    },
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Are there any concerns about misallocation or misuse of funds?,Auditability,,,,,,,,,6.0,0.0,2.0,3.0,Moderate,3.21,,,,,,,6.0,,8.0,,4.0,,,,,,,,,,,,,
+Does the project have a clear budget or financial plan for the next 1-3 years?,Auditability,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,8.0,,6.0,,4.0,,,,,,,,,,,,,
+Are there any risks of insolvency or running out of funds?,Auditability,,,,,,,,,6.0,0.0,7.0,5.0,Medium,5.0,,,,,,,7.0,,5.0,,8.0,,,,,,,,,,,,,
+Does the project have a sustainability plan to reduce its environmental impact?,Reputational and Strategic,,,,,,,,,5.0,0.0,3.0,2.0,Medium,2.79,,,,,,,,,,,,,,,,,,,8.0,,6.0,,4.0,
+How does the project contribute to social causes or communities?,Reputational and Strategic,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,,,,,,,,,,,,,,,,,,,7.0,,8.0,,6.0,
+How does the project ensure diversity and inclusion within its team and community?,Reputational and Strategic,"Expecting ',' delimiter: line 15 column 2 (char 380)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Brand Strategist"": {""score"": 8, ""rationale"": """"}, 
+      ""Crisis Manager"": {""score"": 7, ""rationale"": """"}, 
+      ""Market Analyst"": {""score"": 6, ""rationale"": """"}
+    }, 
+    ""aggregates"": {
+      ""severity"": 2.33,
+      ""data_accessibility"": 0,
+      ""category_risk"": 3,
+      ""strategic_impact"": 4
+    }, 
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Are there any ethical concerns related to the project’s operations or goals?,Reputational and Strategic,,,,,,,,,6.0,0.0,5.0,6.0,Moderate,4.93,,,,,,,,,,,,,,,,,,,5.0,,7.0,,4.0,
+Who owns the intellectual property (IP) related to the project's technology?,Legal and Compliance,,,8.0,,9.0,,7.0,,0.0,0.0,2.33,1.0,Medium,0.86,,,,,,,,,,,,,,,,,,,,,,,,
+What are the on chain analysis tools that they utilize to track illicit funds?,Legal and Compliance,,,6.0,,8.0,,9.0,,7.0,3.0,6.0,4.0,Moderate,4.29,,,,,,,,,,,,,,,,,,,,,,,,
+How are liabilities handled within the DAO structure?,Legal and Compliance,,,8.0,,7.0,,6.0,,0.0,0.0,5.0,4.0,Moderate,2.5,,,,,,,,,,,,,,,,,,,,,,,,
+What are the legal implications of the DAO's governance model?,Legal and Compliance,"Expecting ',' delimiter: line 15 column 2 (char 380)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Compliance Officer"": {""score"": 6, ""rationale"": """"},
+      ""Regulatory Attorney"": {""score"": 8, ""rationale"": """"},
+      ""Audit Specialist"": {""score"": 5, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 6,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2,
+      ""strategic_impact"": 4
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Are there any mechanisms for burning or repurchasing tokens?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 378)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 7, ""rationale"": """"}, 
+      ""Financial Auditor"": {""score"": 8, ""rationale"": """"}, 
+      ""Risk Analyst"": {""score"": 6, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 8,
+      ""data_accessibility"": 7,
+      ""category_risk"": 7.5,
+      ""strategic_impact"": 6
+    },
+    ""risk_profile"": ""Medium""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What is the token's velocity and circulation?,Financial,,,,,,,,,5.0,0.0,3.0,2.0,Medium,2.79,8.0,,6.0,,4.0,,,,,,,,,,,,,,,,,,,
+How are the funds raised during token sales being used?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 383)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 8, ""rationale"": """"},
+      ""Financial Auditor"": {""score"": 9, ""rationale"": """"},
+      ""Risk Analyst"": {""score"": 7, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 26,
+      ""data_accessibility"": 22,
+      ""category_risk"": 24,
+      ""strategic_impact"": 18
+    },
+    ""risk_profile"": ""Medium-High""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+What stress testing has been conducted on the project's financial model?,Financial,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,8.0,,7.0,,6.0,,,,,,,,,,,,,,,,,,,
+What is the projects treasury management strategy?,Financial,"Expecting ',' delimiter: line 15 column 2 (char 380)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Hedge Fund Manager"": {""score"": 8, ""rationale"": """"}, 
+      ""Financial Auditor"": {""score"": 6, ""rationale"": """"}, 
+      ""Risk Analyst"": {""score"": 5, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 0,
+      ""data_accessibility"": 0,
+      ""category_risk"": 1.5,
+      ""strategic_impact"": 2
+    },
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Which accounting standards are being used?,Financial,,,,,,,,,5.0,0.0,4.0,3.0,Medium,3.36,8.0,,9.0,,7.0,,,,,,,,,,,,,,,,,,,
+"Who are the auditors, and what is their reputation in the digital asset space?",Financial,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,7.0,,8.0,,6.0,,,,,,,,,,,,,,,,,,,
+Are there regular proof of reserve audits?,Financial,,,,,,,,,0.0,0.0,0.0,0.0,Low,0.0,8.0,,9.0,,7.0,,,,,,,,,,,,,,,,,,,
+What specific cryptographic algorithms are used?,Technical,"Expecting ',' delimiter: line 15 column 2 (char 387)","{
+  ""analysis"": {
+    ""experts"": {
+      ""Blockchain Architect"": {""score"": 8, ""rationale"": """"},
+      ""Smart Contract Auditor"": {""score"": 6, ""rationale"": """"},
+      ""Network Security"": {""score"": 9, ""rationale"": """"}
+    },
+    ""aggregates"": {
+      ""severity"": 7,
+      ""data_accessibility"": 0,
+      ""category_risk"": 2,
+      ""strategic_impact"": 3
+    },
+    ""risk_profile"": ""Moderate""
+}",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

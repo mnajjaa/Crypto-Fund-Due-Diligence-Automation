@@ -29,7 +29,7 @@ urlpatterns = [
     path('overview/', include('overViewDash.urls')),
     path('analytics/', include('analytics.urls')),
     path('pptxGen/', include('pptxGen.urls')),
-
+    path('ChatBot/', include('ChatBot.urls')),
 
     
 ]

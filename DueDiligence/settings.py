@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'analytics',
     'pptxGen',
+    'ChatBot',
 
 
 ]

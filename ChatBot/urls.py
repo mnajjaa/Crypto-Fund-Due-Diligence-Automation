@@ -6,4 +6,5 @@ urlpatterns = [
     path('chatbot/', views.chatbot_view, name='chatbot'),
     path('upload_pdf/', views.upload_pdf, name='upload_pdf'),
     path('serve_pdf/<int:document_id>/', views.serve_pdf, name='serve_pdf'),
+    path('Q&A.json', views.serve_qa_json, name='qa_json'),
     ]

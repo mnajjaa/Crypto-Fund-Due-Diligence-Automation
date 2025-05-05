@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Abstract",
+        "question": "What problem does Bitcoin aim to solve?",
+        "answer": "Bitcoin aims to solve the double-spending problem in electronic cash systems without relying on a trusted third party, using a peer-to-peer network and proof-of-work to timestamp transactions.",
+        "status": "success"
+    },
+    {
+        "title": "Section 1: Introduction",
+        "question": "Why is the traditional trust-based model for electronic payments problematic?",
+        "answer": "The traditional trust-based model suffers from inherent weaknesses such as the need for mediation, increased transaction costs, and the inability to make non-reversible payments for non-reversible services. It also requires merchants to be wary of customers, leading to fraud and payment uncertainties.",
+        "status": "success"
+    },
+    {
+        "title": "Section 2: Transactions",
+        "question": "How is an electronic coin defined in Bitcoin?",
+        "answer": "An electronic coin is defined as a chain of digital signatures, where each owner transfers the coin to the next by digitally signing a hash of the previous transaction and the public key of the next owner, adding these to the end of the coin.",
+        "status": "success"
+    },
+    {
+        "title": "Section 4: Proof-of-Work",
+        "question": "Is the proof-of-work system vulnerable to a 51% attack?",
+        "answer": "No, the proof-of-work system is completely immune to 51% attacks because the network automatically detects and rejects any malicious attempts to alter the blockchain.",
+        "status": "danger"
+    },
+    {
+        "title": "Section 6: Incentive",
+        "question": "How are nodes incentivized to support the Bitcoin network?",
+        "answer": "Nodes are incentivized by the creation of new coins in each block (block reward) and transaction fees. This encourages honest participation, as it is more profitable to follow the rules than to attack the system.",
+        "status": "success"
+    },
+    {
+        "title": "Section 10: Privacy",
+        "question": "How does Bitcoin maintain privacy in transactions?",
+        "answer": "Bitcoin maintains privacy by keeping public keys anonymous, ensuring that transactions are visible but not linked to identities. Additionally, a new key pair is used for each transaction to prevent linking transactions to a common owner.",
+        "status": "success"
+    },
+    {
+        "title": "Section 11: Calculations",
+        "question": "What is the probability of an attacker catching up with the honest chain?",
+        "answer": "The probability of an attacker catching up with the honest chain decreases exponentially as the number of blocks the attacker needs to catch up with increases. The exact probability is calculated using a Poisson distribution and depends on the attacker's share of CPU power (q) and the number of blocks behind (z).",
+        "status": "success"
+    },
+    {
+        "title": "Section 12: Conclusion",
+        "question": "What is the key takeaway from the Bitcoin paper?",
+        "answer": "The key takeaway is that Bitcoin provides a system for electronic transactions without relying on trust, using a peer-to-peer network, proof-of-work, and cryptographic proof to secure transactions and prevent double-spending. The network is robust, decentralized, and operates with minimal coordination among nodes.",
+        "status": "success"
+    }
+]

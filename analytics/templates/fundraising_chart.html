@@ -1,5 +1,19 @@
 {% extends 'baseTim.html' %}
 
+{% load static %}
+{% block title %} Crypto Fundraising Analytics Dashboard {% endblock %}
+{% load humanize %}
+
+
+{% block nav %}
+        <nav  aria-label="breadcrumb" class="ps-2">
+          <ol class="breadcrumb bg-transparent mb-0 p-0 me-sm-6 me-5">
+            <li class=" text-sm p-1">Dashboards  / </li>
+            <li class=" text-sm p-1 text-dark active font-weight-bold" aria-current="page"> Analytics Dashboard</li>
+          </ol>
+        </nav>
+        {% endblock %}
+
 {% block content %}
 
 <!DOCTYPE html>

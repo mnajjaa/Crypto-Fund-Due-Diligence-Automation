@@ -276,6 +276,12 @@
           <div class="collapse {% if '/funding/' in request.path or request.path == '/' %}show{% endif %}" id="dashboardsExamples">
             <ul class="nav">
               <li class="nav-item">
+                <a class="nav-link text-dark {% if request.path == '/analytics/' %}active{% endif %}" href="{% url 'overview_page' %}">
+                  <span class="sidenav-mini-icon"> O </span>
+                  <span class="sidenav-normal ms-1 ps-1"> Overview </span>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link text-dark {% if request.path == '/funding/' %}active{% endif %}" href="{% url 'funding_dashboard' %}">
                   <span class="sidenav-mini-icon"> F </span>
                   <span class="sidenav-normal ms-1 ps-1"> Funding Rounds </span>
@@ -283,14 +289,8 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link text-dark {% if request.path == '/analytics/' %}active{% endif %}" href="{% url 'fundraising_chart' %}">
-                  <span class="sidenav-mini-icon"> F </span>
+                  <span class="sidenav-mini-icon"> A </span>
                   <span class="sidenav-normal ms-1 ps-1"> Analytics </span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark {% if request.path == '/discover/' %}active{% endif %}" href="">
-                  <span class="sidenav-mini-icon"> D </span>
-                  <span class="sidenav-normal ms-1 ps-1"> Discover </span>
                 </a>
               </li>
             </ul>
@@ -301,88 +301,37 @@
           <h6 class="ps-3  ms-2 text-uppercase text-xs font-weight-bolder text-dark">PAGES</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark {% if request.path == '/sanctions/check/' %}active{% endif %}" href="{% url 'check_sanctions' %}">
-            <i class="material-symbols-rounded opacity-5 ms-2 me-2">contract</i>
-            <span class="nav-link-text ms-1 ps-1">Sanctions</span>
+          <a data-bs-toggle="collapse" href="#projectsExamples" class="nav-link text-dark " aria-controls="projectsExamples" role="button" aria-expanded="false">
+            <i class="material-symbols-rounded opacity-5 {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">widgets</i>
+            <span class="nav-link-text ms-1 ps-1">Question Bank</span>
           </a>
-          
-          
-          
-        </li>
-        
-        
-        <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link text-dark " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
-            <i class="material-symbols-rounded opacity-5 {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">storefront</i>
-            <span class="nav-link-text ms-1 ps-1">Ecommerce</span>
-          </a>
-          <div class="collapse " id="ecommerceExamples">
+          <div class="collapse " id="projectsExamples">
             <ul class="nav ">
               <li class="nav-item ">
-                <a class="nav-link text-dark " data-bs-toggle="collapse" aria-expanded="false" href="#productsExample">
-                  <span class="sidenav-mini-icon"> P </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Products <b class="caret"></b></span>
+                <a class="nav-link text-dark " href="#">
+                  <span class="sidenav-mini-icon"> M </span>
+                  <span class="sidenav-normal  ms-1  ps-1"> Main </span>
                 </a>
-                <div class="collapse " id="productsExample">
-                  <ul class="nav nav-sm flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/products/new-product.html">
-                        <span class="sidenav-mini-icon"> N </span>
-                        <span class="sidenav-normal  ms-1  ps-1"> New Product </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/products/edit-product.html">
-                        <span class="sidenav-mini-icon"> E </span>
-                        <span class="sidenav-normal  ms-1  ps-1"> Edit Product </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/products/product-page.html">
-                        <span class="sidenav-mini-icon"> P </span>
-                        <span class="sidenav-normal  ms-1  ps-1"> Product Page </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/products/products-list.html">
-                        <span class="sidenav-mini-icon"> P </span>
-                        <span class="sidenav-normal  ms-1  ps-1"> Products List </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </li>
               <li class="nav-item ">
-                <a class="nav-link text-dark " data-bs-toggle="collapse" aria-expanded="false" href="#ordersExample">
-                  <span class="sidenav-mini-icon"> O </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Orders <b class="caret"></b></span>
-                </a>
-                <div class="collapse " id="ordersExample">
-                  <ul class="nav nav-sm flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/orders/list.html">
-                        <span class="sidenav-mini-icon"> O </span>
-                        <span class="sidenav-normal  ms-1  ps-1"> Order List </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/orders/details.html">
-                        <span class="sidenav-mini-icon"> O </span>
-                        <span class="sidenav-normal  ms-1  ps-1"> Order Details </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/ecommerce/referral.html">
+                <a class="nav-link text-dark {% if request.path == '/funding/' %}active{% endif %}" href="{% url 'pptx_view' %}">
                   <span class="sidenav-mini-icon"> R </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Referral </span>
+                  <span class="sidenav-normal  ms-1  ps-1"> Report Generation </span>
                 </a>
               </li>
             </ul>
           </div>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link text-dark {% if request.path == '/sanctions/check/' %}active{% endif %}" href="{% url 'check_sanctions' %}">
+            <i class="material-symbols-rounded opacity-5 ms-2 me-2">contract</i>
+            <span class="nav-link-text ms-1 ps-1">Sanctions</span>
+          </a>
+        </li>
+        
+        
+        
         <li class="nav-item">
           <a data-bs-toggle="collapse" href="#profileExamples" class="nav-link text-dark " aria-controls="profileExamples" role="button" aria-expanded="false">
             <i class="material-symbols-rounded opacity-5 {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">group</i>
@@ -423,34 +372,7 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#projectsExamples" class="nav-link text-dark " aria-controls="projectsExamples" role="button" aria-expanded="false">
-            <i class="material-symbols-rounded opacity-5 {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">widgets</i>
-            <span class="nav-link-text ms-1 ps-1">Projects</span>
-          </a>
-          <div class="collapse " id="projectsExamples">
-            <ul class="nav ">
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/projects/general.html">
-                  <span class="sidenav-mini-icon"> G </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> General </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/projects/timeline.html">
-                  <span class="sidenav-mini-icon"> T </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> Timeline </span>
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-dark " href="https://demos.creative-tim.com/material-dashboard-pro/pages/projects/new-project.html">
-                  <span class="sidenav-mini-icon"> N </span>
-                  <span class="sidenav-normal  ms-1  ps-1"> New Project </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
+        
         
         <li class="nav-item">
           <hr class="horizontal dark" />
@@ -764,38 +686,7 @@
 {% endblock %}
       {% block footer %}
 
-      <footer class="footer py-4  ">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com/" class="font-weight-bold" target="_blank">Creative Tim</a>
-                for a better web.
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
       {% endblock %}
 
     </div>

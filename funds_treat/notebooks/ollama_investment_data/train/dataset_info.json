@@ -1,0 +1,22 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "data": {
+      "context": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "instruction": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "response": {
+        "dtype": "string",
+        "_type": "Value"
+      }
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

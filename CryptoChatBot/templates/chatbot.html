@@ -439,7 +439,7 @@
                     Swal.showLoading();
 
                     // Send the file to the backend via AJAX
-                    fetch('/ChatBot/upload_pdf/', {
+                    fetch('/CryptoChatBot/upload_pdf/', {
                         method: 'POST',
                         body: formData,
                     })
@@ -455,7 +455,7 @@
                             Swal.close();
 
                             // Load the PDF using PDF.js
-                            const pdfUrl = `/ChatBot/serve_pdf/${documentId}/`;
+                            const pdfUrl = `/CryptoChatBot/serve_pdf/${documentId}/`;
                             pdfDoc = await pdfjsLib.getDocument(pdfUrl).promise;
                             pageCount = pdfDoc.numPages;
                             pageNum = 1;
@@ -482,7 +482,7 @@
                             addBotMessage('Your document has been uploaded successfully. The review has been generated below.');
 
                             // Fetch Q&A.json and populate section list and review content
-                            const response = await fetch('/ChatBot/Q&A.json');
+                            const response = await fetch('/CryptoChatBot/Q&A.json');
                             if (!response.ok) {
                                 throw new Error('Failed to load Q&A.json');
                             }

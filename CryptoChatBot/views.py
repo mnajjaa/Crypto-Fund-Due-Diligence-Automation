@@ -27,7 +27,7 @@ def serve_pdf(request, document_id):
     return response
 
 def serve_qa_json(request):
-    file_path = os.path.join(settings.BASE_DIR, 'ChatBot', 'Q&A.json')
+    file_path = os.path.join(settings.BASE_DIR, 'CryptoChatBot', 'Q&A.json')
     if os.path.exists(file_path):
         return FileResponse(open(file_path, 'rb'), content_type='application/json')
     else:

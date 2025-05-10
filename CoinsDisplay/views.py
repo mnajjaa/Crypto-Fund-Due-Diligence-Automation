@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 import time
+from django.views.decorators.csrf import csrf_exempt
 
 def fetch_crypto_data():
     # List of cryptocurrencies to fetch with their symbols
@@ -220,3 +221,84 @@ def fetch_whale_alerts(request):  # <-- now accepts `request`
                     })
 
     return JsonResponse({'alerts': alerts_data})
+
+#fund investments
+@csrf_exempt
+def fetch_investment_data(request):
+    group_by = request.GET.get('groupBy', 'month')
+    start_date = request.GET.get('startDate', '2023-04-01')
+    end_date = request.GET.get('endDate')
+
+    url = f"https://api.cryptorank.io/v0/public-raise-dashboard/investment-trend?groupBy={group_by}&startDate={start_date}&endDate={end_date}"
+
+    try:
+        response = requests.get(url)
+        return JsonResponse(response.json(), safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+
+@csrf_exempt
+def fetch_raise_data(request):
+    group_by = request.GET.get('groupBy', 'month')
+    start_date = request.GET.get('startDate', '2023-04-01')
+    end_date = request.GET.get('endDate')
+
+    url = f"https://api.cryptorank.io/v0/public-raise-dashboard/raise?groupBy={group_by}&startDate={start_date}&endDate={end_date}"
+
+    print("Fetching URL:", url)
+    try:
+        response = requests.get(url)
+        return JsonResponse(response.json(), safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+
+@csrf_exempt
+def fetch_raise_and_projects_on_blockchains(request):
+    start_date = request.GET.get('startDate', '2023-04-01')
+    end_date = request.GET.get('endDate')
+
+    url = f"https://api.cryptorank.io/v0/public-raise-dashboard/raise-and-projects-on-blockchains?startDate={start_date}&endDate={end_date}"
+
+    print("Fetching URL:", url)
+
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        raw_data = response.json()
+
+        # Optional: filter out only useful fields
+        simplified_data = [
+            {
+                "name": item.get("name"),
+                "key": item.get("key"),
+                "projects":item.get("projects"),
+                "sum": item.get("sum")
+            }
+            for item in raw_data.get("data", [])
+        ]
+
+        return JsonResponse({"data": simplified_data}, safe=False)
+
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+
+@csrf_exempt
+def fetch_token_sales_by_type(request):
+
+    start_date = request.GET.get('startDate', '2023-04-01')
+    end_date = request.GET.get('endDate')
+
+    url = f"https://api.cryptorank.io/v0/public-raise-dashboard/public-rounds-by-type?startDate={start_date}&endDate={end_date}"
+
+    print("Fetching URL:", url)
+    try:
+        response = requests.get(url)
+        return JsonResponse(response.json(), safe=False)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+    
+def fund_investments(request):
+    return render(request, 'fund_investments.html')

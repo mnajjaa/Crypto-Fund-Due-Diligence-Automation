@@ -1,0 +1,649 @@
+{% extends "baseTim.html" %}
+{% load static %}
+{% block extra_head %}
+    <meta charset="UTF-8">
+    {% block title %}
+        Token Sales Analytic Dashboard
+    {% endblock %}
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+
+        .controls {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+
+        .token-description {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        button {
+            padding: 6px 12px;
+            background: #4a6bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Token type descriptions at bottom */
+        token-type {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .token-type h3 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .token-type p {
+            margin: 0;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .ico {
+            color: #ff69b4;
+        }
+
+        .ido {
+            color: #1e90ff;
+        }
+
+        .ieo {
+            color: #ffd700;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <!-- First Row -->
+            <div class="col-lg-6 col-md-6 mt-4 mb-4">
+                <div class="chart-card">
+                    <h2>Total Raise and Public Sales</h2>
+                    <p class="token-description">Total raised in USD value and number of IDO/ICO/IEOs by month</p>
+                    <div class="controls">
+                        <label for="groupBy1">Group by:</label>
+                        <select id="groupBy1">
+                            <option value="month" selected>Month</option>
+                            <option value="week">Week</option>
+                        </select>
+                        <label for="startDate1">Start:</label>
+                        <input type="date" id="startDate1" value="2024-10-01">
+                        <label for="endDate1">End:</label>
+                        <input type="date" id="endDate1">
+                        <button onclick="fetchChart1()">Update</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="raiseChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 mt-4 mb-4">
+                <div class="chart-card">
+                    <h2>Fundraising Activity</h2>
+                    <p class="token-description">Monthly raise and number of token sales including private rounds</p>
+                    <div class="controls">
+                        <label for="groupBy2">Group By:</label>
+                        <select id="groupBy2">
+                            <option value="month" selected>Month</option>
+                            <option value="week">Week</option>
+                        </select>
+                        <label for="startDate2">Start:</label>
+                        <input type="date" id="startDate2" value="2023-04-01"/>
+                        <label for="endDate2">End:</label>
+                        <input type="date" id="endDate2"/>
+                        <button onclick="fetchChart2()">Update</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="cryptoChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Second Row -->
+            <div class="col-lg-6 col-md-6 mt-4 mb-4">
+                <div class="chart-card">
+                    <h2>Funds Raised on Public Rounds by Blockchain</h2>
+                    <p class="token-description">Total raised amounts segmented by blockchain platform</p>
+                    <div class="controls">
+                        <label for="startDate3">Start Date:</label>
+                        <input type="date" id="startDate3" value="2023-04-01">
+                        <label for="endDate3">End Date:</label>
+                        <input type="date" id="endDate3">
+                        <button onclick="fetchBlockchainChart()">Load</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="blockchainChart" style="height: 450px;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 mt-4 mb-4">
+                <div class="chart-card">
+                    <h2>Number of Public Token Sales by Type</h2>
+                    <p class="token-description">Percentage distribution of different token sale types</p>
+                    <div class="controls">
+                        <label for="startDate4">Start Date:</label>
+                        <input type="date" id="startDate4" value="2023-04-01">
+                        <label for="endDate4">End Date:</label>
+                        <input type="date" id="endDate4">
+                        <button onclick="fetchDistributionChart()">Load</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="distributionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Token Type Descriptions at Bottom -->
+    <!-- Token Type Descriptions at Bottom -->
+    <div class="container-fluid" style="background-color: #f4f4f4; padding: 20px;">
+        <div class="row">
+            <div class="col-12 mt-4">
+                
+
+                <div class="token-type"
+                     style="margin-bottom: 20px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+                    <h3 class="ico" style="color: #ff69b4; margin-top: 0; margin-bottom: 5px;">ICO (Initial Coin
+                        Offering)</h3>
+                    <p style="margin: 0; line-height: 1.6;">Represented by the pink segment, an ICO is a fundraising
+                        method where a project sells its tokens to early investors, often before the project is fully
+                        developed, to raise capital. ICOs were popular around 2017-2018 but faced scrutiny due to scams
+                        and lack of regulation.</p>
+                </div>
+
+                <div class="token-type"
+                     style="margin-bottom: 20px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+                    <h3 class="ido" style="color: #1e90ff; margin-top: 0; margin-bottom: 5px;">IDO (Initial DEX
+                        Offering)</h3>
+                    <p style="margin: 0; line-height: 1.6;">Shown in blue, an IDO is a token sale conducted on a
+                        decentralized exchange (DEX). It allows projects to launch their tokens directly on a DEX, often
+                        with liquidity pools, enabling immediate trading. IDOs are popular in DeFi (Decentralized
+                        Finance) ecosystems.</p>
+                </div>
+
+                <div class="token-type"
+                     style="margin-bottom: 20px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+                    <h3 class="ieo" style="color: #ffd700; margin-top: 0; margin-bottom: 5px;">IEO (Initial Exchange
+                        Offering)</h3>
+                    <p style="margin: 0; line-height: 1.6;">Indicated by the yellow segment, an IEO is a token sale
+                        managed by a centralized cryptocurrency exchange. The exchange facilitates the sale, vets the
+                        project, and provides a platform for investors to buy tokens, often adding a layer of trust
+                        compared to ICOs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        async function fetchChart1() {
+            const groupBy = document.getElementById("groupBy1").value;
+            const startDate = document.getElementById("startDate1").value;
+            const endDate = document.getElementById("endDate1").value;
+            const url = `/coins/fetch-raise-data?groupBy=${groupBy}&startDate=${startDate}&endDate=${endDate}`;
+
+            try {
+                const response = await fetch(url);
+                const raw = await response.json();
+                const data = Array.isArray(raw) ? raw : raw.data;
+
+                if (!data || !Array.isArray(data)) {
+                    alert("No data available.");
+                    return;
+                }
+
+                const labels = data.map(d => new Date(d.date).toLocaleDateString('en-US', {
+                    month: 'short', year: '2-digit'
+                }));
+                const raised = data.map(d => d.sum); // <-- Change this to d.raisedUSD if needed
+                const raisedLabels = raised.map(v => `$ ${(v / 1e6).toFixed(2)}M`);
+                const events = data.map(d => d.count);
+
+                const ctx = document.getElementById("raiseChart").getContext("2d");
+                if (window.raiseChartInstance) window.raiseChartInstance.destroy();
+
+                window.raiseChartInstance = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels,
+                        datasets: [
+                            {
+                                label: 'Raised in USD value',
+                                type: 'bar',
+                                data: raised,
+                                backgroundColor: '#2f3542',
+                                borderRadius: 5,
+                                barThickness: 20,
+                                yAxisID: 'y',
+                            },
+                            {
+                                label: 'IDO/ICO/IEOs',
+                                type: 'line',
+                                data: events,
+                                borderColor: '#1e90ff',
+                                backgroundColor: 'rgba(30,144,255,0.1)',
+                                tension: 0.4,
+                                yAxisID: 'y1',
+                                pointRadius: 4,
+                                pointBackgroundColor: '#1e90ff',
+                                pointBorderColor: '#fff',
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        interaction: {mode: 'index', intersect: false},
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: (ctx) => {
+                                        if (ctx.dataset.label === 'Raised in USD value') {
+                                            return `$ ${(ctx.parsed.y / 1e6).toFixed(2)}M`;
+                                        }
+                                        return `${ctx.dataset.label}: ${ctx.parsed.y}`;
+                                    }
+                                }
+                            },
+                            legend: {position: 'top'}
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {display: true, text: 'Raised in USD'},
+                                ticks: {
+                                    callback: val => `$${(val / 1e6).toFixed(0)}M`
+                                }
+                            },
+                            y1: {
+                                beginAtZero: true,
+                                position: 'right',
+                                title: {display: true, text: 'Number of IDO/ICO/IEOs'},
+                                grid: {drawOnChartArea: false}
+                            }
+                        }
+                    },
+                    plugins: [{
+                        id: 'customBarLabels',
+                        afterDatasetsDraw(chart) {
+                            const {ctx, chartArea: {top}, scales: {x, y}} = chart;
+                            chart.data.datasets[0].data.forEach((val, index) => {
+                                const xPos = x.getPixelForValue(index);
+                                const yPos = y.getPixelForValue(val) - 10;
+                                ctx.fillStyle = '#000';
+                                ctx.font = '12px sans-serif';
+                                ctx.textAlign = 'center';
+                                ctx.fillText(raisedLabels[index], xPos, yPos);
+                            });
+                        }
+                    }]
+                });
+
+            } catch (err) {
+                console.error("Fetch failed:", err);
+                alert("Error loading chart");
+            }
+        }
+
+        async function fetchChart2() {
+            const groupBy = document.getElementById("groupBy2").value;
+            const startDate = document.getElementById("startDate2").value;
+            const endDate = document.getElementById("endDate2").value;
+            const url = `/coins/investment-data?groupBy=${groupBy}&startDate=${startDate}&endDate=${endDate}`;
+
+            try {
+                const response = await fetch(url);
+                const result = await response.json();
+                const dataArray = Array.isArray(result) ? result : result.data;
+
+                if (!dataArray || !Array.isArray(dataArray)) {
+                    alert("No data received from API.");
+                    return;
+                }
+
+                const labels = dataArray.map(item =>
+                    new Date(item.date).toLocaleDateString('en-US', {month: 'short', year: 'numeric'})
+                );
+                const amountRaised = dataArray.map(item => (item.sum / 1e9).toFixed(2));
+                const salesCount = dataArray.map(item => item.count);
+
+                const ctx = document.getElementById('cryptoChart').getContext('2d');
+                if (window.cryptoChartInstance) window.cryptoChartInstance.destroy();
+
+                window.cryptoChartInstance = new Chart(ctx, {
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                type: 'bar',
+                                label: 'Amount Raised ($B)',
+                                data: amountRaised,
+                                yAxisID: 'y1',
+                                backgroundColor: 'dodgerblue'
+                            },
+                            {
+                                type: 'line',
+                                label: 'Number of Sales',
+                                data: salesCount,
+                                yAxisID: 'y2',
+                                borderColor: 'limegreen',
+                                backgroundColor: 'rgba(0,255,0,0.1)',
+                                tension: 0.3,
+                                pointRadius: 5,
+                                pointHoverRadius: 7
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {position: 'top'},
+                            tooltip: {mode: 'index', intersect: false}
+                        },
+                        interaction: {mode: 'nearest', axis: 'x', intersect: false},
+                        scales: {
+                            y1: {
+                                type: 'linear',
+                                position: 'left',
+                                beginAtZero: true,
+                                title: {display: true, text: 'Amount Raised ($B)'}
+                            },
+                            y2: {
+                                type: 'linear',
+                                position: 'right',
+                                beginAtZero: true,
+                                title: {display: true, text: 'Number of Sales'},
+                                grid: {drawOnChartArea: false}
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                alert("Failed to load chart. See console for details.");
+            }
+        }
+
+        // Blockchain Chart Logic
+        let blockchainChartInstance = null;
+
+        async function fetchBlockchainChart() {
+            const startDate = document.getElementById('startDate3').value;
+            const endDate = document.getElementById('endDate3').value;
+
+            try {
+                const response = await fetch(`/coins/fetch_raise_and_projects_on_blockchains?startDate=${startDate}&endDate=${endDate}`);
+                const result = await response.json();
+
+                if (!result.data || !result.data.length) {
+                    console.error('No data available');
+                    return;
+                }
+
+                // Sort by projects (descending) and take top 10
+                const sortedData = result.data
+                    .sort((a, b) => b.projects - a.projects)
+                    .slice(0, 10);
+
+                const ctx = document.getElementById('blockchainChart').getContext('2d');
+
+                // Destroy existing chart
+                if (blockchainChartInstance) {
+                    blockchainChartInstance.destroy();
+                }
+
+                // Process data
+                const labels = sortedData.map(item => item.name);
+                const fundsData = sortedData.map(item => item.sum / 1000000); // Convert to millions
+                const projectsData = sortedData.map(item => item.projects);
+
+                // Create new chart
+                blockchainChartInstance = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: 'Funds Raised ($M)',
+                                data: fundsData,
+                                backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1,
+                                yAxisID: 'y'
+                            },
+                            {
+                                label: 'Projects Launched',
+                                data: projectsData,
+                                backgroundColor: 'rgba(75, 192, 192, 0.8)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1,
+                                yAxisID: 'y1'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Top 10 Blockchains by Project Count',
+                                font: {size: 16}
+                            },
+                            legend: {
+                                position: 'top',
+                            }
+                        },
+                        scales: {
+                            y: {
+                                type: 'linear',
+                                position: 'left',
+                                title: {
+                                    display: true,
+                                    text: 'Funds Raised ($M)'
+                                },
+                                ticks: {
+                                    callback: function (value) {
+                                        return '$' + value + 'M';
+                                    }
+                                }
+                            },
+                            y1: {
+                                type: 'linear',
+                                position: 'right',
+                                title: {
+                                    display: true,
+                                    text: 'Projects Launched'
+                                },
+                                grid: {
+                                    drawOnChartArea: false
+                                }
+                            }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Distribution Chart Logic
+        let distributionChartInstance = null;
+
+        async function fetchDistributionChart() {
+            const startDate = document.getElementById('startDate4').value;
+            const endDate = document.getElementById('endDate4').value;
+
+            try {
+                const response = await fetch(`/coins/fetch_token_sales_by_type?startDate=${startDate}&endDate=${endDate}`);
+                const result = await response.json();
+
+                if (!result || Object.keys(result).length === 0) {
+                    console.error('No data available');
+                    return;
+                }
+
+                // Prepare data for chart
+                const labels = Object.keys(result);
+                const data = Object.values(result);
+                const total = data.reduce((sum, value) => sum + value, 0);
+
+                // Calculate percentages
+                const percentages = data.map(value => ((value / total) * 100).toFixed(1) + '%');
+
+                // Colors similar to your image
+                const backgroundColors = [
+                    '#FF6384', // IDO (pink/red)
+                    '#36A2EB', // IEO (blue)
+                    '#FFCE56'  // ICO (yellow)
+                ];
+
+                const borderColors = [
+                    '#FF6384',
+                    '#36A2EB',
+                    '#FFCE56'
+                ];
+
+                const ctx = document.getElementById('distributionChart').getContext('2d');
+
+                // Destroy existing chart
+                if (distributionChartInstance) {
+                    distributionChartInstance.destroy();
+                }
+
+                // Create new chart
+                distributionChartInstance = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            data: data,
+                            backgroundColor: backgroundColors,
+                            borderColor: borderColors,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        const label = context.label || '';
+                                        const value = context.raw || 0;
+                                        const percentage = ((value / total) * 100).toFixed(1);
+                                        return `${label}: ${value} (${percentage}%)`;
+                                    }
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: `Total: ${total}`,
+                                font: {
+                                    size: 18
+                                },
+                                position: 'bottom'
+                            }
+                        },
+                        cutout: '65%', // Makes it a doughnut chart
+                        animation: {
+                            animateScale: true,
+                            animateRotate: true
+                        }
+                    },
+                    plugins: [{
+                        id: 'doughnutCenterText',
+                        beforeDraw(chart) {
+                            if (chart.config.options.plugins.centerText) {
+                                const {ctx, chartArea: {width, height}} = chart;
+                                ctx.restore();
+
+                                // Draw total in center
+                                const fontSize = (height / 8).toFixed(2);
+                                ctx.font = `bold ${fontSize}px sans-serif`;
+                                ctx.textBaseline = 'middle';
+                                ctx.fillStyle = '#333';
+
+                                const text = chart.config.options.plugins.centerText.text || '';
+                                const textX = Math.round((width - ctx.measureText(text).width) / 2);
+                                const textY = height / 2 + chart.legend.height / 2;
+
+                                ctx.fillText(text, textX, textY);
+                                ctx.save();
+                            }
+                        }
+                    }]
+                });
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to load distribution chart data');
+            }
+        }
+
+
+        // Default date setup and initial load
+        document.getElementById("endDate1").valueAsDate = new Date();
+        document.getElementById("endDate2").valueAsDate = new Date();
+        document.getElementById("endDate3").valueAsDate = new Date();
+        document.getElementById("endDate4").valueAsDate = new Date();
+        window.onload = () => {
+            fetchChart1();
+            fetchChart2();
+            fetchBlockchainChart();
+            fetchDistributionChart();
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}

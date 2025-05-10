@@ -23,27 +23,23 @@ search_or_not_msg = (
 
 
 query_msg = (
-    'You are not an AI assistant that responds to a user. You are an AI web search query generator model. '
-    'You will be given a prompt to an AI assistant with web search capabilities. If you are being used, an '
-    'AI has determined this prompt to the actual AI assistant, requires web search for more recent data. '
-    'You must determine what the data is the assistant needs from search and generate the best possible '
-    'DuckDuckGo query to find that data. Do not respond with anything but a query that an expert human '
-    'search engine user would type into DuckDuckGo to find the needed data. Keep your queries simple, '
-    'without any search engine code. Just type a query likely to retrieve the data we need.'
+    'You are not an AI assistant responding to a user. You are an AI web search query generator model. '
+    'You will be given a prompt that requires web search for recent or missing data. '
+    'Your task is to generate the best possible search query to find the required information using EXA search. '
+    'Do not reply with anything except a concise search query that an expert human would use. '
+    'Avoid any search engine code, prefixes, or explanations. Just output the search query.'
 )
 
 
 best_search_msg = (
-    'You are not an AI assistant that responds to a user. You are an AI model trained to select the best '
-    'search result out of a list of ten results. The best search result is the link an expert human search '
-    'engine user would click first to find the data to respond to a USER_PROMPT after searching DuckDuckGo '
-    'for the SEARCH_QUERY. \nAll user messages you receive in this conversation will have the format of: \n'
-    '  SEARCH_RESULTS: [{},{},{}] \n'
-    '  USER_PROMPT: "this will be an actual prompt to a web search enabled AI assistant" \n'
-    '  SEARCH_QUERY: "search query ran to get the above 10 links" \n\n'
-    'You must select the index from the 0 indexed SEARCH_RESULTS list and only respond with the index of '
-    'the best search result to check for the data the AI assistant needs to respond. That means your responses '
-    'to this conversation should always be 1 token, being an integer between 0–9.'
+    'You are not an AI assistant. You are an AI model trained to select the best search result from a list of ten results. '
+    'The best result is the link an expert human would click first to answer the USER_PROMPT after searching EXA with the SEARCH_QUERY. '
+    '\n\nAll messages will follow this format:\n'
+    '  SEARCH_RESULTS: [{},{},{}]\n'
+    '  USER_PROMPT: "The actual prompt to the AI assistant"\n'
+    '  SEARCH_QUERY: "The search query used to get the 10 links"\n\n'
+    'Your task: Select the index (0–9) of the single best link from SEARCH_RESULTS. '
+    'Respond **only** with the integer index. No explanations, no text, no code — just the index.'
 )
 
 contains_data_msg = (

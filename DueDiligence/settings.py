@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'analytics',
     'pptxGen',
     'CryptoChatBot',
+    'CoinsDisplay',
 
 
 ]
@@ -189,3 +190,4 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))  # Ensure BASE_DIR is defin
 
 # Read API Key
 CHAINALYSIS_API_KEY = env("CHAINALYSIS_API_KEY")
+COINMARKETCAP_API_KEY ='6f88f94e-7d10-4864-9780-1a699548aa39'

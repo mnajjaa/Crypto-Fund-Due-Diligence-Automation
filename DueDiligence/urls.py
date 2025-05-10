@@ -30,6 +30,7 @@ urlpatterns = [
     path('analytics/', include('analytics.urls')),
     path('pptxGen/', include('pptxGen.urls')),
     path('CryptoChatBot/', include('CryptoChatBot.urls')),
+    path('coins/', include('CoinsDisplay.urls')),
 
     
 ]

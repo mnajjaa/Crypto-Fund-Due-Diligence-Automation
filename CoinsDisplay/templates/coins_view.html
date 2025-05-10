@@ -1,0 +1,324 @@
+{% extends "baseTim.html" %}
+{% load static %}
+{% block title %}CoinDisplay Interface{% endblock %}
+{% load humanize %}
+
+
+{% block extra_css %}
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .coin-card {
+            cursor: grab;
+            transition: box-shadow 0.2s;
+        }
+
+        .coin-card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .whale-alerts-container {
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .whale-alert-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 8px 0;
+        }
+
+        .whale-alert-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+
+    <!-- Fonts and icons -->
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900"/>
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"/>
+{% endblock %}
+
+{% block content %}
+    <!-- Whale Alerts Section -->
+    <div class="p-6">
+        <h2 class="text-xl font-bold mb-4 text-gray-700 text-center">🐳🐳🐳Whale Alerts 🚨🚨🚨</h2>
+        <div id="whale-alerts" class="whale-alerts-container">
+            <div class="text-muted text-center">Loading alerts...</div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 p-6 min-h-screen h-screen">
+        <!-- Coin List -->
+        <div class="col-span-1 space-y-3 overflow-y-auto h-full flex flex-col min-h-0">
+            {% for coin in coins %}
+                <div draggable="true" class="coin-card bg-white rounded-xl p-3 flex items-center shadow"
+                     ondragstart="handleDrag(event, '{{ coin.symbol }}')" data-id="{{ coin.id }}"
+                     data-symbol="{{ coin.symbol }}"
+                     onclick="handleCoinClick(event)">
+                    <img src="{{ coin.logo }}" alt="{{ coin.name }}" class="w-10 h-10 rounded-full mr-3"/>
+                    <div class="flex-1">
+                        <div class="font-semibold text-lg">{{ coin.name }}</div>
+                        <div class="text-sm text-gray-500">{{ coin.symbol }}</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold">${{ coin.price|floatformat:2 }}</div>
+                        <div class="{% if coin.change24h >= 0 %}text-green-500{% else %}text-red-500{% endif %} text-sm">
+                            {% if coin.change24h >= 0 %}+{% endif %}{{ coin.change24h|floatformat:2 }}%
+                        </div>
+                        <div class="text-xs text-gray-500">MCap: ${{ coin.marketCap|floatformat:"0"|intcomma }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Chart Area -->
+        <div class="col-span-2">
+            <div class="bg-white rounded-xl shadow p-4 h-full flex flex-col" ondrop="handleDrop(event)"
+                 ondragover="allowDrop(event)">
+                <h2 id="chart-title" class="text-xl font-bold mb-4 text-center text-gray-600">Drag a coin here to view
+                    its chart</h2>
+                <div id="chart-container" class="flex-1" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coin Details Modal -->
+    <div id="coin-modal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 backdrop-blur-md">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl p-6 w-96 max-h-[80vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold" id="modal-coin-name"></h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">✕</button>
+            </div>
+            <div id="coin-info" class="space-y-3"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard -->
+    <script src="{% static '/assets/js/material-dashboard.min.js?v=3.2.0' %}"></script>
+
+    <!-- Whale Alerts Script -->
+    <script>
+        function fetchWhaleAlerts() {
+            const alertsContainer = document.getElementById('whale-alerts');
+            alertsContainer.innerHTML = '<div class="text-muted text-center">Loading alerts...</div>';
+
+            fetch('/coins/alerts/')
+                .then(response => response.json())
+                .then(data => {
+                    const alerts = data.alerts;
+                    if (alerts.length === 0) {
+                        alertsContainer.innerHTML = '<div class="text-muted text-center">No alerts found</div>';
+                        return;
+                    }
+
+                    alertsContainer.innerHTML = ''; // Clear loading message
+
+                    alerts.forEach(alert => {
+                        const alertItem = document.createElement('div');
+                        alertItem.classList.add('whale-alert-item');
+                        alertItem.innerHTML = `
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-gray-700">${alert.emoticons}</span>
+                                    <span class="font-medium">${Number(alert.amount).toLocaleString()} #${alert.symbol}</span>
+                                    <span class="text-gray-500">(${Number(alert.value_usd).toLocaleString()} USD)</span>
+                                </div>
+                                <span class="text-muted text-sm">${alert.ago}</span>
+                            </div>
+                            <div class="text-gray-600 text-sm">${alert.text}</div>
+                        `;
+                        alertsContainer.appendChild(alertItem);
+                    });
+                })
+                .catch(error => {
+                    alertsContainer.innerHTML = '<div class="text-red-500 text-center">Error loading alerts</div>';
+                    console.error('Error fetching alerts:', error);
+                });
+        }
+
+        // Fetch alerts when the page loads
+        document.addEventListener('DOMContentLoaded', fetchWhaleAlerts);
+    </script>
+
+    <!-- Chart and Modal Scripts -->
+    <script>
+        let draggedSymbol = null;
+
+        function handleDrag(event, symbol) {
+            draggedSymbol = symbol;
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function handleDrop(event) {
+            event.preventDefault();
+            if (draggedSymbol) {
+                drawChart(draggedSymbol);
+            }
+        }
+
+        async function drawChart(symbol) {
+            const chartContainer = document.getElementById("chart-container");
+            const chartTitle = document.getElementById("chart-title");
+
+            chartContainer.innerHTML = `
+                <div class="flex justify-center items-center h-full">
+                    <span class="animate-spin rounded-full border-4 border-gray-300 border-t-blue-500 w-12 h-12"></span>
+                </div>
+            `;
+
+            chartTitle.textContent = `${symbol} Chart`;
+
+            try {
+                const response = await fetch(`/coins/api/candles/${symbol}/`);
+                const rawData = await response.json();
+
+                console.log("Raw API Data:", rawData);
+
+                if (!Array.isArray(rawData)) {
+                    console.error("Data is not an array:", rawData);
+                    throw new Error("Invalid data format");
+                }
+
+                const formattedData = rawData
+                    .filter(item => {
+                        const isValid = (
+                            item.time !== null &&
+                            typeof item.open === 'number' &&
+                            typeof item.high === 'number' &&
+                            typeof item.low === 'number' &&
+                            typeof item.close === 'number' &&
+                            ![item.open, item.high, item.low, item.close].some(isNaN)
+                        );
+                        if (!isValid) console.warn("Invalid item:", item);
+                        return isValid;
+                    })
+                    .map(item => ({
+                        time: item.time,
+                        open: item.open,
+                        high: item.high,
+                        low: item.low,
+                        close: item.close,
+                    }))
+                    .reverse();
+
+                console.log("Formatted Chart Data:", formattedData);
+
+                if (formattedData.length === 0) {
+                    chartContainer.innerHTML = '<p class="text-center text-gray-500 mt-4">No valid candlestick data available.</p>';
+                    return;
+                }
+
+                chartContainer.innerHTML = "";
+
+                const chart = LightweightCharts.createChart(chartContainer, {
+                    width: chartContainer.offsetWidth,
+                    height: 400,
+                    layout: {
+                        backgroundColor: "#ffffff",
+                        textColor: "#000000"
+                    },
+                    grid: {
+                        vertLines: {color: "#f0f3fa"},
+                        horzLines: {color: "#f0f3fa"},
+                    },
+                    priceScale: {borderColor: "#ccc"},
+                    timeScale: {borderColor: "#ccc"}
+                });
+
+                const candleSeries = chart.addCandlestickSeries();
+                candleSeries.setData(formattedData);
+
+                window.addEventListener("resize", () => {
+                    chart.applyOptions({width: chartContainer.offsetWidth});
+                });
+
+            } catch (error) {
+                console.error("Chart fetch error:", error);
+                chartContainer.innerHTML = '<p class="text-center text-red-500 mt-4">Failed to load chart data.</p>';
+            }
+        }
+
+        function handleCoinClick(event) {
+            event.stopPropagation();
+            const card = event.currentTarget;
+            const coinId = card.getAttribute('data-id');
+            const symbol = card.getAttribute('data-symbol');
+            openModal(coinId, symbol);
+        }
+
+        async function openModal(coinId, symbol) {
+            document.getElementById('coin-modal').classList.remove('hidden');
+            document.getElementById('modal-coin-name').textContent = `${symbol} Details`;
+
+            try {
+                const response = await fetch(`/coins/api/coin-info/${coinId}/`);
+                console.log(response);
+                const data = await response.json();
+
+                document.getElementById('coin-info').innerHTML = `
+                    ${linkItem('Website', data.website)}
+                    ${linkItem('Whitepaper', data.whitepaper)}
+                    ${linkItem('Source Code', data.source_code)}
+                    ${listItem('Categories', data.categories)}
+                    ${listItem('Explorers', data.explorers)}
+                    ${listItem('Wallets', data.wallets)}
+                `;
+            } catch (error) {
+                document.getElementById('coin-info').innerHTML = '<p class="text-red-500">Failed to load data.</p>';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('coin-modal').classList.add('hidden');
+        }
+
+        function linkItem(label, url) {
+            return url ? `
+                <div class="space-y-1">
+                    <span class="font-medium">${label}:</span>
+                    <a href="${url}" target="_blank" class="text-blue-600 hover:underline block truncate">${url}</a>
+                </div>
+            ` : '';
+        }
+
+        function listItem(label, items) {
+            if (!items) return '';
+
+            const safeItems = Array.isArray(items) ? items : [items];
+
+            return safeItems.length ? `
+                <div class="space-y-1">
+                    <span class="font-medium">${label}:</span>
+                    <ul class="list-disc pl-5">
+                        ${safeItems.map(item => `<li class="text-gray-700">${item}</li>`).join('')}
+                    </ul>
+                </div>
+            ` : '';
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial"></script>
+    <script src="https://unpkg.com/lightweight-charts@3.8.0/dist/lightweight-charts.standalone.production.js"></script>
+{% endblock %}

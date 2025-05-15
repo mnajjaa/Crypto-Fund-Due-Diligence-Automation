@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Due Diligence Chatbot</title>
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #6c757d;
+            --success-color: #4cc9f0;
+            --warning-color: #f8961e;
+            --danger-color: #f94144;
+        }
+        body {
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+        .sidebar, .questions-panel, .chat-panel, .pdf-panel {
+            background-color: white;
+        }
+        .sidebar {
+            width: 12%;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        .questions-panel {
+            width: 38%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .chat-panel {
+            width: 30%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid var(--medium-gray);
+            border-right: 1px solid var(--medium-gray);
+        }
+        .pdf-panel {
+            width: 20%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .question-block {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: var(--light-gray);
+            transition: all 0.3s ease;
+        }
+        .question-block:hover {
+            background-color: var(--medium-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .answer-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .answer-buttons button {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+        .answer-buttons button:nth-child(1) { background-color: var(--success-color); color: white; }
+        .answer-buttons button:nth-child(2) { background-color: var(--warning-color); color: white; }
+        .answer-buttons button:nth-child(3) { background-color: var(--danger-color); color: white; }
+        .answer-buttons button:hover { opacity: 0.9; transform: translateY(-1px); }
+        .chat-box { flex-grow: 1; margin-top: 20px; border: 1px solid var(--medium-gray); border-radius: 8px; padding: 15px; overflow-y: auto; background-color: #fff; box-shadow: inset 0 0 5px rgba(0,0,0,0.05); }
+        .chat-input { margin-top: 15px; display: flex; gap: 8px; }
+        .chat-input input { flex-grow: 1; padding: 10px; border: 1px solid var(--medium-gray); border-radius: 4px; font-size: 1rem; }
+        .chat-input button { padding: 10px 20px; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer; transition: all 0.2s ease; }
+        .chat-input button:hover { background-color: var(--secondary-color); }
+        #section-list { list-style: none; padding: 0; }
+        #section-list li { padding: 8px 12px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; transition: all 0.2s ease; }
+        #section-list li:hover { background-color: var(--light-gray); color: var(--primary-color); }
+        .pdf-panel ul { list-style: none; padding: 0; }
+        .pdf-panel li { padding: 10px; margin-bottom: 5px; background-color: var(--light-gray); border-radius: 4px; cursor: pointer; }
+        .pdf-panel li:hover { background-color: var(--medium-gray); }
+        #chat-history p { margin: 0 0 10px 0; padding: 8px 12px; border-radius: 4px; }
+        #chat-history p strong { color: var(--primary-color); }
+        #chat-history p em { color: var(--dark-gray); font-style: normal; background-color: var(--light-gray); display: inline-block; padding: 5px 10px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+<div class="fund-input-container" style="position: fixed; top: 0; left: 0; width: 100%; background: white; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000;">
+    <input type="text" id="fund-name-input" placeholder="Enter fund name..." style="width: 300px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    <button onclick="saveFundName()" style="padding: 8px 15px; background-color: #4361ee; color: white; border: none; border-radius: 4px; margin-left: 10px; cursor: pointer;">Save</button>
+</div>
+<div class="sidebar">
+    <h3>Sections</h3>
+    <li onclick="renderCsvQuestions()">CSV-Based Questions</li>
+
+    <ul id="section-list"></ul>
+    <h3>Whitepaper</h3>
+
+<ul>
+  <li onclick="renderBitcoinQuestions()">Bitcoin</li>
+</ul>
+</div>
+<div class="questions-panel"><h3>Questions</h3><div id="questions-area"></div></div>
+<div class="chat-panel">
+    <h3>Chatbot Assistant</h3>
+    <div class="chat-box" id="chat-history">Select a question to start a conversation.</div>
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Ask a follow-up...">
+        <button onclick="sendChat()">Send</button>
+    </div>
+</div>
+<div class="pdf-panel"><h3>PDF Viewer</h3><ul><li>fund_1.pdf</li><li>whitepaper_xyz.pdf</li></ul></div>
+<script>
+const categories = {{ categories|safe }};
+const questions = {{ questions_map|safe }};
+const bitcoinQuestions = [
+    "What is the main problem Bitcoin solves?",
+    "How does proof-of-work function in Bitcoin?",
+    "Who are the participants in the Bitcoin network?",
+    "What is the role of miners in Bitcoin?",
+    "How is double-spending prevented in Bitcoin?"
+];
+const csvQuestions = [
+    "What is the average funding round range?",
+    "Which countries does the fund invest in?",
+    "Give a summary of the fund.",
+    "Who are the team members?",
+    "Describe one of the fund's major funding rounds.",
+    "Summarize the latest news about the fund."
+];
+
+
+let fundName = "";
+
+function renderSections() {
+    const sectionList = document.getElementById("section-list");
+    categories.forEach(cat => {
+        const li = document.createElement("li");
+        li.textContent = cat;
+        li.onclick = () => renderQuestions(cat);
+        sectionList.appendChild(li);
+    });
+}
+
+function renderQuestions(category) {
+    const area = document.getElementById("questions-area");
+    area.innerHTML = "";
+    questions[category].forEach((q, i) => {
+        const block = document.createElement("div");
+        block.className = "question-block";
+        block.innerHTML = `
+            <p><strong>Q${i + 1}:</strong> ${q}</p>
+            <div class="answer-buttons">
+                <button onclick="selectQuestion('${q}', 'web')">Answer via Web</button>
+                <button onclick="selectQuestion('${q}', 'database')">Answer via DB</button>
+                <button onclick="selectQuestion('${q}', 'document')">Answer via Document</button>
+            </div>
+        `;
+        area.appendChild(block);
+    });
+}
+
+function renderCsvQuestions() {
+    const area = document.getElementById("questions-area");
+    area.innerHTML = "";
+    csvQuestions.forEach((q, i) => {
+        const block = document.createElement("div");
+        block.className = "question-block";
+        block.innerHTML = `
+            <p><strong>Q${i + 1}:</strong> ${q}</p>
+            <div class="answer-buttons">
+                <button onclick="selectCsvQuestion('${q}', 'database')">Answer via DB</button>
+                <button onclick="selectCsvQuestion('${q}', 'document')">Answer via Document</button>
+                <button onclick="selectCsvQuestion('${q}', 'web')">Answer via Web</button>
+            </div>
+        `;
+        area.appendChild(block);
+    });
+}
+
+function selectCsvQuestion(question, source) {
+    const fund = fundContext.name?.trim();
+    if (!fund) {
+        alert("Please enter a fund name first.");
+        return;
+    }
+
+    const chatBox = document.getElementById("chat-history");
+    const prompt = `Fund: ${fund}. ${question}`;
+    const sessionId = crypto.randomUUID();
+    let endpoint = "";
+
+    if (source === "database") {
+        endpoint = `/finalRAGChatbot/api/search-csv?q=${encodeURIComponent(prompt)}`;
+    } else if (source === "document") {
+        endpoint = `/finalRAGChatbot/api/rag-answer?q=${encodeURIComponent(prompt)}&session=${sessionId}`;
+    } else if (source === "web") {
+        endpoint = `/finalRAGChatbot/api/websearch?prompt=${encodeURIComponent(prompt)}`;
+    }
+
+    chatBox.innerHTML = `<p><strong>Question:</strong> ${question}</p><p><em>Loading answer via ${source}...</em></p>`;
+
+    fetch(endpoint)
+        .then(res => res.json())
+        .then(data => {
+            const answer = data.answer || data.results?.[0]?.content || "No info found.";
+            chatBox.innerHTML += `<p><strong>${source.toUpperCase()} Answer:</strong><br>${answer}</p>`;
+            saveAnswerToBackend(question, answer, source);
+        })
+        .catch(() => {
+            chatBox.innerHTML += `<p><em>Error fetching from ${source}</em></p>`;
+        });
+}
+
+
+function renderBitcoinQuestions() {
+    const area = document.getElementById("questions-area");
+    area.innerHTML = "";
+    bitcoinQuestions.forEach((q, i) => {
+        const block = document.createElement("div");
+        block.className = "question-block";
+        block.innerHTML = `
+            <p><strong>Q${i + 1}:</strong> ${q}</p>
+            <div class="answer-buttons">
+                <button onclick="selectQuestion('${q}', 'web')">Answer via Web</button>
+                <button onclick="selectQuestion('${q}', 'database')">Answer via DB</button>
+                <button onclick="selectQuestion('${q}', 'document')">Answer via Document</button>
+            </div>
+        `;
+        area.appendChild(block);
+    });
+}
+
+
+function selectQuestion(question, source) {
+    const chatBox = document.getElementById("chat-history");
+    const sessionId = crypto.randomUUID();
+    let endpoint = "";
+    if (source === 'web') endpoint = `/finalRAGChatbot/api/websearch?prompt=${encodeURIComponent(question)}`;
+    else if (source === 'database') endpoint = `/finalRAGChatbot/api/search-csv?q=${encodeURIComponent(question)}`;
+    else if (source === 'document') endpoint = `/finalRAGChatbot/api/rag-answer?q=${encodeURIComponent(question)}&session=${sessionId}`;
+    chatBox.innerHTML = `<p><strong>Question:</strong> ${question}</p><p><em>Loading answer from ${source}...</em></p>`;
+
+    fetch(endpoint)
+        .then(res => res.json())
+        .then(data => {
+            chatBox.innerHTML += `<p><strong>${source.toUpperCase()} Answer:</strong><br>${data.answer || data.results?.[0]?.content || "No info found."}</p>`;
+            saveAnswerToBackend(question, answer, source);
+        })
+        .catch(() => {
+            chatBox.innerHTML += `<p><em>Error fetching from ${source}</em></p>`;
+        });
+}
+
+//let chatHistory = [
+//    {
+//        role: "system",
+//        content: `You are CryptoDiligenceAI, an expert assistant specializing in comprehensive cryptocurrency due diligence. Your capabilities include:
+//
+//1. Analysis Framework:
+//   - Tokenomics evaluation (supply, distribution, vesting)
+//   - Protocol security assessment (audits, vulnerabilities)
+//   - Team and governance analysis
+//   - Market positioning and competitive landscape
+//   - Regulatory compliance considerations
+//
+//2. Response Guidelines:
+//   - Always maintain professional, objective tone
+//   - Structure complex answers with clear sections
+//   - Highlight risks using [⚠️] and strengths using [✅]
+//   - Provide numerical data with sources when available
+//   - Distinguish between facts and opinions
+//
+//3. Special Functions:
+//   - Can generate due diligence checklists
+//   - Compare projects across key metrics
+//   - Explain technical concepts at multiple complexity levels
+//   - Identify red flags and positive signals
+//
+//Current Date: ${new Date().toISOString().split('T')[0]}
+//        
+//Initialization complete. How can I assist with your crypto due diligence needs today?`
+//    }
+//];
+
+
+
+
+// Function to handle chat input and send it to the LLM
+// Global fund context object
+let fundContext = {
+    name: null,
+    lastUpdated: null,
+    metadata: {}
+};
+
+// Enhanced fund saving function
+function saveFundName() {
+    const input = document.getElementById('fund-name-input').value.trim();
+    
+    if (!input) {
+        showToast('Please enter a valid fund name', 'warning');
+        return;
+    }
+
+    // Update fund context
+    fundContext = {
+        name: input,
+        lastUpdated: new Date().toISOString(),
+        metadata: {
+            analysisCount: 0,
+            lastAnalysis: null
+        }
+    };
+
+    // Update AI context
+    updateAIContext(fundContext);
+    
+    // UI feedback
+    showToast(`Fund context set: ${input}`, 'success');
+    updateFundHeader();
+    console.log('Fund context updated:', fundContext);
+}
+
+// Update AI with fund context
+function updateAIContext(fund) {
+    chatHistory = [
+        {
+            role: "system",
+            content: `You are CryptoDiligencePro, an institutional-grade crypto analysis assistant. Current context:
+            
+Fund Analysis Mode: ACTIVE
+Fund Name: ${fund.name || 'Not specified'}
+Last Updated: ${fund.lastUpdated || 'N/A'}
+
+Analysis Framework:
+1. STRUCTURAL ANALYSIS
+   - Tokenomics (supply dynamics, vesting schedules)
+   - Protocol architecture (consensus, smart contract risks)
+   
+2. FINANCIAL ASSESSMENT
+   - Treasury management
+   - Revenue models
+   - Valuation metrics
+
+3. GOVERNANCE EVALUATION
+   - DAO structure
+   - Proposal history
+   - Voting participation
+
+4. ECOSYSTEM HEALTH
+   - Developer activity
+   - Partnership quality
+   - Roadmap credibility
+
+Guidelines:
+• Always cross-reference with on-chain data
+• Highlight regulatory considerations
+• Provide risk scoring (1-5 scale)
+• Maintain institutional tone
+• Flag any conflicts of interest
+
+[!] Important: All analysis must include timestamps and data sources where applicable.`
+        }
+    ];
+    
+    if (fund.name) {
+        chatHistory.push({
+            role: "assistant",
+            content: `I've initialized a new analysis session for ${fund.name}. What specific aspects would you like me to evaluate? I can:
+            
+1. Perform comprehensive due diligence
+2. Analyze specific components (tokenomics/governance/etc)
+3. Compare against sector benchmarks
+4. Generate risk assessment report`
+        });
+    }
+}
+
+// UI feedback functions
+function showToast(message, type) {
+    // Implement toast notification UI here
+    console.log(`${type.toUpperCase()}: ${message}`);
+}
+
+function updateFundHeader() {
+    const fundHeader = document.getElementById('fund-header');
+    if (fundHeader) {
+        fundHeader.innerHTML = `
+            <h2>${fundContext.name || 'No fund selected'}</h2>
+            <small>Last updated: ${fundContext.lastUpdated ? new Date(fundContext.lastUpdated).toLocaleString() : 'N/A'}</small>
+        `;
+    }
+}
+
+// Initialize with empty state
+updateAIContext(fundContext);
+// Function to handle chat input and send it to the LLM
+
+
+//
+//async function sendChat() {
+//    const input = document.getElementById("user-input");
+//    const chatBox = document.getElementById("chat-history");
+//    const userText = input.value.trim();
+//    if (!userText) return;
+//
+//    chatHistory.push({ role: "user", content: userText });
+//    chatBox.innerHTML += `<p><strong>You:</strong> ${userText}</p><p id="typing"><em>Bot is typing...</em></p>`;
+//    input.value = "";
+//
+//    try {
+//        const response = await fetch("http://127.0.0.1:11434/api/chat", {
+//            method: "POST",
+//            headers: { "Content-Type": "application/json" },
+//            body: JSON.stringify({ model: "llama3", messages: chatHistory, stream: false })
+//        });
+//
+//        const data = await response.json();
+//        const answer = data.message?.content || "No response.";
+//        chatHistory.push({ role: "assistant", content: answer });
+//
+//        document.getElementById("typing").remove();
+//        chatBox.innerHTML += `<p><strong>Bot:</strong> ${answer}</p>`;
+//        chatBox.scrollTop = chatBox.scrollHeight;
+//    } catch (error) {
+//        console.error("LLM error:", error);
+//        document.getElementById("typing").innerHTML = "<em>Error getting response from llama3.</em>";
+//    }
+//}
+async function sendChat() {
+    const input = document.getElementById("user-input");
+    const chatBox = document.getElementById("chat-history");
+    const userText = input.value.trim();
+    if (!userText) return;
+
+    // Enhanced user message with fund context if available
+    const userMessage = {
+        role: "user",
+        content: fundContext.name 
+            ? `[Analysis for ${fundContext.name}]\n${userText}`
+            : userText
+    };
+    
+    chatHistory.push(userMessage);
+    chatBox.innerHTML += `<p><strong>You:</strong> ${userText}</p><p id="typing"><em>Bot is analyzing...</em></p>`;
+    input.value = "";
+
+    try {
+        const response = await fetch("http://127.0.0.1:11434/api/chat", {
+            method: "POST",
+            headers: { 
+                "Content-Type": "application/json",
+                // Add any auth headers if needed
+            },
+            body: JSON.stringify({ 
+                model: "llama3", 
+                messages: chatHistory, 
+                stream: false,
+                options: {
+                    // Add context guidance
+                    system: `Respond as CryptoDiligencePro${fundContext.name ? ' analyzing ' + fundContext.name : ''}.`,
+                    temperature: 0.7  // More focused responses
+                }
+            })
+        });
+
+        const data = await response.json();
+        let answer = data.message?.content || "No response.";
+        //saveAnswerToBackend(question, answer, source);
+        
+        // Format response with fund context
+        if (fundContext.name) {
+            answer = `[${fundContext.name} Analysis]\n${answer}`;
+            fundContext.metadata.analysisCount++;
+            fundContext.metadata.lastAnalysis = new Date().toISOString();
+        }
+
+        chatHistory.push({ role: "assistant", content: answer });
+        document.getElementById("typing").remove();
+        chatBox.innerHTML += `<p><strong>Analyst:</strong> ${answer}</p>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+        
+        // Optional: Update analysis counter in UI
+        if (fundContext.name) {
+            updateFundHeader();
+        }
+    } catch (error) {
+        console.error("LLM error:", error);
+        document.getElementById("typing").innerHTML = 
+            `<em>Error processing ${fundContext.name ? fundContext.name + ' ' : ''}request. Please try again.</em>`;
+    }
+}
+
+function saveAnswerToBackend(question, answer, source) {
+    if (!fundContext.name) return;
+
+    fetch("/finalRAGChatbot/api/save-qa", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            question,
+            answer,
+            fund: fundContext.name,
+            source
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log("Answer saved:", data);
+    })
+    .catch(err => {
+        console.error("Failed to save answer:", err);
+    });
+}
+
+
+//function saveFundName() {
+//    const input = document.getElementById('fund-name-input').value;
+//    if (input.trim()) {
+//        fundName = input.trim();
+//        console.log('Saved fund name:', fundName);
+//    }
+//}
+
+renderSections();
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- ✅ Updated Template to Use Correct Fund Data Structure -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ fund.basic.name }} Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 font-inter">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- ==================== HEADER ==================== -->
+    <div class="flex flex-col md:flex-row justify-between mb-8">
+      <div class="flex items-center gap-4 mb-4 md:mb-0">
+        <img src="{{ fund.media.logos.x60|default:'#' }}" alt="{{ fund.basic.name }} Logo" class="w-14 h-14 rounded-lg bg-gray-100 object-contain">
+        <div>
+          <h1 class="text-2xl font-bold">{{ fund.basic.name|default:'N/A' }}</h1>
+          <div class="text-sm text-gray-500 flex gap-2">
+            <span class="bg-blue-100 text-blue-800 px-2 rounded">Tier {{ fund.basic.tier|default:'-' }} - {{ fund.basic.category.name|default:'-' }}</span>
+            <span>{{ fund.basic.country|default:'-' }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div>
+          <div class="text-gray-500">Investments</div>
+          <div class="font-bold">{{ fund.performance.investments|default:'0' }}</div>
+        </div>
+        <div>
+          <div class="text-gray-500">Retail ROI</div>
+          <div class="font-bold text-green-600">{{ fund.performance.roi|floatformat:2 }}x</div>
+        </div>
+        <div>
+          <div class="text-gray-500">Jurisdiction</div>
+          <div class="font-bold">{{ fund.basic.country|default:'-' }}</div>
+        </div>
+        <div>
+          <div class="text-gray-500">Top Investment</div>
+          <div class="font-bold">{{ fund.investments.top.0.name|default:'N/A' }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Rest of your blocks stay unchanged -->
+    <!-- For example: fund stats, donut chart, team, co-investors... -->
+
+    <!-- Example debug footer to inspect entire object -->
+    <div class="mt-10">
+      <details>
+        <summary class="text-sm text-blue-600 cursor-pointer">Debug JSON</summary>
+        <pre class="text-xs text-gray-500">{{ fund|safe }}</pre>
+      </details>
+    </div>
+  </div>
+
+  <!-- Focus Area Chart -->
+  <script>
+    const focusChart = new ApexCharts(document.querySelector("#focusAreaChart"), {
+      chart: { type: 'donut', height: '100%' },
+      series: {{ round_avg_values|safe }},
+      labels: {{ round_avg_labels|safe }},
+      colors: ['#3B82F6', '#10B981', '#F59E0B', '#6366F1', '#EF4444'],
+      legend: { position: 'bottom' },
+      dataLabels: { enabled: false },
+      plotOptions: { pie: { donut: { size: '65%' } } }
+    });
+    focusChart.render();
+  </script>
+</body>
+
+</html>

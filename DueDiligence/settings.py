@@ -53,7 +53,10 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'analytics',
     'pptxGen',
-
+    'data',
+    'django_extensions',
+    'funds_treat',
+    'finalRAGChatbot',
 
 ]
 
@@ -172,6 +175,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+    # Ensure DRF uses drf-spectacular's schema
+    
 }
 
 # drf-spectacular settings swagger
@@ -188,3 +193,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))  # Ensure BASE_DIR is defin
 
 # Read API Key
 CHAINALYSIS_API_KEY = env("CHAINALYSIS_API_KEY")
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'  # or your Docker host
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+# If using django-celery-beat for advanced scheduling

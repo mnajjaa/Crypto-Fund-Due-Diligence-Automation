@@ -49,7 +49,7 @@ def funding_dashboard(request):
         
         print("First row after parsing tags:", df.iloc[0].to_dict())
 
-        digest = df.to_dict(orient="records")
+        digest = json.loads(df.to_json(orient="records", date_format="iso"))
         print("Sample digest entry:", digest[0] if digest else "EMPTY")
 
     except Exception as e:

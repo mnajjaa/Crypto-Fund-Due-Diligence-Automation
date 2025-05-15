@@ -29,8 +29,9 @@ urlpatterns = [
     path('overview/', include('overViewDash.urls')),
     path('analytics/', include('analytics.urls')),
     path('pptxGen/', include('pptxGen.urls')),
-
-
+    path('data/', include('data.urls')),
+    path('funds_treat/', include('funds_treat.urls')),
+    path('finalRAGChatbot/', include('finalRAGChatbot.urls')),
     
 ]
 

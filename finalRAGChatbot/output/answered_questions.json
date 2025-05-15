@@ -1,0 +1,107 @@
+[
+  {
+    "question": "What is the average funding round range?",
+    "answer": "For fund hash-key-capital, the range is $3,000,000 - $10,000,000, the minimum amount is 3000000, the maximum amount is 10000000.0, and the percentage is 70.0.",
+    "fund": "hashkey",
+    "source": "database",
+    "timestamp": "2025-05-13T08:31:41.030834"
+  },
+  {
+    "question": "What is the average funding round range?",
+    "answer": "I'm afraid I'm not able to provide information on average funding round ranges or any financial information related to hashkeys, as this context appears to be focused on a proof-of-work system and cryptographic concepts rather than funding rounds. The information is not available in the document.",
+    "fund": "hashkey",
+    "source": "document",
+    "timestamp": "2025-05-13T08:33:48.674320"
+  },
+  {
+    "question": "What is the average funding round range?",
+    "answer": "The information is not available in the provided context. The article does not mention the average funding round range for HashKey Capital's funds. It only mentions that they plan to launch at least two liquid funds to ride on opportunities in the secondary market, but it does not provide any specific details about the size or scope of these funds.",
+    "fund": "hashkey",
+    "source": "web",
+    "timestamp": "2025-05-13T08:34:15.192425"
+  },
+  {
+    "question": "What is the average funding round range?",
+    "answer": "Based on the provided context, HashKey Group raised $100 million in its Series A funding round. There is no mention of previous or subsequent funding rounds, so it's difficult to determine an average funding range.\n\nHowever, we can analyze this specific funding round to get some insight:\n\n* The funding round was a Series A, which typically indicates that the company has received seed funding previously.\n* The amount raised in this Series A round is $100 million, which may be considered a larger-than-average series A round for many startups.\n* Post-money valuation of this financing is over $1.3 billion, indicating significant growth and value creation.\n\nIn conclusion, while we don't have enough information to determine an average funding range for HashKey Group, the context suggests that this specific Series A round was likely on the higher side compared to typical series A rounds in the industry.",
+    "fund": "hashkey",
+    "source": "web",
+    "timestamp": "2025-05-13T08:35:18.104899"
+  },
+  {
+    "question": "Give a summary of the fund.",
+    "answer": "Hashed Fund | Type: Venture | Tier: 2 | Based in South Korea",
+    "fund": "hashkey",
+    "source": "database",
+    "timestamp": "2025-05-13T09:47:13.599166"
+  },
+  {
+    "question": "Who are the team members?",
+    "answer": "Date: Feb 12, 2024 06:18 | Title: HashKey Group Leads the Pack: January’s Top Fundraisers in Crypto VC | Summary: The overall funding amassed in January amounted to $650 million. | Source: {'name': 'CryptoPotato', 'lang': 'en'} | Tags: {'id': 52, 'key': 'social', 'name': 'Social'}",
+    "fund": "hashkey",
+    "source": "database",
+    "timestamp": "2025-05-13T09:47:38.629141"
+  },
+  {
+    "question": "Who are the team members?",
+    "answer": "Date: Feb 12, 2024 06:18 | Title: HashKey Group Leads the Pack: January’s Top Fundraisers in Crypto VC | Summary: The overall funding amassed in January amounted to $650 million. | Source: {'name': 'CryptoPotato', 'lang': 'en'} | Tags: {'id': 52, 'key': 'social', 'name': 'Social'}",
+    "fund": "hashkey",
+    "source": "database",
+    "timestamp": "2025-05-13T09:48:02.270993"
+  },
+  {
+    "question": "Who are the team members?",
+    "answer": "Coinbase Ventures | Type: Venture | Tier: 1 | Based in United States",
+    "fund": "coinbase venture",
+    "source": "database",
+    "timestamp": "2025-05-13T09:54:03.551020"
+  },
+  {
+    "question": "Summarize the latest news about the fund.",
+    "answer": "Date: Jul 24, 2024 18:08 | Title: Coinbase Tokenized Fund Is Being Planned For RWA’s New Boom | Summary: To facilitate Coinbase tokenized fund, the exchange is working with Bermuda-based Apex Group, which manages over $3 trillion in assets.\nRead more...\nCoincu News | Source: {'name': 'CoinCu News', 'lang': 'en'}",
+    "fund": "coinbase venture",
+    "source": "database",
+    "timestamp": "2025-05-13T09:54:13.941216"
+  },
+  {
+    "question": "What is the average funding round range?",
+    "answer": "For fund hash-key-capital, the range is $3,000,000 - $10,000,000, the minimum amount is 3000000, the maximum amount is 10000000.0, and the percentage is 70.0.",
+    "fund": "Hashkey",
+    "source": "database",
+    "timestamp": "2025-05-13T10:02:53.962695"
+  },
+  {
+    "question": "What is the average funding round range?",
+    "answer": "For fund hash-key-capital, the range is $3,000,000 - $10,000,000, the minimum amount is 3000000, the maximum amount is 10000000.0, and the percentage is 70.0.",
+    "fund": "hashkey",
+    "source": "database",
+    "timestamp": "2025-05-13T10:24:13.043587"
+  },
+  {
+    "question": "What is the average funding round range?",
+    "answer": "For fund coinbase-ventures, the range is $3,000,000 - $10,000,000, the minimum amount is 3000000, the maximum amount is 10000000.0, and the percentage is 40.0.",
+    "fund": "Coinbase venture",
+    "source": "database",
+    "timestamp": "2025-05-13T16:38:27.611846"
+  },
+  {
+    "question": "What is the average funding round range?",
+    "answer": "For fund hash-key-capital, the range is $3,000,000 - $10,000,000, the minimum amount is 3000000, the maximum amount is 10000000.0, and the percentage is 70.0.",
+    "fund": "hashkey",
+    "source": "database",
+    "timestamp": "2025-05-14T16:17:31.444417"
+  },
+  {
+    "question": "Which countries does the fund invest in?",
+    "answer": "Based on the provided context, the user prompt asks about the countries that a specific fund (hashkey) invests in. Unfortunately, the context does not provide any information about the countries where the fund invests. Therefore, I must respond:\n\nThe information is not available in the provided context.",
+    "fund": "hashkey",
+    "source": "web",
+    "timestamp": "2025-05-14T16:18:07.544590"
+  },
+  {
+    "question": "Summarize the latest news about the fund.",
+    "answer": "For fund avaloq, the range is $3,000,000 - $10,000,000, the minimum amount is 3000000, the maximum amount is 10000000.0, and the percentage is 66.67.",
+    "fund": "avaloq",
+    "source": "database",
+    "timestamp": "2025-05-14T16:23:33.072125"
+  }
+]

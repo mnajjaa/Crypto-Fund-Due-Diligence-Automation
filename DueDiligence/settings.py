@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'data',
     'django_extensions',
     'funds_treat',
+    'finalRAGChatbot',
 
 ]
 

@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('Core.urls')),  
     path('data/', include('data.urls')),
     path('funds_treat/', include('funds_treat.urls')),
+    path('finalRAGChatbot/', include('finalRAGChatbot.urls')),
     
 ]
 
